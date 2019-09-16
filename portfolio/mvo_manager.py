@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-class PortfolioManager:
+class MeanVarOptManager:
     def __init__(self, data):
         self.data = data
         self.backtesting = dict
