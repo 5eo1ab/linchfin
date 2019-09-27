@@ -7,6 +7,102 @@ class MeanVarOptManager:
     def __init__(self):
         self.backtesting = dict()
 
+    def simulation_portfolio(self, tickers, ticker_names, num_try=10):
+        port_returns = []
+        port_volatility = []
+        sharpe_ratio = []
+        stock_weights = []
+
+        portfolio = {'returns': port_returns,
+                     'volatility': port_volatility,
+                     'sharpe_ratio': sharpe_ratio}
+
+        num_of_tickers = len(ticker_names)
+
+        for i in range(num_try):
+            weights = self.get_randomized_weights(num_of_tickers)
+            portfolio_summary = self.evaluate_portfolio(tickers, weights)
+
+            port_returns.append(portfolio_summary['return'])
+            port_volatility.append(portfolio_summary['volatility'])
+            sharpe_ratio.append(portfolio_summary['sharpe'])
+            stock_weights.append(weights)
+
+        for idx, symbol in enumerate(ticker_names):
+            portfolio[symbol + ' weight'] = [weights[idx] for weights in stock_weights]
+
+        column_order = ['returns', 'volatility', 'sharpe_ratio'] + [stock+' weight' for stock in ticker_names]
+        portfolio_df = pd.DataFrame(portfolio)
+        return portfolio_df[column_order]
+
+    def evaluate_portfolio(self, tickers, weights, display=False):
+        sample_data_returns = tickers.pct_change()
+
+        # variance
+        portfolio_variance = self.get_variance(sample_data_returns, weights)
+
+        # standard deviation
+        portfolio_volatility = np.sqrt(portfolio_variance)
+
+        # Expected return
+        expected_return = self.get_annual_returns(sample_data_returns, weights)
+        sharp_ratio = expected_return / portfolio_volatility
+
+        if display:
+            print('Variance of Portfolio', str(round(portfolio_variance, 4) * 100) + '%')
+            print('Variance of Risk', str(round(portfolio_volatility, 4) * 100) + '%')
+
+            sample_data_returns.plot(figsize=(20,14))
+
+        portfolio_dic = dict()
+        selected_tickers_name = [ticker.split('.')[0] for ticker in tickers.columns]
+
+        portfolio_dic['tickers'] = selected_tickers_name
+        portfolio_dic['weights'] = weights
+        portfolio_dic['volatility'] = portfolio_volatility
+        portfolio_dic['return'] = expected_return
+        portfolio_dic['sharpe'] = sharp_ratio
+
+        return portfolio_dic
+
+    def get_simulation_summary(self, portfolio_df: pd.DataFrame, ticker_names, display=False):
+        min_volatility = portfolio_df['volatility'].min()
+        max_sharpe = portfolio_df['sharpe_ratio'].max()
+
+        sharpe_portfolio = portfolio_df.loc[portfolio_df['sharpe_ratio'] == max_sharpe]
+        min_variance_port = portfolio_df.loc[portfolio_df['volatility'] == min_volatility]
+
+        if display:
+            # use the min, max values to locate and create the two special portfolios
+
+            plt.style.use('seaborn-dark')
+            portfolio_df.plot.scatter(x='volatility', y='returns', c='sharpe_ratio',
+                                      cmap='RdYlGn', edgecolors='black', figsize = (10, 8), grid=True)
+            plt.scatter(x=sharpe_portfolio['volatility'],
+                        y=sharpe_portfolio['returns'],
+                        c='red', marker='D', s=200)
+            plt.scatter(x=min_variance_port['volatility'],
+                        y=min_variance_port['returns'],
+                        c='blue', marker='D', s=200)
+
+            plt.xlabel('Volatility (Std. Deviation)')
+            plt.ylabel('Expected Returns')
+            plt.title('Efficient Frontier')
+            plt.show()
+
+        simulation_result = {
+            'min_volatility_portfolio': min_variance_port.T,
+            'max_sharpe_portfolio': sharpe_portfolio.T,
+            'min_volatility': min_volatility,
+            'max_sharpe': max_sharpe,
+            'tickers': ticker_names
+        }
+
+        return simulation_result
+
+    def get_ticker_names(self, tickers):
+      return [ticker.split('.')[0] for ticker in tickers.columns]
+
     def get_randomized_weights(self, size):
         randomized_values = np.random.random([size])
         return randomized_values / sum(randomized_values)
@@ -33,96 +129,6 @@ class MeanVarOptManager:
         expected_return = np.sum(annual_returns * weights)
         return expected_return
 
-    def evaluate_porfolio(self, tickers, weights, num_of_tickers, display=False):
-        sample_data_returns = tickers.pct_change()
-        # variance
-        portfolio_variance = self.get_variance(sample_data_returns, weights)
-        # standard deviation
-        portfolio_volatility = np.sqrt(portfolio_variance)
-        # Expected return
-        expected_return = self.get_annual_returns(sample_data_returns, weights)
-        sharp_ratio = expected_return / portfolio_volatility
-
-        if display:
-            print(sample_data.columns)
-            print('Variance of Portfolio', str(round(portfolio_variance, 4) * 100) + '%')
-            print('Variance of Risk', str(round(portfolio_volatility, 4) * 100) + '%')
-
-            sample_data_returns.plot(figsize=(20,14))
-
-        portfolio_dic = dict()
-        selected_tickers_name = [ticker.split('.')[0] for ticker in tickers.columns]
-
-        portfolio_dic['tickers'] = selected_tickers_name
-        portfolio_dic['weights'] = weights
-        portfolio_dic['volatility'] = portfolio_volatility
-        portfolio_dic['return'] = expected_return
-        portfolio_dic['sharpe'] = sharp_ratio
-
-        return portfolio_dic
-
-    def simulation_portfolio(self, tickers, num_try=10, display=True):
-        port_returns = []
-        port_volatility = []
-        sharpe_ratio = []
-        stock_weights = []
-
-        portfolio = {'returns': port_returns,
-                     'volatility': port_volatility,
-                     'sharpe_ratio': sharpe_ratio}
-        tickers_name = [ticker.split('.')[0] for ticker in tickers.columns]
-        num_of_tickers = len(tickers_name)
-
-        for i in range(num_try):
-            weights = self.get_randomized_weights(num_of_tickers)
-            portfolio_summary = self.evaluate_porfolio(tickers, weights, num_of_tickers)
-
-            port_returns.append(portfolio_summary['return'])
-            port_volatility.append(portfolio_summary['volatility'])
-            sharpe_ratio.append(portfolio_summary['sharpe'])
-            stock_weights.append(weights)
-
-        for idx, symbol in enumerate(tickers_name):
-            portfolio[symbol + ' weight'] = [weights[idx] for weights in stock_weights]
-
-        column_order = ['returns', 'volatility', 'sharpe_ratio'] + [stock+' weight' for stock in tickers_name]
-        df = pd.DataFrame(portfolio)
-        df = df[column_order]
-
-        min_volatility = df['volatility'].min()
-        max_sharpe = df['sharpe_ratio'].max()
-
-        sharpe_portfolio = df.loc[df['sharpe_ratio'] == max_sharpe]
-        min_variance_port = df.loc[df['volatility'] == min_volatility]
-
-        if display:
-            # use the min, max values to locate and create the two special portfolios
-
-            plt.style.use('seaborn-dark')
-            df.plot.scatter(x='volatility', y='returns', c='sharpe_ratio',
-                           cmap='RdYlGn', edgecolors='black', figsize = (10, 8), grid=True)
-            plt.scatter(x=sharpe_portfolio['volatility'],
-                        y=sharpe_portfolio['returns'],
-                        c='red', marker='D', s=200)
-            plt.scatter(x=min_variance_port['volatility'],
-                        y=min_variance_port['returns'],
-                        c='blue', marker='D', s=200)
-
-            plt.xlabel('Volatility (Std. Deviation)')
-            plt.ylabel('Expected Returns')
-            plt.title('Efficient Frontier')
-            plt.show()
-
-        simulation_result = {
-            'min_volatility_portfolio': min_variance_port.T,
-            'max_sharpe_portfolio': sharpe_portfolio.T,
-            'min_volatility': min_volatility,
-            'max_sharpe': max_sharpe,
-            'tickers': tickers_name
-        }
-
-        return simulation_result
-
 
 if __name__ == '__main__':
     import pprint
@@ -134,7 +140,10 @@ if __name__ == '__main__':
     for i in range(5):
         selected_ticker = mvo_manager.get_sample_selected_ticker(stock_prices=sample_stock_price_df, num_of_tickers=2)
         # print(selected_ticker)
-        res = mvo_manager.simulation_portfolio(selected_ticker, num_try=5, display=False)
+        ticker_names = mvo_manager.get_ticker_names(tickers=selected_ticker)
+        portfolio_df = mvo_manager.simulation_portfolio(selected_ticker, ticker_names=ticker_names, num_try=5)
+        res = mvo_manager.get_simulation_summary(portfolio_df=portfolio_df, ticker_names=ticker_names)
+
         print("min_volatility_portfolio")
         pp.pprint(res['min_volatility_portfolio'])
         print()
