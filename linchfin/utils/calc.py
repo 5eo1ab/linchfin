@@ -20,5 +20,5 @@ def get_dollar_bars(index, trading_values, threshold=2273626800):
                 yield i, _value
                 acc = 0
 
-    df = pd.DataFrame(list(get_dollar_iter()), columns=['index', 'value'])
+    df = pd.DataFrame(list(get_dollar_iter()), columns=['index', 'dollar_value'])
     return df.set_index('index')
