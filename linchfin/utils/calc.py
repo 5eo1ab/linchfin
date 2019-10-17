@@ -25,4 +25,12 @@ def get_dollar_bars(index, trading_values, threshold=2273626800):
 
 
 def calc_total_return(prices):
-    return prices.adj_close.diff(1)[1:].sum()
+    return prices.diff(1)[1:].sum()
+
+
+def calc_installment_return(prices, holding_idx):
+    if not isinstance(holding_idx, np.ndarray):
+        holding_idx = np.array(holding_idx)
+
+    weighted_changes = prices.diff(1)[1:] * holding_idx[1:]
+    return weighted_changes.sum()
