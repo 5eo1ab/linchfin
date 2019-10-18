@@ -32,5 +32,8 @@ def calc_installment_return(prices, holding_idx):
     if not isinstance(holding_idx, np.ndarray):
         holding_idx = np.array(holding_idx)
 
-    weighted_changes = prices.diff(1)[1:] * holding_idx[1:]
+    if not isinstance(holding_idx, np.ndarray):
+        prices = np.array(prices)
+
+    weighted_changes = np.diff(prices) * holding_idx[:, 1:]
     return weighted_changes.sum()
