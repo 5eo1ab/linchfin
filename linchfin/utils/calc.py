@@ -37,3 +37,8 @@ def calc_installment_return(prices, holding_idx):
 
     weighted_changes = np.diff(prices) * holding_idx[:, 1:]
     return weighted_changes.sum()
+
+
+def calc_compound_rate(rate, years):
+    return (1 - rate ** years) / (1 - rate)
+
