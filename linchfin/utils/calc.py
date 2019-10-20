@@ -11,19 +11,6 @@ def calc_trading_value(prices, volumes) -> np.ndarray:
     return prices * volumes
 
 
-def get_dollar_bars(index, trading_values, threshold=2273626800):
-    def get_dollar_iter():
-        acc = 0
-        for i, _value in zip(index, trading_values):
-            acc += _value
-            if acc > threshold:
-                yield i, _value
-                acc = 0
-
-    df = pd.DataFrame(list(get_dollar_iter()), columns=['index', 'dollar_value'])
-    return df.set_index('index')
-
-
 def calc_total_return(prices):
     return prices.diff(1)[1:].sum()
 
@@ -42,3 +29,14 @@ def calc_installment_return(prices, holding_idx):
 def calc_compound_rate(rate, years):
     return (1 - rate ** years) / (1 - rate)
 
+
+def get_variance(sample_data_returns, weights):
+    cov_matrix_portfolio = sample_data_returns.cov() * 250
+    variance = np.dot(weights.T, np.dot(cov_matrix_portfolio, weights))
+    return variance
+
+
+def get_annual_returns(sample_data_returns, weights):
+    annual_returns = sample_data_returns.mean() * 250
+    expected_return = np.sum(annual_returns * weights)
+    return expected_return
