@@ -80,6 +80,13 @@ class HierarchyCluster:
         ivp = 1./np.diag(cov)
         return ivp/ivp.sum()
 
+    def show_dendrogram(self, clusters, **kwargs):
+        plt.title("Hierarchical Cluster")
+        plt.xlabel("index")
+        plt.ylabel("Distance")
+        sch.dendrogram(clusters, **kwargs)
+        plt.show()
+
 
 if __name__ == '__main__':
     p = np.array(
