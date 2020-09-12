@@ -2,6 +2,7 @@ from dataclasses import dataclass, field
 from typing import List, Dict
 
 
+
 @dataclass
 class AssetClass:
     asset_class_id: str
