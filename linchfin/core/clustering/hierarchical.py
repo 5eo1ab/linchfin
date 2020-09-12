@@ -1,10 +1,22 @@
 import scipy.cluster.hierarchy as sch
 import numpy as np
 import pandas as pd
-from collections import namedtuple
+from dataclasses import dataclass
+from matplotlib import pyplot as plt
 
 
-Cluster = namedtuple('cluster', ['e1', 'e2', 'd', 'size'])
+@dataclass
+class Cluster:
+    e1: int
+    e2: int
+    d: float
+    size: int
+
+    def __post_init__(self):
+        for k, _field in self.__dataclass_fields__.items():
+            v = getattr(self, k)
+            if not isinstance(v, _field.type):
+                setattr(self, k, _field.type(getattr(self, k)))
 
 
 class HierarchyCluster:
@@ -28,24 +40,26 @@ class HierarchyCluster:
     def get_clusters(self, corr: np.array):
         dist = ((1 - corr) / 2.) ** .5
         links = sch.linkage(dist, 'single')
-        return links
+        return [Cluster(*c) for c in links]
 
     def get_quansi_diag(self, link):
-        link = link.astype(int)
-        sort_ix = pd.Series([link[-1, 0], link[-1, 1]])
-        num_items = link[-1, 3]
+        # link = link.astype(int)
+        last_cluster = link[-1]
+        sort_ix = pd.Series([last_cluster.e1, last_cluster.e2])
+        num_items = last_cluster.size
 
         while sort_ix.max() >= num_items:
             sort_ix.index = range(0, sort_ix.shape[0] * 2, 2) # make space
             df0 = sort_ix[sort_ix >= num_items]
             i = df0.index
             j = df0.values - num_items
-            sort_ix[i] = link[j, 0]
-            df0 = pd.Series(link[j, 1], index=i+1)
+
+            current_cluster = link[j.item()]
+            sort_ix[i] = current_cluster.e1
+            df0 = pd.Series(current_cluster.e2, index=i+1)
             sort_ix = sort_ix.append(df0)
             sort_ix = sort_ix.sort_index()  # re-sort
             sort_ix.index = range(sort_ix.shape[0])  # reindex
-            print(sort_ix.max(), num_items)
         return sort_ix.tolist()
 
     def get_recursive_bisect(self, cov: pd.DataFrame, sort_ix: list):
@@ -80,11 +94,12 @@ class HierarchyCluster:
         ivp = 1./np.diag(cov)
         return ivp/ivp.sum()
 
-    def show_dendrogram(self, clusters, **kwargs):
+    def show_dendrogram(self, corr, **kwargs):
         plt.title("Hierarchical Cluster")
         plt.xlabel("index")
         plt.ylabel("Distance")
-        sch.dendrogram(clusters, **kwargs)
+        links = sch.linkage(corr, 'single')
+        sch.dendrogram(links, **kwargs)
         plt.show()
 
 
@@ -98,5 +113,6 @@ if __name__ == '__main__':
     )
 
     hcp = HierarchyCluster()
+    hcp.show_dendrogram(corr=p)
     w = hcp.run(corr=p)
     print("weights:", w)
