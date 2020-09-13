@@ -3,15 +3,14 @@ import numpy as np
 import pandas as pd
 from dataclasses import dataclass
 from matplotlib import pyplot as plt
+from linchfin.common.data_class import (
+    Asset, AssetUniverse, Metric, Portfolio, Cluster
+)
+from typing import List
 
 
 @dataclass
-class Cluster:
-    e1: int
-    e2: int
-    d: float
-    size: int
-
+class HierarchyCluster(Cluster):
     def __post_init__(self):
         for k, _field in self.__dataclass_fields__.items():
             v = getattr(self, k)
@@ -19,9 +18,9 @@ class Cluster:
                 setattr(self, k, _field.type(getattr(self, k)))
 
 
-class HierarchyCluster:
-    def __init__(self):
-        pass
+class HierarchyRiskParityEngine:
+    def __init__(self, asset_universe):
+        self.asset_universe = asset_universe
 
     @staticmethod
     def calc_correlation(x: np.array):
@@ -31,19 +30,20 @@ class HierarchyCluster:
     def calc_covariance(x: np.array):
         return x.cov()
 
-    def run(self, corr):
-        _clusters = self.get_clusters(corr=corr)
+    def run(self, corr: Metric) -> Portfolio:
+        portfolio = Portfolio(asset_universe=self.asset_universe)
+        _clusters = self.get_clusters(corr=corr.value)
         sort_ix = self.get_quansi_diag(_clusters)
-        weights = self.get_recursive_bisect(cov=pd.DataFrame(p), sort_ix=sort_ix)
-        return weights
+        weights = self.get_recursive_bisect(cov=pd.DataFrame(p.value), sort_ix=sort_ix)
+        portfolio.set_weights(weights)
+        return portfolio
 
-    def get_clusters(self, corr: np.array):
+    def get_clusters(self, corr: np.array) -> List[Cluster]:
         dist = ((1 - corr) / 2.) ** .5
         links = sch.linkage(dist, 'single')
-        return [Cluster(*c) for c in links]
+        return [HierarchyCluster(*c) for c in links]
 
     def get_quansi_diag(self, link):
-        # link = link.astype(int)
         last_cluster = link[-1]
         sort_ix = pd.Series([last_cluster.e1, last_cluster.e2])
         num_items = last_cluster.size
@@ -112,7 +112,13 @@ if __name__ == '__main__':
         ]
     )
 
-    hcp = HierarchyCluster()
-    hcp.show_dendrogram(corr=p)
-    w = hcp.run(corr=p)
-    print("weights:", w)
+    _asset_universe = AssetUniverse()
+    for idx, _ in enumerate(p):
+        _asset_universe.append(Asset(str(idx)))
+
+    p = Metric(name='correlation', value=p)
+    hcp = HierarchyRiskParityEngine(asset_universe=_asset_universe)
+    hcp.show_dendrogram(corr=p.value)
+    portfolio = hcp.run(corr=p)
+    print(portfolio.is_valid())
+    print(portfolio)
