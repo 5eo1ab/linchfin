@@ -3,9 +3,11 @@ import numpy as np
 import pandas as pd
 from dataclasses import dataclass
 from matplotlib import pyplot as plt
-from linchfin.common.data_class import (
-    Asset, AssetUniverse, Metric, Portfolio, Cluster
+from linchfin.base.dataclasses.entities import (
+    Asset, AssetUniverse, Portfolio, Cluster
 )
+from linchfin.base.dataclasses.value_types import Metric
+from linchfin.base.encoder import EuclideanEncoder
 from typing import List
 
 
@@ -21,6 +23,7 @@ class HierarchyCluster(Cluster):
 class HierarchyRiskParityEngine:
     def __init__(self, asset_universe):
         self.asset_universe = asset_universe
+        self.distance_encoder = EuclideanEncoder()
 
     @staticmethod
     def calc_correlation(x: np.array):
@@ -32,15 +35,16 @@ class HierarchyRiskParityEngine:
 
     def run(self, corr: Metric) -> Portfolio:
         portfolio = Portfolio(asset_universe=self.asset_universe)
-        _clusters = self.get_clusters(corr=corr.value)
+        dist = self.distance_encoder.encode(data=corr)
+
+        _clusters = self.get_clusters(distance=dist)
         sort_ix = self.get_quansi_diag(_clusters)
-        weights = self.get_recursive_bisect(cov=pd.DataFrame(p.value), sort_ix=sort_ix)
+        weights = self.get_recursive_bisect(cov=pd.DataFrame(corr.value), sort_ix=sort_ix)
         portfolio.set_weights(weights)
         return portfolio
 
-    def get_clusters(self, corr: np.array) -> List[Cluster]:
-        dist = ((1 - corr) / 2.) ** .5
-        links = sch.linkage(dist, 'single')
+    def get_clusters(self, distance: Metric) -> List[Cluster]:
+        links = sch.linkage(distance.value, 'single')
         return [HierarchyCluster(*c) for c in links]
 
     def get_quansi_diag(self, link):
@@ -104,7 +108,7 @@ class HierarchyRiskParityEngine:
 
 
 if __name__ == '__main__':
-    p = np.array(
+    _p = np.array(
         [
             [1, 0.7, 0.2],
             [0.7, 1, -0.2],
@@ -113,12 +117,12 @@ if __name__ == '__main__':
     )
 
     _asset_universe = AssetUniverse()
-    for idx, _ in enumerate(p):
+    for idx, _ in enumerate(_p):
         _asset_universe.append(Asset(str(idx)))
 
-    p = Metric(name='correlation', value=p)
+    _p = Metric(name='correlation', value=_p)
     hcp = HierarchyRiskParityEngine(asset_universe=_asset_universe)
-    hcp.show_dendrogram(corr=p.value)
-    portfolio = hcp.run(corr=p)
-    print(portfolio.is_valid())
-    print(portfolio)
+    hcp.show_dendrogram(corr=_p.value)
+    _portfolio = hcp.run(corr=_p)
+    print(_portfolio.is_valid())
+    print(_portfolio)

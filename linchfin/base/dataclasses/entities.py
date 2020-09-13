@@ -1,10 +1,10 @@
 from dataclasses import dataclass, field
 from collections import OrderedDict
 from typing import Dict, OrderedDict as OrderedDictType
-import numpy as np
-from decimal import Decimal
 from uuid import uuid4
 import pandas as pd
+
+from .value_types import Weight
 
 
 @dataclass
@@ -36,27 +36,11 @@ class AssetUniverse:
 
 
 @dataclass
-class Metric:
-    name: str
-    value: float or np.ndarray
-
-
-@dataclass
-class Encoder:
-    def encode(self, asset_universe: AssetUniverse) -> Metric:
-        pass
-
-
-@dataclass
 class Cluster:
     e1: int
     e2: int
     d: float
     size: int
-
-
-class Weight(Decimal):
-    pass
 
 
 @dataclass
