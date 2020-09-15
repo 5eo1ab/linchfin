@@ -6,8 +6,8 @@ from matplotlib import pyplot as plt
 from linchfin.base.dataclasses.entities import (
     Asset, AssetUniverse, Portfolio, Cluster
 )
-from linchfin.base.dataclasses.value_types import Metric
-from linchfin.base.encoder import EuclideanEncoder
+from linchfin.base.dataclasses.value_types import Metric, Feature
+from linchfin.base.encoder import CorrelationEncoder
 from typing import List
 
 
@@ -23,7 +23,7 @@ class HierarchyCluster(Cluster):
 class HierarchyRiskParityEngine:
     def __init__(self, asset_universe):
         self.asset_universe = asset_universe
-        self.distance_encoder = EuclideanEncoder()
+        self.distance_encoder = CorrelationEncoder()
 
     @staticmethod
     def calc_correlation(x: np.array):
@@ -33,9 +33,9 @@ class HierarchyRiskParityEngine:
     def calc_covariance(x: np.array):
         return x.cov()
 
-    def run(self, corr: Metric) -> Portfolio:
+    def run(self, corr: Feature) -> Portfolio:
         portfolio = Portfolio(asset_universe=self.asset_universe)
-        dist = self.distance_encoder.encode(data=corr)
+        dist = self.distance_encoder.encode(corr=corr)
 
         _clusters = self.get_clusters(distance=dist)
         sort_ix = self.get_quansi_diag(_clusters)
