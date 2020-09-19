@@ -1,0 +1,4601 @@
+{
+  "children": [
+    {
+      "name": "Forex",
+      "children": [
+        {
+          "name": "Inverse",
+          "children": [
+            {
+              "name": "YCS",
+              "description": "ProShares UltraShort Yen",
+              "cap_size": 5.0
+            },
+            {
+              "name": "EUO",
+              "description": "ProShares UltraShort Euro",
+              "cap_size": 5.656854249492381
+            }
+          ],
+          "x": 778,
+          "y": 427,
+          "dy": 9,
+          "dx": 9
+        },
+        {
+          "name": "Basket",
+          "children": [
+            {
+              "name": "USDU",
+              "description": "WisdomTree Bloomberg U.S. Dollar Bullish Fund",
+              "cap_size": 8.06225774829855
+            },
+            {
+              "name": "UDN",
+              "description": "Invesco DB US Dollar Index Bearish Fund",
+              "cap_size": 8.06225774829855
+            },
+            {
+              "name": "UUP",
+              "description": "Invesco DB US Dollar Index Bullish Fund",
+              "cap_size": 21.18962010041709
+            }
+          ],
+          "x": 778,
+          "y": 394,
+          "dy": 33,
+          "dx": 9
+        },
+        {
+          "name": "Currency",
+          "children": [
+            {
+              "name": "FXC",
+              "description": "Invesco CurrencyShares Canadian Dollar Trust",
+              "cap_size": 8.06225774829855
+            },
+            {
+              "name": "FXA",
+              "description": "Invesco CurrencyShares Australian Dollar Trust",
+              "cap_size": 8.06225774829855
+            },
+            {
+              "name": "FXB",
+              "description": "Invesco CurrencyShares British Pound Sterling Trust",
+              "cap_size": 8.06225774829855
+            },
+            {
+              "name": "FXF",
+              "description": "Invesco CurrencyShares Swiss Franc Trust",
+              "cap_size": 8.06225774829855
+            },
+            {
+              "name": "FXE",
+              "description": "Invesco CurrencyShares Euro Currency Trust",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "FXY",
+              "description": "Invesco CurrencyShares Japanese Yen Trust",
+              "cap_size": 9.219544457292887
+            }
+          ],
+          "x": 778,
+          "y": 361,
+          "dy": 33,
+          "dx": 9
+        }
+      ],
+      "x": 777,
+      "y": 346,
+      "dy": 91,
+      "dx": 11
+    },
+    {
+      "name": "Strategy",
+      "children": [
+        {
+          "name": "Asset Allocation",
+          "children": [
+            {
+              "name": "CEFL",
+              "description": null,
+              "cap_size": 6.0
+            },
+            {
+              "name": "CVY",
+              "description": "Invesco Zacks Multi-Asset Income ETF",
+              "cap_size": 7.211102550927978
+            },
+            {
+              "name": "MDIV",
+              "description": "First Trust Multi-Asset Diversified Income Index Fund",
+              "cap_size": 7.810249675906654
+            },
+            {
+              "name": "PCEF",
+              "description": "Invesco CEF Income Composite ETF",
+              "cap_size": 7.211102550927978
+            },
+            {
+              "name": "AOA",
+              "description": "iShares Core Aggressive Allocation ETF",
+              "cap_size": 7.810249675906654
+            },
+            {
+              "name": "IYLD",
+              "description": "iShares Morningstar Multi-Asset Income ETF",
+              "cap_size": 7.810249675906654
+            },
+            {
+              "name": "GYLD",
+              "description": "Arrow Dow Jones Global Yield ETF",
+              "cap_size": 7.810249675906654
+            },
+            {
+              "name": "AOK",
+              "description": "iShares Core Conservative Allocation ETF",
+              "cap_size": 7.810249675906654
+            },
+            {
+              "name": "GAL",
+              "description": "SPDR SSgA Global Allocation ETF",
+              "cap_size": 7.810249675906654
+            },
+            {
+              "name": "AOR",
+              "description": "iShares Core Growth Allocation ETF",
+              "cap_size": 8.48528137423857
+            },
+            {
+              "name": "AOM",
+              "description": "iShares Core Moderate Allocation ETF",
+              "cap_size": 8.48528137423857
+            }
+          ],
+          "x": 762,
+          "y": 406,
+          "dy": 30,
+          "dx": 14
+        },
+        {
+          "name": "Alpha",
+          "children": [
+            {
+              "name": "WDTI",
+              "description": null,
+              "cap_size": 6.082762530298219
+            },
+            {
+              "name": "TTFS",
+              "description": null,
+              "cap_size": 6.0
+            },
+            {
+              "name": "PKW",
+              "description": "Invesco BuyBack Achievers ETF",
+              "cap_size": 7.810249675906654
+            },
+            {
+              "name": "QAI",
+              "description": "IQ Hedge Multi-Strategy Tracker ETF",
+              "cap_size": 7.810249675906654
+            },
+            {
+              "name": "CSD",
+              "description": "Invesco S&P Spin-Off ETF",
+              "cap_size": 8.48528137423857
+            },
+            {
+              "name": "GURU",
+              "description": "Global X Guru Index ETF",
+              "cap_size": 7.810249675906654
+            },
+            {
+              "name": "RLY",
+              "description": "SPDR SSgA Multi-Asset Real Return ETF",
+              "cap_size": 7.810249675906654
+            },
+            {
+              "name": "DEF",
+              "description": "Invesco Defensive Equity ETF",
+              "cap_size": 7.810249675906654
+            },
+            {
+              "name": "RYJ",
+              "description": "Invesco Raymond James SB-1 Equity ETF",
+              "cap_size": 7.0710678118654755
+            },
+            {
+              "name": "FPX",
+              "description": "First Trust US Equity Opportunities ETF",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "FV",
+              "description": "First Trust Dorsey Wright Focus 5 ETF",
+              "cap_size": 10.816653826391969
+            },
+            {
+              "name": "PDP",
+              "description": "Invesco DWA Momentum ETF",
+              "cap_size": 10.816653826391969
+            },
+            {
+              "name": "MOAT",
+              "description": "VanEck Vectors Morningstar Wide Moat ETF",
+              "cap_size": 15.620499351813308
+            }
+          ],
+          "x": 762,
+          "y": 361,
+          "dy": 45,
+          "dx": 14
+        },
+        {
+          "name": "US Large Cap",
+          "children": [
+            {
+              "name": "KLD",
+              "description": null,
+              "cap_size": 12.649110640673518
+            },
+            {
+              "name": "FEX",
+              "description": "First Trust Large Cap Core AlphaDEX Fund",
+              "cap_size": 12.36931687685298
+            },
+            {
+              "name": "PHDG",
+              "description": "Invesco S&P 500 Downside Hedged ETF",
+              "cap_size": 12.36931687685298
+            },
+            {
+              "name": "VQT",
+              "description": "Barclays ETN+ S&P VEQTOR ETN",
+              "cap_size": 8.48528137423857
+            },
+            {
+              "name": "PBP",
+              "description": "Invesco S&P 500 BuyWrite ETF",
+              "cap_size": 8.48528137423857
+            },
+            {
+              "name": "VUSE",
+              "description": "Vident Core U.S. Equity Fund",
+              "cap_size": 7.211102550927978
+            },
+            {
+              "name": "TRND",
+              "description": "Pacer Trendpilot Fund of Funds ETF",
+              "cap_size": 8.48528137423857
+            },
+            {
+              "name": "TILT",
+              "description": "FlexShares Morningstar US Market Factors Tilt Index Fund",
+              "cap_size": 8.48528137423857
+            },
+            {
+              "name": "DSI",
+              "description": "iShares MSCI KLD 400 Social ETF",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "SPHB",
+              "description": "Invesco S&P 500 High Beta ETF",
+              "cap_size": 10.295630140987
+            },
+            {
+              "name": "SPHQ",
+              "description": "Invesco S&P 500 Quality ETF",
+              "cap_size": 17.88854381999832
+            },
+            {
+              "name": "MTUM",
+              "description": "iShares Edge MSCI USA Momentum Factor ETF",
+              "cap_size": 36.359317925395686
+            },
+            {
+              "name": "QUAL",
+              "description": "iShares Edge MSCI USA Quality Factor ETF",
+              "cap_size": 41.10960958218893
+            },
+            {
+              "name": "SPLV",
+              "description": "Invesco S&P 500 Low Volatility ETF",
+              "cap_size": 51.62363799656123
+            },
+            {
+              "name": "USMV",
+              "description": "iShares Edge MSCI Min Vol USA ETF",
+              "cap_size": 56.22277118748239
+            }
+          ],
+          "x": 685,
+          "y": 361,
+          "dx": 77,
+          "dy": 75
+        }
+      ],
+      "x": 684,
+      "y": 346,
+      "dx": 93,
+      "dy": 91
+    },
+    {
+      "name": "Commodity",
+      "children": [
+        {
+          "name": "Agriculture",
+          "children": [
+            {
+              "name": "CORN",
+              "description": "Teucrium Corn Fund",
+              "cap_size": 5.656854249492381
+            },
+            {
+              "name": "JJG",
+              "description": "iPath Series B Bloomberg Grains Subindex Total Return ETN",
+              "cap_size": 5.656854249492381
+            },
+            {
+              "name": "JO",
+              "description": "iPath Series B Bloomberg Coffee Subindex Total Return ETN",
+              "cap_size": 5.656854249492381
+            }
+          ],
+          "x": 781,
+          "y": 328,
+          "dy": 17,
+          "dx": 6
+        },
+        {
+          "name": "Energy",
+          "children": [
+            {
+              "name": "UGA",
+              "description": "United States Gasoline Fund, LP",
+              "cap_size": 12.165525060596439
+            },
+            {
+              "name": "UNG",
+              "description": "United States Natural Gas Fund, LP",
+              "cap_size": 17.69180601295413
+            }
+          ],
+          "x": 764,
+          "y": 328,
+          "dx": 17,
+          "dy": 17
+        },
+        {
+          "name": "Broad Market",
+          "children": [
+            {
+              "name": "DJP",
+              "description": "iPath Bloomberg Commodity Index Total Return(SM) ETN",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "GSG",
+              "description": "iShares S&P GSCI Commodity-Indexed Trust",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "RJI",
+              "description": "ELEMENTS Rogers Intl Cmdty Agri TR ETN",
+              "cap_size": 7.810249675906654
+            },
+            {
+              "name": "DBA",
+              "description": "Invesco DB Agriculture Fund",
+              "cap_size": 8.48528137423857
+            },
+            {
+              "name": "USCI",
+              "description": "United States Commodity Index Fund, LP",
+              "cap_size": 7.810249675906654
+            },
+            {
+              "name": "DBE",
+              "description": "Invesco DB Energy Fund",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "GSP",
+              "description": "iPath S&P GSCI Total Return Index ETN",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "GLTR",
+              "description": "Aberdeen Standard Physical Precious Metals Basket Shares ETF",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "DBB",
+              "description": "Invesco DB Base Metals Fund",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "FTGC",
+              "description": "First Trust Global Tactical Commodity Strategy Fund",
+              "cap_size": 7.810249675906654
+            },
+            {
+              "name": "GSC",
+              "description": "GS Connect S&P GSCI Enhanced Commodity Total Return ETN",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "GCC",
+              "description": "WisdomTree Continuous Commodity Index Fund",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "BCM",
+              "description": "iPath Pure Beta Broad Commodity ETN",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "DJCI",
+              "description": "UBS ETRACS Bloomberg Commodity Index Total Return ETN",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "DBC",
+              "description": "Invesco DB Commodity Index Tracking Fund",
+              "cap_size": 12.206555615733702
+            }
+          ],
+          "x": 764,
+          "y": 296,
+          "dy": 32,
+          "dx": 23
+        },
+        {
+          "name": "Leverage",
+          "children": [
+            {
+              "name": "UWTI",
+              "description": null,
+              "cap_size": 7.0
+            },
+            {
+              "name": "AGQ",
+              "description": "ProShares Ultra Silver",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "BOIL",
+              "description": "ProShares Ultra Bloomberg Natural Gas",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "DGP",
+              "description": "DB Gold Double Long ETN",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "UGL",
+              "description": "ProShares Ultra Gold",
+              "cap_size": 11.180339887498949
+            },
+            {
+              "name": "USLV",
+              "description": "VelocityShares 3x Long Silver ETN Linked to the S&P GSCI Silver Index ER",
+              "cap_size": 15.620499351813308
+            },
+            {
+              "name": "UGLD",
+              "description": "VelocityShares 3x Long Gold ETN Linked to the S&P GSCI Gold Index ER",
+              "cap_size": 19.235384061671343
+            },
+            {
+              "name": "UCO",
+              "description": "ProShares Ultra Bloomberg Crude Oil",
+              "cap_size": 28.635642126552707
+            },
+            {
+              "name": "UGAZ",
+              "description": "VelocityShares 3x Long Natural Gas ETN Linked to the S&P GSCI Natural Gas Index ER",
+              "cap_size": 34.132096331752024
+            }
+          ],
+          "x": 733,
+          "y": 296,
+          "dx": 31,
+          "dy": 49
+        },
+        {
+          "name": "Crude Oil",
+          "children": [
+            {
+              "name": "DBO",
+              "description": "Invesco DB Oil Fund",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "BNO",
+              "description": "United States Brent Oil Fund, LP",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "OIL",
+              "description": "iPath Series B S&P GSCI Crude Oil Total Return Index ETN",
+              "cap_size": 11.40175425099138
+            },
+            {
+              "name": "USO",
+              "description": "United States Oil Fund, LP",
+              "cap_size": 49.24428900898052
+            }
+          ],
+          "x": 733,
+          "y": 263,
+          "dy": 33,
+          "dx": 54
+        },
+        {
+          "name": "Precious Metals",
+          "children": [
+            {
+              "name": "SIVR",
+              "description": "Aberdeen Standard Physical Silver Shares ETF",
+              "cap_size": 7.810249675906654
+            },
+            {
+              "name": "DBP",
+              "description": "Invesco DB Precious Metals Fund",
+              "cap_size": 7.810249675906654
+            },
+            {
+              "name": "PALL",
+              "description": "Aberdeen Standard Physical Palladium Shares ETF",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "PPLT",
+              "description": "Aberdeen Standard Physical Platinum Shares ETF",
+              "cap_size": 9.433981132056603
+            },
+            {
+              "name": "SLV",
+              "description": "iShares Silver Trust",
+              "cap_size": 49.09175083453431
+            }
+          ],
+          "x": 685,
+          "y": 305,
+          "dx": 48,
+          "dy": 40
+        },
+        {
+          "name": "Inverse",
+          "children": [
+            {
+              "name": "DWTI",
+              "description": null,
+              "cap_size": 5.0
+            },
+            {
+              "name": "DTO",
+              "description": "DB Crude Oil Double Short ETN",
+              "cap_size": 6.4031242374328485
+            },
+            {
+              "name": "ZSL",
+              "description": "ProShares UltraShort Silver",
+              "cap_size": 7.810249675906654
+            },
+            {
+              "name": "GLL",
+              "description": "ProShares UltraShort Gold",
+              "cap_size": 7.810249675906654
+            },
+            {
+              "name": "DSLV",
+              "description": "VelocityShares 3x Inverse Silver ETN Linked to the S&P GSCI Silver Index ER",
+              "cap_size": 7.810249675906654
+            },
+            {
+              "name": "DGLD",
+              "description": "VelocityShares 3x Inverse Gold ETN Linked to the S&P GSCI Gold Index ER",
+              "cap_size": 8.48528137423857
+            },
+            {
+              "name": "DZZ",
+              "description": "DB Gold Double Short ETN",
+              "cap_size": 7.810249675906654
+            },
+            {
+              "name": "KOLD",
+              "description": "ProShares UltraShort Bloomberg Natural Gas",
+              "cap_size": 8.48528137423857
+            },
+            {
+              "name": "DGZ",
+              "description": "DB Gold Short ETN",
+              "cap_size": 7.810249675906654
+            },
+            {
+              "name": "DGAZ",
+              "description": "VelocityShares 3x Inverse Natural Gas ETN Linked to the S&P GSCI Natural Gas Index ER",
+              "cap_size": 28.42534080710379
+            },
+            {
+              "name": "SCO",
+              "description": "ProShares UltraShort Bloomberg Crude Oil",
+              "cap_size": 37.64306044943742
+            }
+          ],
+          "x": 685,
+          "y": 263,
+          "dx": 48,
+          "dy": 42
+        },
+        {
+          "name": "Gold",
+          "children": [
+            {
+              "name": "DGL",
+              "description": "Invesco DB Gold Fund",
+              "cap_size": 8.94427190999916
+            },
+            {
+              "name": "SGOL",
+              "description": "Aberdeen Standard Gold ETF Trust",
+              "cap_size": 26.30589287593181
+            },
+            {
+              "name": "IAU",
+              "description": "iShares Gold Trust",
+              "cap_size": 58.008620049092706
+            },
+            {
+              "name": "GLD",
+              "description": "SPDR Gold Shares",
+              "cap_size": 59.64059020499378
+            }
+          ],
+          "x": 685,
+          "y": 216,
+          "dy": 47,
+          "dx": 102
+        }
+      ],
+      "x": 684,
+      "y": 201,
+      "dy": 145,
+      "dx": 104
+    },
+    {
+      "name": "Fixed Income",
+      "children": [
+        {
+          "name": "Inverse",
+          "children": [
+            {
+              "name": "DTYS",
+              "description": null,
+              "cap_size": 9.0
+            },
+            {
+              "name": "PST",
+              "description": "ProShares UltraShort 7-10 Year Treasury",
+              "cap_size": 9.848857801796104
+            },
+            {
+              "name": "TTT",
+              "description": "ProShares UltraPro Short 20+ Year Treasury",
+              "cap_size": 10.295630140987
+            },
+            {
+              "name": "TMV",
+              "description": "Direxion Daily 20+ Year Treasury Bear 3X Shares",
+              "cap_size": 11.40175425099138
+            },
+            {
+              "name": "SJB",
+              "description": "ProShares Short High Yield",
+              "cap_size": 12.806248474865697
+            },
+            {
+              "name": "TBF",
+              "description": "ProShares Short 20+ Year Treasury",
+              "cap_size": 12.806248474865697
+            },
+            {
+              "name": "TBT",
+              "description": "ProShares UltraShort 20+ Year Treasury",
+              "cap_size": 21.2602916254693
+            }
+          ],
+          "x": 665,
+          "y": 398,
+          "dy": 38,
+          "dx": 18
+        },
+        {
+          "name": "Government/Credit",
+          "children": [
+            {
+              "name": "GBF",
+              "description": "iShares Government/Credit Bond ETF",
+              "cap_size": 10.0
+            },
+            {
+              "name": "GVI",
+              "description": "iShares Intermediate Government/Credit Bond ETF",
+              "cap_size": 11.661903789690601
+            },
+            {
+              "name": "BLV",
+              "description": "Vanguard Long-Term Bond Index Fund ETF Shares",
+              "cap_size": 26.1725046566048
+            },
+            {
+              "name": "BIV",
+              "description": "Vanguard Intermediate-Term Bond Index Fund ETF Shares",
+              "cap_size": 30.805843601498726
+            },
+            {
+              "name": "BSV",
+              "description": "Vanguard Short-Term Bond Index Fund ETF Shares",
+              "cap_size": 42.20189569201838
+            }
+          ],
+          "x": 593,
+          "y": 398,
+          "dx": 72,
+          "dy": 38
+        },
+        {
+          "name": "Municipals",
+          "children": [
+            {
+              "name": "BABS",
+              "description": null,
+              "cap_size": 8.246211251235321
+            },
+            {
+              "name": "SMB",
+              "description": "VanEck Vectors AMT-Free Short Municipal Index ETF",
+              "cap_size": 9.433981132056603
+            },
+            {
+              "name": "NYF",
+              "description": "iShares New York Muni Bond ETF",
+              "cap_size": 9.433981132056603
+            },
+            {
+              "name": "BAB",
+              "description": "Invesco Taxable Municipal Bond ETF",
+              "cap_size": 13.416407864998739
+            },
+            {
+              "name": "CMF",
+              "description": "iShares California Muni Bond ETF",
+              "cap_size": 13.038404810405298
+            },
+            {
+              "name": "ITM",
+              "description": "VanEck Vectors AMT-Free Intermediate Municipal Index ETF",
+              "cap_size": 13.038404810405298
+            },
+            {
+              "name": "PZA",
+              "description": "Invesco National AMT-Free Municipal Bond ETF",
+              "cap_size": 14.212670403551895
+            },
+            {
+              "name": "HYMB",
+              "description": "SPDR Nuveen Bloomberg Barclays High Yield Municipal Bond ETF",
+              "cap_size": 15.0
+            },
+            {
+              "name": "SUB",
+              "description": "iShares Short-Term National Muni Bond ETF",
+              "cap_size": 18.439088914585774
+            },
+            {
+              "name": "SHM",
+              "description": "SPDR Nuveen Bloomberg Barclays Short Term Municipal Bond ETF",
+              "cap_size": 17.804493814764857
+            },
+            {
+              "name": "TFI",
+              "description": "SPDR Nuveen Bloomberg Barclays Municipal Bond ETF",
+              "cap_size": 22.67156809750927
+            },
+            {
+              "name": "HYD",
+              "description": "VanEck Vectors High-Yield Municipal Index ETF",
+              "cap_size": 25.0
+            },
+            {
+              "name": "MUB",
+              "description": "iShares National Muni Bond ETF",
+              "cap_size": 46.400431032480725
+            }
+          ],
+          "x": 644,
+          "y": 327,
+          "dy": 71,
+          "dx": 39
+        },
+        {
+          "name": "Sovereign",
+          "children": [
+            {
+              "name": "WIP",
+              "description": "SPDR FTSE International Government Inflation-Protected Bond ETF",
+              "cap_size": 10.63014581273465
+            },
+            {
+              "name": "BWZ",
+              "description": "SPDR Bloomberg Barclays Short Term International Treasury Bond ETF",
+              "cap_size": 9.433981132056603
+            },
+            {
+              "name": "LEMB",
+              "description": "iShares J.P. Morgan EM Local Currency Bond ETF",
+              "cap_size": 8.48528137423857
+            },
+            {
+              "name": "ISHG",
+              "description": "iShares 1-3 Year International Treasury Bond ETF",
+              "cap_size": 8.48528137423857
+            },
+            {
+              "name": "EBND",
+              "description": "SPDR Bloomberg Barclays Emerging Markets Local Bond ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "BWX",
+              "description": "SPDR Bloomberg Barclays International Treasury Bond ETF",
+              "cap_size": 10.63014581273465
+            },
+            {
+              "name": "IGOV",
+              "description": "iShares International Treasury Bond ETF",
+              "cap_size": 10.63014581273465
+            },
+            {
+              "name": "VWOB",
+              "description": "Vanguard Emerging Markets Government Bond Index Fund ETF Shares",
+              "cap_size": 14.422205101855956
+            },
+            {
+              "name": "PCY",
+              "description": "Invesco Emerging Markets Sovereign Debt ETF",
+              "cap_size": 21.95449840010015
+            },
+            {
+              "name": "EMLC",
+              "description": "VanEck Vectors J.P. Morgan EM Local Currency Bond ETF",
+              "cap_size": 24.839484696748443
+            },
+            {
+              "name": "EMB",
+              "description": "iShares J.P. Morgan USD Emerging Markets Bond ETF",
+              "cap_size": 62.625873247404705
+            }
+          ],
+          "x": 593,
+          "y": 327,
+          "dy": 71,
+          "dx": 51
+        },
+        {
+          "name": "Broad Market",
+          "children": [
+            {
+              "name": "LAG",
+              "description": null,
+              "cap_size": 12.36931687685298
+            },
+            {
+              "name": "ALD",
+              "description": null,
+              "cap_size": 12.0
+            },
+            {
+              "name": "DSUM",
+              "description": null,
+              "cap_size": 12.0
+            },
+            {
+              "name": "ELD",
+              "description": "WisdomTree Emerging Markets Local Debt Fund",
+              "cap_size": 12.649110640673518
+            },
+            {
+              "name": "VBND",
+              "description": "Vident Core U.S. Bond Strategy ETF",
+              "cap_size": 12.649110640673518
+            },
+            {
+              "name": "ILTB",
+              "description": "iShares Core 10+ Year USD Bond ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "RIGS",
+              "description": "RiverFront Strategic Income Fund",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "IGHG",
+              "description": "ProShares Investment Grade-Interest Rate Hedged",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "MINC",
+              "description": "AdvisorShares Newfleet Multi-Sector Income ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "EMHY",
+              "description": "iShares J.P. Morgan EM High Yield Bond ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "ISTB",
+              "description": "iShares Core 1-5 Year USD Bond ETF",
+              "cap_size": 19.697715603592208
+            },
+            {
+              "name": "BOND",
+              "description": "PIMCO Active Bond Exchange-Traded Fund",
+              "cap_size": 17.804493814764857
+            },
+            {
+              "name": "GSY",
+              "description": "Invesco Ultra Short Duration ETF",
+              "cap_size": 21.2602916254693
+            },
+            {
+              "name": "SCHZ",
+              "description": "Schwab U.S. Aggregate Bond ETF",
+              "cap_size": 26.92582403567252
+            },
+            {
+              "name": "FTSM",
+              "description": "First Trust Enhanced Short Maturity ETF",
+              "cap_size": 29.206163733020468
+            },
+            {
+              "name": "NEAR",
+              "description": "iShares Short Maturity Bond ETF",
+              "cap_size": 29.732137494637012
+            },
+            {
+              "name": "FLOT",
+              "description": "iShares Floating Rate Bond ETF",
+              "cap_size": 34.40930106817051
+            },
+            {
+              "name": "BNDX",
+              "description": "Vanguard Total International Bond Index Fund ETF Shares",
+              "cap_size": 41.677331968349414
+            },
+            {
+              "name": "MINT",
+              "description": "PIMCO Enhanced Short Maturity Active Exchange-Traded Fund",
+              "cap_size": 46.22769732530488
+            },
+            {
+              "name": "BND",
+              "description": "Vanguard Total Bond Market Index Fund ETF Shares",
+              "cap_size": 65.11528238439882
+            },
+            {
+              "name": "AGG",
+              "description": "iShares Core U.S. Aggregate Bond ETF",
+              "cap_size": 65.11528238439882
+            }
+          ],
+          "x": 593,
+          "y": 216,
+          "dy": 111,
+          "dx": 90
+        },
+        {
+          "name": "Corporate",
+          "children": [
+            {
+              "name": "CSJ",
+              "description": null,
+              "cap_size": 7.0
+            },
+            {
+              "name": "CIU",
+              "description": null,
+              "cap_size": 7.0
+            },
+            {
+              "name": "SCPB",
+              "description": null,
+              "cap_size": 7.0
+            },
+            {
+              "name": "CLY",
+              "description": null,
+              "cap_size": 7.0
+            },
+            {
+              "name": "BSJF",
+              "description": null,
+              "cap_size": 7.0
+            },
+            {
+              "name": "BSJG",
+              "description": null,
+              "cap_size": 7.0
+            },
+            {
+              "name": "CRED",
+              "description": null,
+              "cap_size": 7.0
+            },
+            {
+              "name": "LWC",
+              "description": null,
+              "cap_size": 7.0
+            },
+            {
+              "name": "ITR",
+              "description": null,
+              "cap_size": 7.0
+            },
+            {
+              "name": "BSCG",
+              "description": null,
+              "cap_size": 7.0
+            },
+            {
+              "name": "BSCH",
+              "description": null,
+              "cap_size": 7.0
+            },
+            {
+              "name": "BSJH",
+              "description": null,
+              "cap_size": 7.0
+            },
+            {
+              "name": "ENGN",
+              "description": null,
+              "cap_size": 7.0
+            },
+            {
+              "name": "QLTB",
+              "description": null,
+              "cap_size": 7.0
+            },
+            {
+              "name": "BSCI",
+              "description": null,
+              "cap_size": 7.0
+            },
+            {
+              "name": "BSCF",
+              "description": null,
+              "cap_size": 7.0
+            },
+            {
+              "name": "BSJI",
+              "description": null,
+              "cap_size": 7.0
+            },
+            {
+              "name": "BSCJ",
+              "description": null,
+              "cap_size": 7.0
+            },
+            {
+              "name": "HYLD",
+              "description": "High Yield ETF",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "CORP",
+              "description": "PIMCO Investment Grade Corporate Bond Index Exchange-Traded Fund",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "IBND",
+              "description": "SPDR Bloomberg Barclays International Corporate Bond ETF",
+              "cap_size": 10.0
+            },
+            {
+              "name": "IHY",
+              "description": "VanEck Vectors International High Yield Bond ETF",
+              "cap_size": 9.433981132056603
+            },
+            {
+              "name": "SPFF",
+              "description": "Global X SuperIncome Preferred ETF",
+              "cap_size": 10.0
+            },
+            {
+              "name": "HYEM",
+              "description": "VanEck Vectors Emerging Markets High Yield Bond ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "HYHG",
+              "description": "ProShares High Yield-Interest Rate Hedged",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "PICB",
+              "description": "Invesco International Corporate Bond ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "SNLN",
+              "description": "Highland/iBoxx Senior Loan ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "PFXF",
+              "description": "VanEck Vectors Preferred Securities ex Financials ETF",
+              "cap_size": 10.0
+            },
+            {
+              "name": "HYXU",
+              "description": "iShares International High Yield Bond ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "GHYG",
+              "description": "iShares US & Intl High Yield Corp Bond ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "PHB",
+              "description": "Invesco Fundamental High Yield Corporate Bond ETF",
+              "cap_size": 10.63014581273465
+            },
+            {
+              "name": "VRP",
+              "description": "Invesco Variable Rate Preferred ETF",
+              "cap_size": 11.313708498984761
+            },
+            {
+              "name": "BSCK",
+              "description": "Invesco BulletShares 2020 Corporate Bond ETF",
+              "cap_size": 11.313708498984761
+            },
+            {
+              "name": "PSK",
+              "description": "SPDR Wells Fargo Preferred Stock ETF",
+              "cap_size": 12.206555615733702
+            },
+            {
+              "name": "PGF",
+              "description": "Invesco Financial Preferred ETF",
+              "cap_size": 12.206555615733702
+            },
+            {
+              "name": "QLTA",
+              "description": "iShares Aaa - A Rated Corporate Bond ETF",
+              "cap_size": 12.206555615733702
+            },
+            {
+              "name": "FTSL",
+              "description": "First Trust Senior Loan Fund",
+              "cap_size": 13.45362404707371
+            },
+            {
+              "name": "HYS",
+              "description": "PIMCO 0-5 Year High Yield Corporate Bond Index Exchange-Traded Fund",
+              "cap_size": 18.867962264113206
+            },
+            {
+              "name": "SRLN",
+              "description": "SPDR Blackstone / GSO Senior Loan ETF",
+              "cap_size": 19.72308292331602
+            },
+            {
+              "name": "FPE",
+              "description": "First Trust Preferred Securities and Income ETF",
+              "cap_size": 19.849433241279208
+            },
+            {
+              "name": "PGX",
+              "description": "Invesco Preferred ETF",
+              "cap_size": 25.0
+            },
+            {
+              "name": "VCLT",
+              "description": "Vanguard Long-Term Corporate Bond Index Fund ETF Shares",
+              "cap_size": 28.42534080710379
+            },
+            {
+              "name": "SHYG",
+              "description": "iShares 0-5 Year High Yield Corporate Bond ETF",
+              "cap_size": 28.42534080710379
+            },
+            {
+              "name": "CWB",
+              "description": "SPDR Bloomberg Barclays Convertible Securities ETF",
+              "cap_size": 29.068883707497267
+            },
+            {
+              "name": "SJNK",
+              "description": "SPDR Bloomberg Barclays Short Term High Yield Bond ETF",
+              "cap_size": 34.828149534535996
+            },
+            {
+              "name": "BKLN",
+              "description": "Invesco Senior Loan ETF",
+              "cap_size": 42.638011210655684
+            },
+            {
+              "name": "PFF",
+              "description": "iShares Preferred and Income Securities ETF",
+              "cap_size": 49.57822102496216
+            },
+            {
+              "name": "VCIT",
+              "description": "Vanguard Intermediate-Term Corporate Bond Index Fund ETF Shares",
+              "cap_size": 55.80322571321482
+            },
+            {
+              "name": "VCSH",
+              "description": "Vanguard Short-Term Corporate Bond Index Fund ETF Shares",
+              "cap_size": 57.0087712549569
+            },
+            {
+              "name": "HYG",
+              "description": "iShares iBoxx $ High Yield Corporate Bond ETF",
+              "cap_size": 65.06919393998976
+            },
+            {
+              "name": "JNK",
+              "description": "SPDR Bloomberg Barclays High Yield Bond ETF",
+              "cap_size": 65.43699259593154
+            },
+            {
+              "name": "LQD",
+              "description": "iShares iBoxx $ Investment Grade Corporate Bond ETF",
+              "cap_size": 65.43699259593154
+            }
+          ],
+          "x": 407,
+          "y": 341,
+          "dx": 186,
+          "dy": 95
+        },
+        {
+          "name": "U.S. Government",
+          "children": [
+            {
+              "name": "TLO",
+              "description": null,
+              "cap_size": 2.0
+            },
+            {
+              "name": "IPE",
+              "description": null,
+              "cap_size": 2.0
+            },
+            {
+              "name": "ITE",
+              "description": null,
+              "cap_size": 2.0
+            },
+            {
+              "name": "TUZ",
+              "description": null,
+              "cap_size": 2.0
+            },
+            {
+              "name": "UST",
+              "description": "ProShares Ultra 7-10 Year Treasury",
+              "cap_size": 2.0
+            },
+            {
+              "name": "TDTT",
+              "description": "FlexShares iBoxx 3-Year Target Duration TIPS Index Fund",
+              "cap_size": 7.280109889280518
+            },
+            {
+              "name": "STPZ",
+              "description": "PIMCO 1-5 Year U.S. TIPS Index Exchange-Traded Fund",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "TDTF",
+              "description": "FlexShares iBoxx 5-Year Target Duration TIPS Index Fund",
+              "cap_size": 9.433981132056603
+            },
+            {
+              "name": "UBT",
+              "description": "ProShares Ultra 20+ Year Treasury",
+              "cap_size": 9.433981132056603
+            },
+            {
+              "name": "AGZ",
+              "description": "iShares Agency Bond ETF",
+              "cap_size": 10.816653826391969
+            },
+            {
+              "name": "ZROZ",
+              "description": "PIMCO 25+ Year Zero Coupon U.S. Treasury Index Exchange-Traded Fund",
+              "cap_size": 14.212670403551895
+            },
+            {
+              "name": "STIP",
+              "description": "iShares 0-5 Year TIPS Bond ETF",
+              "cap_size": 16.55294535724685
+            },
+            {
+              "name": "TLH",
+              "description": "iShares 10-20 Year Treasury Bond ETF",
+              "cap_size": 18.027756377319946
+            },
+            {
+              "name": "SCHR",
+              "description": "Schwab Intermediate-Term U.S. Treasury ETF",
+              "cap_size": 21.2602916254693
+            },
+            {
+              "name": "VGLT",
+              "description": "Vanguard Long-Term Treasury Index Fund ETF Shares",
+              "cap_size": 24.08318915758459
+            },
+            {
+              "name": "VTIP",
+              "description": "Vanguard Short-Term Inflation-Protected Securities Index Fund ETF Shares",
+              "cap_size": 24.08318915758459
+            },
+            {
+              "name": "TMF",
+              "description": "Direxion Daily 20+ Year Treasury Bull 3X Shares",
+              "cap_size": 24.758836806279895
+            },
+            {
+              "name": "SCHP",
+              "description": "Schwab U.S. TIPS ETF",
+              "cap_size": 27.018512172212592
+            },
+            {
+              "name": "EDV",
+              "description": "Vanguard Extended Duration Treasury Index Fund ETF Shares",
+              "cap_size": 26.40075756488817
+            },
+            {
+              "name": "VGIT",
+              "description": "Vanguard Intermediate-Term Treasury Index Fund ETF Shares",
+              "cap_size": 27.018512172212592
+            },
+            {
+              "name": "VMBS",
+              "description": "Vanguard Mortgage-Backed Securities Index Fund ETF Shares",
+              "cap_size": 30.23243291566195
+            },
+            {
+              "name": "SCHO",
+              "description": "Schwab Short-Term U.S. Treasury ETF",
+              "cap_size": 30.23243291566195
+            },
+            {
+              "name": "VGSH",
+              "description": "Vanguard Short-Term Treasury Index Fund ETF Shares",
+              "cap_size": 33.97057550292606
+            },
+            {
+              "name": "MBB",
+              "description": "iShares MBS ETF",
+              "cap_size": 54.120236510939236
+            },
+            {
+              "name": "IEI",
+              "description": "iShares 3-7 Year Treasury Bond ETF",
+              "cap_size": 50.20956084253277
+            },
+            {
+              "name": "GOVT",
+              "description": "iShares U.S. Treasury Bond ETF",
+              "cap_size": 52.40229002629561
+            },
+            {
+              "name": "TIP",
+              "description": "iShares TIPS Bond ETF",
+              "cap_size": 59.81638571495272
+            },
+            {
+              "name": "TLT",
+              "description": "iShares 20+ Year Treasury Bond ETF",
+              "cap_size": 69.6419413859206
+            },
+            {
+              "name": "SHV",
+              "description": "iShares Short Treasury Bond ETF",
+              "cap_size": 68.24221567329127
+            },
+            {
+              "name": "IEF",
+              "description": "iShares 7-10 Year Treasury Bond ETF",
+              "cap_size": 68.24221567329127
+            },
+            {
+              "name": "SHY",
+              "description": "iShares 1-3 Year Treasury Bond ETF",
+              "cap_size": 68.24221567329127
+            },
+            {
+              "name": "BIL",
+              "description": "SPDR Bloomberg Barclays 1-3 Month T-Bill ETF",
+              "cap_size": 68.24221567329127
+            }
+          ],
+          "x": 407,
+          "y": 216,
+          "dx": 186,
+          "dy": 125
+        }
+      ],
+      "x": 406,
+      "y": 201,
+      "dx": 278,
+      "dy": 236
+    },
+    {
+      "name": "International",
+      "children": [
+        {
+          "name": "Africa",
+          "children": [
+            {
+              "name": "AFK",
+              "description": "VanEck Vectors Africa Index ETF",
+              "cap_size": 11.704699910719626
+            },
+            {
+              "name": "EZA",
+              "description": "iShares MSCI South Africa ETF",
+              "cap_size": 14.212670403551895
+            }
+          ],
+          "x": 681,
+          "y": 184,
+          "dy": 16,
+          "dx": 15
+        },
+        {
+          "name": "Canada",
+          "children": [
+            {
+              "name": "FCAN",
+              "description": "First Trust Canada AlphaDEX Fund",
+              "cap_size": 13.341664064126334
+            },
+            {
+              "name": "EWC",
+              "description": "iShares MSCI Canada ETF",
+              "cap_size": 28.178005607210743
+            }
+          ],
+          "x": 681,
+          "y": 151,
+          "dy": 33,
+          "dx": 15
+        },
+        {
+          "name": "Latin America",
+          "children": [
+            {
+              "name": "EPU",
+              "description": "iShares MSCI Peru ETF",
+              "cap_size": 9.433981132056603
+            },
+            {
+              "name": "GXG",
+              "description": "Global X MSCI Colombia ETF",
+              "cap_size": 8.94427190999916
+            },
+            {
+              "name": "ECH",
+              "description": "iShares MSCI Chile Capped ETF",
+              "cap_size": 10.63014581273465
+            },
+            {
+              "name": "ILF",
+              "description": "iShares Latin America 40 ETF",
+              "cap_size": 18.35755975068582
+            },
+            {
+              "name": "EWW",
+              "description": "iShares MSCI Mexico Capped ETF",
+              "cap_size": 27.018512172212592
+            }
+          ],
+          "x": 642,
+          "y": 178,
+          "dx": 39,
+          "dy": 22
+        },
+        {
+          "name": "Russia",
+          "children": [
+            {
+              "name": "RUSS",
+              "description": null,
+              "cap_size": 7.0
+            },
+            {
+              "name": "RUSL",
+              "description": "Direxion Daily Russia Bull 2X Shares",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "RSXJ",
+              "description": "VanEck Vectors Russia Small-Cap ETF",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "ERUS",
+              "description": "iShares MSCI Russia Capped ETF",
+              "cap_size": 9.433981132056603
+            },
+            {
+              "name": "RSX",
+              "description": "VanEck Vectors Russia ETF",
+              "cap_size": 38.8329756778952
+            }
+          ],
+          "x": 642,
+          "y": 151,
+          "dx": 39,
+          "dy": 27
+        },
+        {
+          "name": "India",
+          "children": [
+            {
+              "name": "INP",
+              "description": null,
+              "cap_size": 6.0
+            },
+            {
+              "name": "PIN",
+              "description": "Invesco India ETF",
+              "cap_size": 7.810249675906654
+            },
+            {
+              "name": "INDY",
+              "description": "iShares India 50 ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "SCIF",
+              "description": "VanEck Vectors India Small-Cap Index ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "INDL",
+              "description": "Direxion Daily MSCI India Bull 3x Shares",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "EPI",
+              "description": "WisdomTree India Earnings Fund",
+              "cap_size": 17.69180601295413
+            },
+            {
+              "name": "INDA",
+              "description": "iShares MSCI India ETF",
+              "cap_size": 41.23105625617661
+            }
+          ],
+          "x": 614,
+          "y": 151,
+          "dx": 28,
+          "dy": 49
+        },
+        {
+          "name": "Brazil",
+          "children": [
+            {
+              "name": "BRF",
+              "description": "VanEck Vectors Brazil Small-Cap ETF",
+              "cap_size": 9.848857801796104
+            },
+            {
+              "name": "BZQ",
+              "description": "ProShares UltraShort MSCI Brazil Capped",
+              "cap_size": 13.601470508735444
+            },
+            {
+              "name": "BRZU",
+              "description": "Direxion Daily MSCI Brazil Bull 2X Shares",
+              "cap_size": 15.524174696260024
+            },
+            {
+              "name": "EWZ",
+              "description": "iShares MSCI Brazil Capped ETF",
+              "cap_size": 68.79680225126747
+            }
+          ],
+          "x": 657,
+          "y": 84,
+          "dy": 67,
+          "dx": 39
+        },
+        {
+          "name": "Japan",
+          "children": [
+            {
+              "name": "NKY",
+              "description": null,
+              "cap_size": 8.0
+            },
+            {
+              "name": "DBJP",
+              "description": "Xtrackers MSCI Japan Hedged Equity ETF",
+              "cap_size": 8.94427190999916
+            },
+            {
+              "name": "DFJ",
+              "description": "WisdomTree Japan SmallCap Dividend Fund",
+              "cap_size": 9.433981132056603
+            },
+            {
+              "name": "DXJS",
+              "description": "WisdomTree Japan Hedged SmallCap Equity Fund",
+              "cap_size": 10.295630140987
+            },
+            {
+              "name": "HEWJ",
+              "description": "iShares Currency Hedged MSCI Japan ETF",
+              "cap_size": 9.848857801796104
+            },
+            {
+              "name": "DXJ",
+              "description": "WisdomTree Japan Hedged Equity Fund",
+              "cap_size": 25.632011235952593
+            },
+            {
+              "name": "EWJ",
+              "description": "iShares MSCI Japan ETF",
+              "cap_size": 60.876925020897694
+            }
+          ],
+          "x": 614,
+          "y": 84,
+          "dy": 67,
+          "dx": 43
+        },
+        {
+          "name": "Global Ex-U.S.",
+          "children": [
+            {
+              "name": "DWX",
+              "description": "SPDR S&P International Dividend ETF",
+              "cap_size": 10.816653826391969
+            },
+            {
+              "name": "PID",
+              "description": "Invesco International Dividend Achievers ETF",
+              "cap_size": 8.94427190999916
+            },
+            {
+              "name": "IQDF",
+              "description": "FlexShares International Quality Dividend Index Fund",
+              "cap_size": 9.433981132056603
+            },
+            {
+              "name": "IQDE",
+              "description": "FlexShares International Quality Dividend Defensive Index Fund",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "IQDY",
+              "description": "FlexShares International Quality Dividend Dynamic Index Fund",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "VIDI",
+              "description": "Vident International Equity Fund",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "IFV",
+              "description": "First Trust Dorsey Wright International Focus 5 ETF",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "CWI",
+              "description": "SPDR MSCI ACWI ex-US ETF",
+              "cap_size": 11.313708498984761
+            },
+            {
+              "name": "RWX",
+              "description": "SPDR Dow Jones International Real Estate ETF",
+              "cap_size": 13.601470508735444
+            },
+            {
+              "name": "VSS",
+              "description": "Vanguard FTSE All-World ex-US Small-Cap Index Fund ETF Shares",
+              "cap_size": 19.235384061671343
+            },
+            {
+              "name": "VNQI",
+              "description": "Vanguard Global ex-U.S. Real Estate Index Fund ETF Shares",
+              "cap_size": 19.72308292331602
+            },
+            {
+              "name": "ACWX",
+              "description": "iShares MSCI ACWI ex U.S. ETF",
+              "cap_size": 29.206163733020468
+            },
+            {
+              "name": "IXUS",
+              "description": "iShares Core MSCI Total International Stock ETF",
+              "cap_size": 31.144823004794873
+            },
+            {
+              "name": "VXUS",
+              "description": "Vanguard Total International Stock Index Fund ETF Shares",
+              "cap_size": 46.51881339845203
+            },
+            {
+              "name": "VEU",
+              "description": "Vanguard FTSE All-World ex-US Index Fund ETF Shares",
+              "cap_size": 51.03920062069938
+            }
+          ],
+          "x": 524,
+          "y": 145,
+          "dx": 90,
+          "dy": 55
+        },
+        {
+          "name": "China",
+          "children": [
+            {
+              "name": "HAO",
+              "description": null,
+              "cap_size": 6.0
+            },
+            {
+              "name": "PEK",
+              "description": "VanEck Vectors ChinaAMC CSI 300 ETF",
+              "cap_size": 7.211102550927978
+            },
+            {
+              "name": "FXP",
+              "description": "ProShares UltraShort FTSE China 50",
+              "cap_size": 8.48528137423857
+            },
+            {
+              "name": "PGJ",
+              "description": "Invesco Golden Dragon China ETF",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "XPP",
+              "description": "ProShares Ultra FTSE China 50",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "ASHS",
+              "description": "Xtrackers Harvest CSI 500 China-A Shares Small Cap ETF",
+              "cap_size": 8.94427190999916
+            },
+            {
+              "name": "GXC",
+              "description": "SPDR S&P China ETF",
+              "cap_size": 10.0
+            },
+            {
+              "name": "YINN",
+              "description": "Direxion Daily FTSE China Bull 3X Shares",
+              "cap_size": 16.401219466856727
+            },
+            {
+              "name": "YANG",
+              "description": "Direxion Daily FTSE China Bear 3X Shares",
+              "cap_size": 17.204650534085253
+            },
+            {
+              "name": "ASHR",
+              "description": "Xtrackers Harvest CSI 300 China A-Shares ETF",
+              "cap_size": 43.829214001622255
+            },
+            {
+              "name": "MCHI",
+              "description": "iShares MSCI China ETF",
+              "cap_size": 48.010415536631214
+            },
+            {
+              "name": "FXI",
+              "description": "iShares China Large-Cap ETF",
+              "cap_size": 61.84658438426491
+            }
+          ],
+          "x": 524,
+          "y": 84,
+          "dx": 90,
+          "dy": 61
+        },
+        {
+          "name": "Asia-Pacific",
+          "children": [
+            {
+              "name": "VNM",
+              "description": "VanEck Vectors Vietnam ETF",
+              "cap_size": 7.615773105863909
+            },
+            {
+              "name": "GMF",
+              "description": "SPDR S&P Emerging Asia Pacific ETF",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "EPHE",
+              "description": "iShares MSCI Philippines ETF",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "FPA",
+              "description": "First Trust Asia Pacific Ex-Japan AlphaDEX Fund",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "IDX",
+              "description": "VanEck Vectors Indonesia Index ETF",
+              "cap_size": 8.48528137423857
+            },
+            {
+              "name": "AIA",
+              "description": "iShares Asia 50 ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "IPAC",
+              "description": "iShares Core MSCI Pacific ETF",
+              "cap_size": 8.48528137423857
+            },
+            {
+              "name": "FHK",
+              "description": "First Trust Hong Kong AlphaDEX Fund",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "FNI",
+              "description": "First Trust Chindia ETF",
+              "cap_size": 8.48528137423857
+            },
+            {
+              "name": "EEMA",
+              "description": "iShares MSCI Emerging Markets Asia ETF",
+              "cap_size": 8.48528137423857
+            },
+            {
+              "name": "ENZL",
+              "description": "iShares MSCI New Zealand ETF",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "THD",
+              "description": "iShares MSCI Thailand Capped ETF",
+              "cap_size": 9.899494936611665
+            },
+            {
+              "name": "EWM",
+              "description": "iShares MSCI Malaysia ETF",
+              "cap_size": 9.899494936611665
+            },
+            {
+              "name": "EIDO",
+              "description": "iShares MSCI Indonesia ETF",
+              "cap_size": 12.206555615733702
+            },
+            {
+              "name": "EWS",
+              "description": "iShares MSCI Singapore Capped ETF",
+              "cap_size": 12.206555615733702
+            },
+            {
+              "name": "EPP",
+              "description": "iShares MSCI Pacific ex Japan ETF",
+              "cap_size": 15.620499351813308
+            },
+            {
+              "name": "VPL",
+              "description": "Vanguard FTSE Pacific Index Fund ETF Shares",
+              "cap_size": 19.849433241279208
+            },
+            {
+              "name": "EWA",
+              "description": "iShares MSCI Australia ETF",
+              "cap_size": 21.93171219946131
+            },
+            {
+              "name": "AAXJ",
+              "description": "iShares MSCI All Country Asia ex Japan ETF",
+              "cap_size": 30.886890422961002
+            },
+            {
+              "name": "EWH",
+              "description": "iShares MSCI Hong Kong ETF",
+              "cap_size": 37.48332962798263
+            },
+            {
+              "name": "EWT",
+              "description": "iShares MSCI Taiwan Capped ETF",
+              "cap_size": 45.221676218380054
+            },
+            {
+              "name": "EWY",
+              "description": "iShares MSCI South Korea Capped ETF",
+              "cap_size": 47.634021455258214
+            }
+          ],
+          "x": 616,
+          "y": 15,
+          "dy": 69,
+          "dx": 80
+        },
+        {
+          "name": "Europe",
+          "children": [
+            {
+              "name": "FEU",
+              "description": null,
+              "cap_size": 3.0
+            },
+            {
+              "name": "FIEU",
+              "description": null,
+              "cap_size": 3.0
+            },
+            {
+              "name": "TUR",
+              "description": "iShares MSCI Turkey ETF",
+              "cap_size": 3.0
+            },
+            {
+              "name": "DBEU",
+              "description": "Xtrackers MSCI Europe Hedged Equity ETF",
+              "cap_size": 9.486832980505138
+            },
+            {
+              "name": "DFE",
+              "description": "WisdomTree Europe SmallCap Dividend Fund",
+              "cap_size": 10.295630140987
+            },
+            {
+              "name": "FEP",
+              "description": "First Trust Europe AlphaDEX Fund",
+              "cap_size": 9.848857801796104
+            },
+            {
+              "name": "EPOL",
+              "description": "iShares MSCI Poland ETF",
+              "cap_size": 8.48528137423857
+            },
+            {
+              "name": "GREK",
+              "description": "Global X MSCI Greece ETF",
+              "cap_size": 8.48528137423857
+            },
+            {
+              "name": "EWN",
+              "description": "iShares MSCI Netherlands ETF",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "FKU",
+              "description": "First Trust United Kingdom AlphaDEX Fund",
+              "cap_size": 9.433981132056603
+            },
+            {
+              "name": "NORW",
+              "description": "Global X MSCI Norway ETF",
+              "cap_size": 9.899494936611665
+            },
+            {
+              "name": "FSZ",
+              "description": "First Trust Switzerland AlphaDEX Fund",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "HEWG",
+              "description": "iShares Currency Hedged MSCI Germany ETF",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "EWK",
+              "description": "iShares MSCI Belgium Capped ETF",
+              "cap_size": 9.899494936611665
+            },
+            {
+              "name": "FDD",
+              "description": "First Trust STOXX European Select Dividend Index Fund",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "EIRL",
+              "description": "iShares MSCI Ireland ETF",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "EPV",
+              "description": "ProShares UltraShort FTSE Europe",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "EDEN",
+              "description": "iShares MSCI Denmark ETF",
+              "cap_size": 10.0
+            },
+            {
+              "name": "EWO",
+              "description": "iShares MSCI Austria Capped ETF",
+              "cap_size": 9.433981132056603
+            },
+            {
+              "name": "EWD",
+              "description": "iShares MSCI Sweden ETF",
+              "cap_size": 9.433981132056603
+            },
+            {
+              "name": "EUFN",
+              "description": "iShares MSCI Europe Financials ETF",
+              "cap_size": 11.313708498984761
+            },
+            {
+              "name": "HEZU",
+              "description": "iShares Currency Hedged MSCI Eurozone ETF",
+              "cap_size": 12.806248474865697
+            },
+            {
+              "name": "EWI",
+              "description": "iShares MSCI Italy Capped ETF",
+              "cap_size": 12.806248474865697
+            },
+            {
+              "name": "IEV",
+              "description": "iShares Europe ETF",
+              "cap_size": 12.806248474865697
+            },
+            {
+              "name": "EWP",
+              "description": "iShares MSCI Spain Capped ETF",
+              "cap_size": 16.401219466856727
+            },
+            {
+              "name": "EWQ",
+              "description": "iShares MSCI France ETF",
+              "cap_size": 17.029386365926403
+            },
+            {
+              "name": "HEDJ",
+              "description": "WisdomTree Europe Hedged Equity Fund",
+              "cap_size": 17.029386365926403
+            },
+            {
+              "name": "IEUR",
+              "description": "iShares Core MSCI Europe ETF",
+              "cap_size": 17.804493814764857
+            },
+            {
+              "name": "EWL",
+              "description": "iShares MSCI Switzerland ETF",
+              "cap_size": 21.095023109728988
+            },
+            {
+              "name": "FEZ",
+              "description": "SPDR EURO STOXX 50 ETF",
+              "cap_size": 29.410882339705484
+            },
+            {
+              "name": "EWU",
+              "description": "iShares MSCI United Kingdom ETF",
+              "cap_size": 28.844410203711913
+            },
+            {
+              "name": "EWG",
+              "description": "iShares MSCI Germany ETF",
+              "cap_size": 31.89043743820395
+            },
+            {
+              "name": "EZU",
+              "description": "iShares MSCI Eurozone ETF",
+              "cap_size": 43.266615305567875
+            },
+            {
+              "name": "VGK",
+              "description": "Vanguard FTSE Europe Index Fund ETF Shares",
+              "cap_size": 48.16637831516918
+            }
+          ],
+          "x": 524,
+          "y": 15,
+          "dy": 69,
+          "dx": 92
+        },
+        {
+          "name": "Emerging Markets",
+          "children": [
+            {
+              "name": "BBRC",
+              "description": null,
+              "cap_size": 11.045361017187261
+            },
+            {
+              "name": "GMM",
+              "description": null,
+              "cap_size": 11.0
+            },
+            {
+              "name": "BIK",
+              "description": null,
+              "cap_size": 11.0
+            },
+            {
+              "name": "FM",
+              "description": "iShares MSCI Frontier 100 ETF",
+              "cap_size": 11.704699910719626
+            },
+            {
+              "name": "FEM",
+              "description": "First Trust Emerging Markets AlphaDEX Fund",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "ECON",
+              "description": "Columbia Emerging Markets Consumer ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "PIE",
+              "description": "Invesco DWA Emerging Markets Momentum ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "EWX",
+              "description": "SPDR S&P Emerging Markets Small Cap ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "EDIV",
+              "description": "SPDR S&P Emerging Markets Dividend ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "DVYE",
+              "description": "iShares Emerging Markets Dividend ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "FEMS",
+              "description": "First Trust Emerging Markets Small Cap AlphaDEX Fund",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "BKF",
+              "description": "iShares MSCI BRIC ETF",
+              "cap_size": 7.810249675906654
+            },
+            {
+              "name": "EEV",
+              "description": "ProShares UltraShort MSCI Emerging Markets",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "TLTE",
+              "description": "FlexShares Morningstar Emerging Markets Factor Tilt Index Fund",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "EELV",
+              "description": "Invesco S&P Emerging Markets Low Volatility ETF",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "DBEM",
+              "description": "Xtrackers MSCI Emerging Markets Hedged Equity ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "EEMS",
+              "description": "iShares MSCI Emerging Markets Small-Cap ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "EDC",
+              "description": "Direxion Daily MSCI Emerging Markets Bull 3X Shares",
+              "cap_size": 9.899494936611665
+            },
+            {
+              "name": "EUM",
+              "description": "ProShares Short MSCI Emerging Markets",
+              "cap_size": 10.0
+            },
+            {
+              "name": "PXH",
+              "description": "Invesco FTSE RAFI Emerging Markets ETF",
+              "cap_size": 12.806248474865697
+            },
+            {
+              "name": "DEM",
+              "description": "WisdomTree Emerging Markets High Dividend Fund",
+              "cap_size": 12.806248474865697
+            },
+            {
+              "name": "DGS",
+              "description": "WisdomTree Emerging Markets SmallCap Dividend Fund",
+              "cap_size": 13.45362404707371
+            },
+            {
+              "name": "FNDE",
+              "description": "Schwab Fundamental Emerging Markets Large Company Index ETF",
+              "cap_size": 13.45362404707371
+            },
+            {
+              "name": "EDZ",
+              "description": "Direxion Daily MSCI Emerging Markets Bear 3X Shares",
+              "cap_size": 17.204650534085253
+            },
+            {
+              "name": "EEMV",
+              "description": "iShares Edge MSCI Min Vol Emerging Markets ETF",
+              "cap_size": 22.360679774997898
+            },
+            {
+              "name": "SCHE",
+              "description": "Schwab Emerging Markets Equity ETF",
+              "cap_size": 29.732137494637012
+            },
+            {
+              "name": "EEM",
+              "description": "iShares MSCI Emerging Markets ETF",
+              "cap_size": 66.03786792439622
+            },
+            {
+              "name": "VWO",
+              "description": "Vanguard FTSE Emerging Markets Index Fund ETF Shares",
+              "cap_size": 68.09552114493287
+            },
+            {
+              "name": "IEMG",
+              "description": "iShares Core MSCI Emerging Markets ETF",
+              "cap_size": 67.60177512462228
+            }
+          ],
+          "x": 407,
+          "y": 120,
+          "dx": 117,
+          "dy": 80
+        },
+        {
+          "name": "Developed Markets",
+          "children": [
+            {
+              "name": "GWL",
+              "description": null,
+              "cap_size": 11.40175425099138
+            },
+            {
+              "name": "IFGL",
+              "description": "iShares International Developed Real Estate ETF",
+              "cap_size": 11.704699910719626
+            },
+            {
+              "name": "EFZ",
+              "description": "ProShares Short MSCI EAFE",
+              "cap_size": 10.0
+            },
+            {
+              "name": "TLTD",
+              "description": "FlexShares Morningstar Developed Markets ex-US Factor Tilt Index Fund",
+              "cap_size": 9.433981132056603
+            },
+            {
+              "name": "GWX",
+              "description": "SPDR S&P International Small Cap ETF",
+              "cap_size": 10.0
+            },
+            {
+              "name": "PIZ",
+              "description": "Invesco DWA Developed Markets Momentum ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "DWM",
+              "description": "WisdomTree International Equity Fund",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "DTH",
+              "description": "WisdomTree International High Dividend Fund",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "DOL",
+              "description": "WisdomTree International LargeCap Dividend Fund",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "DZK",
+              "description": "Direxion Daily MSCI Developed Markets Bull 3X Shares",
+              "cap_size": 10.0
+            },
+            {
+              "name": "IDOG",
+              "description": "ALPS International Sector Dividend Dogs ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "DOO",
+              "description": "WisdomTree International Dividend ex-Financials Fund",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "EFO",
+              "description": "ProShares Ultra MSCI EAFE",
+              "cap_size": 7.810249675906654
+            },
+            {
+              "name": "IDLV",
+              "description": "Invesco S&P International Developed Low Volatility ETF",
+              "cap_size": 10.0
+            },
+            {
+              "name": "DLS",
+              "description": "WisdomTree International SmallCap Dividend Fund",
+              "cap_size": 10.816653826391969
+            },
+            {
+              "name": "PXF",
+              "description": "Invesco FTSE RAFI Developed Markets ex-U.S. ETF",
+              "cap_size": 15.0
+            },
+            {
+              "name": "SCHC",
+              "description": "Schwab International Small-Cap Equity ETF",
+              "cap_size": 15.0
+            },
+            {
+              "name": "HEFA",
+              "description": "iShares Currency Hedged MSCI EAFE ETF",
+              "cap_size": 16.278820596099706
+            },
+            {
+              "name": "IDV",
+              "description": "iShares International Select Dividend ETF",
+              "cap_size": 18.439088914585774
+            },
+            {
+              "name": "DBEF",
+              "description": "Xtrackers MSCI EAFE Hedged Equity ETF",
+              "cap_size": 19.209372712298546
+            },
+            {
+              "name": "FNDF",
+              "description": "Schwab Fundamental International Large Company Index ETF",
+              "cap_size": 20.808652046684813
+            },
+            {
+              "name": "EFV",
+              "description": "iShares MSCI EAFE Value ETF",
+              "cap_size": 23.345235059857504
+            },
+            {
+              "name": "EFG",
+              "description": "iShares MSCI EAFE Growth ETF",
+              "cap_size": 24.758836806279895
+            },
+            {
+              "name": "SCZ",
+              "description": "iShares MSCI EAFE Small-Cap ETF",
+              "cap_size": 33.24154027718932
+            },
+            {
+              "name": "EFAV",
+              "description": "iShares Edge MSCI Min Vol EAFE ETF",
+              "cap_size": 33.24154027718932
+            },
+            {
+              "name": "SCHF",
+              "description": "Schwab International Equity ETF",
+              "cap_size": 52.354560450833695
+            },
+            {
+              "name": "EFA",
+              "description": "iShares MSCI EAFE ETF",
+              "cap_size": 64.35060217278468
+            },
+            {
+              "name": "VEA",
+              "description": "Vanguard FTSE Developed Markets Index Fund ETF Shares",
+              "cap_size": 64.35060217278468
+            },
+            {
+              "name": "IEFA",
+              "description": "iShares Core MSCI EAFE ETF",
+              "cap_size": 64.35060217278468
+            }
+          ],
+          "x": 407,
+          "y": 15,
+          "dx": 117,
+          "dy": 105
+        }
+      ],
+      "x": 406,
+      "y": 0,
+      "dy": 201,
+      "dx": 291
+    },
+    {
+      "name": "Global",
+      "children": [
+        {
+          "name": "Energy",
+          "children": [
+            {
+              "name": "URA",
+              "description": "Global X Uranium ETF",
+              "cap_size": 8.54400374531753
+            },
+            {
+              "name": "KOL",
+              "description": "VanEck Vectors Coal ETF",
+              "cap_size": 9.433981132056603
+            },
+            {
+              "name": "FRAK",
+              "description": "VanEck Vectors Unconventional Oil & Gas ETF",
+              "cap_size": 9.433981132056603
+            },
+            {
+              "name": "TAN",
+              "description": "Invesco Solar ETF",
+              "cap_size": 12.529964086141668
+            },
+            {
+              "name": "IXC",
+              "description": "iShares Global Energy ETF",
+              "cap_size": 13.038404810405298
+            },
+            {
+              "name": "OIH",
+              "description": "VanEck Vectors Oil Services ETF",
+              "cap_size": 24.20743687382041
+            }
+          ],
+          "x": 757,
+          "y": 176,
+          "dx": 30,
+          "dy": 24
+        },
+        {
+          "name": "Sectors",
+          "children": [
+            {
+              "name": "IGE",
+              "description": "iShares North American Natural Resources ETF",
+              "cap_size": 5.385164807134504
+            },
+            {
+              "name": "BBH",
+              "description": "VanEck Vectors Biotech ETF",
+              "cap_size": 6.4031242374328485
+            },
+            {
+              "name": "MOO",
+              "description": "VanEck Vectors Agribusiness ETF",
+              "cap_size": 7.211102550927978
+            },
+            {
+              "name": "RTH",
+              "description": "VanEck Vectors Retail ETF",
+              "cap_size": 7.0710678118654755
+            },
+            {
+              "name": "IXG",
+              "description": "iShares Global Financials ETF",
+              "cap_size": 6.4031242374328485
+            },
+            {
+              "name": "PPH",
+              "description": "VanEck Vectors Pharmaceutical ETF",
+              "cap_size": 7.211102550927978
+            },
+            {
+              "name": "PSP",
+              "description": "Invesco Global Listed Private Equity ETF",
+              "cap_size": 6.4031242374328485
+            },
+            {
+              "name": "HAP",
+              "description": "VanEck Vectors Natural Resources ETF",
+              "cap_size": 7.211102550927978
+            },
+            {
+              "name": "MXI",
+              "description": "iShares Global Materials ETF",
+              "cap_size": 6.4031242374328485
+            },
+            {
+              "name": "PHO",
+              "description": "Invesco Water Resources ETF",
+              "cap_size": 7.211102550927978
+            },
+            {
+              "name": "RXI",
+              "description": "iShares Global Consumer Discretionary ETF",
+              "cap_size": 6.4031242374328485
+            },
+            {
+              "name": "KXI",
+              "description": "iShares Global Consumer Staples ETF",
+              "cap_size": 7.211102550927978
+            },
+            {
+              "name": "EXI",
+              "description": "iShares Global Industrials ETF",
+              "cap_size": 6.4031242374328485
+            },
+            {
+              "name": "JXI",
+              "description": "iShares Global Utilities ETF",
+              "cap_size": 7.211102550927978
+            },
+            {
+              "name": "CGW",
+              "description": "Invesco S&P Global Water Index ETF",
+              "cap_size": 6.4031242374328485
+            },
+            {
+              "name": "CUT",
+              "description": "Invesco MSCI Global Timber ETF",
+              "cap_size": 7.211102550927978
+            },
+            {
+              "name": "NFRA",
+              "description": "FlexShares STOXX Global Broad Infrastructure Index Fund",
+              "cap_size": 6.4031242374328485
+            },
+            {
+              "name": "SIL",
+              "description": "Global X Silver Miners ETF",
+              "cap_size": 7.0710678118654755
+            },
+            {
+              "name": "GNR",
+              "description": "SPDR S&P Global Natural Resources ETF",
+              "cap_size": 7.810249675906654
+            },
+            {
+              "name": "RWO",
+              "description": "SPDR Dow Jones Global Real Estate ETF",
+              "cap_size": 7.810249675906654
+            },
+            {
+              "name": "IXJ",
+              "description": "iShares Global Healthcare ETF",
+              "cap_size": 8.48528137423857
+            },
+            {
+              "name": "IGF",
+              "description": "iShares Global Infrastructure ETF",
+              "cap_size": 12.083045973594572
+            },
+            {
+              "name": "GUNR",
+              "description": "FlexShares Morningstar Global Upstream Natural Resources Index Fund",
+              "cap_size": 13.601470508735444
+            }
+          ],
+          "x": 698,
+          "y": 176,
+          "dx": 59,
+          "dy": 24
+        },
+        {
+          "name": "Technology",
+          "children": [
+            {
+              "name": "TDIV",
+              "description": "First Trust NASDAQ Technology Dividend Index Fund",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "IXP",
+              "description": "iShares Global Comm Services ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "SOCL",
+              "description": "Global X Social Media ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "HACK",
+              "description": "ETFMG Prime Cyber Security ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "IXN",
+              "description": "iShares Global Tech ETF",
+              "cap_size": 16.278820596099706
+            },
+            {
+              "name": "SKYY",
+              "description": "First Trust Cloud Computing ETF",
+              "cap_size": 17.69180601295413
+            },
+            {
+              "name": "SMH",
+              "description": "VanEck Vectors Semiconductor ETF",
+              "cap_size": 66.85057965343307
+            }
+          ],
+          "x": 747,
+          "y": 104,
+          "dy": 72,
+          "dx": 40
+        },
+        {
+          "name": "Index",
+          "children": [
+            {
+              "name": "IOO",
+              "description": "iShares Global 100 ETF",
+              "cap_size": 9.899494936611665
+            },
+            {
+              "name": "LOWC",
+              "description": "SPDR MSCI ACWI Low Carbon Target ETF",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "URTH",
+              "description": "iShares MSCI World ETF",
+              "cap_size": 13.892443989449804
+            },
+            {
+              "name": "ACWV",
+              "description": "iShares Edge MSCI Min Vol Global ETF",
+              "cap_size": 20.518284528683193
+            },
+            {
+              "name": "VT",
+              "description": "Vanguard Total World Stock Index Fund ETF Shares",
+              "cap_size": 42.638011210655684
+            },
+            {
+              "name": "ACWI",
+              "description": "iShares MSCI ACWI ETF",
+              "cap_size": 56.859475903318
+            }
+          ],
+          "x": 698,
+          "y": 104,
+          "dy": 72,
+          "dx": 49
+        },
+        {
+          "name": "Gold Miners",
+          "children": [
+            {
+              "name": "SGDM",
+              "description": "Sprott Gold Miners ETF",
+              "cap_size": 12.529964086141668
+            },
+            {
+              "name": "RING",
+              "description": "iShares MSCI Global Gold Miners ETF",
+              "cap_size": 12.083045973594572
+            },
+            {
+              "name": "JDST",
+              "description": "Direxion Daily Junior Gold Miners Index Bear 2X Shares",
+              "cap_size": 14.866068747318506
+            },
+            {
+              "name": "DUST",
+              "description": "Direxion Daily Gold Miners Index Bear 2X Shares",
+              "cap_size": 17.804493814764857
+            },
+            {
+              "name": "JNUG",
+              "description": "Direxion Daily Junior Gold Miners Index Bull 2X Shares",
+              "cap_size": 43.01162633521314
+            },
+            {
+              "name": "NUGT",
+              "description": "Direxion Daily Gold Miners Index Bull 2X Shares",
+              "cap_size": 53.150729063673246
+            },
+            {
+              "name": "GDX",
+              "description": "VanEck Vectors Gold Miners ETF",
+              "cap_size": 64.40496875241847
+            },
+            {
+              "name": "GDXJ",
+              "description": "VanEck Vectors Junior Gold Miners ETF",
+              "cap_size": 64.40496875241847
+            }
+          ],
+          "x": 698,
+          "y": 15,
+          "dy": 89,
+          "dx": 89
+        }
+      ],
+      "x": 697,
+      "y": 0,
+      "dy": 201,
+      "dx": 91
+    },
+    {
+      "name": "US Volatility",
+      "children": [
+        {
+          "name": "Inverse",
+          "children": [
+            {
+              "name": "XIV",
+              "description": null,
+              "cap_size": 3.0
+            },
+            {
+              "name": "ZIV",
+              "description": "VelocityShares Daily Inverse VIX Medium-Term ETN",
+              "cap_size": 3.1622776601683795
+            },
+            {
+              "name": "SVXY",
+              "description": "ProShares Short VIX Short-Term Futures ETF",
+              "cap_size": 54.00925846556311
+            }
+          ],
+          "x": 346,
+          "y": 422,
+          "dx": 59,
+          "dy": 14
+        },
+        {
+          "name": "VIX",
+          "children": [
+            {
+              "name": "VXZ",
+              "description": "iPath Series B S&P 500 VIX Mid-Term Futures ETN",
+              "cap_size": 11.661903789690601
+            },
+            {
+              "name": "VIIX",
+              "description": "VelocityShares VIX Short-Term ETN",
+              "cap_size": 7.810249675906654
+            },
+            {
+              "name": "VIXM",
+              "description": "ProShares VIX Mid-Term Futures ETF",
+              "cap_size": 7.810249675906654
+            },
+            {
+              "name": "VIXY",
+              "description": "ProShares VIX Short-Term Futures ETF",
+              "cap_size": 40.311288741492746
+            },
+            {
+              "name": "VXX",
+              "description": "iPath Series B S&P 500 VIX Short-Term Futures ETN",
+              "cap_size": 55.226805085936306
+            }
+          ],
+          "x": 346,
+          "y": 368,
+          "dy": 54,
+          "dx": 59
+        },
+        {
+          "name": "Leverage",
+          "children": [
+            {
+              "name": "UVXY",
+              "description": "ProShares Ultra VIX Short-Term Futures ETF",
+              "cap_size": 62.177166226839255
+            },
+            {
+              "name": "TVIX",
+              "description": "VelocityShares Daily 2x VIX Short-Term ETN",
+              "cap_size": 62.64982043070834
+            }
+          ],
+          "x": 285,
+          "y": 368,
+          "dx": 61,
+          "dy": 68
+        }
+      ],
+      "x": 284,
+      "y": 353,
+      "dx": 122,
+      "dy": 84
+    },
+    {
+      "name": "US Small Cap",
+      "children": [
+        {
+          "name": "Growth",
+          "children": [
+            {
+              "name": "SLYG",
+              "description": "SPDR S&P 600 Small Cap Growth ETF",
+              "cap_size": 6.4031242374328485
+            },
+            {
+              "name": "IJT",
+              "description": "iShares S&P Small-Cap 600 Growth ETF",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "VBK",
+              "description": "Vanguard Small-Cap Growth Index Fund ETF Shares",
+              "cap_size": 15.811388300841896
+            },
+            {
+              "name": "IWO",
+              "description": "iShares Russell 2000 Growth ETF",
+              "cap_size": 29.427877939124322
+            }
+          ],
+          "x": 348,
+          "y": 334,
+          "dx": 57,
+          "dy": 18
+        },
+        {
+          "name": "Leverage",
+          "children": [
+            {
+              "name": "UWM",
+              "description": "ProShares Ultra Russell2000",
+              "cap_size": 12.529964086141668
+            },
+            {
+              "name": "URTY",
+              "description": "ProShares UltraPro Russell2000",
+              "cap_size": 15.231546211727817
+            },
+            {
+              "name": "TNA",
+              "description": "Direxion Daily Small Cap Bull 3X Shares",
+              "cap_size": 46.32493928760188
+            }
+          ],
+          "x": 378,
+          "y": 284,
+          "dy": 50,
+          "dx": 27
+        },
+        {
+          "name": "Value",
+          "children": [
+            {
+              "name": "JKL",
+              "description": "iShares Morningstar Small-Cap Value ETF",
+              "cap_size": 11.704699910719626
+            },
+            {
+              "name": "SLYV",
+              "description": "SPDR S&P 600 Small Cap Value ETF",
+              "cap_size": 14.212670403551895
+            },
+            {
+              "name": "IJS",
+              "description": "iShares S&P Small-Cap 600 Value ETF",
+              "cap_size": 20.615528128088304
+            },
+            {
+              "name": "VBR",
+              "description": "Vanguard Small-Cap Value Index Fund ETF Shares",
+              "cap_size": 30.886890422961002
+            },
+            {
+              "name": "IWN",
+              "description": "iShares Russell 2000 Value ETF",
+              "cap_size": 33.28663395418648
+            }
+          ],
+          "x": 348,
+          "y": 284,
+          "dy": 50,
+          "dx": 30
+        },
+        {
+          "name": "Inverse",
+          "children": [
+            {
+              "name": "TWM",
+              "description": "ProShares UltraShort Russell2000",
+              "cap_size": 14.142135623730951
+            },
+            {
+              "name": "SRTY",
+              "description": "ProShares UltraPro Short Russell2000",
+              "cap_size": 14.866068747318506
+            },
+            {
+              "name": "RWM",
+              "description": "ProShares Short Russell2000",
+              "cap_size": 23.706539182259394
+            },
+            {
+              "name": "TZA",
+              "description": "Direxion Daily Small Cap Bear 3X Shares",
+              "cap_size": 39.96248240537617
+            }
+          ],
+          "x": 348,
+          "y": 250,
+          "dy": 34,
+          "dx": 57
+        },
+        {
+          "name": "Blend",
+          "children": [
+            {
+              "name": "IWC",
+              "description": "iShares Micro-Cap ETF",
+              "cap_size": 14.317821063276353
+            },
+            {
+              "name": "FYX",
+              "description": "First Trust Small Cap Core AlphaDEX Fund",
+              "cap_size": 13.341664064126334
+            },
+            {
+              "name": "DWAS",
+              "description": "Invesco DWA SmallCap Momentum ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "EES",
+              "description": "WisdomTree U.S. SmallCap Earnings Fund",
+              "cap_size": 8.48528137423857
+            },
+            {
+              "name": "RWJ",
+              "description": "Invesco S&P SmallCap 600 Revenue ETF",
+              "cap_size": 8.48528137423857
+            },
+            {
+              "name": "SLY",
+              "description": "SPDR S&P 600 Small Cap ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "DES",
+              "description": "WisdomTree U.S. SmallCap Dividend Fund",
+              "cap_size": 10.0
+            },
+            {
+              "name": "VIOO",
+              "description": "Vanguard S&P Small-Cap 600 Index Fund ETF Shares",
+              "cap_size": 10.63014581273465
+            },
+            {
+              "name": "VTWO",
+              "description": "Vanguard Russell 2000 Index Fund ETF Shares",
+              "cap_size": 22.02271554554524
+            },
+            {
+              "name": "SCHA",
+              "description": "Schwab U.S. Small-Cap ETF",
+              "cap_size": 22.67156809750927
+            },
+            {
+              "name": "VB",
+              "description": "Vanguard Small-Cap Index Fund ETF Shares",
+              "cap_size": 40.311288741492746
+            },
+            {
+              "name": "IJR",
+              "description": "iShares Core S&P Small-Cap ETF",
+              "cap_size": 66.24198064671678
+            },
+            {
+              "name": "IWM",
+              "description": "iShares Russell 2000 ETF",
+              "cap_size": 68.42514157822401
+            }
+          ],
+          "x": 285,
+          "y": 250,
+          "dx": 63,
+          "dy": 102
+        }
+      ],
+      "x": 284,
+      "y": 235,
+      "dx": 122,
+      "dy": 118
+    },
+    {
+      "name": "US Mid Cap",
+      "children": [
+        {
+          "name": "Leverage",
+          "children": [
+            {
+              "name": "MVV",
+              "description": "ProShares Ultra MidCap400",
+              "cap_size": 24.0
+            },
+            {
+              "name": "MIDU",
+              "description": "Direxion Daily Mid Cap Bull 3X Shares",
+              "cap_size": 24.0
+            },
+            {
+              "name": "MYY",
+              "description": "ProShares Short MidCap400",
+              "cap_size": 24.0
+            },
+            {
+              "name": "UMDD",
+              "description": "ProShares UltraPro MidCap400",
+              "cap_size": 24.0
+            }
+          ],
+          "x": 379,
+          "y": 229,
+          "dx": 26,
+          "dy": 5
+        },
+        {
+          "name": "Growth",
+          "children": [
+            {
+              "name": "RFG",
+              "description": "Invesco S&P MidCap 400 Pure Growth ETF",
+              "cap_size": 10.816653826391969
+            },
+            {
+              "name": "IVOG",
+              "description": "Vanguard S&P Mid-Cap 400 Growth Index Fund ETF Shares",
+              "cap_size": 7.810249675906654
+            },
+            {
+              "name": "IJK",
+              "description": "iShares S&P Mid-Cap 400 Growth ETF",
+              "cap_size": 16.64331697709324
+            },
+            {
+              "name": "VOT",
+              "description": "Vanguard Mid-Cap Growth Index Fund ETF Shares",
+              "cap_size": 16.64331697709324
+            },
+            {
+              "name": "IWP",
+              "description": "iShares Russell Mid-Cap Growth ETF",
+              "cap_size": 26.40075756488817
+            }
+          ],
+          "x": 379,
+          "y": 199,
+          "dy": 30,
+          "dx": 26
+        },
+        {
+          "name": "Value",
+          "children": [
+            {
+              "name": "IJJ",
+              "description": "iShares S&P Mid-Cap 400 Value ETF",
+              "cap_size": 19.235384061671343
+            },
+            {
+              "name": "VOE",
+              "description": "Vanguard Mid-Cap Value Index Fund ETF Shares",
+              "cap_size": 22.67156809750927
+            },
+            {
+              "name": "IWS",
+              "description": "iShares Russell Mid-Cap Value ETF",
+              "cap_size": 27.784887978899608
+            }
+          ],
+          "x": 379,
+          "y": 163,
+          "dy": 36,
+          "dx": 26
+        },
+        {
+          "name": "Blend",
+          "children": [
+            {
+              "name": "FNX",
+              "description": "First Trust Mid Cap Core AlphaDEX Fund",
+              "cap_size": 14.7648230602334
+            },
+            {
+              "name": "EZM",
+              "description": "WisdomTree U.S. MidCap Earnings Fund",
+              "cap_size": 13.341664064126334
+            },
+            {
+              "name": "JKG",
+              "description": "iShares Morningstar Mid-Cap ETF",
+              "cap_size": 7.810249675906654
+            },
+            {
+              "name": "IVOO",
+              "description": "Vanguard S&P Mid-Cap 400 Index Fund ETF Shares",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "DON",
+              "description": "WisdomTree U.S. MidCap Dividend Fund",
+              "cap_size": 12.529964086141668
+            },
+            {
+              "name": "PRFZ",
+              "description": "Invesco FTSE RAFI US 1500 Small-Mid ETF",
+              "cap_size": 14.212670403551895
+            },
+            {
+              "name": "SCHM",
+              "description": "Schwab U.S. Mid-Cap ETF",
+              "cap_size": 20.0
+            },
+            {
+              "name": "VXF",
+              "description": "Vanguard Extended Market Index Fund ETF Shares",
+              "cap_size": 20.0
+            },
+            {
+              "name": "IWR",
+              "description": "iShares Russell Mid-Cap ETF",
+              "cap_size": 36.124783736376884
+            },
+            {
+              "name": "VO",
+              "description": "Vanguard Mid-Cap Index Fund ETF Shares",
+              "cap_size": 43.829214001622255
+            },
+            {
+              "name": "IJH",
+              "description": "iShares Core S&P Mid-Cap ETF",
+              "cap_size": 54.45181356024793
+            },
+            {
+              "name": "MDY",
+              "description": "SPDR S&P MIDCAP 400 ETF Trust",
+              "cap_size": 64.8459713474939
+            }
+          ],
+          "x": 285,
+          "y": 163,
+          "dx": 94,
+          "dy": 71
+        }
+      ],
+      "x": 284,
+      "y": 148,
+      "dx": 122,
+      "dy": 87
+    },
+    {
+      "name": "US Large Cap",
+      "children": [
+        {
+          "name": "Blend",
+          "children": [
+            {
+              "name": "CSM",
+              "description": "ProShares Large Cap Core Plus",
+              "cap_size": 6.708203932499369
+            },
+            {
+              "name": "JKD",
+              "description": "iShares Morningstar Large-Cap ETF",
+              "cap_size": 7.211102550927978
+            },
+            {
+              "name": "IWL",
+              "description": "iShares Russell Top 200 ETF",
+              "cap_size": 6.708203932499369
+            },
+            {
+              "name": "RWL",
+              "description": "Invesco S&P 500 Revenue ETF",
+              "cap_size": 7.211102550927978
+            },
+            {
+              "name": "XLG",
+              "description": "Invesco S&P 500 Top 50 ETF",
+              "cap_size": 10.295630140987
+            },
+            {
+              "name": "MGC",
+              "description": "Vanguard Mega Cap Index Fund ETF Shares",
+              "cap_size": 11.40175425099138
+            },
+            {
+              "name": "FNDX",
+              "description": "Schwab Fundamental U.S. Large Company Index ETF",
+              "cap_size": 15.0
+            },
+            {
+              "name": "VV",
+              "description": "Vanguard Large-Cap Index Fund ETF Shares",
+              "cap_size": 22.47220505424423
+            },
+            {
+              "name": "SCHB",
+              "description": "Schwab U.S. Broad Market ETF",
+              "cap_size": 37.0
+            },
+            {
+              "name": "SCHX",
+              "description": "Schwab U.S. Large-Cap ETF",
+              "cap_size": 40.80441152620633
+            }
+          ],
+          "x": 285,
+          "y": 122,
+          "dx": 120,
+          "dy": 25
+        },
+        {
+          "name": "Value",
+          "children": [
+            {
+              "name": "FTA",
+              "description": "First Trust Large Cap Value AlphaDEX Fund",
+              "cap_size": 12.529964086141668
+            },
+            {
+              "name": "PWV",
+              "description": "Invesco Dynamic Large Cap Value ETF",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "DVP",
+              "description": "Deep Value ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "JKF",
+              "description": "iShares Morningstar Large-Cap Value ETF",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "RPV",
+              "description": "Invesco S&P 500 Pure Value ETF",
+              "cap_size": 10.63014581273465
+            },
+            {
+              "name": "MGV",
+              "description": "Vanguard Mega Cap Value Index Fund ETF Shares",
+              "cap_size": 12.206555615733702
+            },
+            {
+              "name": "VONV",
+              "description": "Vanguard Russell 1000 Value Index Fund ETF Shares",
+              "cap_size": 14.866068747318506
+            },
+            {
+              "name": "IUSV",
+              "description": "iShares Core S&P U.S. Value ETF",
+              "cap_size": 21.95449840010015
+            },
+            {
+              "name": "SCHV",
+              "description": "Schwab U.S. Large-Cap Value ETF",
+              "cap_size": 22.47220505424423
+            },
+            {
+              "name": "SPYV",
+              "description": "SPDR Portfolio S&P 500 Value ETF",
+              "cap_size": 27.459060435491963
+            },
+            {
+              "name": "IVE",
+              "description": "iShares S&P 500 Value ETF",
+              "cap_size": 48.30113870293329
+            },
+            {
+              "name": "VTV",
+              "description": "Vanguard Value Index Fund ETF Shares",
+              "cap_size": 52.43090691567332
+            },
+            {
+              "name": "IWD",
+              "description": "iShares Russell 1000 Value ETF",
+              "cap_size": 59.0592922409336
+            }
+          ],
+          "x": 351,
+          "y": 15,
+          "dy": 107,
+          "dx": 54
+        },
+        {
+          "name": "Growth",
+          "children": [
+            {
+              "name": "FTC",
+              "description": "First Trust Large Cap Growth AlphaDEX Fund",
+              "cap_size": 8.06225774829855
+            },
+            {
+              "name": "RPG",
+              "description": "Invesco S&P 500 Pure Growth ETF",
+              "cap_size": 12.206555615733702
+            },
+            {
+              "name": "JKE",
+              "description": "iShares Morningstar Large-Cap Growth ETF",
+              "cap_size": 13.038404810405298
+            },
+            {
+              "name": "IWY",
+              "description": "iShares Russell Top 200 Growth ETF",
+              "cap_size": 13.038404810405298
+            },
+            {
+              "name": "VONG",
+              "description": "Vanguard Russell 1000 Growth Index Fund ETF Shares",
+              "cap_size": 17.204650534085253
+            },
+            {
+              "name": "VOOG",
+              "description": "Vanguard S&P 500 Growth Index Fund ETF Shares",
+              "cap_size": 22.80350850198276
+            },
+            {
+              "name": "IUSG",
+              "description": "iShares Core S&P U.S. Growth ETF",
+              "cap_size": 22.80350850198276
+            },
+            {
+              "name": "SCHG",
+              "description": "Schwab U.S. Large-Cap Growth ETF",
+              "cap_size": 26.40075756488817
+            },
+            {
+              "name": "MGK",
+              "description": "Vanguard Mega Cap Growth Index Fund ETF Shares",
+              "cap_size": 26.40075756488817
+            },
+            {
+              "name": "SPYG",
+              "description": "SPDR Portfolio S&P 500 Growth ETF",
+              "cap_size": 37.21558813185679
+            },
+            {
+              "name": "IVW",
+              "description": "iShares S&P 500 Growth ETF",
+              "cap_size": 43.86342439892262
+            },
+            {
+              "name": "VUG",
+              "description": "Vanguard Growth Index Fund ETF Shares",
+              "cap_size": 51.97114584074513
+            },
+            {
+              "name": "IWF",
+              "description": "iShares Russell 1000 Growth ETF",
+              "cap_size": 58.89821729050889
+            }
+          ],
+          "x": 285,
+          "y": 15,
+          "dy": 107,
+          "dx": 66
+        }
+      ],
+      "x": 284,
+      "y": 0,
+      "dx": 122,
+      "dy": 148
+    },
+    {
+      "name": "US Sector",
+      "children": [
+        {
+          "name": "Mortgages",
+          "children": [
+            {
+              "name": "MORL",
+              "description": null,
+              "cap_size": 31.0
+            },
+            {
+              "name": "REM",
+              "description": "iShares Mortgage Real Estate Capped ETF",
+              "cap_size": 31.400636936215164
+            }
+          ],
+          "x": 250,
+          "y": 426,
+          "dx": 33,
+          "dy": 10
+        },
+        {
+          "name": "Telecommunications",
+          "children": [
+            {
+              "name": "IYZ",
+              "description": "iShares U.S. Telecommunications ETF",
+              "cap_size": 7.810249675906654
+            },
+            {
+              "name": "VOX",
+              "description": "Vanguard Communication Services Index Fund ETF Shares",
+              "cap_size": 15.811388300841896
+            }
+          ],
+          "x": 227,
+          "y": 426,
+          "dx": 23,
+          "dy": 10
+        },
+        {
+          "name": "Consumer Non-cyclicals",
+          "children": [
+            {
+              "name": "FXG",
+              "description": "First Trust Consumer Staples AlphaDEX Fund",
+              "cap_size": 9.848857801796104
+            },
+            {
+              "name": "IYK",
+              "description": "iShares U.S. Consumer Goods ETF",
+              "cap_size": 9.433981132056603
+            },
+            {
+              "name": "RHS",
+              "description": "Invesco S&P 500 Equal Weight Consumer Staples ETF",
+              "cap_size": 8.94427190999916
+            },
+            {
+              "name": "FSTA",
+              "description": "Fidelity MSCI Consumer Staples Index ETF",
+              "cap_size": 9.433981132056603
+            },
+            {
+              "name": "PBJ",
+              "description": "Invesco Dynamic Food & Beverage ETF",
+              "cap_size": 8.94427190999916
+            },
+            {
+              "name": "VDC",
+              "description": "Vanguard Consumer Staples Index Fund ETF Shares",
+              "cap_size": 21.02379604162864
+            },
+            {
+              "name": "XLP",
+              "description": "Consumer Staples Select Sector SPDR Fund",
+              "cap_size": 59.54829972383762
+            }
+          ],
+          "x": 227,
+          "y": 374,
+          "dy": 52,
+          "dx": 56
+        },
+        {
+          "name": "Basic Materials",
+          "children": [
+            {
+              "name": "FXZ",
+              "description": "First Trust Materials AlphaDEX Fund",
+              "cap_size": 11.180339887498949
+            },
+            {
+              "name": "IYM",
+              "description": "iShares U.S. Basic Materials ETF",
+              "cap_size": 10.770329614269007
+            },
+            {
+              "name": "FMAT",
+              "description": "Fidelity MSCI Materials Index ETF",
+              "cap_size": 8.94427190999916
+            },
+            {
+              "name": "UYM",
+              "description": "ProShares Ultra Basic Materials",
+              "cap_size": 9.433981132056603
+            },
+            {
+              "name": "VAW",
+              "description": "Vanguard Materials Index Fund ETF Shares",
+              "cap_size": 12.041594578792296
+            },
+            {
+              "name": "XME",
+              "description": "SPDR S&P Metals and Mining ETF",
+              "cap_size": 21.93171219946131
+            },
+            {
+              "name": "XLB",
+              "description": "Materials Select Sector SPDR Fund",
+              "cap_size": 60.959002616512684
+            }
+          ],
+          "x": 179,
+          "y": 374,
+          "dx": 48,
+          "dy": 62
+        },
+        {
+          "name": "Utilities",
+          "children": [
+            {
+              "name": "RYU",
+              "description": "Invesco S&P 500 Equal Weight Utilities ETF",
+              "cap_size": 11.180339887498949
+            },
+            {
+              "name": "UPW",
+              "description": "ProShares Ultra Utilities",
+              "cap_size": 10.770329614269007
+            },
+            {
+              "name": "FXU",
+              "description": "First Trust Utilities AlphaDEX Fund",
+              "cap_size": 10.295630140987
+            },
+            {
+              "name": "FUTY",
+              "description": "Fidelity MSCI Utilities Index ETF",
+              "cap_size": 10.295630140987
+            },
+            {
+              "name": "IDU",
+              "description": "iShares U.S. Utilities ETF",
+              "cap_size": 11.40175425099138
+            },
+            {
+              "name": "VPU",
+              "description": "Vanguard Utilities Index Fund ETF Shares",
+              "cap_size": 21.02379604162864
+            },
+            {
+              "name": "XLU",
+              "description": "Utilities Select Sector SPDR Fund",
+              "cap_size": 60.30754513325841
+            }
+          ],
+          "x": 235,
+          "y": 313,
+          "dy": 61,
+          "dx": 48
+        },
+        {
+          "name": "Industrials",
+          "children": [
+            {
+              "name": "IYJ",
+              "description": "iShares U.S. Industrials ETF",
+              "cap_size": 11.180339887498949
+            },
+            {
+              "name": "XTN",
+              "description": "SPDR S&P Transportation ETF",
+              "cap_size": 10.770329614269007
+            },
+            {
+              "name": "FXR",
+              "description": "First Trust Industrials/Producer Durables AlphaDEX Fund",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "PPA",
+              "description": "Invesco Aerospace & Defense ETF",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "FIDU",
+              "description": "Fidelity MSCI Industrials Index ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "RGI",
+              "description": "Invesco S&P 500 Equal Weight Industrials ETF",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "PRN",
+              "description": "Invesco DWA Industrials Momentum ETF",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "AIRR",
+              "description": "First Trust RBA American Industrial RenaissanceTM ETF",
+              "cap_size": 10.295630140987
+            },
+            {
+              "name": "VIS",
+              "description": "Vanguard Industrials Index Fund ETF Shares",
+              "cap_size": 14.212670403551895
+            },
+            {
+              "name": "IYT",
+              "description": "iShares Transportation Average ETF",
+              "cap_size": 17.88854381999832
+            },
+            {
+              "name": "ITA",
+              "description": "iShares U.S. Aerospace & Defense ETF",
+              "cap_size": 21.2602916254693
+            },
+            {
+              "name": "XLI",
+              "description": "Industrial Select Sector SPDR Fund",
+              "cap_size": 61.220911460055866
+            }
+          ],
+          "x": 179,
+          "y": 313,
+          "dy": 61,
+          "dx": 56
+        },
+        {
+          "name": "Consumer Cyclicals",
+          "children": [
+            {
+              "name": "FXD",
+              "description": "First Trust Consumer Discretionary AlphaDEX Fund",
+              "cap_size": 9.433981132056603
+            },
+            {
+              "name": "FDIS",
+              "description": "Fidelity MSCI Consumer Discretionary Index ETF",
+              "cap_size": 9.433981132056603
+            },
+            {
+              "name": "RCD",
+              "description": "Invesco S&P 500 Equal Weight Consumer Discretionary ETF",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "PBS",
+              "description": "Invesco Dynamic Media ETF",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "RETL",
+              "description": "Direxion Daily Retail Bull 3X Shares",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "IYC",
+              "description": "iShares U.S. Consumer Services ETF",
+              "cap_size": 9.433981132056603
+            },
+            {
+              "name": "VCR",
+              "description": "Vanguard Consumer Discretionary Index Fund ETF Shares",
+              "cap_size": 16.55294535724685
+            },
+            {
+              "name": "XHB",
+              "description": "SPDR S&P Homebuilders ETF",
+              "cap_size": 27.459060435491963
+            },
+            {
+              "name": "ITB",
+              "description": "iShares U.S. Home Construction ETF",
+              "cap_size": 33.54101966249684
+            },
+            {
+              "name": "XRT",
+              "description": "SPDR S&P Retail ETF",
+              "cap_size": 42.42640687119285
+            },
+            {
+              "name": "XLY",
+              "description": "Consumer Discretionary Select Sector SPDR Fund",
+              "cap_size": 60.207972893961475
+            }
+          ],
+          "x": 92,
+          "y": 378,
+          "dx": 87,
+          "dy": 58
+        },
+        {
+          "name": "Real Estate",
+          "children": [
+            {
+              "name": "DRN",
+              "description": "Direxion Daily MSCI Real Estate Bull 3X Shares",
+              "cap_size": 9.486832980505138
+            },
+            {
+              "name": "URE",
+              "description": "ProShares Ultra Real Estate",
+              "cap_size": 10.295630140987
+            },
+            {
+              "name": "FRI",
+              "description": "First Trust S&P REIT Index Fund",
+              "cap_size": 9.848857801796104
+            },
+            {
+              "name": "REZ",
+              "description": "iShares Residential Real Estate Capped ETF",
+              "cap_size": 8.48528137423857
+            },
+            {
+              "name": "DRV",
+              "description": "Direxion Daily MSCI Real Estate Bear 3X Shares",
+              "cap_size": 8.48528137423857
+            },
+            {
+              "name": "ICF",
+              "description": "iShares Cohen & Steers REIT ETF",
+              "cap_size": 11.180339887498949
+            },
+            {
+              "name": "RWR",
+              "description": "SPDR Dow Jones REIT ETF",
+              "cap_size": 12.206555615733702
+            },
+            {
+              "name": "SCHH",
+              "description": "Schwab U.S. REIT ETF",
+              "cap_size": 25.942243542145693
+            },
+            {
+              "name": "IYR",
+              "description": "iShares U.S. Real Estate ETF",
+              "cap_size": 62.48199740725323
+            },
+            {
+              "name": "VNQ",
+              "description": "Vanguard Real Estate Index Fund ETF Shares",
+              "cap_size": 63.8200595424354
+            }
+          ],
+          "x": 92,
+          "y": 313,
+          "dx": 87,
+          "dy": 65
+        },
+        {
+          "name": "Financials",
+          "children": [
+            {
+              "name": "BDCL",
+              "description": null,
+              "cap_size": 10.198039027185569
+            },
+            {
+              "name": "UYG",
+              "description": "ProShares Ultra Financials",
+              "cap_size": 10.770329614269007
+            },
+            {
+              "name": "IAT",
+              "description": "iShares U.S. Regional Banks ETF",
+              "cap_size": 9.433981132056603
+            },
+            {
+              "name": "RYF",
+              "description": "Invesco S&P 500 Equal Weight Financials ETF",
+              "cap_size": 9.433981132056603
+            },
+            {
+              "name": "IAI",
+              "description": "iShares U.S. Broker-Dealers & Securities Exchanges ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "KBWD",
+              "description": "Invesco KBW High Dividend Yield Financial ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "SKF",
+              "description": "ProShares UltraShort Financials",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "KIE",
+              "description": "SPDR S&P Insurance ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "FNCL",
+              "description": "Fidelity MSCI Financials Index ETF",
+              "cap_size": 8.94427190999916
+            },
+            {
+              "name": "IYG",
+              "description": "iShares U.S. Financial Services ETF",
+              "cap_size": 10.63014581273465
+            },
+            {
+              "name": "KBWB",
+              "description": "Invesco KBW Bank ETF",
+              "cap_size": 13.601470508735444
+            },
+            {
+              "name": "FXO",
+              "description": "First Trust Financials AlphaDEX Fund",
+              "cap_size": 14.422205101855956
+            },
+            {
+              "name": "IYF",
+              "description": "iShares U.S. Financials ETF",
+              "cap_size": 18.439088914585774
+            },
+            {
+              "name": "VFH",
+              "description": "Vanguard Financials Index Fund ETF Shares",
+              "cap_size": 22.80350850198276
+            },
+            {
+              "name": "FAZ",
+              "description": "Direxion Daily Financial Bear 3X Shares",
+              "cap_size": 26.90724809414742
+            },
+            {
+              "name": "KBE",
+              "description": "SPDR S&P Bank ETF",
+              "cap_size": 30.4138126514911
+            },
+            {
+              "name": "FAS",
+              "description": "Direxion Daily Financial Bull 3X Shares",
+              "cap_size": 33.60059523282288
+            },
+            {
+              "name": "KRE",
+              "description": "SPDR S&P Regional Banking ETF",
+              "cap_size": 58.180752831155424
+            },
+            {
+              "name": "XLF",
+              "description": "Financial Select Sector SPDR Fund",
+              "cap_size": 64.20280367709809
+            }
+          ],
+          "x": 196,
+          "y": 233,
+          "dy": 80,
+          "dx": 87
+        },
+        {
+          "name": "Energy",
+          "children": [
+            {
+              "name": "GASL",
+              "description": null,
+              "cap_size": 8.0
+            },
+            {
+              "name": "MLPN",
+              "description": null,
+              "cap_size": 8.0
+            },
+            {
+              "name": "MLPL",
+              "description": null,
+              "cap_size": 8.0
+            },
+            {
+              "name": "YMLP",
+              "description": null,
+              "cap_size": 8.0
+            },
+            {
+              "name": "IEO",
+              "description": "iShares U.S. Oil & Gas Exploration & Production ETF",
+              "cap_size": 8.54400374531753
+            },
+            {
+              "name": "DUG",
+              "description": "ProShares UltraShort Oil & Gas",
+              "cap_size": 9.433981132056603
+            },
+            {
+              "name": "DIG",
+              "description": "ProShares Ultra Oil & Gas",
+              "cap_size": 9.433981132056603
+            },
+            {
+              "name": "IEZ",
+              "description": "iShares U.S. Oil Equipment & Services ETF",
+              "cap_size": 8.48528137423857
+            },
+            {
+              "name": "XES",
+              "description": "SPDR S&P Oil & Gas Equipment & Services ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "FXN",
+              "description": "First Trust Energy AlphaDEX Fund",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "AMU",
+              "description": "UBS ETRACS Alerian MLP Index ETN",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "RYE",
+              "description": "Invesco S&P 500 Equal Weight Energy ETF",
+              "cap_size": 7.810249675906654
+            },
+            {
+              "name": "PXI",
+              "description": "Invesco DWA Energy Momentum ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "IMLP",
+              "description": "iPath S&P MLP ETN",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "PXJ",
+              "description": "Invesco Dynamic Oil & Gas Services ETF",
+              "cap_size": 8.48528137423857
+            },
+            {
+              "name": "PXE",
+              "description": "Invesco Dynamic Energy Exploration & Production ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "ZMLP",
+              "description": "Direxion Zacks MLP High Income Index Shares",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "MLPY",
+              "description": "Morgan Stanley Cushing MLP High Income Index ETN",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "MLPI",
+              "description": "UBS ETRACS Alerian MLP Infrastructure Index ETN",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "FCG",
+              "description": "First Trust Natural Gas ETF",
+              "cap_size": 9.899494936611665
+            },
+            {
+              "name": "FENY",
+              "description": "Fidelity MSCI Energy Index ETF",
+              "cap_size": 9.899494936611665
+            },
+            {
+              "name": "MLPX",
+              "description": "Global X MLP & Energy Infrastructure ETF",
+              "cap_size": 10.63014581273465
+            },
+            {
+              "name": "MLPA",
+              "description": "Global X MLP ETF",
+              "cap_size": 12.806248474865697
+            },
+            {
+              "name": "ERY",
+              "description": "Direxion Daily Energy Bear 2X Shares",
+              "cap_size": 12.806248474865697
+            },
+            {
+              "name": "EMLP",
+              "description": "First Trust North American Energy Infrastructure Fund",
+              "cap_size": 14.212670403551895
+            },
+            {
+              "name": "IYE",
+              "description": "iShares U.S. Energy ETF",
+              "cap_size": 18.35755975068582
+            },
+            {
+              "name": "ERX",
+              "description": "Direxion Daily Energy Bull 2X Shares",
+              "cap_size": 23.323807579381203
+            },
+            {
+              "name": "AMJ",
+              "description": "JPMorgan Alerian MLP Index ETN",
+              "cap_size": 23.323807579381203
+            },
+            {
+              "name": "VDE",
+              "description": "Vanguard Energy Index Fund ETF Shares",
+              "cap_size": 26.90724809414742
+            },
+            {
+              "name": "AMLP",
+              "description": "Alerian MLP ETF",
+              "cap_size": 46.51881339845203
+            },
+            {
+              "name": "XLE",
+              "description": "Energy Select Sector SPDR Fund",
+              "cap_size": 68.96375859826666
+            },
+            {
+              "name": "XOP",
+              "description": "SPDR S&P Oil & Gas Exploration & Production ETF",
+              "cap_size": 68.47627326307996
+            }
+          ],
+          "x": 92,
+          "y": 233,
+          "dy": 80,
+          "dx": 104
+        },
+        {
+          "name": "Health Care",
+          "children": [
+            {
+              "name": "PJP",
+              "description": "Invesco Dynamic Pharmaceuticals ETF",
+              "cap_size": 10.816653826391969
+            },
+            {
+              "name": "XPH",
+              "description": "SPDR S&P Pharmaceuticals ETF",
+              "cap_size": 10.295630140987
+            },
+            {
+              "name": "IHE",
+              "description": "iShares U.S. Pharmaceuticals ETF",
+              "cap_size": 10.295630140987
+            },
+            {
+              "name": "BIS",
+              "description": "ProShares UltraShort Nasdaq Biotechnology",
+              "cap_size": 10.0
+            },
+            {
+              "name": "RYH",
+              "description": "Invesco S&P 500 Equal Weight Health Care ETF",
+              "cap_size": 9.433981132056603
+            },
+            {
+              "name": "RXL",
+              "description": "ProShares Ultra Health Care",
+              "cap_size": 9.433981132056603
+            },
+            {
+              "name": "PBE",
+              "description": "Invesco Dynamic Biotechnology & Genome ETF",
+              "cap_size": 8.602325267042627
+            },
+            {
+              "name": "XHS",
+              "description": "SPDR S&P Health Care Services ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "PTH",
+              "description": "Invesco DWA Healthcare Momentum ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "BBC",
+              "description": "Virtus LifeSci Biotech Clinical Trials ETF",
+              "cap_size": 8.48528137423857
+            },
+            {
+              "name": "BIB",
+              "description": "ProShares Ultra Nasdaq Biotechnology",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "CURE",
+              "description": "Direxion Daily Healthcare Bull 3X Shares",
+              "cap_size": 11.661903789690601
+            },
+            {
+              "name": "FHLC",
+              "description": "Fidelity MSCI Health Care Index ETF",
+              "cap_size": 12.806248474865697
+            },
+            {
+              "name": "FBT",
+              "description": "First Trust NYSE Arca Biotechnology Index Fund",
+              "cap_size": 12.206555615733702
+            },
+            {
+              "name": "IHF",
+              "description": "iShares U.S. Healthcare Providers ETF",
+              "cap_size": 12.806248474865697
+            },
+            {
+              "name": "IYH",
+              "description": "iShares U.S. Healthcare ETF",
+              "cap_size": 14.212670403551895
+            },
+            {
+              "name": "FXH",
+              "description": "First Trust Health Care AlphaDEX Fund",
+              "cap_size": 15.0
+            },
+            {
+              "name": "VHT",
+              "description": "Vanguard Health Care Index Fund ETF Shares",
+              "cap_size": 24.839484696748443
+            },
+            {
+              "name": "IHI",
+              "description": "iShares U.S. Medical Devices ETF",
+              "cap_size": 32.202484376209235
+            },
+            {
+              "name": "IBB",
+              "description": "iShares Nasdaq Biotechnology ETF",
+              "cap_size": 61.554853586049575
+            },
+            {
+              "name": "XLV",
+              "description": "Health Care Select Sector SPDR Fund",
+              "cap_size": 63.702433234531945
+            },
+            {
+              "name": "XBI",
+              "description": "SPDR S&P Biotech ETF",
+              "cap_size": 64.38167441127949
+            }
+          ],
+          "x": 1,
+          "y": 336,
+          "dx": 91,
+          "dy": 100
+        },
+        {
+          "name": "Technology",
+          "children": [
+            {
+              "name": "PNQI",
+              "description": "Invesco NASDAQ Internet ETF",
+              "cap_size": 10.816653826391969
+            },
+            {
+              "name": "PSCT",
+              "description": "Invesco S&P SmallCap Information Technology ETF",
+              "cap_size": 10.295630140987
+            },
+            {
+              "name": "PTF",
+              "description": "Invesco DWA Technology Momentum ETF",
+              "cap_size": 10.0
+            },
+            {
+              "name": "USD",
+              "description": "ProShares Ultra Semiconductors",
+              "cap_size": 9.433981132056603
+            },
+            {
+              "name": "XSD",
+              "description": "SPDR S&P Semiconductor ETF",
+              "cap_size": 10.816653826391969
+            },
+            {
+              "name": "RYT",
+              "description": "Invesco S&P 500 Equal Weight Technology ETF",
+              "cap_size": 10.0
+            },
+            {
+              "name": "ROM",
+              "description": "ProShares Ultra Technology",
+              "cap_size": 11.40175425099138
+            },
+            {
+              "name": "FXL",
+              "description": "First Trust Technology AlphaDEX Fund",
+              "cap_size": 13.45362404707371
+            },
+            {
+              "name": "QTEC",
+              "description": "First Trust NASDAQ-100-Technology Sector Index Fund",
+              "cap_size": 17.204650534085253
+            },
+            {
+              "name": "IYW",
+              "description": "iShares U.S. Technology ETF",
+              "cap_size": 21.2602916254693
+            },
+            {
+              "name": "FTEC",
+              "description": "Fidelity MSCI Information Technology Index ETF",
+              "cap_size": 22.47220505424423
+            },
+            {
+              "name": "SOXS",
+              "description": "Direxion Daily Semiconductor Bear 3X Shares",
+              "cap_size": 26.870057685088806
+            },
+            {
+              "name": "FDN",
+              "description": "First Trust Dow Jones Internet Index Fund",
+              "cap_size": 27.65863337187866
+            },
+            {
+              "name": "TECL",
+              "description": "Direxion Daily Technology Bull 3X Shares",
+              "cap_size": 34.20526275297414
+            },
+            {
+              "name": "SOXX",
+              "description": "iShares PHLX Semiconductor ETF",
+              "cap_size": 50.11985634456667
+            },
+            {
+              "name": "SOXL",
+              "description": "Direxion Daily Semiconductor Bull 3X Shares",
+              "cap_size": 52.15361924162119
+            },
+            {
+              "name": "VGT",
+              "description": "Vanguard Information Technology Index Fund ETF Shares",
+              "cap_size": 50.99019513592785
+            },
+            {
+              "name": "XLK",
+              "description": "Technology Select Sector SPDR Fund",
+              "cap_size": 66.85057965343307
+            }
+          ],
+          "x": 1,
+          "y": 233,
+          "dx": 91,
+          "dy": 103
+        }
+      ],
+      "x": 0,
+      "y": 218,
+      "dx": 284,
+      "dy": 219
+    },
+    {
+      "name": "US",
+      "children": [
+        {
+          "name": "Dividend",
+          "children": [
+            {
+              "name": "SDOG",
+              "description": "ALPS Sector Dividend Dogs ETF",
+              "cap_size": 13.416407864998739
+            },
+            {
+              "name": "DIV",
+              "description": "Global X SuperDividend U.S. ETF",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "DHS",
+              "description": "WisdomTree U.S. High Dividend Fund",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "DTN",
+              "description": "WisdomTree U.S. Dividend ex-Financials Fund",
+              "cap_size": 8.48528137423857
+            },
+            {
+              "name": "QDF",
+              "description": "FlexShares Quality Dividend Index Fund",
+              "cap_size": 9.219544457292887
+            },
+            {
+              "name": "DTD",
+              "description": "WisdomTree U.S. Total Dividend Fund",
+              "cap_size": 10.0
+            },
+            {
+              "name": "PEY",
+              "description": "Invesco High Yield Equity Dividend Achievers ETF",
+              "cap_size": 9.433981132056603
+            },
+            {
+              "name": "FDL",
+              "description": "First Trust Morningstar Dividend Leaders Index Fund",
+              "cap_size": 10.63014581273465
+            },
+            {
+              "name": "DLN",
+              "description": "WisdomTree U.S. LargeCap Dividend Fund",
+              "cap_size": 12.041594578792296
+            },
+            {
+              "name": "DGRW",
+              "description": "WisdomTree U.S. Quality Dividend Growth Fund",
+              "cap_size": 15.811388300841896
+            },
+            {
+              "name": "SPHD",
+              "description": "Invesco S&P 500 High Dividend Low Volatility ETF",
+              "cap_size": 23.706539182259394
+            },
+            {
+              "name": "HDV",
+              "description": "iShares Core High Dividend ETF",
+              "cap_size": 24.758836806279895
+            },
+            {
+              "name": "FVD",
+              "description": "First Trust Value Line Dividend Index Fund",
+              "cap_size": 27.65863337187866
+            },
+            {
+              "name": "SDY",
+              "description": "SPDR S&P Dividend ETF",
+              "cap_size": 29.206163733020468
+            },
+            {
+              "name": "NOBL",
+              "description": "ProShares S&P 500 Dividend Aristocrats ETF",
+              "cap_size": 30.479501308256342
+            },
+            {
+              "name": "DVY",
+              "description": "iShares Select Dividend ETF",
+              "cap_size": 30.23243291566195
+            },
+            {
+              "name": "DGRO",
+              "description": "iShares Core Dividend Growth ETF",
+              "cap_size": 32.01562118716424
+            },
+            {
+              "name": "SCHD",
+              "description": "Schwab U.S. Dividend Equity ETF",
+              "cap_size": 35.35533905932738
+            },
+            {
+              "name": "VYM",
+              "description": "Vanguard High Dividend Yield Index Fund ETF Shares",
+              "cap_size": 44.82186966202994
+            },
+            {
+              "name": "VIG",
+              "description": "Vanguard Dividend Appreciation Index Fund ETF Shares",
+              "cap_size": 49.49747468305833
+            }
+          ],
+          "x": 218,
+          "y": 107,
+          "dy": 110,
+          "dx": 65
+        },
+        {
+          "name": "Leverage",
+          "children": [
+            {
+              "name": "SPUU",
+              "description": "Direxion Daily S&P 500 Bull 2X Shares",
+              "cap_size": 16.1245154965971
+            },
+            {
+              "name": "DDM",
+              "description": "ProShares Ultra Dow30",
+              "cap_size": 24.351591323771842
+            },
+            {
+              "name": "QLD",
+              "description": "ProShares Ultra QQQ",
+              "cap_size": 48.91829923454004
+            },
+            {
+              "name": "UDOW",
+              "description": "ProShares UltraPro Dow30",
+              "cap_size": 51.22499389946279
+            },
+            {
+              "name": "SSO",
+              "description": "ProShares Ultra S&P500",
+              "cap_size": 65.36818798161687
+            },
+            {
+              "name": "TQQQ",
+              "description": "ProShares UltraPro QQQ",
+              "cap_size": 67.95586803212802
+            },
+            {
+              "name": "UPRO",
+              "description": "ProShares UltraPro S&P500",
+              "cap_size": 64.4437739428721
+            },
+            {
+              "name": "SPXL",
+              "description": "Direxion Daily S&P500 Bull 3X Shares",
+              "cap_size": 65.19202405202648
+            }
+          ],
+          "x": 104,
+          "y": 107,
+          "dx": 114,
+          "dy": 110
+        },
+        {
+          "name": "Inverse",
+          "children": [
+            {
+              "name": "DXD",
+              "description": "ProShares UltraShort Dow30",
+              "cap_size": 22.825424421026653
+            },
+            {
+              "name": "DOG",
+              "description": "ProShares Short Dow30",
+              "cap_size": 27.586228448267445
+            },
+            {
+              "name": "QID",
+              "description": "ProShares UltraShort QQQ",
+              "cap_size": 39.05124837953327
+            },
+            {
+              "name": "PSQ",
+              "description": "ProShares Short QQQ",
+              "cap_size": 39.698866482558415
+            },
+            {
+              "name": "SDOW",
+              "description": "ProShares UltraPro Short Dow30",
+              "cap_size": 56.938563381947034
+            },
+            {
+              "name": "SPXS",
+              "description": "Direxion Daily S&P 500 Bear 3X Shares",
+              "cap_size": 64.53681120105021
+            },
+            {
+              "name": "SDS",
+              "description": "ProShares UltraShort S&P500",
+              "cap_size": 66.40030120413611
+            },
+            {
+              "name": "SPXU",
+              "description": "ProShares UltraPro Short S&P500",
+              "cap_size": 65.80273550544841
+            },
+            {
+              "name": "SQQQ",
+              "description": "ProShares UltraPro Short QQQ",
+              "cap_size": 66.40030120413611
+            },
+            {
+              "name": "SH",
+              "description": "ProShares Short S&P500",
+              "cap_size": 65.80273550544841
+            }
+          ],
+          "x": 104,
+          "y": 15,
+          "dy": 92,
+          "dx": 179
+        },
+        {
+          "name": "Index",
+          "children": [
+            {
+              "name": "IYY",
+              "description": "iShares Dow Jones U.S. ETF",
+              "cap_size": 10.63014581273465
+            },
+            {
+              "name": "QQEW",
+              "description": "First Trust NASDAQ-100 Equal Weighted Index Fund",
+              "cap_size": 10.0
+            },
+            {
+              "name": "EPS",
+              "description": "WisdomTree U.S. Earnings 500 Fund",
+              "cap_size": 10.0
+            },
+            {
+              "name": "VONE",
+              "description": "Vanguard Russell 1000 Index Fund ETF Shares",
+              "cap_size": 13.892443989449804
+            },
+            {
+              "name": "ONEQ",
+              "description": "Fidelity NASDAQ Composite Index Tracking Stock Fund",
+              "cap_size": 16.97056274847714
+            },
+            {
+              "name": "PRF",
+              "description": "Invesco FTSE RAFI US 1000 ETF",
+              "cap_size": 21.470910553583888
+            },
+            {
+              "name": "IWV",
+              "description": "iShares Russell 3000 ETF",
+              "cap_size": 33.54101966249684
+            },
+            {
+              "name": "RSP",
+              "description": "Invesco S&P 500 Equal Weight ETF",
+              "cap_size": 37.8021163428716
+            },
+            {
+              "name": "OEF",
+              "description": "iShares S&P 100 ETF",
+              "cap_size": 38.897300677553446
+            },
+            {
+              "name": "SCHB",
+              "description": "Schwab U.S. Broad Market ETF",
+              "cap_size": 41.036569057366385
+            },
+            {
+              "name": "IWB",
+              "description": "iShares Russell 1000 ETF",
+              "cap_size": 51.31276644267
+            },
+            {
+              "name": "ITOT",
+              "description": "iShares Core S&P Total U.S. Stock Market ETF",
+              "cap_size": 51.86520991955976
+            },
+            {
+              "name": "SPY",
+              "description": "SPDR S&P 500 ETF Trust",
+              "cap_size": 66.60330322138685
+            },
+            {
+              "name": "QQQ",
+              "description": "Invesco QQQ Trust",
+              "cap_size": 67.35725647619564
+            },
+            {
+              "name": "DIA",
+              "description": "SPDR Dow Jones Industrial Average ETF Trust",
+              "cap_size": 66.60330322138685
+            },
+            {
+              "name": "IVV",
+              "description": "iShares Core S&P 500 ETF",
+              "cap_size": 67.35725647619564
+            },
+            {
+              "name": "VOO",
+              "description": "Vanguard S&P 500 ETF",
+              "cap_size": 66.60330322138685
+            },
+            {
+              "name": "VTI",
+              "description": "Vanguard Total Stock Market Index Fund ETF Shares",
+              "cap_size": 67.35725647619564
+            }
+          ],
+          "x": 1,
+          "y": 15,
+          "dx": 103,
+          "dy": 202
+        }
+      ],
+      "x": 0,
+      "y": 0,
+      "dx": 284,
+      "dy": 218
+    }
+  ],
+  "x": 0,
+  "y": 0,
+  "dx": 788,
+  "dy": 437
+}
