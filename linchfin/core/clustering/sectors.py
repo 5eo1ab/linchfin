@@ -1,78 +1,78 @@
-from dataclasses import dataclass, field
 from collections import OrderedDict
-from linchfin.base.dataclasses.entities import AssetClass
+from typing import List
+from linchfin.base.dataclasses.entities import Asset, Cluster
 from linchfin.metadata import ETF_SECTORS
 
 
 def parse(sectors):
     dic = OrderedDict()
     if 'children' not in sectors:
-        _sector = Sector(asset_class_name=sectors['name'], desc=sectors['description'], cap_size=sectors['cap_size'])
-        return _sector
+        _asset = Asset(asset_name=sectors['name'])
+        _asset.extra['desc'] = sectors['description']
+        _asset.extra['cap_size'] = sectors['cap_size']
+        return _asset
 
     for _child in sectors['children']:
         dic[_child['name']] = parse(_child)
     return dic
 
 
-@dataclass
-class Sector(AssetClass):
-    desc: str = field(default='')
-    cap_size: float = field(default=0)
-
-
 class SectorTree:
-    def __init__(self, sector_dic):
-        self.sector_dic = sector_dic
+    def __init__(self, tree_data: dict):
+        self.cluster_dic = OrderedDict()
+        self.root = self.parse_tree(tree_data=tree_data)
 
-    @property
-    def keys(self):
-        return list(self.sector_dic.keys())
-    #
-    # @classmethod
-    # def get_instance(cls, tree_data: dict):
-    #     def build_tree(sector_tree: SectorTree, tree_data, base_key=''):
-    #         for k, v in tree_data.items():
-    #             if base_key:
-    #                 sector_name = f"{base_key}-{k}"
-    #             else:
-    #                 sector_name = k
-    #                 sector_tree.base_keys.append(k)
-    #
-    #             if isinstance(v, dict):
-    #                 build_tree(sector_tree, tree_data=tree_data[k], base_key=k)
-    #             elif isinstance(v, Sector):
-    #                 sector_tree.register(k=sector_name, sector=v)
-    #             else:
-    #                 TypeError(f"Check tree data type {k}:{v}")
-    #         return sector_tree
-    #
-    #     _sector_tree = cls()
-    #     return build_tree(sector_tree=_sector_tree, tree_data=tree_data)
+    def parse_tree(self, tree_data, keys=None):
+        if not keys:
+            key = 'root'
+            keys = []
+        else:
+            key = '-'.join(keys)
 
-    def register(self, k, sector: Sector):
-        self.sector_dic[k] = sector
+        _cluster = self.cluster_dic.get(key, Cluster(name=key))
+        self.cluster_dic[key] = _cluster
 
-    def search(self, sector_dic=None):
-        if sector_dic is None:
-            sector_dic = self.sector_dic
+        for k, v in tree_data.items():
+            if isinstance(v, dict):
+                keys.append(k)
+                _sub_cluster = self.parse_tree(tree_data=tree_data[k], keys=keys)
+                keys.pop()
+                _cluster.elements.append(_sub_cluster)
 
-        for k, v in sector_dic.items():
-            if isinstance(v, Sector):
-                print(v.cap_size)
-                return v.cap_size
-            elif isinstance(v, OrderedDict):
-                self.search(v)
+            elif isinstance(v, Asset):
+                sub_sector = keys[-1]
+                asset_class_name = '-'.join(keys)
+                _cluster = self.cluster_dic.get(asset_class_name, Cluster(name=sub_sector))
+                v.asset_class.asset_class_name = asset_class_name
+                _cluster.elements.append(v)
             else:
                 TypeError(f"Check tree data type {k}:{v}")
+        return _cluster
+
+    def get_node(self, key):
+        if key not in self.cluster_dic:
+            raise KeyError(f"{key} is not in cluster tree")
+        return self.cluster_dic[key]
+
+    def filter(self, key, filter_func=lambda x: x):
+        searched = self.search(node=self.get_node(key=key))
+        return [_node for _node in searched if filter_func(_node)]
+
+    def search(self, node) -> List[Asset]:
+        searched = []
+        for _elem in node.elements:
+            if isinstance(_elem, Cluster):
+                searched += self.search(_elem)
+            elif isinstance(_elem, Asset):
+                searched.append(_elem)
+            else:
+                raise TypeError("??")
+        return searched
 
 
 if __name__ == '__main__':
     etf_sectors = parse(ETF_SECTORS)
-    sector_tree = SectorTree(sector_dic=etf_sectors)
-    print(sector_tree.search())
-
-    # sector_tree = SectorTree.get_instance(tree_data=etf_sectors)
-    # print(sector_tree.keys)
-    # print(sector_tree.base_keys)
-    # print(sector_tree.sector_dic)
+    __sector_tree = SectorTree(tree_data=etf_sectors)
+    filtered = __sector_tree.filter(key='Strategy', filter_func=lambda x: x.cap_size > 10)
+    not_filtered = __sector_tree.filter(key='Strategy')
+    print(filtered[0].desc)
