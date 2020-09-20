@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from collections import OrderedDict
-from typing import Dict, OrderedDict as OrderedDictType
+from typing import List, Dict, OrderedDict as OrderedDictType
 from uuid import uuid4
 import pandas as pd
 
@@ -8,20 +8,29 @@ from .value_types import Weight
 
 
 @dataclass
-class AssetClass:
+class Entity:
+    def __post_init__(self):
+        self.extra = OrderedDict()
+
+    def __getattr__(self, item):
+        return self.extra[item]
+
+
+@dataclass
+class AssetClass(Entity):
     asset_class_id: str = field(default_factory=uuid4)
     asset_class_name: str = field(default='')
 
 
 @dataclass
-class Asset:
+class Asset(Entity):
     asset_id: str = field(default_factory=uuid4)
     asset_name: str = field(default='')
     asset_class: AssetClass = field(default_factory=AssetClass)
 
 
 @dataclass
-class AssetUniverse:
+class AssetUniverse(Entity):
     universe_id: str = field(default_factory=uuid4)
     assets: OrderedDictType[str, Asset] = field(default_factory=OrderedDict)
 
@@ -36,15 +45,15 @@ class AssetUniverse:
 
 
 @dataclass
-class Cluster:
-    e1: int
-    e2: int
-    d: float
-    size: int
+class Cluster(Entity):
+    name: str = field(default='')
+    elements: List = field(default_factory=list)
+    d: float = field(default=0)
+    size: int = field(default=0)
 
 
 @dataclass
-class Portfolio:
+class Portfolio(Entity):
     portfolio_id: str = field(default_factory=uuid4)
     weights: Dict[str, Weight] = field(default_factory=dict)
     asset_universe: AssetUniverse = field(default_factory=AssetUniverse)
