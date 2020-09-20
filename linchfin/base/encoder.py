@@ -11,6 +11,6 @@ class Encoder:
 
 class CorrelationEncoder(Encoder):
     @classmethod
-    def encode(cls, data: Feature) -> Metric:
-        encoded_value = np.sqrt(np.divide((1 - data.value), 2))
+    def encode(cls, corr: Feature) -> Metric:
+        encoded_value = np.sqrt(np.divide((1 - corr.value), 2))
         return Metric(name='dist', value=encoded_value)

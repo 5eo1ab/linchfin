@@ -1,7 +1,6 @@
 import scipy.cluster.hierarchy as sch
 import numpy as np
 import pandas as pd
-from dataclasses import dataclass
 from matplotlib import pyplot as plt
 from linchfin.base.dataclasses.entities import (
     Asset, AssetUniverse, Portfolio, Cluster
@@ -9,15 +8,6 @@ from linchfin.base.dataclasses.entities import (
 from linchfin.base.dataclasses.value_types import Metric, Feature
 from linchfin.base.encoder import CorrelationEncoder
 from typing import List
-
-
-@dataclass
-class HierarchyCluster(Cluster):
-    def __post_init__(self):
-        for k, _field in self.__dataclass_fields__.items():
-            v = getattr(self, k)
-            if not isinstance(v, _field.type):
-                setattr(self, k, _field.type(getattr(self, k)))
 
 
 class HierarchyRiskParityEngine:
@@ -43,13 +33,16 @@ class HierarchyRiskParityEngine:
         portfolio.set_weights(weights)
         return portfolio
 
-    def get_clusters(self, distance: Metric) -> List[Cluster]:
+    @staticmethod
+    def get_clusters(distance: Metric) -> List[Cluster]:
         links = sch.linkage(distance.value, 'single')
-        return [HierarchyCluster(*c) for c in links]
+        return [Cluster(elements=[int(p1), int(p2)], d=dist, size=int(size))
+                for p1, p2, dist, size in links]
 
-    def get_quansi_diag(self, link):
+    @staticmethod
+    def get_quansi_diag(link):
         last_cluster = link[-1]
-        sort_ix = pd.Series([last_cluster.e1, last_cluster.e2])
+        sort_ix = pd.Series([last_cluster.elements[0], last_cluster.elements[1]])
         num_items = last_cluster.size
 
         while sort_ix.max() >= num_items:
@@ -59,8 +52,8 @@ class HierarchyRiskParityEngine:
             j = df0.values - num_items
 
             current_cluster = link[j.item()]
-            sort_ix[i] = current_cluster.e1
-            df0 = pd.Series(current_cluster.e2, index=i+1)
+            sort_ix[i] = current_cluster.elements[0]
+            df0 = pd.Series(current_cluster.elements[1], index=i+1)
             sort_ix = sort_ix.append(df0)
             sort_ix = sort_ix.sort_index()  # re-sort
             sort_ix.index = range(sort_ix.shape[0])  # reindex
@@ -120,7 +113,7 @@ if __name__ == '__main__':
     for idx, _ in enumerate(_p):
         _asset_universe.append(Asset(str(idx)))
 
-    _p = Metric(name='correlation', value=_p)
+    _p = Feature(name='correlation', value=_p)
     hcp = HierarchyRiskParityEngine(asset_universe=_asset_universe)
     hcp.show_dendrogram(corr=_p.value)
     _portfolio = hcp.run(corr=_p)
