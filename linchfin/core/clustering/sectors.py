@@ -4,19 +4,6 @@ from linchfin.base.dataclasses.entities import Asset, Cluster
 from linchfin.metadata import ETF_SECTORS
 
 
-def parse(sectors):
-    dic = OrderedDict()
-    if 'children' not in sectors:
-        _asset = Asset(asset_name=sectors['name'])
-        _asset.extra['desc'] = sectors['description']
-        _asset.extra['cap_size'] = sectors['cap_size']
-        return _asset
-
-    for _child in sectors['children']:
-        dic[_child['name']] = parse(_child)
-    return dic
-
-
 class SectorTree:
     def __init__(self, tree_data: dict):
         self.cluster_dic = OrderedDict()
@@ -49,16 +36,14 @@ class SectorTree:
                 TypeError(f"Check tree data type {k}:{v}")
         return _cluster
 
-    def get_node(self, key):
-        if key not in self.cluster_dic:
-            raise KeyError(f"{key} is not in cluster tree")
-        return self.cluster_dic[key]
-
     def filter(self, key, filter_func=lambda x: x):
         searched = self.search(node=self.get_node(key=key))
         return [_node for _node in searched if filter_func(_node)]
 
-    def search(self, node) -> List[Asset]:
+    def search(self, node: str or Asset or Cluster) -> List[Asset]:
+        if isinstance(node, str):
+            node = self.get_node(key=node)
+
         searched = []
         for _elem in node.elements:
             if isinstance(_elem, Cluster):
@@ -69,10 +54,14 @@ class SectorTree:
                 raise TypeError("??")
         return searched
 
+    def get_node(self, key):
+        if key not in self.cluster_dic:
+            raise KeyError(f"{key} is not in cluster tree")
+        return self.cluster_dic[key]
+
 
 if __name__ == '__main__':
-    etf_sectors = parse(ETF_SECTORS)
-    __sector_tree = SectorTree(tree_data=etf_sectors)
+    __sector_tree = SectorTree(tree_data=ETF_SECTORS)
     filtered = __sector_tree.filter(key='Strategy', filter_func=lambda x: x.cap_size > 10)
     not_filtered = __sector_tree.filter(key='Strategy')
     print(filtered[0].desc)
