@@ -12,9 +12,6 @@ class Entity:
     def __post_init__(self):
         self.extra = OrderedDict()
 
-    def __getattr__(self, item):
-        return self.extra[item]
-
 
 @dataclass
 class AssetClass(Entity):
@@ -33,6 +30,21 @@ class Asset(Entity):
 class AssetUniverse(Entity):
     universe_id: str = field(default_factory=uuid4)
     assets: OrderedDictType[str, Asset] = field(default_factory=OrderedDict)
+
+    def __post_init__(self):
+        if isinstance(self.assets, list):
+            asset_dic = OrderedDict()
+            for _asset in self.assets:
+                asset_dic[_asset.asset_name] = _asset
+            self.assets = asset_dic
+        elif isinstance(self.assets, OrderedDict):
+            pass
+        else:
+            raise TypeError("Unsupported Assets to initialize universe")
+
+    @property
+    def symbols(self):
+        return [_asset.asset_name for _asset in self.assets.values()]
 
     def append(self, asset: Asset):
         self.assets[asset.asset_id] = asset
@@ -58,10 +70,15 @@ class Portfolio(Entity):
     weights: Dict[str, Weight] = field(default_factory=dict)
     asset_universe: AssetUniverse = field(default_factory=AssetUniverse)
 
+    def get_weights(self):
+        _weights = [(_asset.asset_name, self.weights[_asset.asset_id])
+                    for _asset in self.asset_universe.assets.values()]
+        return OrderedDict(_weights)
+
     def set_weights(self, weights: Dict[str, Weight] or pd.Series):
         for k, v in weights.items():
             _asset = self.asset_universe.assets[str(k)]
-            self.weights[_asset.asset_id] = Weight(v)
+            self.weights[_asset.asset_name] = Weight(v)
 
     def is_valid(self):
         if not round(sum(self.weights.values()), 4) == 1.0:

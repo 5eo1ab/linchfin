@@ -27,23 +27,30 @@ class HierarchyRiskParityEngine:
         portfolio = Portfolio(asset_universe=self.asset_universe)
         dist = self.distance_encoder.encode(corr=corr)
 
-        _clusters = self.get_clusters(distance=dist)
-        sort_ix = self.get_quansi_diag(_clusters)
-        weights = self.get_recursive_bisect(cov=pd.DataFrame(corr.value), sort_ix=sort_ix)
+        linkage = self.calc_linkage(distance=dist)
+        sort_ix = self.get_quansi_diag(linkage)
+        weights = self.get_recursive_bisect(cov=corr.value, sort_ix=sort_ix)
+
+        weights.index = corr.columns[weights.index]
         portfolio.set_weights(weights)
         return portfolio
 
     @staticmethod
-    def get_clusters(distance: Metric) -> List[Cluster]:
+    def calc_linkage(distance: Metric) -> np.array:
         links = sch.linkage(distance.value, 'single')
+        return links
+
+    def get_clusters(self, distance: Metric) -> List[Cluster]:
+        links = self.calc_linkage(distance=distance)
         return [Cluster(elements=[int(p1), int(p2)], d=dist, size=int(size))
                 for p1, p2, dist, size in links]
 
     @staticmethod
     def get_quansi_diag(link):
+        link = link.astype(int)
         last_cluster = link[-1]
-        sort_ix = pd.Series([last_cluster.elements[0], last_cluster.elements[1]])
-        num_items = last_cluster.size
+        sort_ix = pd.Series([link[-1, 0], link[-1, 1]])
+        num_items = last_cluster[3]
 
         while sort_ix.max() >= num_items:
             sort_ix.index = range(0, sort_ix.shape[0] * 2, 2) # make space
@@ -51,9 +58,8 @@ class HierarchyRiskParityEngine:
             i = df0.index
             j = df0.values - num_items
 
-            current_cluster = link[j.item()]
-            sort_ix[i] = current_cluster.elements[0]
-            df0 = pd.Series(current_cluster.elements[1], index=i+1)
+            sort_ix[i] = link[j, 0]
+            df0 = pd.Series(link[j, 1], index=i+1)
             sort_ix = sort_ix.append(df0)
             sort_ix = sort_ix.sort_index()  # re-sort
             sort_ix.index = range(sort_ix.shape[0])  # reindex
@@ -82,7 +88,8 @@ class HierarchyRiskParityEngine:
         return w
 
     def get_cluster_var(self, cov, c_items):
-        cov_ = cov.loc[c_items, c_items]
+        cov_ = cov.loc[cov.columns[c_items], cov.columns[c_items]]
+        # cov_ = cov.loc[c_items, c_items]
         w_ = self.get_ivp(cov_).reshape(-1, 1)
         c_var = np.dot(np.dot(w_.T, cov_), w_)[0, 0]
         return c_var
@@ -111,11 +118,11 @@ if __name__ == '__main__':
 
     _asset_universe = AssetUniverse()
     for idx, _ in enumerate(_p):
-        _asset_universe.append(Asset(str(idx)))
+        _asset_universe.append(Asset(str(idx), asset_name=str(idx)))
 
     _p = Feature(name='correlation', value=_p)
     hcp = HierarchyRiskParityEngine(asset_universe=_asset_universe)
     hcp.show_dendrogram(corr=_p.value)
     _portfolio = hcp.run(corr=_p)
     print(_portfolio.is_valid())
-    print(_portfolio)
+    print(_portfolio.get_weights())
