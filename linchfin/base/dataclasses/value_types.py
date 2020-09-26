@@ -2,6 +2,7 @@ from dataclasses import dataclass
 import numpy as np
 from decimal import Decimal
 import pandas as pd
+from uuid import UUID
 
 
 @dataclass
@@ -29,4 +30,12 @@ class Weight(Decimal):
 
 
 class TimeSeries(pd.DataFrame):
+    pass
+
+
+class AssetId(UUID):
+    pass
+
+
+class AssetName(str):
     pass
