@@ -118,11 +118,11 @@ if __name__ == '__main__':
 
     _asset_universe = AssetUniverse()
     for idx, _ in enumerate(_p):
-        _asset_universe.append(Asset(str(idx)))
+        _asset_universe.append(Asset(asset_name=str(idx)))
 
     _p = Feature(name='correlation', value=_p)
     hcp = HierarchyRiskParityEngine(asset_universe=_asset_universe)
     hcp.show_dendrogram(corr=_p.value)
     _portfolio = hcp.run(corr=_p)
     print(_portfolio.is_valid())
-    print(_portfolio.get_weights())
+    print(_portfolio.weights)
