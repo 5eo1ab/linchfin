@@ -37,5 +37,5 @@ class AssetId(UUID):
     pass
 
 
-class AssetName(str):
+class AssetCode(str):
     pass
