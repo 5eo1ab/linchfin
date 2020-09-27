@@ -11,7 +11,7 @@ etf_sector_data = json.load(open(os.path.join(WORKDIR, 'etf_sectors.json')))
 def parse(sectors):
     dic = OrderedDict()
     if 'children' not in sectors:
-        _asset = Asset(asset_name=sectors['name'])
+        _asset = Asset(code=sectors['name'])
         _asset.extra['desc'] = sectors['description']
         _asset.extra['cap_size'] = sectors['cap_size']
         return _asset
