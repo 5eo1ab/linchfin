@@ -23,8 +23,8 @@ class DataWrangler:
 
     @staticmethod
     def calc_corr(timeseries: TimeSeries, method='pearson', min_periods: Optional[int] = 1):
-        cov = timeseries.corr(method=method, min_periods=min_periods)
-        return cov
+        corr = timeseries.corr(method=method, min_periods=min_periods)
+        return corr
 
     @staticmethod
     def calc_cov(timeseries: TimeSeries,

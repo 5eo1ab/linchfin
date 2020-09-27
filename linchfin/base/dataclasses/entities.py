@@ -50,8 +50,13 @@ class AssetUniverse(Entity):
     def symbols(self):
         return [_asset.code for _asset in self.assets.values()]
 
-    def get_asset(self, name: AssetName) -> Asset:
-        asset_id = self.get_asset_id(name=name)
+    def show_summary(self):
+        print(f"{self.universe_id}")
+        for _asset_id, _asset in self.assets.items():
+            print(f"Asset({_asset.code}): AssetClass({_asset.asset_class.asset_class_name})")
+
+    def get_asset(self, code: AssetCode) -> Asset:
+        asset_id = self.get_asset_id(code=code)
         return self.assets[asset_id]
 
     def get_asset_id(self, code: AssetCode) -> AssetId:
