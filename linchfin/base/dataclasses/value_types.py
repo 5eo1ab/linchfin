@@ -1,8 +1,9 @@
 from dataclasses import dataclass
-import numpy as np
 from decimal import Decimal
-import pandas as pd
 from uuid import UUID
+
+import numpy as np
+import pandas as pd
 
 
 @dataclass

@@ -1,8 +1,8 @@
 import json
 import os
 from collections import OrderedDict
-from linchfin.base.dataclasses.entities import Asset
 
+from linchfin.base.dataclasses.entities import Asset
 
 WORKDIR = os.path.dirname(__file__)
 etf_sector_data = json.load(open(os.path.join(WORKDIR, 'etf_sectors.json')))

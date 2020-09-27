@@ -1,5 +1,6 @@
 from collections import OrderedDict
 from typing import List
+
 from linchfin.base.dataclasses.entities import Asset, Cluster
 from linchfin.metadata import ETF_SECTORS
 
@@ -62,6 +63,6 @@ class SectorTree:
 
 if __name__ == '__main__':
     __sector_tree = SectorTree(tree_data=ETF_SECTORS)
-    filtered = __sector_tree.filter(key='Strategy', filter_func=lambda x: x.cap_size > 10)
+    filtered = __sector_tree.filter(key='Strategy', filter_func=lambda x: x.extra['cap_size'] > 10)
     not_filtered = __sector_tree.filter(key='Strategy')
-    print(filtered[0].desc)
+    print(filtered[0].extra['desc'])
