@@ -12,7 +12,7 @@ if __name__ == '__main__':
     wrangler = DataWrangler()
 
     sector_tree = SectorTree(tree_data=ETF_SECTORS)
-    filtered = sector_tree.filter(key='Global', filter_func=lambda x: x.extra['cap_size'] > 10)
+    filtered = sector_tree.filter(key='Global', filter_func=lambda x: x.cap_size > 10)
     asset_universe = AssetUniverse(assets=filtered)
 
     timeseries = data_reader.get_adj_close_price(symbols=asset_universe.symbols)
@@ -29,4 +29,4 @@ if __name__ == '__main__':
     for k, v in portfolio.sector_weights.items():
         print(k, v)
     portfolio.round(portfolio.weights)
-    portfolio.asset_universe.show_summary()
+    portfolio.show_summary()

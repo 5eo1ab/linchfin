@@ -12,6 +12,12 @@ class Entity:
     def __post_init__(self):
         self.extra = OrderedDict()
 
+    def __getattr__(self, item):
+        try:
+            return self.extra[item]
+        except KeyError as e:
+            raise AttributeError(f"{self.__class__.__name__} objects has no attribute {item}")
+
 
 @dataclass
 class AssetClass(Entity):
@@ -49,11 +55,6 @@ class AssetUniverse(Entity):
     @property
     def symbols(self):
         return [_asset.code for _asset in self.assets.values()]
-
-    def show_summary(self):
-        print(f"{self.universe_id}")
-        for _asset_id, _asset in self.assets.items():
-            print(f"Asset({_asset.code}): AssetClass({_asset.asset_class.asset_class_name})")
 
     def get_asset(self, code: AssetCode) -> Asset:
         asset_id = self.get_asset_id(code=code)
@@ -126,3 +127,18 @@ class Portfolio(Entity):
         if not round(sum(weights.values()), 4) == 1.0:
             return False
         return True
+
+    def show_summary(self):
+        print(f"Universe ID: {self.asset_universe.universe_id}")
+        asset_class_map = defaultdict(list)
+        asset_class_weights = defaultdict(Weight)
+        for _asset_id, _asset in self.asset_universe.assets.items():
+            asset_class_map[_asset.asset_class.asset_class_name].append(
+                _asset
+            )
+            asset_class_weights[_asset.asset_class.asset_class_name] += self.weights[_asset.code]
+
+        for _asset_class_name, assets in asset_class_map.items():
+            print(f"AssetClass({_asset_class_name}): weights={asset_class_weights[_asset_class_name]},"
+                  f" asset_codes={[_asset.code for _asset in assets]}")
+        return asset_class_weights

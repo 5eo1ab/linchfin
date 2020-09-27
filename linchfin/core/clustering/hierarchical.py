@@ -29,7 +29,7 @@ class HierarchyRiskParityEngine:
 
         linkage = self.calc_linkage(distance=dist)
         sort_ix = self.get_quansi_diag(linkage)
-        weights = self.get_recursive_bisect(cov=corr.value, sort_ix=sort_ix)
+        weights = self.get_recursive_bisect(corr=corr, sort_ix=sort_ix)
 
         weights.index = corr.columns[weights.index]
         portfolio.set_weights(weights)
@@ -65,7 +65,7 @@ class HierarchyRiskParityEngine:
             sort_ix.index = range(sort_ix.shape[0])  # reindex
         return sort_ix.tolist()
 
-    def get_recursive_bisect(self, cov: pd.DataFrame, sort_ix: list):
+    def get_recursive_bisect(self, corr: Feature, sort_ix: list):
         w = pd.Series(1, index=sort_ix)
         c_items = [sort_ix]
 
@@ -80,29 +80,29 @@ class HierarchyRiskParityEngine:
             for i in range(0, len(c_items), 2):
                 c_item0 = c_items[i]
                 c_item1 = c_items[i+1]
-                c_var0 = self.get_cluster_var(cov, c_item0)
-                c_var1 = self.get_cluster_var(cov, c_item1)
+                c_var0 = self.get_cluster_var(corr, c_item0)
+                c_var1 = self.get_cluster_var(corr, c_item1)
                 alpha = 1 - c_var0 / (c_var0 + c_var1)
                 w[c_item0] *= alpha
                 w[c_item1] *= 1-alpha
         return w
 
-    def get_cluster_var(self, cov, c_items):
-        cov_ = cov.loc[cov.columns[c_items], cov.columns[c_items]]
+    def get_cluster_var(self, corr: Feature, c_items):
+        _corr_value = corr.value.loc[corr.columns[c_items], corr.columns[c_items]]
         # cov_ = cov.loc[c_items, c_items]
-        w_ = self.get_ivp(cov_).reshape(-1, 1)
-        c_var = np.dot(np.dot(w_.T, cov_), w_)[0, 0]
+        w_ = self.get_ivp(_corr_value).reshape(-1, 1)
+        c_var = np.dot(np.dot(w_.T, _corr_value), w_)[0, 0]
         return c_var
 
-    def get_ivp(self, cov, **kwargs):
+    def get_ivp(self, cov: pd.DataFrame, **kwargs):
         ivp = 1./np.diag(cov)
         return ivp/ivp.sum()
 
-    def show_dendrogram(self, corr, **kwargs):
+    def show_dendrogram(self, corr: Feature, **kwargs):
         plt.title("Hierarchical Cluster")
         plt.xlabel("index")
         plt.ylabel("Distance")
-        links = sch.linkage(corr, 'single')
+        links = sch.linkage(corr.value.to_numpy(), 'single')
         sch.dendrogram(links, **kwargs)
         plt.show()
 
@@ -120,9 +120,10 @@ if __name__ == '__main__':
     for idx, _ in enumerate(_p):
         _asset_universe.append(Asset(code=str(idx)))
 
-    _p = Feature(name='correlation', value=_p)
+    _p = Feature(name='correlation', value=pd.DataFrame(_p))
     hcp = HierarchyRiskParityEngine(asset_universe=_asset_universe)
-    hcp.show_dendrogram(corr=_p.value)
+    hcp.show_dendrogram(corr=_p)
     _portfolio = hcp.run(corr=_p)
     print(_portfolio.is_valid())
     print(_portfolio.weights)
+    print(_portfolio.show_summary())
