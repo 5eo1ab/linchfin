@@ -1,7 +1,8 @@
-from dataclasses import dataclass, field
 from collections import OrderedDict, defaultdict
+from dataclasses import dataclass, field
 from typing import List, Dict, OrderedDict as OrderedDictType
-from uuid import uuid4
+from uuid import uuid4, UUID
+
 import pandas as pd
 
 from .value_types import Weight, AssetId, AssetCode
@@ -12,24 +13,34 @@ class Entity:
     def __post_init__(self):
         self.extra = OrderedDict()
 
-    def __getattr__(self, item):
-        try:
-            return self.extra[item]
-        except KeyError as e:
-            raise AttributeError(f"{self.__class__.__name__} objects has no attribute {item}")
-
 
 @dataclass
 class AssetClass(Entity):
     asset_class_id: str = field(default_factory=uuid4)
     asset_class_name: str = field(default='')
 
+    @property
+    def id(self):
+        return self.asset_class_id
+
+    @property
+    def name(self):
+        return self.asset_class_name
+
 
 @dataclass
 class Asset(Entity):
     asset_id: AssetId = field(default_factory=uuid4)
-    code: str = field(default='')
+    code: AssetCode = field(default_factory=AssetCode)
     asset_class: AssetClass = field(default_factory=AssetClass)
+
+    @property
+    def id(self):
+        return self.asset_id
+
+    def __post_init__(self):
+        if not isinstance(self.code, AssetCode):
+            self.code = AssetCode(self.code)
 
 
 @dataclass
@@ -53,6 +64,10 @@ class AssetUniverse(Entity):
             self.asset_code_map[_asset.code] = asset_id
 
     @property
+    def id(self):
+        return self.universe_id
+
+    @property
     def symbols(self):
         return [_asset.code for _asset in self.assets.values()]
 
@@ -68,11 +83,14 @@ class AssetUniverse(Entity):
         self.assets[asset.asset_id] = asset
         self.asset_code_map[asset.code] = asset.asset_id
 
-    def pop(self, asset: str or Asset):
-        if isinstance(asset, Asset):
-            self.assets.pop(asset.asset_id)
-        else:
-            self.assets.pop(asset)
+    def pop(self, asset: AssetId or Asset):
+        if isinstance(asset, AssetId) or isinstance(asset, UUID):
+            asset = self.assets[asset]
+
+        if not isinstance(asset, Asset):
+            raise TypeError(f"Can't pop assets for {type(asset)}")
+
+        self.assets.pop(asset.asset_id)
         self.asset_code_map.pop(asset.code)
 
 
@@ -89,6 +107,14 @@ class Portfolio(Entity):
     portfolio_id: str = field(default_factory=uuid4)
     _weights: Dict[AssetCode, Weight] = field(default_factory=dict)
     asset_universe: AssetUniverse = field(default_factory=AssetUniverse)
+
+    @property
+    def id(self):
+        return self.portfolio_id
+
+    @property
+    def symbols(self):
+        return list(self.weights.keys())
 
     @property
     def weights(self):
@@ -127,6 +153,9 @@ class Portfolio(Entity):
         if not round(sum(weights.values()), 4) == 1.0:
             return False
         return True
+
+    def to_series(self):
+        return pd.Series({str(k): float(v) for k, v in self.weights.items()})
 
     def show_summary(self):
         print(f"Universe ID: {self.asset_universe.universe_id}")

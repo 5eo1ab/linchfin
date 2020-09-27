@@ -1,13 +1,15 @@
-import scipy.cluster.hierarchy as sch
+from typing import List
+
 import numpy as np
 import pandas as pd
+import scipy.cluster.hierarchy as sch
 from matplotlib import pyplot as plt
+
 from linchfin.base.dataclasses.entities import (
     Asset, AssetUniverse, Portfolio, Cluster
 )
 from linchfin.base.dataclasses.value_types import Metric, Feature
 from linchfin.base.encoder import CorrelationEncoder
-from typing import List
 
 
 class HierarchyRiskParityEngine:
@@ -53,13 +55,13 @@ class HierarchyRiskParityEngine:
         num_items = last_cluster[3]
 
         while sort_ix.max() >= num_items:
-            sort_ix.index = range(0, sort_ix.shape[0] * 2, 2) # make space
+            sort_ix.index = range(0, sort_ix.shape[0] * 2, 2)  # make space
             df0 = sort_ix[sort_ix >= num_items]
             i = df0.index
             j = df0.values - num_items
 
             sort_ix[i] = link[j, 0]
-            df0 = pd.Series(link[j, 1], index=i+1)
+            df0 = pd.Series(link[j, 1], index=i + 1)
             sort_ix = sort_ix.append(df0)
             sort_ix = sort_ix.sort_index()  # re-sort
             sort_ix.index = range(sort_ix.shape[0])  # reindex
@@ -79,12 +81,12 @@ class HierarchyRiskParityEngine:
 
             for i in range(0, len(c_items), 2):
                 c_item0 = c_items[i]
-                c_item1 = c_items[i+1]
+                c_item1 = c_items[i + 1]
                 c_var0 = self.get_cluster_var(corr, c_item0)
                 c_var1 = self.get_cluster_var(corr, c_item1)
                 alpha = 1 - c_var0 / (c_var0 + c_var1)
                 w[c_item0] *= alpha
-                w[c_item1] *= 1-alpha
+                w[c_item1] *= 1 - alpha
         return w
 
     def get_cluster_var(self, corr: Feature, c_items):
@@ -95,8 +97,8 @@ class HierarchyRiskParityEngine:
         return c_var
 
     def get_ivp(self, cov: pd.DataFrame, **kwargs):
-        ivp = 1./np.diag(cov)
-        return ivp/ivp.sum()
+        ivp = 1. / np.diag(cov)
+        return ivp / ivp.sum()
 
     def show_dendrogram(self, corr: Feature, **kwargs):
         plt.title("Hierarchical Cluster")
@@ -118,7 +120,7 @@ if __name__ == '__main__':
 
     _asset_universe = AssetUniverse()
     for idx, _ in enumerate(_p):
-        _asset_universe.append(Asset(code=str(idx)))
+        _asset_universe.append(Asset(code=idx))
 
     _p = Feature(name='correlation', value=pd.DataFrame(_p))
     hcp = HierarchyRiskParityEngine(asset_universe=_asset_universe)

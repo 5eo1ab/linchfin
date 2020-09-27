@@ -1,15 +1,12 @@
 import setuptools
 
-
 with open("README.md", "r") as fh:
     long_description = fh.read()
-
 
 with open('requirements.txt', encoding='utf-8') as f:
     requirements = []
     for _requirement in f.read().splitlines():
         requirements.append(_requirement)
-
 
 setuptools.setup(
     name="linchfin",

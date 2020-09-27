@@ -1,8 +1,8 @@
-import pandas_datareader as pdr
 from typing import List
-from linchfin.base.dataclasses.value_types import TimeSeries
-import pandas as pd
 
+import pandas_datareader as pdr
+
+from linchfin.base.dataclasses.value_types import TimeSeries
 
 CLOSE = 'Close'
 HIGH = 'High'
