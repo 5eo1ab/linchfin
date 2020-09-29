@@ -1,18 +1,11 @@
 from linchfin.base.dataclasses.entities import Portfolio
 from linchfin.base.dataclasses.value_types import TimeSeries, Weight
+from linchfin.common.calc import calc_portfolio_yield
 
 
 class BackTestSimulator:
     def run(self, portfolio: Portfolio, daily_yield: TimeSeries):
-        portfolio_yield = self.calc_portfolio_yield(portfolio=portfolio, daily_yield=daily_yield)
-        return portfolio_yield.sum(axis=1)
-
-    @staticmethod
-    def calc_portfolio_yield(portfolio: Portfolio, daily_yield: TimeSeries) -> TimeSeries:
-        init_portfolio = portfolio.to_series()
-        daily_return = daily_yield.add(1)
-        daily_return.iloc[0] = init_portfolio
-        portfolio_yield = daily_return.cumprod()
+        portfolio_yield = calc_portfolio_yield(portfolio=portfolio, daily_yield=daily_yield)
         return portfolio_yield
 
 
