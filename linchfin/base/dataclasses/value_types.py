@@ -2,6 +2,7 @@ from dataclasses import dataclass
 from decimal import Decimal
 from uuid import UUID
 
+from collections import OrderedDict
 import numpy as np
 import pandas as pd
 
@@ -24,6 +25,10 @@ class Feature:
 class Metric:
     name: str
     value: np.ndarray
+
+
+class Weights(OrderedDict):
+    pass
 
 
 class Weight(Decimal):

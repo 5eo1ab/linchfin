@@ -115,7 +115,7 @@ class Cluster(Entity):
 @dataclass
 class Portfolio(Entity):
     portfolio_id: str = field(default_factory=uuid4)
-    _weights: Dict[AssetCode, Weight] = field(default_factory=dict)
+    weights: Dict[AssetCode, Weight] = field(default_factory=dict)
     asset_universe: AssetUniverse = field(default_factory=AssetUniverse)
 
     @property
@@ -125,10 +125,6 @@ class Portfolio(Entity):
     @property
     def symbols(self):
         return list(self.weights.keys())
-
-    @property
-    def weights(self):
-        return self._weights
 
     @property
     def sector_weights(self):
@@ -143,7 +139,7 @@ class Portfolio(Entity):
         for _asset_code, _w in weights.items():
             _asset = self.asset_universe.get_asset(code=_asset_code)
             updated_weights[_asset.code] = Weight(_w)
-        self._weights = updated_weights
+        self.weights = updated_weights
 
     def round(self, weights, points=2):
         _rounded_weights = OrderedDict()
@@ -158,8 +154,10 @@ class Portfolio(Entity):
     def is_valid(self):
         return self.validate(weights=self.weights)
 
-    def validate(self, weights):
+    def validate(self, weights, raise_exception=True):
         if not round(sum(weights.values()), 4) == 1.0:
+            if raise_exception:
+                raise RuntimeError(f"Fail to validate portfolio({self.weights})")
             return False
         return True
 

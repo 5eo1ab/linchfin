@@ -1,12 +1,12 @@
 from linchfin.base.dataclasses.entities import Portfolio
-from linchfin.base.dataclasses.value_types import Weight
+from linchfin.base.dataclasses.value_types import Weight, Weights
 import random
 from collections import OrderedDict
 
 
 class RuleEngine:
     @classmethod
-    def run(cls, portfolio: Portfolio, min_cutoff=0.05):
+    def run(cls, portfolio: Portfolio, min_cutoff=0.05) -> Weights:
         updated_weights = portfolio.weights.copy()
         cutoff = Weight(100 * min_cutoff)
 
@@ -15,8 +15,7 @@ class RuleEngine:
 
         accept_ratios = OrderedDict()
         for _asset_code, _weight in portfolio.weights.items():
-            w = _weight * 100
-            updated_weights[_asset_code] = round(w)
+            w = Weight(_weight * 100)
             updated_weights[_asset_code] = (w // cutoff) * cutoff
             accept_ratios[_asset_code] = float((w % cutoff) / cutoff)
 
@@ -33,7 +32,8 @@ class RuleEngine:
                 if random.random() <= accept_ratios[_asset_code]:
                     updated_weights[_asset_code] += cutoff
                     accept_ratios[_asset_code] = 0
-        return cls.to_representation(weights=updated_weights)
+        weights = cls.to_representation(weights=updated_weights)
+        return weights
 
     @classmethod
     def to_representation(cls, weights):
@@ -67,9 +67,9 @@ if __name__ == '__main__':
         'ACWI': Weight('0.035140928888262860929625475137072498910129070281982421875'),
         'IXC': Weight('0.0178150740709680059647990191251665237359702587127685546875'),
         'GUNR': Weight('0.0178150740709680059647990191251665237359702587127685546875')}
-    _port = Portfolio(_weights=_weights)
+    _port = Portfolio(weights=_weights)
 
     rule_engine = RuleEngine()
-    sampled_port = rule_engine.run(portfolio=_port, min_cutoff=0.1)
-    print(sampled_port)
-    print(sum(sampled_port.values()))
+    print(_port.weights)
+    weights = rule_engine.run(portfolio=_port, min_cutoff=0.1)
+    print(weights)
