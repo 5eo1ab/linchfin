@@ -1,9 +1,11 @@
 from matplotlib import pyplot
 
+from linchfin.common.calc import calc_volatility, calc_portfolio_yield, calc_sharp_ratio
 from linchfin.base.dataclasses.entities import AssetUniverse
 from linchfin.base.dataclasses.value_types import Feature
 from linchfin.core.clustering.hierarchical import HierarchyRiskParityEngine
 from linchfin.core.clustering.sectors import SectorTree
+from linchfin.core.portfolio.rules import RuleEngine
 from linchfin.data_handler.reader import DataReader
 from linchfin.data_handler.wrangler import DataWrangler
 from linchfin.metadata import ETF_SECTORS
@@ -21,10 +23,9 @@ if __name__ == '__main__':
     asset_universe = AssetUniverse(assets=filtered)
 
     # 3-2. filter asset universe(exclude: Inverse, Leverage)
-    removable_assets = []
-    for asset_id, asset in asset_universe.assets.items():
-        if "Inverse" in asset.asset_class.asset_class_name or "Leverage" in asset.asset_class.asset_class_name:
-            removable_assets.append(asset)
+    removable_assets = asset_universe.filter_assets(
+        filter_func=lambda _asset: "Leverage" in _asset.asset_class.name or "Inverse" in _asset.asset_class.name
+    )
 
     for _asset in removable_assets:
         asset_universe.pop(asset=_asset)
@@ -56,7 +57,8 @@ if __name__ == '__main__':
     for k, v in portfolio.sector_weights.items():
         print(k, v)
 
-    portfolio.round(portfolio.weights)
+    rule_applied_weights = RuleEngine.run(portfolio=portfolio, min_cutoff=0.05)
+    portfolio.set_weights(weights=rule_applied_weights)
     portfolio.show_summary()
 
     # 8. run backtest
@@ -64,6 +66,15 @@ if __name__ == '__main__':
     daily_yield = wrangler.calc_daily_yield(time_series=time_series)
     backtest_result = backtest_simulator.run(portfolio=portfolio, daily_yield=daily_yield)
 
-    # 9. show plot
+    # 9. summary
+    # 9-1. show evaluation metrics
+    portfolio_yield = calc_portfolio_yield(portfolio=portfolio, daily_yield=daily_yield)
+    sharp_ratio = calc_sharp_ratio(daily_yield=portfolio_yield, risk_free_return=0.01)
+    volatility = calc_volatility(daily_yield=portfolio_yield)
+    print(f"Portfolio evaluation metric\n"
+          f"sharp_ratio: {sharp_ratio}\n"
+          f"volatility: {volatility}\n")
+
+    # 9-2. show plot
     backtest_result.plot()
     pyplot.show()
