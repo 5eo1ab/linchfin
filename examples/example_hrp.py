@@ -3,9 +3,9 @@ from matplotlib import pyplot
 from linchfin.common.calc import calc_volatility, calc_portfolio_yield, calc_sharp_ratio
 from linchfin.base.dataclasses.entities import AssetUniverse
 from linchfin.base.dataclasses.value_types import Feature
-from linchfin.core.clustering.hierarchical import HierarchyRiskParityEngine
 from linchfin.core.clustering.sectors import SectorTree
 from linchfin.core.portfolio.rules import RuleEngine
+from linchfin.core.portfolio.hierarchical import HierarchyRiskParityEngine
 from linchfin.data_handler.reader import DataReader
 from linchfin.data_handler.wrangler import DataWrangler
 from linchfin.metadata import ETF_SECTORS
