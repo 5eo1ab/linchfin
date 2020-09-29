@@ -73,6 +73,14 @@ class AssetUniverse(Entity):
     def symbols(self):
         return [_asset.code for _asset in self.assets.values()]
 
+    def filter_assets(self, filter_func=None):
+        return list(self._filter(filter_func=filter_func))
+
+    def _filter(self, filter_func):
+        for asset_code, _asset in self.assets.items():
+            if filter_func(_asset):
+                yield _asset
+
     def get_asset(self, code: AssetCode) -> Asset:
         asset_id = self.get_asset_id(code=code)
         return self.assets[asset_id]

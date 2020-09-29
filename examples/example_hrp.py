@@ -23,10 +23,9 @@ if __name__ == '__main__':
     asset_universe = AssetUniverse(assets=filtered)
 
     # 3-2. filter asset universe(exclude: Inverse, Leverage)
-    removable_assets = []
-    for asset_id, asset in asset_universe.assets.items():
-        if "Inverse" in asset.asset_class.asset_class_name or "Leverage" in asset.asset_class.asset_class_name:
-            removable_assets.append(asset)
+    removable_assets = asset_universe.filter_assets(
+        filter_func=lambda _asset: "Leverage" in _asset.asset_class.name or "Inverse" in _asset.asset_class.name
+    )
 
     for _asset in removable_assets:
         asset_universe.pop(asset=_asset)
