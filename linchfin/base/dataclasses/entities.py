@@ -39,6 +39,7 @@ class Asset(Entity):
         return self.asset_id
 
     def __post_init__(self):
+        super().__post_init__()
         if not isinstance(self.code, AssetCode):
             self.code = AssetCode(self.code)
 
@@ -50,6 +51,7 @@ class AssetUniverse(Entity):
     asset_code_map: OrderedDictType = field(init=False)
 
     def __post_init__(self):
+        super().__post_init__()
         if isinstance(self.assets, list):
             asset_dic = OrderedDict()
             for _asset in self.assets:
@@ -129,12 +131,11 @@ class Portfolio(Entity):
         return _sector_weights
 
     def set_weights(self, weights: Dict[AssetCode, Weight] or pd.Series):
+        updated_weights = {}
         for _asset_code, _w in weights.items():
-            if _asset_code in self._weights:
-                raise KeyError(f"asset name is conflicted, {_asset_code}")
-
             _asset = self.asset_universe.get_asset(code=_asset_code)
-            self._weights[_asset.code] = Weight(_w)
+            updated_weights[_asset.code] = Weight(_w)
+        self._weights = updated_weights
 
     def round(self, weights, points=2):
         _rounded_weights = OrderedDict()
@@ -165,9 +166,11 @@ class Portfolio(Entity):
             asset_class_map[_asset.asset_class.asset_class_name].append(
                 _asset
             )
-            asset_class_weights[_asset.asset_class.asset_class_name] += self.weights[_asset.code]
+            asset_class_weights[_asset.asset_class.asset_class_name] += self.weights.get(_asset.code, 0)
 
         for _asset_class_name, assets in asset_class_map.items():
-            print(f"AssetClass({_asset_class_name}): weights={asset_class_weights[_asset_class_name]},"
-                  f" asset_codes={[_asset.code for _asset in assets]}")
+            asset_class_weight = asset_class_weights[_asset_class_name]
+            if asset_class_weight:
+                print(f"AssetClass({_asset_class_name}): weights={asset_class_weight},"
+                      f" asset_codes={[_asset.code for _asset in assets]}")
         return asset_class_weights
