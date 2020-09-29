@@ -33,7 +33,6 @@ class RuleEngine:
                 if random.random() <= accept_ratios[_asset_code]:
                     updated_weights[_asset_code] += cutoff
                     accept_ratios[_asset_code] = 0
-                    print(sum_of_weights, accept_ratios)
         return cls.to_representation(weights=updated_weights)
 
     @classmethod
