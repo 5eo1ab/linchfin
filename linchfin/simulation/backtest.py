@@ -34,7 +34,7 @@ if __name__ == '__main__':
         'ACWI': Weight('0.035140928888262860929625475137072498910129070281982421875'),
         'IXC': Weight('0.0178150740709680059647990191251665237359702587127685546875'),
         'GUNR': Weight('0.0178150740709680059647990191251665237359702587127685546875')}
-    _port = Portfolio(_weights=weights)
+    _port = Portfolio(weights=weights)
     backtester = BackTestSimulator()
 
     data_reader = DataReader(start='2019/01/01', end='2020/09/01')
