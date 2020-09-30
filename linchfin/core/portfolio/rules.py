@@ -45,18 +45,41 @@ class RuleEngine:
                 weights.pop(_asset_code)
         return weights
 
-    def calc_minimum_cash(self, portfolio: Portfolio, close_price: Prices):
+    @staticmethod
+    def calc_recommended_quantity(portfolio: Portfolio, close_price: Prices):
         def multiple_gcd(array):
             while len(array) > 1:
                 array.append(gcd(array.pop(), array.pop()))
             return array[0]
 
         asset_close_price = close_price[portfolio.symbols]
-        weight_values = [round(w * 100) for w in portfolio.weights.values()]
-        gcd_value = multiple_gcd(weight_values)
-        portfolio_asset_qty = (portfolio.to_series() * 100 / gcd_value).astype(int)
-        portfolio_values = portfolio_asset_qty * asset_close_price
-        return portfolio_values.sum()
+        optimal_qty = portfolio.to_series() * asset_close_price.sum() / asset_close_price
+        available_qty = (optimal_qty * 10).round().astype(int)
+        gcd_value = multiple_gcd(available_qty.to_list())
+        psudo_optimal_qty = available_qty / gcd_value
+        return psudo_optimal_qty
+
+    def calc_recommended_cash(self, portfolio: Portfolio, close_price: Prices):
+        psudo_optimal_qty = self.calc_recommended_quantity(portfolio=portfolio, close_price=close_price)
+        return (psudo_optimal_qty * close_price).sum().astype(int)
+
+    def calc_recommended_quantity_diff(self, portfolio: Portfolio, close_price: Prices):
+        recommended_qty = self.calc_recommended_quantity(portfolio=portfolio, close_price=close_price)
+        portfolio_valuation = recommended_qty * close_price
+        return portfolio.to_series() - portfolio_valuation / portfolio_valuation.sum()
+
+    def calc_minimum_quantity(self, portfolio: Portfolio, close_price: Prices):
+        psudo_optimal_qty = self.calc_recommended_quantity(portfolio=portfolio, close_price=close_price)
+        return (psudo_optimal_qty / psudo_optimal_qty.min()).astype(int)
+
+    def calc_minimum_cash(self, portfolio: Portfolio, close_price: Prices):
+        minimum_qty = self.calc_minimum_quantity(portfolio=portfolio, close_price=close_price)
+        return (minimum_qty * close_price).sum().astype(int)
+
+    def calc_minimum_quantity_diff(self, portfolio: Portfolio, close_price: Prices):
+        minimum_qty = self.calc_minimum_quantity(portfolio=portfolio, close_price=close_price)
+        portfolio_valuation = minimum_qty * close_price
+        return portfolio.to_series() - portfolio_valuation / portfolio_valuation.sum()
 
 
 if __name__ == '__main__':

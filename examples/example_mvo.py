@@ -22,9 +22,15 @@ if __name__ == '__main__':
     daily_close_price = data_reader.get_adj_close_price(asset_universe.symbols)
     daily_yield = wrangler.calc_daily_yield(daily_close_price)
     portfolio_engine = MeanVarOptimizationEngine(asset_universe=asset_universe, rule_engine=RuleEngine())
-    print(portfolio_engine.simulate_portfolio(daily_yield=daily_yield, simulation_size=100))
+    # print(portfolio_engine.simulate_portfolio(daily_yield=daily_yield, simulation_size=100))
     port = portfolio_engine.run(daily_yield=daily_yield, simulation_size=10)
     rule_engine = RuleEngine()
     weights = rule_engine.run(port, 0.05)
     port.set_weights(weights=weights)
-    rule_engine.calc_minimum_cash(portfolio=port, close_price=daily_close_price.iloc[-1])
+    recommended_quantity = rule_engine.calc_recommended_quantity(portfolio=port, close_price=daily_close_price.iloc[-1])
+    minimum_quantity = rule_engine.calc_minimum_quantity(portfolio=port, close_price=daily_close_price.iloc[-1])
+
+    recommended_quantity_valuation = daily_close_price[port.symbols].iloc[-1] * recommended_quantity
+    minimum_quantity_valuation = daily_close_price[port.symbols].iloc[-1] * minimum_quantity
+    print("recommended port diff", port.to_series() - recommended_quantity_valuation / recommended_quantity_valuation.sum())
+    print("minimum port diff", port.to_series() - minimum_quantity_valuation / minimum_quantity_valuation.sum())
