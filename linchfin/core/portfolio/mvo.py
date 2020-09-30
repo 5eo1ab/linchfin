@@ -39,7 +39,6 @@ class MeanVarOptimizationEngine:
         row = simulation_result.iloc[idx]
         return row['weights']
 
-
     def simulate_portfolio(self, daily_yield: TimeSeries, simulation_size=1000) -> pd.DataFrame:
         data = defaultdict(list)
         for idx in range(simulation_size):
