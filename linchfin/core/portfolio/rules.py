@@ -1,7 +1,8 @@
 from linchfin.base.dataclasses.entities import Portfolio
-from linchfin.base.dataclasses.value_types import Weight, Weights
+from linchfin.base.dataclasses.value_types import Weight, Weights, Prices
 import random
 from collections import OrderedDict
+from math import gcd
 
 
 class RuleEngine:
@@ -43,6 +44,19 @@ class RuleEngine:
             if _weight == 0:
                 weights.pop(_asset_code)
         return weights
+
+    def calc_minimum_cash(self, portfolio: Portfolio, close_price: Prices):
+        def multiple_gcd(array):
+            while len(array) > 1:
+                array.append(gcd(array.pop(), array.pop()))
+            return array[0]
+
+        asset_close_price = close_price[portfolio.symbols]
+        weight_values = [round(w * 100) for w in portfolio.weights.values()]
+        gcd_value = multiple_gcd(weight_values)
+        portfolio_asset_qty = (portfolio.to_series() * 100 / gcd_value).astype(int)
+        portfolio_values = portfolio_asset_qty * asset_close_price
+        return portfolio_values.sum()
 
 
 if __name__ == '__main__':

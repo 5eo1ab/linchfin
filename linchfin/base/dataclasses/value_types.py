@@ -35,6 +35,10 @@ class Weight(Decimal):
     pass
 
 
+class Prices(pd.Series):
+    pass
+
+
 class TimeSeries(pd.DataFrame):
     pass
 
