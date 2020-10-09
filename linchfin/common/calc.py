@@ -11,6 +11,10 @@ MONTHLY = 21
 ANNUAL = 252
 
 
+def calc_total_return(prices: TimeSeries):
+    return (prices.iloc[-1] - prices.iloc[0]) / prices.iloc[0]
+
+
 def calc_daily_yield(time_series: TimeSeries) -> TimeSeries:
     return time_series.pct_change(periods=DAILY)
 
