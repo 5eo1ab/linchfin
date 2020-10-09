@@ -1,6 +1,6 @@
 from matplotlib import pyplot
 
-from linchfin.common.calc import calc_volatility, calc_portfolio_yield, calc_sharp_ratio
+from linchfin.common.calc import calc_volatility, calc_portfolio_returns, calc_sharp_ratio
 from linchfin.base.dataclasses.entities import AssetUniverse
 from linchfin.base.dataclasses.value_types import Feature
 from linchfin.core.clustering.sectors import SectorTree
@@ -10,6 +10,7 @@ from linchfin.data_handler.reader import DataReader
 from linchfin.data_handler.wrangler import DataWrangler
 from linchfin.metadata import ETF_SECTORS
 from linchfin.simulation.backtest import BackTestSimulator
+from linchfin.common.calc import calc_monthly_returns, calc_corr, calc_daily_returns
 
 if __name__ == '__main__':
     # 1. read data
@@ -33,7 +34,7 @@ if __name__ == '__main__':
     # 4. load time_series
     time_series = data_reader.get_adj_close_price(symbols=asset_universe.symbols)
     time_series = time_series.dropna(axis=1)
-    time_series_monthly = wrangler.calc_monthly_yield(time_series=time_series)
+    time_series_monthly = calc_monthly_returns(time_series=time_series)
 
     # 5. remove assets unloading time_series
     items = set(asset_universe.symbols) - set(time_series.columns)
@@ -42,7 +43,7 @@ if __name__ == '__main__':
         asset_universe.pop(asset)
 
     # 6. calc corr
-    corr = wrangler.calc_corr(time_series=time_series_monthly)
+    corr = calc_corr(time_series=time_series_monthly)
     corr = Feature(name='corr', value=corr)
 
     # 7. run HRP
@@ -63,14 +64,14 @@ if __name__ == '__main__':
 
     # 8. run backtest
     backtest_simulator = BackTestSimulator()
-    daily_yield = wrangler.calc_daily_yield(time_series=time_series)
-    backtest_result = backtest_simulator.run(portfolio=portfolio, daily_yield=daily_yield)
+    daily_returns = calc_daily_returns(time_series=time_series)
+    backtest_result = backtest_simulator.run(portfolio=portfolio, daily_returns=daily_returns)
 
     # 9. summary
     # 9-1. show evaluation metrics
-    portfolio_yield = calc_portfolio_yield(portfolio=portfolio, daily_yield=daily_yield)
-    sharp_ratio = calc_sharp_ratio(daily_yield=portfolio_yield, risk_free_return=0.01)
-    volatility = calc_volatility(daily_yield=portfolio_yield)
+    portfolio_returns = calc_portfolio_returns(portfolio=portfolio, daily_returns=daily_returns)
+    sharp_ratio = calc_sharp_ratio(daily_returns=portfolio_returns, risk_free_return=0.01)
+    volatility = calc_volatility(time_series=portfolio_returns)
     print(f"Portfolio evaluation metric\n"
           f"sharp_ratio: {sharp_ratio}\n"
           f"volatility: {volatility}\n")

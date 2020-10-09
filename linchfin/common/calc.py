@@ -11,20 +11,24 @@ MONTHLY = 21
 ANNUAL = 252
 
 
+def calc_cumulative_returns(daily_returns: TimeSeries):
+    return daily_returns.add(1).cumprod()
+
+
 def calc_total_return(prices: TimeSeries):
     return (prices.iloc[-1] - prices.iloc[0]) / prices.iloc[0]
 
 
-def calc_daily_yield(time_series: TimeSeries) -> TimeSeries:
+def calc_daily_returns(time_series: TimeSeries) -> TimeSeries:
     return time_series.pct_change(periods=DAILY)
 
 
-def calc_monthly_yield(time_series: TimeSeries) -> TimeSeries:
-    return time_series.pct_change(periods=MONTHLY)
+def calc_monthly_returns(time_series: TimeSeries) -> TimeSeries:
+    return time_series.resample('M').ffill().pct_change()
 
 
-def calc_annal_yield(time_series: TimeSeries) -> TimeSeries:
-    return time_series.pct_change(periods=ANNUAL)
+def calc_annal_returns(time_series: TimeSeries) -> TimeSeries:
+    return time_series.resample('Y').ffill().pct_change()
 
 
 def calc_corr(time_series: TimeSeries, method='pearson', min_periods: Optional[int] = 1):
@@ -38,44 +42,44 @@ def calc_cov(time_series: TimeSeries,
     return cov
 
 
-def calc_portfolio_asset_yields(portfolio: Portfolio, daily_yield: TimeSeries) -> TimeSeries:
-    daily_return = daily_yield.add(1)
+def calc_portfolio_asset_yields(portfolio: Portfolio, daily_returns: TimeSeries) -> TimeSeries:
+    daily_return = daily_returns.add(1)
     daily_return.iloc[0] = portfolio.to_series()
     portfolio_asset_yields = daily_return[portfolio.symbols].cumprod()
     return portfolio_asset_yields
 
 
-def calc_portfolio_yield(portfolio: Portfolio, daily_yield: TimeSeries) -> TimeSeries:
+def calc_portfolio_returns(portfolio: Portfolio, daily_returns: TimeSeries) -> TimeSeries:
     """
     calc portfolio yield
     :param portfolio: Portfolio
-    :param daily_yield: TimeSeries
+    :param daily_returns: TimeSeries
     :return:
     """
-    portfolio_asset_yields = calc_portfolio_asset_yields(portfolio=portfolio, daily_yield=daily_yield)
+    portfolio_asset_yields = calc_portfolio_asset_yields(portfolio=portfolio, daily_returns=daily_returns)
     return portfolio_asset_yields.sum(axis=1).sub(1)
 
 
-def calc_volatility(daily_yield: TimeSeries) -> float:
+def calc_volatility(time_series: TimeSeries) -> float:
     """
     calculate portfolio volatility
 
-    :param daily_yield: TimeSeries
+    :param time_series: TimeSeries
     :return:
     """
-    return daily_yield.var()
+    return time_series.var()
 
 
-def calc_sharp_ratio(daily_yield: TimeSeries, risk_free_return: float = 0.0) -> float:
+def calc_sharp_ratio(daily_returns: TimeSeries, risk_free_return: float = 0.0) -> float:
     """
     Calculate sharp ratio: (return of portfolio - risk-free rate) / standard deviation of the portfolio excess return
 
-    :param daily_yield:
+    :param daily_returns:
     :param risk_free_return:
     :return:
     """
 
-    portfolio_volatility = calc_volatility(daily_yield=daily_yield)
-    portfolio_yield_without_risk_free = daily_yield.sub(risk_free_return)
+    portfolio_volatility = calc_volatility(time_series=daily_returns)
+    portfolio_yield_without_risk_free = daily_returns.sub(risk_free_return)
     sharp_ratio = (portfolio_yield_without_risk_free.mean()) / np.sqrt(portfolio_volatility)
     return sharp_ratio

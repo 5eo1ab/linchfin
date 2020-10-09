@@ -6,7 +6,7 @@ from collections import defaultdict
 from linchfin.base.dataclasses.entities import Portfolio, AssetUniverse
 from linchfin.base.dataclasses.value_types import TimeSeries, Weights, Weight
 from linchfin.core.portfolio.rules import RuleEngine
-from linchfin.common.calc import calc_volatility, calc_portfolio_yield, calc_sharp_ratio
+from linchfin.common.calc import calc_volatility, calc_portfolio_returns, calc_sharp_ratio
 
 
 class MeanVarOptimizationEngine:
@@ -14,8 +14,8 @@ class MeanVarOptimizationEngine:
         self.asset_universe = asset_universe
         self.rule_engine = rule_engine
 
-    def run(self, daily_yield: TimeSeries, kind='sharp_ratio', simulation_size=1000) -> Portfolio:
-        simulation_result = self.simulate_portfolio(daily_yield=daily_yield, simulation_size=simulation_size)
+    def run(self, daily_returns: TimeSeries, kind='sharp_ratio', simulation_size=1000) -> Portfolio:
+        simulation_result = self.simulate_portfolio(daily_returns=daily_returns, simulation_size=simulation_size)
         weights = self.get_optimized_weights(simulation_result=simulation_result, kind=kind)
         return Portfolio(asset_universe=self.asset_universe, weights=weights)
 
@@ -39,13 +39,13 @@ class MeanVarOptimizationEngine:
         row = simulation_result.iloc[idx]
         return row['weights']
 
-    def simulate_portfolio(self, daily_yield: TimeSeries, simulation_size=1000) -> pd.DataFrame:
+    def simulate_portfolio(self, daily_returns: TimeSeries, simulation_size=1000) -> pd.DataFrame:
         data = defaultdict(list)
         for idx in range(simulation_size):
             portfolio_candidate = self.get_portfolio_candidate(min_cutoff=0.01)
-            portfolio_candidate_yield = calc_portfolio_yield(portfolio=portfolio_candidate, daily_yield=daily_yield)
-            sharp_ratio = calc_sharp_ratio(daily_yield=portfolio_candidate_yield)
-            volatility = calc_volatility(daily_yield=portfolio_candidate_yield)
+            portfolio_candidate_returns = calc_portfolio_returns(portfolio=portfolio_candidate, daily_retrurns=daily_returns)
+            sharp_ratio = calc_sharp_ratio(daily_returns=portfolio_candidate_returns)
+            volatility = calc_volatility(time_series=portfolio_candidate_returns)
 
             data['sharp_ratio'].append(sharp_ratio)
             data['volatility'].append(volatility)
