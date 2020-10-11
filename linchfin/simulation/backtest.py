@@ -1,11 +1,11 @@
 from linchfin.base.dataclasses.entities import Portfolio
 from linchfin.base.dataclasses.value_types import TimeSeries, Weight
-from linchfin.common.calc import calc_portfolio_yield
+from linchfin.common.calc import calc_portfolio_returns, calc_daily_returns
 
 
 class BackTestSimulator:
-    def run(self, portfolio: Portfolio, daily_yield: TimeSeries):
-        portfolio_yield = calc_portfolio_yield(portfolio=portfolio, daily_yield=daily_yield)
+    def run(self, portfolio: Portfolio, daily_returns: TimeSeries):
+        portfolio_yield = calc_portfolio_returns(portfolio=portfolio, daily_returns=daily_returns)
         return portfolio_yield
 
 
@@ -40,5 +40,5 @@ if __name__ == '__main__':
     data_reader = DataReader(start='2019/01/01', end='2020/09/01')
     data_wrangler = DataWrangler()
     ts = data_reader.get_adj_close_price(symbols=list(_port.weights.keys()))
-    yield_ts = data_wrangler.calc_daily_yield(ts)
-    backtester.run(portfolio=_port, daily_yield=yield_ts)
+    daily_returns = calc_daily_returns(time_series=ts)
+    backtester.run(portfolio=_port, daily_returns=daily_returns)
