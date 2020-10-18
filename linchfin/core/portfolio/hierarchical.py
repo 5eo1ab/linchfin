@@ -110,6 +110,8 @@ class HierarchyRiskParityEngine:
 
 
 if __name__ == '__main__':
+    from linchfin.base.dataclasses.value_types import AssetCode
+
     _p = np.array(
         [
             [1, 0.7, 0.2],
@@ -120,7 +122,7 @@ if __name__ == '__main__':
 
     _asset_universe = AssetUniverse()
     for idx, _ in enumerate(_p):
-        _asset_universe.append(Asset(code=idx))
+        _asset_universe.append(Asset(code=AssetCode(idx)))
 
     _p = Feature(name='correlation', value=pd.DataFrame(_p))
     hcp = HierarchyRiskParityEngine(asset_universe=_asset_universe)
