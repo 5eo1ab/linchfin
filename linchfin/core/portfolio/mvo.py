@@ -6,7 +6,7 @@ from collections import defaultdict
 from linchfin.base.dataclasses.entities import Portfolio, AssetUniverse
 from linchfin.base.dataclasses.value_types import TimeSeries, Weights, Weight
 from linchfin.core.portfolio.rules import RuleEngine
-from linchfin.common.calc import calc_volatility, calc_portfolio_returns, calc_sharp_ratio
+from linchfin.common.calc import calc_volatility, calc_portfolio_return, calc_sharp_ratio
 
 
 class MeanVarOptimizationEngine:
@@ -43,7 +43,7 @@ class MeanVarOptimizationEngine:
         data = defaultdict(list)
         for idx in range(simulation_size):
             portfolio_candidate = self.get_portfolio_candidate(min_cutoff=0.01)
-            portfolio_candidate_returns = calc_portfolio_returns(portfolio=portfolio_candidate, daily_returns=daily_returns)
+            portfolio_candidate_returns = calc_portfolio_return(portfolio=portfolio_candidate, daily_returns=daily_returns)
             sharp_ratio = calc_sharp_ratio(daily_returns=portfolio_candidate_returns)
             volatility = calc_volatility(time_series=portfolio_candidate_returns)
 

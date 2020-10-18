@@ -42,21 +42,21 @@ def calc_cov(time_series: TimeSeries,
     return cov
 
 
-def calc_portfolio_asset_yields(portfolio: Portfolio, daily_returns: TimeSeries) -> TimeSeries:
+def calc_portfolio_asset_returns(portfolio: Portfolio, daily_returns: TimeSeries) -> TimeSeries:
     daily_return = daily_returns.add(1)
     daily_return.iloc[0] = portfolio.to_series()
     portfolio_asset_yields = daily_return[portfolio.symbols].cumprod()
     return portfolio_asset_yields
 
 
-def calc_portfolio_returns(portfolio: Portfolio, daily_returns: TimeSeries) -> TimeSeries:
+def calc_portfolio_return(portfolio: Portfolio, daily_returns: TimeSeries) -> TimeSeries:
     """
     calc portfolio yield
     :param portfolio: Portfolio
     :param daily_returns: TimeSeries
     :return:
     """
-    portfolio_asset_yields = calc_portfolio_asset_yields(portfolio=portfolio, daily_returns=daily_returns)
+    portfolio_asset_yields = calc_portfolio_asset_returns(portfolio=portfolio, daily_returns=daily_returns)
     return portfolio_asset_yields.sum(axis=1).sub(1)
 
 
