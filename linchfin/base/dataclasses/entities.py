@@ -135,7 +135,7 @@ class Portfolio(Entity):
         return _sector_weights
 
     def set_weights(self, weights: Dict[AssetCode, Weight] or pd.Series):
-        self.weights = {asset_code: Weight(w) for asset_code, w in weights.items()}
+        self.weights = {asset_code: Weight(str(w)) for asset_code, w in weights.items()}
 
     def round(self, weights, points=2):
         _rounded_weights = OrderedDict()

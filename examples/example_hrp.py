@@ -1,6 +1,6 @@
 from matplotlib import pyplot
 
-from linchfin.common.calc import calc_volatility, calc_portfolio_returns, calc_sharp_ratio
+from linchfin.common.calc import calc_volatility, calc_portfolio_return, calc_sharp_ratio
 from linchfin.base.dataclasses.entities import AssetUniverse
 from linchfin.base.dataclasses.value_types import Feature
 from linchfin.core.clustering.sectors import SectorTree
@@ -69,7 +69,7 @@ if __name__ == '__main__':
 
     # 9. summary
     # 9-1. show evaluation metrics
-    portfolio_returns = calc_portfolio_returns(portfolio=portfolio, daily_returns=daily_returns)
+    portfolio_returns = calc_portfolio_return(portfolio=portfolio, daily_returns=daily_returns)
     sharp_ratio = calc_sharp_ratio(daily_returns=portfolio_returns, risk_free_return=0.01)
     volatility = calc_volatility(time_series=portfolio_returns)
     print(f"Portfolio evaluation metric\n"
