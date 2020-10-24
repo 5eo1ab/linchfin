@@ -23,7 +23,7 @@ class TimeSeriesHandler:
 
         portfolio_mean_trading_value = self.get_mean_trading_values(trading_values=asset_trading_values,
                                                                     rule=rule)
-        portfolio_trading_values = self.get_weighted_trading_values(trading_values=trading_values)
+        portfolio_trading_values = self.get_weighted_trading_values(trading_values=asset_trading_values)
         portfolio_dollar_bar = self.get_dollar_bars(trading_value=portfolio_trading_values,
                                                     threshold=portfolio_mean_trading_value)
         mark_points = self.find_mark_points(portfolio_return, portfolio_dollar_bar.index)
