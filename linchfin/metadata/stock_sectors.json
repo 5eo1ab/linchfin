@@ -1,0 +1,5143 @@
+{
+   "name":"Root",
+   "children":[
+      {
+         "name":"Basic Materials",
+         "children":[
+            {
+               "name":"Steel",
+               "children":[
+                  {
+                     "name":"NUE",
+                     "description":"Nucor Corporation",
+                     "x":1197,
+                     "y":648,
+                     "dy":22,
+                     "dx":12
+                  }
+               ],
+               "x":1196,
+               "y":644,
+               "dy":27,
+               "dx":14
+            },
+            {
+               "name":"Copper",
+               "children":[
+                  {
+                     "name":"FCX",
+                     "description":"Freeport-McMoRan Inc.",
+                     "x":1185,
+                     "y":648,
+                     "dy":22,
+                     "dx":10
+                  }
+               ],
+               "x":1184,
+               "y":644,
+               "dy":27,
+               "dx":12
+            },
+            {
+               "name":"Building Materials",
+               "children":[
+                  {
+                     "name":"MLM",
+                     "description":"Martin Marietta Materials, Inc.",
+                     "x":1172,
+                     "y":648,
+                     "dy":22,
+                     "dx":11
+                  },
+                  {
+                     "name":"VMC",
+                     "description":"Vulcan Materials Company",
+                     "x":1159,
+                     "y":648,
+                     "dx":13,
+                     "dy":22
+                  }
+               ],
+               "x":1158,
+               "y":644,
+               "dx":26,
+               "dy":27
+            },
+            {
+               "name":"Agricultural Inputs",
+               "children":[
+                  {
+                     "name":"MOS",
+                     "description":"The Mosaic Company",
+                     "x":1200,
+                     "y":633,
+                     "dy":10,
+                     "dx":9
+                  },
+                  {
+                     "name":"CF",
+                     "description":"CF Industries Holdings, Inc.",
+                     "x":1188,
+                     "y":633,
+                     "dx":12,
+                     "dy":10
+                  },
+                  {
+                     "name":"FMC",
+                     "description":"FMC Corporation",
+                     "x":1188,
+                     "y":622,
+                     "dy":11,
+                     "dx":21
+                  },
+                  {
+                     "name":"CTVA",
+                     "description":"Corteva, Inc.",
+                     "x":1188,
+                     "y":603,
+                     "dy":19,
+                     "dx":21
+                  }
+               ],
+               "x":1187,
+               "y":599,
+               "dy":45,
+               "dx":23
+            },
+            {
+               "name":"Gold",
+               "children":[
+                  {
+                     "name":"NEM",
+                     "description":"Newmont Corporation",
+                     "x":1159,
+                     "y":603,
+                     "dy":40,
+                     "dx":27
+                  }
+               ],
+               "x":1158,
+               "y":599,
+               "dy":45,
+               "dx":29
+            },
+            {
+               "name":"Chemicals",
+               "children":[
+                  {
+                     "name":"EMN",
+                     "description":"Eastman Chemical Company",
+                     "x":1146,
+                     "y":656,
+                     "dy":14,
+                     "dx":11
+                  },
+                  {
+                     "name":"CE",
+                     "description":"Celanese Corporation",
+                     "x":1132,
+                     "y":656,
+                     "dx":14,
+                     "dy":14
+                  },
+                  {
+                     "name":"DOW",
+                     "description":"Dow Inc.",
+                     "x":1132,
+                     "y":634,
+                     "dy":22,
+                     "dx":25
+                  },
+                  {
+                     "name":"DD",
+                     "description":"DuPont de Nemours, Inc.",
+                     "x":1113,
+                     "y":634,
+                     "dx":19,
+                     "dy":36
+                  },
+                  {
+                     "name":"APD",
+                     "description":"Air Products and Chemicals, Inc.",
+                     "x":1113,
+                     "y":611,
+                     "dy":23,
+                     "dx":44
+                  }
+               ],
+               "x":1112,
+               "y":599,
+               "dx":46,
+               "dy":72
+            },
+            {
+               "name":"Specialty Chemicals",
+               "children":[
+                  {
+                     "name":"ALB",
+                     "description":"Albemarle Corporation",
+                     "x":1091,
+                     "y":662,
+                     "dx":20,
+                     "dy":8
+                  },
+                  {
+                     "name":"IFF",
+                     "description":"International Flavors & Fragrances Inc.",
+                     "x":1091,
+                     "y":648,
+                     "dy":14,
+                     "dx":20
+                  },
+                  {
+                     "name":"LYB",
+                     "description":"LyondellBasell Industries N.V.",
+                     "x":1073,
+                     "y":648,
+                     "dx":18,
+                     "dy":22
+                  },
+                  {
+                     "name":"PPG",
+                     "description":"PPG Industries, Inc.",
+                     "x":1053,
+                     "y":648,
+                     "dx":20,
+                     "dy":22
+                  },
+                  {
+                     "name":"SHW",
+                     "description":"The Sherwin-Williams Company",
+                     "x":1084,
+                     "y":611,
+                     "dy":37,
+                     "dx":27
+                  },
+                  {
+                     "name":"ECL",
+                     "description":"Ecolab Inc.",
+                     "x":1053,
+                     "y":611,
+                     "dy":37,
+                     "dx":31
+                  },
+                  {
+                     "name":"LIN",
+                     "description":"Linde plc",
+                     "x":1019,
+                     "y":611,
+                     "dx":34,
+                     "dy":59
+                  }
+               ],
+               "x":1018,
+               "y":599,
+               "dx":94,
+               "dy":72
+            }
+         ],
+         "x":1017,
+         "y":584,
+         "dx":194,
+         "dy":88
+      },
+      {
+         "name":"Utilities",
+         "children":[
+            {
+               "name":"Utilities - Independent Power Producers",
+               "children":[
+                  {
+                     "name":"NRG",
+                     "description":"NRG Energy, Inc.",
+                     "x":1203,
+                     "y":562,
+                     "dy":20,
+                     "dx":6
+                  }
+               ],
+               "x":1202,
+               "y":558,
+               "dy":25,
+               "dx":8
+            },
+            {
+               "name":"Utilities - Regulated Water",
+               "children":[
+                  {
+                     "name":"AWK",
+                     "description":"American Water Works Company, Inc.",
+                     "x":1179,
+                     "y":562,
+                     "dx":22,
+                     "dy":20
+                  }
+               ],
+               "x":1178,
+               "y":558,
+               "dx":24,
+               "dy":25
+            },
+            {
+               "name":"Utilities - Regulated Gas",
+               "children":[
+                  {
+                     "name":"CNP",
+                     "description":"CenterPoint Energy, Inc.",
+                     "x":1158,
+                     "y":573,
+                     "dx":19,
+                     "dy":9
+                  },
+                  {
+                     "name":"NI",
+                     "description":"NiSource Inc.",
+                     "x":1158,
+                     "y":562,
+                     "dy":11,
+                     "dx":19
+                  },
+                  {
+                     "name":"ATO",
+                     "description":"Atmos Energy Corporation",
+                     "x":1145,
+                     "y":562,
+                     "dx":13,
+                     "dy":20
+                  }
+               ],
+               "x":1144,
+               "y":558,
+               "dx":34,
+               "dy":25
+            },
+            {
+               "name":"Utilities - Diversified",
+               "children":[
+                  {
+                     "name":"AES",
+                     "description":"The AES Corporation",
+                     "x":1193,
+                     "y":544,
+                     "dx":16,
+                     "dy":13
+                  },
+                  {
+                     "name":"ETR",
+                     "description":"Entergy Corporation",
+                     "x":1193,
+                     "y":517,
+                     "dy":27,
+                     "dx":16
+                  },
+                  {
+                     "name":"FE",
+                     "description":"FirstEnergy Corp.",
+                     "x":1166,
+                     "y":539,
+                     "dx":27,
+                     "dy":18
+                  },
+                  {
+                     "name":"PEG",
+                     "description":"Public Service Enterprise Group Incorporated",
+                     "x":1166,
+                     "y":517,
+                     "dx":27,
+                     "dy":22
+                  },
+                  {
+                     "name":"EXC",
+                     "description":"Exelon Corporation",
+                     "x":1145,
+                     "y":517,
+                     "dx":21,
+                     "dy":40
+                  },
+                  {
+                     "name":"SRE",
+                     "description":"Sempra Energy",
+                     "x":1186,
+                     "y":481,
+                     "dy":36,
+                     "dx":23
+                  },
+                  {
+                     "name":"D",
+                     "description":"Dominion Energy, Inc.",
+                     "x":1145,
+                     "y":481,
+                     "dy":36,
+                     "dx":41
+                  }
+               ],
+               "x":1144,
+               "y":469,
+               "dy":89,
+               "dx":66
+            },
+            {
+               "name":"Utilities - Regulated Electric",
+               "children":[
+                  {
+                     "name":"PNW",
+                     "description":"Pinnacle West Capital Corporation",
+                     "x":1123,
+                     "y":572,
+                     "dx":20,
+                     "dy":10
+                  },
+                  {
+                     "name":"LNT",
+                     "description":"Alliant Energy Corporation",
+                     "x":1123,
+                     "y":558,
+                     "dy":14,
+                     "dx":20
+                  },
+                  {
+                     "name":"EVRG",
+                     "description":"Evergy, Inc.",
+                     "x":1110,
+                     "y":558,
+                     "dx":13,
+                     "dy":24
+                  },
+                  {
+                     "name":"CMS",
+                     "description":"CMS Energy Corporation",
+                     "x":1127,
+                     "y":533,
+                     "dy":25,
+                     "dx":16
+                  },
+                  {
+                     "name":"AEE",
+                     "description":"Ameren Corporation",
+                     "x":1110,
+                     "y":533,
+                     "dy":25,
+                     "dx":17
+                  },
+                  {
+                     "name":"PPL",
+                     "description":"PPL Corporation",
+                     "x":1091,
+                     "y":558,
+                     "dx":19,
+                     "dy":24
+                  },
+                  {
+                     "name":"DTE",
+                     "description":"DTE Energy Company",
+                     "x":1091,
+                     "y":533,
+                     "dx":19,
+                     "dy":25
+                  },
+                  {
+                     "name":"EIX",
+                     "description":"Edison International",
+                     "x":1120,
+                     "y":511,
+                     "dy":22,
+                     "dx":23
+                  },
+                  {
+                     "name":"ED",
+                     "description":"Consolidated Edison, Inc.",
+                     "x":1091,
+                     "y":511,
+                     "dy":22,
+                     "dx":29
+                  },
+                  {
+                     "name":"ES",
+                     "description":"Eversource Energy",
+                     "x":1061,
+                     "y":561,
+                     "dx":30,
+                     "dy":21
+                  },
+                  {
+                     "name":"WEC",
+                     "description":"WEC Energy Group, Inc.",
+                     "x":1061,
+                     "y":538,
+                     "dx":30,
+                     "dy":23
+                  },
+                  {
+                     "name":"XEL",
+                     "description":"Xcel Energy Inc.",
+                     "x":1061,
+                     "y":511,
+                     "dx":30,
+                     "dy":27
+                  },
+                  {
+                     "name":"AEP",
+                     "description":"American Electric Power Company, Inc.",
+                     "x":1109,
+                     "y":481,
+                     "dy":30,
+                     "dx":34
+                  },
+                  {
+                     "name":"SO",
+                     "description":"The Southern Company",
+                     "x":1061,
+                     "y":481,
+                     "dy":30,
+                     "dx":48
+                  },
+                  {
+                     "name":"DUK",
+                     "description":"Duke Energy Corporation",
+                     "x":1019,
+                     "y":546,
+                     "dx":42,
+                     "dy":36
+                  },
+                  {
+                     "name":"NEE",
+                     "description":"NextEra Energy, Inc.",
+                     "x":1019,
+                     "y":481,
+                     "dx":42,
+                     "dy":65
+                  }
+               ],
+               "x":1018,
+               "y":469,
+               "dx":126,
+               "dy":114
+            }
+         ],
+         "x":1017,
+         "y":454,
+         "dy":130,
+         "dx":194
+      },
+      {
+         "name":"Real Estate",
+         "children":[
+            {
+               "name":"REIT - Hotel & Motel",
+               "children":[
+                  {
+                     "name":"HST",
+                     "description":"Host Hotels & Resorts, Inc.",
+                     "x":1193,
+                     "y":447,
+                     "dx":16,
+                     "dy":5
+                  }
+               ],
+               "x":1192,
+               "y":443,
+               "dx":18,
+               "dy":10
+            },
+            {
+               "name":"Real Estate Services",
+               "children":[
+                  {
+                     "name":"CBRE",
+                     "description":"CBRE Group, Inc.",
+                     "x":1154,
+                     "y":447,
+                     "dx":37,
+                     "dy":5
+                  }
+               ],
+               "x":1153,
+               "y":443,
+               "dx":39,
+               "dy":10
+            },
+            {
+               "name":"REIT - Healthcare Facilities",
+               "children":[
+                  {
+                     "name":"VTR",
+                     "description":"Ventas, Inc.",
+                     "x":1186,
+                     "y":431,
+                     "dx":23,
+                     "dy":11
+                  },
+                  {
+                     "name":"PEAK",
+                     "description":"Healthpeak Properties, Inc.",
+                     "x":1186,
+                     "y":418,
+                     "dy":13,
+                     "dx":23
+                  },
+                  {
+                     "name":"WELL",
+                     "description":"Welltower Inc.",
+                     "x":1186,
+                     "y":398,
+                     "dy":20,
+                     "dx":23
+                  }
+               ],
+               "x":1185,
+               "y":394,
+               "dy":49,
+               "dx":25
+            },
+            {
+               "name":"REIT - Retail",
+               "children":[
+                  {
+                     "name":"KIM",
+                     "description":"Kimco Realty Corporation",
+                     "x":1169,
+                     "y":435,
+                     "dx":15,
+                     "dy":7
+                  },
+                  {
+                     "name":"FRT",
+                     "description":"Federal Realty Investment Trust",
+                     "x":1169,
+                     "y":425,
+                     "dy":10,
+                     "dx":15
+                  },
+                  {
+                     "name":"REG",
+                     "description":"Regency Centers Corporation",
+                     "x":1169,
+                     "y":414,
+                     "dy":11,
+                     "dx":15
+                  },
+                  {
+                     "name":"O",
+                     "description":"Realty Income Corporation",
+                     "x":1154,
+                     "y":414,
+                     "dx":15,
+                     "dy":28
+                  },
+                  {
+                     "name":"SPG",
+                     "description":"Simon Property Group, Inc.",
+                     "x":1154,
+                     "y":398,
+                     "dy":16,
+                     "dx":30
+                  }
+               ],
+               "x":1153,
+               "y":394,
+               "dy":49,
+               "dx":32
+            },
+            {
+               "name":"REIT - Office",
+               "children":[
+                  {
+                     "name":"SLG",
+                     "description":"SL Green Realty Corp.",
+                     "x":1201,
+                     "y":383,
+                     "dy":10,
+                     "dx":8
+                  },
+                  {
+                     "name":"VNO",
+                     "description":"Vornado Realty Trust",
+                     "x":1201,
+                     "y":364,
+                     "dy":19,
+                     "dx":8
+                  },
+                  {
+                     "name":"BXP",
+                     "description":"Boston Properties, Inc.",
+                     "x":1179,
+                     "y":380,
+                     "dx":22,
+                     "dy":13
+                  },
+                  {
+                     "name":"ARE",
+                     "description":"Alexandria Real Estate Equities, Inc.",
+                     "x":1179,
+                     "y":364,
+                     "dx":22,
+                     "dy":16
+                  },
+                  {
+                     "name":"DLR",
+                     "description":"Digital Realty Trust, Inc.",
+                     "x":1154,
+                     "y":364,
+                     "dx":25,
+                     "dy":29
+                  }
+               ],
+               "x":1153,
+               "y":352,
+               "dy":42,
+               "dx":57
+            },
+            {
+               "name":"REIT - Residential",
+               "children":[
+                  {
+                     "name":"AIV",
+                     "description":"Apartment Investment and Management Company",
+                     "x":1141,
+                     "y":440,
+                     "dy":12,
+                     "dx":11
+                  },
+                  {
+                     "name":"UDR",
+                     "description":"UDR, Inc.",
+                     "x":1124,
+                     "y":440,
+                     "dx":17,
+                     "dy":12
+                  },
+                  {
+                     "name":"MAA",
+                     "description":"Mid-America Apartment Communities, Inc.",
+                     "x":1140,
+                     "y":421,
+                     "dy":19,
+                     "dx":12
+                  },
+                  {
+                     "name":"ESS",
+                     "description":"Essex Property Trust, Inc.",
+                     "x":1124,
+                     "y":421,
+                     "dy":19,
+                     "dx":16
+                  },
+                  {
+                     "name":"AVB",
+                     "description":"AvalonBay Communities, Inc.",
+                     "x":1096,
+                     "y":437,
+                     "dx":28,
+                     "dy":15
+                  },
+                  {
+                     "name":"EQR",
+                     "description":"Equity Residential",
+                     "x":1096,
+                     "y":421,
+                     "dx":28,
+                     "dy":16
+                  }
+               ],
+               "x":1095,
+               "y":409,
+               "dx":58,
+               "dy":44
+            },
+            {
+               "name":"REIT - Industrial",
+               "children":[
+                  {
+                     "name":"EXR",
+                     "description":"Extra Space Storage Inc.",
+                     "x":1140,
+                     "y":389,
+                     "dy":19,
+                     "dx":12
+                  },
+                  {
+                     "name":"DRE",
+                     "description":"Duke Realty Corporation",
+                     "x":1126,
+                     "y":389,
+                     "dx":14,
+                     "dy":19
+                  },
+                  {
+                     "name":"PSA",
+                     "description":"Public Storage",
+                     "x":1126,
+                     "y":364,
+                     "dy":25,
+                     "dx":26
+                  },
+                  {
+                     "name":"PLD",
+                     "description":"Prologis, Inc.",
+                     "x":1096,
+                     "y":364,
+                     "dx":30,
+                     "dy":44
+                  }
+               ],
+               "x":1095,
+               "y":352,
+               "dx":58,
+               "dy":57
+            },
+            {
+               "name":"REIT - Specialty",
+               "children":[
+                  {
+                     "name":"IRM",
+                     "description":"Iron Mountain Incorporated",
+                     "x":1078,
+                     "y":441,
+                     "dx":16,
+                     "dy":11
+                  },
+                  {
+                     "name":"WY",
+                     "description":"Weyerhaeuser Company",
+                     "x":1078,
+                     "y":417,
+                     "dy":24,
+                     "dx":16
+                  },
+                  {
+                     "name":"SBAC",
+                     "description":"SBA Communications Corporation",
+                     "x":1057,
+                     "y":417,
+                     "dx":21,
+                     "dy":35
+                  },
+                  {
+                     "name":"EQIX",
+                     "description":"Equinix, Inc. (REIT)",
+                     "x":1019,
+                     "y":417,
+                     "dx":38,
+                     "dy":35
+                  },
+                  {
+                     "name":"CCI",
+                     "description":"Crown Castle International Corp. (REIT)",
+                     "x":1065,
+                     "y":364,
+                     "dy":53,
+                     "dx":29
+                  },
+                  {
+                     "name":"AMT",
+                     "description":"American Tower Corporation (REIT)",
+                     "x":1019,
+                     "y":364,
+                     "dy":53,
+                     "dx":46
+                  }
+               ],
+               "x":1018,
+               "y":352,
+               "dx":77,
+               "dy":101
+            }
+         ],
+         "x":1017,
+         "y":337,
+         "dy":117,
+         "dx":194
+      },
+      {
+         "name":"Industrials",
+         "children":[
+            {
+               "name":"Business Equipment & Supplies",
+               "children":[
+                  {
+                     "name":"AVY",
+                     "description":"Avery Dennison Corporation",
+                     "x":991,
+                     "y":583,
+                     "dx":24,
+                     "dy":0
+                  }
+               ],
+               "x":990,
+               "y":579,
+               "dx":26,
+               "dy":5
+            },
+            {
+               "name":"Security & Protection Services",
+               "children":[
+                  {
+                     "name":"ALLE",
+                     "description":"Allegion plc",
+                     "x":1004,
+                     "y":562,
+                     "dy":16,
+                     "dx":11
+                  }
+               ],
+               "x":1003,
+               "y":558,
+               "dy":21,
+               "dx":13
+            },
+            {
+               "name":"Rental & Leasing Services",
+               "children":[
+                  {
+                     "name":"URI",
+                     "description":"United Rentals, Inc.",
+                     "x":991,
+                     "y":562,
+                     "dy":16,
+                     "dx":11
+                  }
+               ],
+               "x":990,
+               "y":558,
+               "dy":21,
+               "dx":13
+            },
+            {
+               "name":"Trucking",
+               "children":[
+                  {
+                     "name":"ODFL",
+                     "description":"Old Dominion Freight Line, Inc.",
+                     "x":971,
+                     "y":562,
+                     "dy":21,
+                     "dx":18
+                  }
+               ],
+               "x":970,
+               "y":558,
+               "dx":20,
+               "dy":26
+            },
+            {
+               "name":"Tools & Accessories",
+               "children":[
+                  {
+                     "name":"SNA",
+                     "description":"Snap-on Incorporated",
+                     "x":994,
+                     "y":549,
+                     "dx":21,
+                     "dy":8
+                  },
+                  {
+                     "name":"SWK",
+                     "description":"Stanley Black & Decker, Inc.",
+                     "x":994,
+                     "y":530,
+                     "dy":19,
+                     "dx":21
+                  }
+               ],
+               "x":993,
+               "y":526,
+               "dy":32,
+               "dx":23
+            },
+            {
+               "name":"Building Products & Equipment",
+               "children":[
+                  {
+                     "name":"MAS",
+                     "description":"Masco Corporation",
+                     "x":971,
+                     "y":545,
+                     "dx":21,
+                     "dy":12
+                  },
+                  {
+                     "name":"CARR",
+                     "description":"Carrier Global Corporation",
+                     "x":971,
+                     "y":530,
+                     "dy":15,
+                     "dx":21
+                  }
+               ],
+               "x":970,
+               "y":526,
+               "dy":32,
+               "dx":23
+            },
+            {
+               "name":"Industrial Distribution",
+               "children":[
+                  {
+                     "name":"GWW",
+                     "description":"W.W. Grainger, Inc.",
+                     "x":954,
+                     "y":560,
+                     "dy":23,
+                     "dx":15
+                  },
+                  {
+                     "name":"FAST",
+                     "description":"Fastenal Company",
+                     "x":933,
+                     "y":560,
+                     "dx":21,
+                     "dy":23
+                  }
+               ],
+               "x":932,
+               "y":556,
+               "dx":38,
+               "dy":28
+            },
+            {
+               "name":"Engineering & Construction",
+               "children":[
+                  {
+                     "name":"PWR",
+                     "description":"Quanta Services, Inc.",
+                     "x":954,
+                     "y":547,
+                     "dx":15,
+                     "dy":8
+                  },
+                  {
+                     "name":"J",
+                     "description":"Jacobs Engineering Group Inc.",
+                     "x":954,
+                     "y":530,
+                     "dy":17,
+                     "dx":15
+                  },
+                  {
+                     "name":"JCI",
+                     "description":"Johnson Controls International plc",
+                     "x":933,
+                     "y":530,
+                     "dx":21,
+                     "dy":25
+                  }
+               ],
+               "x":932,
+               "y":526,
+               "dx":38,
+               "dy":30
+            },
+            {
+               "name":"Airlines",
+               "children":[
+                  {
+                     "name":"ALK",
+                     "description":"Alaska Air Group, Inc.",
+                     "x":1007,
+                     "y":512,
+                     "dy":13,
+                     "dx":8
+                  },
+                  {
+                     "name":"AAL",
+                     "description":"American Airlines Group Inc.",
+                     "x":997,
+                     "y":512,
+                     "dx":10,
+                     "dy":13
+                  },
+                  {
+                     "name":"UAL",
+                     "description":"United Airlines Holdings, Inc.",
+                     "x":981,
+                     "y":512,
+                     "dx":16,
+                     "dy":13
+                  },
+                  {
+                     "name":"LUV",
+                     "description":"Southwest Airlines Co.",
+                     "x":999,
+                     "y":489,
+                     "dy":23,
+                     "dx":16
+                  },
+                  {
+                     "name":"DAL",
+                     "description":"Delta Air Lines, Inc.",
+                     "x":981,
+                     "y":489,
+                     "dy":23,
+                     "dx":18
+                  }
+               ],
+               "x":980,
+               "y":485,
+               "dy":41,
+               "dx":36
+            },
+            {
+               "name":"Waste Management",
+               "children":[
+                  {
+                     "name":"RSG",
+                     "description":"Republic Services, Inc.",
+                     "x":962,
+                     "y":497,
+                     "dy":28,
+                     "dx":17
+                  },
+                  {
+                     "name":"WM",
+                     "description":"Waste Management, Inc.",
+                     "x":933,
+                     "y":497,
+                     "dx":29,
+                     "dy":28
+                  }
+               ],
+               "x":932,
+               "y":485,
+               "dy":41,
+               "dx":48
+            },
+            {
+               "name":"Consulting Services",
+               "children":[
+                  {
+                     "name":"NLSN",
+                     "description":"Nielsen Holdings plc",
+                     "x":923,
+                     "y":568,
+                     "dy":15,
+                     "dx":8
+                  },
+                  {
+                     "name":"EFX",
+                     "description":"Equifax Inc.",
+                     "x":901,
+                     "y":568,
+                     "dx":22,
+                     "dy":15
+                  },
+                  {
+                     "name":"VRSK",
+                     "description":"Verisk Analytics, Inc.",
+                     "x":901,
+                     "y":552,
+                     "dy":16,
+                     "dx":30
+                  },
+                  {
+                     "name":"INFO",
+                     "description":"IHS Markit Ltd.",
+                     "x":884,
+                     "y":552,
+                     "dx":17,
+                     "dy":31
+                  }
+               ],
+               "x":883,
+               "y":540,
+               "dx":49,
+               "dy":44
+            },
+            {
+               "name":"Specialty Business Services",
+               "children":[
+                  {
+                     "name":"CPRT",
+                     "description":"Copart, Inc.",
+                     "x":910,
+                     "y":521,
+                     "dx":21,
+                     "dy":18
+                  },
+                  {
+                     "name":"CTAS",
+                     "description":"Cintas Corporation",
+                     "x":910,
+                     "y":497,
+                     "dy":24,
+                     "dx":21
+                  },
+                  {
+                     "name":"GPN",
+                     "description":"Global Payments Inc.",
+                     "x":884,
+                     "y":497,
+                     "dx":26,
+                     "dy":42
+                  }
+               ],
+               "x":883,
+               "y":485,
+               "dx":49,
+               "dy":55
+            },
+            {
+               "name":"Staffing & Employment Services",
+               "children":[
+                  {
+                     "name":"RHI",
+                     "description":"Robert Half International Inc.",
+                     "x":998,
+                     "y":477,
+                     "dx":17,
+                     "dy":7
+                  },
+                  {
+                     "name":"PAYX",
+                     "description":"Paychex, Inc.",
+                     "x":998,
+                     "y":447,
+                     "dy":30,
+                     "dx":17
+                  },
+                  {
+                     "name":"ADP",
+                     "description":"Automatic Data Processing, Inc.",
+                     "x":962,
+                     "y":447,
+                     "dx":36,
+                     "dy":37
+                  }
+               ],
+               "x":961,
+               "y":435,
+               "dy":50,
+               "dx":55
+            },
+            {
+               "name":"Farm & Heavy Construction Machinery",
+               "children":[
+                  {
+                     "name":"PCAR",
+                     "description":"PACCAR Inc",
+                     "x":946,
+                     "y":447,
+                     "dy":37,
+                     "dx":14
+                  },
+                  {
+                     "name":"DE",
+                     "description":"Deere & Company",
+                     "x":920,
+                     "y":447,
+                     "dx":26,
+                     "dy":37
+                  },
+                  {
+                     "name":"CAT",
+                     "description":"Caterpillar Inc.",
+                     "x":884,
+                     "y":447,
+                     "dx":36,
+                     "dy":37
+                  }
+               ],
+               "x":883,
+               "y":435,
+               "dy":50,
+               "dx":78
+            },
+            {
+               "name":"Integrated Freight & Logistics",
+               "children":[
+                  {
+                     "name":"CHRW",
+                     "description":"C.H. Robinson Worldwide, Inc.",
+                     "x":990,
+                     "y":425,
+                     "dx":25,
+                     "dy":9
+                  },
+                  {
+                     "name":"JBHT",
+                     "description":"J.B. Hunt Transport Services, Inc.",
+                     "x":1003,
+                     "y":403,
+                     "dy":22,
+                     "dx":12
+                  },
+                  {
+                     "name":"EXPD",
+                     "description":"Expeditors International of Washington, Inc.",
+                     "x":990,
+                     "y":403,
+                     "dy":22,
+                     "dx":13
+                  },
+                  {
+                     "name":"FDX",
+                     "description":"FedEx Corporation",
+                     "x":964,
+                     "y":403,
+                     "dx":26,
+                     "dy":31
+                  },
+                  {
+                     "name":"UPS",
+                     "description":"United Parcel Service, Inc.",
+                     "x":964,
+                     "y":364,
+                     "dy":39,
+                     "dx":51
+                  }
+               ],
+               "x":963,
+               "y":352,
+               "dy":83,
+               "dx":53
+            },
+            {
+               "name":"Railroads",
+               "children":[
+                  {
+                     "name":"WAB",
+                     "description":"Wabtec Corporation",
+                     "x":947,
+                     "y":414,
+                     "dy":20,
+                     "dx":15
+                  },
+                  {
+                     "name":"KSU",
+                     "description":"Kansas City Southern",
+                     "x":947,
+                     "y":394,
+                     "dy":20,
+                     "dx":15
+                  },
+                  {
+                     "name":"NSC",
+                     "description":"Norfolk Southern Corporation",
+                     "x":921,
+                     "y":394,
+                     "dx":26,
+                     "dy":40
+                  },
+                  {
+                     "name":"CSX",
+                     "description":"CSX Corporation",
+                     "x":921,
+                     "y":364,
+                     "dy":30,
+                     "dx":41
+                  },
+                  {
+                     "name":"UNP",
+                     "description":"Union Pacific Corporation",
+                     "x":884,
+                     "y":364,
+                     "dx":37,
+                     "dy":70
+                  }
+               ],
+               "x":883,
+               "y":352,
+               "dy":83,
+               "dx":80
+            },
+            {
+               "name":"Aerospace & Defense",
+               "children":[
+                  {
+                     "name":"TXT",
+                     "description":"Textron Inc.",
+                     "x":874,
+                     "y":568,
+                     "dy":15,
+                     "dx":8
+                  },
+                  {
+                     "name":"HII",
+                     "description":"Huntington Ingalls Industries, Inc.",
+                     "x":861,
+                     "y":568,
+                     "dx":13,
+                     "dy":15
+                  },
+                  {
+                     "name":"TDG",
+                     "description":"TransDigm Group Incorporated",
+                     "x":861,
+                     "y":544,
+                     "dy":24,
+                     "dx":21
+                  },
+                  {
+                     "name":"GD",
+                     "description":"General Dynamics Corporation",
+                     "x":837,
+                     "y":544,
+                     "dx":24,
+                     "dy":39
+                  },
+                  {
+                     "name":"LHX",
+                     "description":"L3Harris Technologies, Inc.",
+                     "x":810,
+                     "y":544,
+                     "dx":27,
+                     "dy":39
+                  },
+                  {
+                     "name":"NOC",
+                     "description":"Northrop Grumman Corporation",
+                     "x":852,
+                     "y":496,
+                     "dy":48,
+                     "dx":30
+                  },
+                  {
+                     "name":"BA",
+                     "description":"The Boeing Company",
+                     "x":810,
+                     "y":496,
+                     "dy":48,
+                     "dx":42
+                  },
+                  {
+                     "name":"RTX",
+                     "description":"Raytheon Technologies Corporation",
+                     "x":749,
+                     "y":542,
+                     "dx":61,
+                     "dy":41
+                  },
+                  {
+                     "name":"LMT",
+                     "description":"Lockheed Martin Corporation",
+                     "x":749,
+                     "y":496,
+                     "dx":61,
+                     "dy":46
+                  }
+               ],
+               "x":748,
+               "y":484,
+               "dx":135,
+               "dy":100
+            },
+            {
+               "name":"Specialty Industrial Machinery",
+               "children":[
+                  {
+                     "name":"FLS",
+                     "description":"Flowserve Corporation",
+                     "x":865,
+                     "y":472,
+                     "dx":17,
+                     "dy":11
+                  },
+                  {
+                     "name":"HWM",
+                     "description":"Howmet Aerospace Inc.",
+                     "x":865,
+                     "y":463,
+                     "dy":9,
+                     "dx":17
+                  },
+                  {
+                     "name":"PNR",
+                     "description":"Pentair plc",
+                     "x":848,
+                     "y":474,
+                     "dx":17,
+                     "dy":9
+                  },
+                  {
+                     "name":"AOS",
+                     "description":"A. O. Smith Corporation",
+                     "x":848,
+                     "y":463,
+                     "dx":17,
+                     "dy":11
+                  },
+                  {
+                     "name":"IEX",
+                     "description":"IDEX Corporation",
+                     "x":866,
+                     "y":445,
+                     "dy":18,
+                     "dx":16
+                  },
+                  {
+                     "name":"IR",
+                     "description":"Ingersoll Rand Inc.",
+                     "x":848,
+                     "y":445,
+                     "dy":18,
+                     "dx":18
+                  },
+                  {
+                     "name":"XYL",
+                     "description":"Xylem Inc.",
+                     "x":866,
+                     "y":425,
+                     "dy":20,
+                     "dx":16
+                  },
+                  {
+                     "name":"DOV",
+                     "description":"Dover Corporation",
+                     "x":848,
+                     "y":425,
+                     "dy":20,
+                     "dx":18
+                  },
+                  {
+                     "name":"AME",
+                     "description":"AMETEK, Inc.",
+                     "x":821,
+                     "y":465,
+                     "dx":27,
+                     "dy":18
+                  },
+                  {
+                     "name":"PH",
+                     "description":"Parker-Hannifin Corporation",
+                     "x":821,
+                     "y":445,
+                     "dx":27,
+                     "dy":20
+                  },
+                  {
+                     "name":"TT",
+                     "description":"Trane Technologies plc",
+                     "x":821,
+                     "y":425,
+                     "dx":27,
+                     "dy":20
+                  },
+                  {
+                     "name":"OTIS",
+                     "description":"Otis Worldwide Corporation",
+                     "x":863,
+                     "y":396,
+                     "dy":29,
+                     "dx":19
+                  },
+                  {
+                     "name":"ROK",
+                     "description":"Rockwell Automation, Inc.",
+                     "x":843,
+                     "y":396,
+                     "dy":29,
+                     "dx":20
+                  },
+                  {
+                     "name":"CMI",
+                     "description":"Cummins Inc.",
+                     "x":821,
+                     "y":396,
+                     "dy":29,
+                     "dx":22
+                  },
+                  {
+                     "name":"EMR",
+                     "description":"Emerson Electric Co.",
+                     "x":790,
+                     "y":455,
+                     "dx":31,
+                     "dy":28
+                  },
+                  {
+                     "name":"ETN",
+                     "description":"Eaton Corporation plc",
+                     "x":790,
+                     "y":426,
+                     "dx":31,
+                     "dy":29
+                  },
+                  {
+                     "name":"ROP",
+                     "description":"Roper Technologies, Inc.",
+                     "x":790,
+                     "y":396,
+                     "dx":31,
+                     "dy":30
+                  },
+                  {
+                     "name":"ITW",
+                     "description":"Illinois Tool Works Inc.",
+                     "x":839,
+                     "y":364,
+                     "dy":32,
+                     "dx":43
+                  },
+                  {
+                     "name":"GE",
+                     "description":"General Electric Company",
+                     "x":790,
+                     "y":364,
+                     "dy":32,
+                     "dx":49
+                  },
+                  {
+                     "name":"MMM",
+                     "description":"3M Company",
+                     "x":749,
+                     "y":428,
+                     "dx":41,
+                     "dy":55
+                  },
+                  {
+                     "name":"HON",
+                     "description":"Honeywell International Inc.",
+                     "x":749,
+                     "y":364,
+                     "dx":41,
+                     "dy":64
+                  }
+               ],
+               "x":748,
+               "y":352,
+               "dx":135,
+               "dy":132
+            }
+         ],
+         "x":747,
+         "y":337,
+         "dx":270,
+         "dy":248
+      },
+      {
+         "name":"Energy",
+         "children":[
+            {
+               "name":"Oil & Gas Drilling",
+               "children":[
+                  {
+                     "name":"HP",
+                     "description":"Helmerich & Payne, Inc.",
+                     "x":997,
+                     "y":672.5,
+                     "dx":18,
+                     "dy":0
+                  }
+               ],
+               "x":996,
+               "y":671,
+               "dx":20,
+               "dy":0
+            },
+            {
+               "name":"Oil & Gas Equipment & Services",
+               "children":[
+                  {
+                     "name":"FTI",
+                     "description":"TechnipFMC plc",
+                     "x":1007,
+                     "y":660,
+                     "dy":10,
+                     "dx":8
+                  },
+                  {
+                     "name":"NOV",
+                     "description":"National Oilwell Varco, Inc.",
+                     "x":997,
+                     "y":660,
+                     "dx":10,
+                     "dy":10
+                  },
+                  {
+                     "name":"HAL",
+                     "description":"Halliburton Company",
+                     "x":997,
+                     "y":649,
+                     "dy":11,
+                     "dx":18
+                  },
+                  {
+                     "name":"BKR",
+                     "description":"Baker Hughes Company",
+                     "x":997,
+                     "y":632,
+                     "dy":17,
+                     "dx":18
+                  },
+                  {
+                     "name":"SLB",
+                     "description":"Schlumberger Limited",
+                     "x":997,
+                     "y":604,
+                     "dy":28,
+                     "dx":18
+                  }
+               ],
+               "x":996,
+               "y":600,
+               "dy":71,
+               "dx":20
+            },
+            {
+               "name":"Oil & Gas Midstream",
+               "children":[
+                  {
+                     "name":"OKE",
+                     "description":"ONEOK, Inc.",
+                     "x":985,
+                     "y":650,
+                     "dy":20,
+                     "dx":10
+                  },
+                  {
+                     "name":"WMB",
+                     "description":"The Williams Companies, Inc.",
+                     "x":967,
+                     "y":650,
+                     "dx":18,
+                     "dy":20
+                  },
+                  {
+                     "name":"KMI",
+                     "description":"Kinder Morgan, Inc.",
+                     "x":941,
+                     "y":650,
+                     "dx":26,
+                     "dy":20
+                  }
+               ],
+               "x":940,
+               "y":638,
+               "dx":56,
+               "dy":33
+            },
+            {
+               "name":"Oil & Gas Refining & Marketing",
+               "children":[
+                  {
+                     "name":"HFC",
+                     "description":"HollyFrontier Corporation",
+                     "x":979,
+                     "y":633,
+                     "dx":16,
+                     "dy":4
+                  },
+                  {
+                     "name":"MPC",
+                     "description":"Marathon Petroleum Corporation",
+                     "x":979,
+                     "y":612,
+                     "dy":21,
+                     "dx":16
+                  },
+                  {
+                     "name":"VLO",
+                     "description":"Valero Energy Corporation",
+                     "x":962,
+                     "y":612,
+                     "dx":17,
+                     "dy":25
+                  },
+                  {
+                     "name":"PSX",
+                     "description":"Phillips 66",
+                     "x":941,
+                     "y":612,
+                     "dx":21,
+                     "dy":25
+                  }
+               ],
+               "x":940,
+               "y":600,
+               "dx":56,
+               "dy":38
+            },
+            {
+               "name":"Oil & Gas E&P",
+               "children":[
+                  {
+                     "name":"NBL",
+                     "description":"Noble Energy, Inc.",
+                     "x":928,
+                     "y":661,
+                     "dx":11,
+                     "dy":9
+                  },
+                  {
+                     "name":"DVN",
+                     "description":"Devon Energy Corporation",
+                     "x":928,
+                     "y":652,
+                     "dy":9,
+                     "dx":11
+                  },
+                  {
+                     "name":"MRO",
+                     "description":"Marathon Oil Corporation",
+                     "x":917,
+                     "y":661,
+                     "dx":11,
+                     "dy":9
+                  },
+                  {
+                     "name":"APA",
+                     "description":"Apache Corporation",
+                     "x":917,
+                     "y":652,
+                     "dx":11,
+                     "dy":9
+                  },
+                  {
+                     "name":"FANG",
+                     "description":"Diamondback Energy, Inc.",
+                     "x":929,
+                     "y":638,
+                     "dy":14,
+                     "dx":10
+                  },
+                  {
+                     "name":"COG",
+                     "description":"Cabot Oil & Gas Corporation",
+                     "x":917,
+                     "y":638,
+                     "dy":14,
+                     "dx":12
+                  },
+                  {
+                     "name":"CXO",
+                     "description":"Concho Resources Inc.",
+                     "x":901,
+                     "y":657,
+                     "dx":16,
+                     "dy":13
+                  },
+                  {
+                     "name":"PXD",
+                     "description":"Pioneer Natural Resources Company",
+                     "x":901,
+                     "y":638,
+                     "dx":16,
+                     "dy":19
+                  },
+                  {
+                     "name":"HES",
+                     "description":"Hess Corporation",
+                     "x":882,
+                     "y":654,
+                     "dx":19,
+                     "dy":16
+                  },
+                  {
+                     "name":"OXY",
+                     "description":"Occidental Petroleum Corporation",
+                     "x":882,
+                     "y":638,
+                     "dx":19,
+                     "dy":16
+                  },
+                  {
+                     "name":"EOG",
+                     "description":"EOG Resources, Inc.",
+                     "x":917,
+                     "y":612,
+                     "dy":26,
+                     "dx":22
+                  },
+                  {
+                     "name":"COP",
+                     "description":"ConocoPhillips",
+                     "x":882,
+                     "y":612,
+                     "dy":26,
+                     "dx":35
+                  }
+               ],
+               "x":881,
+               "y":600,
+               "dx":59,
+               "dy":71
+            },
+            {
+               "name":"Oil & Gas Integrated",
+               "children":[
+                  {
+                     "name":"CVX",
+                     "description":"Chevron Corporation",
+                     "x":819,
+                     "y":612,
+                     "dx":61,
+                     "dy":58
+                  },
+                  {
+                     "name":"XOM",
+                     "description":"Exxon Mobil Corporation",
+                     "x":749,
+                     "y":612,
+                     "dx":70,
+                     "dy":58
+                  }
+               ],
+               "x":748,
+               "y":600,
+               "dx":133,
+               "dy":71
+            }
+         ],
+         "x":747,
+         "y":585,
+         "dx":270,
+         "dy":87
+      },
+      {
+         "name":"Consumer Defensive",
+         "children":[
+            {
+               "name":"Beverages - Brewers",
+               "children":[
+                  {
+                     "name":"TAP",
+                     "description":"Molson Coors Beverage Company",
+                     "x":1182,
+                     "y":331,
+                     "dx":27,
+                     "dy":4
+                  }
+               ],
+               "x":1181,
+               "y":327,
+               "dx":29,
+               "dy":9
+            },
+            {
+               "name":"Grocery Stores",
+               "children":[
+                  {
+                     "name":"KR",
+                     "description":"The Kroger Co.",
+                     "x":1182,
+                     "y":306,
+                     "dx":27,
+                     "dy":20
+                  }
+               ],
+               "x":1181,
+               "y":302,
+               "dy":25,
+               "dx":29
+            },
+            {
+               "name":"Food Distribution",
+               "children":[
+                  {
+                     "name":"SYY",
+                     "description":"Sysco Corporation",
+                     "x":1182,
+                     "y":276,
+                     "dx":27,
+                     "dy":25
+                  }
+               ],
+               "x":1181,
+               "y":272,
+               "dy":30,
+               "dx":29
+            },
+            {
+               "name":"Farm Products",
+               "children":[
+                  {
+                     "name":"ADM",
+                     "description":"Archer-Daniels-Midland Company",
+                     "x":1158,
+                     "y":322,
+                     "dx":22,
+                     "dy":13
+                  },
+                  {
+                     "name":"TSN",
+                     "description":"Tyson Foods, Inc.",
+                     "x":1134,
+                     "y":322,
+                     "dx":24,
+                     "dy":13
+                  }
+               ],
+               "x":1133,
+               "y":310,
+               "dx":48,
+               "dy":26
+            },
+            {
+               "name":"Beverages - Wineries & Distilleries",
+               "children":[
+                  {
+                     "name":"BF-B",
+                     "description":"Brown-Forman Corporation",
+                     "x":1158,
+                     "y":284,
+                     "dy":25,
+                     "dx":22
+                  },
+                  {
+                     "name":"STZ",
+                     "description":"Constellation Brands, Inc.",
+                     "x":1134,
+                     "y":284,
+                     "dx":24,
+                     "dy":25
+                  }
+               ],
+               "x":1133,
+               "y":272,
+               "dx":48,
+               "dy":38
+            },
+            {
+               "name":"Confectioners",
+               "children":[
+                  {
+                     "name":"HSY",
+                     "description":"The Hershey Company",
+                     "x":1087,
+                     "y":321,
+                     "dx":45,
+                     "dy":14
+                  },
+                  {
+                     "name":"MDLZ",
+                     "description":"Mondelez International, Inc.",
+                     "x":1087,
+                     "y":284,
+                     "dy":37,
+                     "dx":45
+                  }
+               ],
+               "x":1086,
+               "y":272,
+               "dx":47,
+               "dy":64
+            },
+            {
+               "name":"Tobacco",
+               "children":[
+                  {
+                     "name":"MO",
+                     "description":"Altria Group, Inc.",
+                     "x":1150,
+                     "y":240,
+                     "dx":59,
+                     "dy":31
+                  },
+                  {
+                     "name":"PM",
+                     "description":"Philip Morris International Inc.",
+                     "x":1150,
+                     "y":191,
+                     "dy":49,
+                     "dx":59
+                  }
+               ],
+               "x":1149,
+               "y":179,
+               "dy":93,
+               "dx":61
+            },
+            {
+               "name":"Packaged Foods",
+               "children":[
+                  {
+                     "name":"LW",
+                     "description":"Lamb Weston Holdings, Inc.",
+                     "x":1126,
+                     "y":261,
+                     "dx":22,
+                     "dy":10
+                  },
+                  {
+                     "name":"SJM",
+                     "description":"The J. M. Smucker Company",
+                     "x":1126,
+                     "y":246,
+                     "dy":15,
+                     "dx":22
+                  },
+                  {
+                     "name":"CPB",
+                     "description":"Campbell Soup Company",
+                     "x":1111,
+                     "y":246,
+                     "dx":15,
+                     "dy":25
+                  },
+                  {
+                     "name":"CAG",
+                     "description":"Conagra Brands, Inc.",
+                     "x":1132,
+                     "y":221,
+                     "dy":25,
+                     "dx":16
+                  },
+                  {
+                     "name":"MKC",
+                     "description":"McCormick & Company, Incorporated",
+                     "x":1111,
+                     "y":221,
+                     "dy":25,
+                     "dx":21
+                  },
+                  {
+                     "name":"K",
+                     "description":"Kellogg Company",
+                     "x":1087,
+                     "y":247,
+                     "dx":24,
+                     "dy":24
+                  },
+                  {
+                     "name":"HRL",
+                     "description":"Hormel Foods Corporation",
+                     "x":1087,
+                     "y":221,
+                     "dx":24,
+                     "dy":26
+                  },
+                  {
+                     "name":"GIS",
+                     "description":"General Mills, Inc.",
+                     "x":1118,
+                     "y":191,
+                     "dy":30,
+                     "dx":30
+                  },
+                  {
+                     "name":"KHC",
+                     "description":"The Kraft Heinz Company",
+                     "x":1087,
+                     "y":191,
+                     "dy":30,
+                     "dx":31
+                  }
+               ],
+               "x":1086,
+               "y":179,
+               "dy":93,
+               "dx":63
+            },
+            {
+               "name":"Beverages - Non-Alcoholic",
+               "children":[
+                  {
+                     "name":"MNST",
+                     "description":"Monster Beverage Corporation",
+                     "x":1074,
+                     "y":260,
+                     "dy":75,
+                     "dx":11
+                  },
+                  {
+                     "name":"PEP",
+                     "description":"PepsiCo, Inc.",
+                     "x":1008,
+                     "y":260,
+                     "dx":66,
+                     "dy":75
+                  },
+                  {
+                     "name":"KO",
+                     "description":"The Coca-Cola Company",
+                     "x":1008,
+                     "y":191,
+                     "dy":69,
+                     "dx":77
+                  }
+               ],
+               "x":1007,
+               "y":179,
+               "dx":79,
+               "dy":157
+            },
+            {
+               "name":"Household & Personal Products",
+               "children":[
+                  {
+                     "name":"COTY",
+                     "description":"Coty Inc.",
+                     "x":1199,
+                     "y":165,
+                     "dy":13,
+                     "dx":10
+                  },
+                  {
+                     "name":"NWL",
+                     "description":"Newell Brands Inc.",
+                     "x":1187,
+                     "y":165,
+                     "dx":12,
+                     "dy":13
+                  },
+                  {
+                     "name":"CHD",
+                     "description":"Church & Dwight Co., Inc.",
+                     "x":1187,
+                     "y":144,
+                     "dy":21,
+                     "dx":22
+                  },
+                  {
+                     "name":"CLX",
+                     "description":"The Clorox Company",
+                     "x":1168,
+                     "y":144,
+                     "dx":19,
+                     "dy":34
+                  },
+                  {
+                     "name":"KMB",
+                     "description":"Kimberly-Clark Corporation",
+                     "x":1168,
+                     "y":113,
+                     "dy":31,
+                     "dx":41
+                  },
+                  {
+                     "name":"CL",
+                     "description":"Colgate-Palmolive Company",
+                     "x":1117,
+                     "y":147,
+                     "dx":51,
+                     "dy":31
+                  },
+                  {
+                     "name":"EL",
+                     "description":"The Estee Lauder Companies Inc.",
+                     "x":1117,
+                     "y":113,
+                     "dx":51,
+                     "dy":34
+                  },
+                  {
+                     "name":"PG",
+                     "description":"The Procter & Gamble Company",
+                     "x":1117,
+                     "y":27,
+                     "dy":86,
+                     "dx":92
+                  }
+               ],
+               "x":1116,
+               "y":15,
+               "dy":164,
+               "dx":94
+            },
+            {
+               "name":"Discount Stores",
+               "children":[
+                  {
+                     "name":"DLTR",
+                     "description":"Dollar Tree, Inc.",
+                     "x":1100,
+                     "y":144,
+                     "dy":34,
+                     "dx":15
+                  },
+                  {
+                     "name":"DG",
+                     "description":"Dollar General Corporation",
+                     "x":1065,
+                     "y":144,
+                     "dx":35,
+                     "dy":34
+                  },
+                  {
+                     "name":"TGT",
+                     "description":"Target Corporation",
+                     "x":1065,
+                     "y":114,
+                     "dy":30,
+                     "dx":50
+                  },
+                  {
+                     "name":"COST",
+                     "description":"Costco Wholesale Corporation",
+                     "x":1008,
+                     "y":114,
+                     "dx":57,
+                     "dy":64
+                  },
+                  {
+                     "name":"WMT",
+                     "description":"Walmart Inc.",
+                     "x":1008,
+                     "y":27,
+                     "dy":87,
+                     "dx":107
+                  }
+               ],
+               "x":1007,
+               "y":15,
+               "dy":164,
+               "dx":109
+            }
+         ],
+         "x":1006,
+         "y":0,
+         "dy":337,
+         "dx":205
+      },
+      {
+         "name":"Consumer Cyclical",
+         "children":[
+            {
+               "name":"Recreational Vehicles",
+               "children":[
+                  {
+                     "name":"HOG",
+                     "description":"Harley-Davidson, Inc.",
+                     "x":1e3,
+                     "y":324,
+                     "dy":11,
+                     "dx":4
+                  }
+               ],
+               "x":999,
+               "y":320,
+               "dy":16,
+               "dx":6
+            },
+            {
+               "name":"Department Stores",
+               "children":[
+                  {
+                     "name":"KSS",
+                     "description":"Kohl's Corporation",
+                     "x":989,
+                     "y":330,
+                     "dx":9,
+                     "dy":5
+                  },
+                  {
+                     "name":"JWN",
+                     "description":"Nordstrom, Inc.",
+                     "x":989,
+                     "y":324,
+                     "dy":6,
+                     "dx":9
+                  }
+               ],
+               "x":988,
+               "y":320,
+               "dx":11,
+               "dy":16
+            },
+            {
+               "name":"Leisure",
+               "children":[
+                  {
+                     "name":"HAS",
+                     "description":"Hasbro, Inc.",
+                     "x":989,
+                     "y":307,
+                     "dx":15,
+                     "dy":12
+                  }
+               ],
+               "x":988,
+               "y":303,
+               "dy":17,
+               "dx":17
+            },
+            {
+               "name":"Auto & Truck Dealerships",
+               "children":[
+                  {
+                     "name":"KMX",
+                     "description":"CarMax, Inc.",
+                     "x":963,
+                     "y":326,
+                     "dx":24,
+                     "dy":9
+                  }
+               ],
+               "x":962,
+               "y":322,
+               "dx":26,
+               "dy":14
+            },
+            {
+               "name":"Personal Services",
+               "children":[
+                  {
+                     "name":"HRB",
+                     "description":"H&R Block, Inc.",
+                     "x":982,
+                     "y":307,
+                     "dy":14,
+                     "dx":5
+                  },
+                  {
+                     "name":"ROL",
+                     "description":"Rollins, Inc.",
+                     "x":963,
+                     "y":307,
+                     "dx":19,
+                     "dy":14
+                  }
+               ],
+               "x":962,
+               "y":303,
+               "dx":26,
+               "dy":19
+            },
+            {
+               "name":"Luxury Goods",
+               "children":[
+                  {
+                     "name":"TPR",
+                     "description":"Tapestry, Inc.",
+                     "x":945,
+                     "y":329,
+                     "dx":16,
+                     "dy":6
+                  },
+                  {
+                     "name":"TIF",
+                     "description":"Tiffany & Co.",
+                     "x":945,
+                     "y":307,
+                     "dy":22,
+                     "dx":16
+                  }
+               ],
+               "x":944,
+               "y":303,
+               "dx":18,
+               "dy":33
+            },
+            {
+               "name":"Furnishings, Fixtures & Appliances",
+               "children":[
+                  {
+                     "name":"LEG",
+                     "description":"Leggett & Platt, Incorporated",
+                     "x":993,
+                     "y":292,
+                     "dx":11,
+                     "dy":10
+                  },
+                  {
+                     "name":"MHK",
+                     "description":"Mohawk Industries, Inc.",
+                     "x":993,
+                     "y":279,
+                     "dy":13,
+                     "dx":11
+                  },
+                  {
+                     "name":"WHR",
+                     "description":"Whirlpool Corporation",
+                     "x":979,
+                     "y":291,
+                     "dx":14,
+                     "dy":11
+                  },
+                  {
+                     "name":"FBHS",
+                     "description":"Fortune Brands Home & Security, Inc.",
+                     "x":979,
+                     "y":279,
+                     "dx":14,
+                     "dy":12
+                  }
+               ],
+               "x":978,
+               "y":275,
+               "dy":28,
+               "dx":27
+            },
+            {
+               "name":"Auto Parts",
+               "children":[
+                  {
+                     "name":"BWA",
+                     "description":"BorgWarner Inc.",
+                     "x":963,
+                     "y":292,
+                     "dx":14,
+                     "dy":10
+                  },
+                  {
+                     "name":"LKQ",
+                     "description":"LKQ Corporation",
+                     "x":963,
+                     "y":279,
+                     "dy":13,
+                     "dx":14
+                  },
+                  {
+                     "name":"APTV",
+                     "description":"Aptiv PLC",
+                     "x":945,
+                     "y":279,
+                     "dx":18,
+                     "dy":23
+                  }
+               ],
+               "x":944,
+               "y":275,
+               "dy":28,
+               "dx":34
+            },
+            {
+               "name":"Apparel Manufacturing",
+               "children":[
+                  {
+                     "name":"CPRI",
+                     "description":"Capri Holdings Limited",
+                     "x":939,
+                     "y":326,
+                     "dy":9,
+                     "dx":4
+                  },
+                  {
+                     "name":"PVH",
+                     "description":"PVH Corp.",
+                     "x":933,
+                     "y":326,
+                     "dx":6,
+                     "dy":9
+                  },
+                  {
+                     "name":"HBI",
+                     "description":"Hanesbrands Inc.",
+                     "x":933,
+                     "y":321,
+                     "dy":5,
+                     "dx":10
+                  },
+                  {
+                     "name":"UAA",
+                     "description":"Under Armour, Inc.",
+                     "x":923,
+                     "y":329,
+                     "dx":10,
+                     "dy":6
+                  },
+                  {
+                     "name":"RL",
+                     "description":"Ralph Lauren Corporation",
+                     "x":923,
+                     "y":321,
+                     "dx":10,
+                     "dy":8
+                  },
+                  {
+                     "name":"VFC",
+                     "description":"V.F. Corporation",
+                     "x":900,
+                     "y":321,
+                     "dx":23,
+                     "dy":14
+                  }
+               ],
+               "x":899,
+               "y":309,
+               "dx":45,
+               "dy":27
+            },
+            {
+               "name":"Lodging",
+               "children":[
+                  {
+                     "name":"HLT",
+                     "description":"Hilton Worldwide Holdings Inc.",
+                     "x":925,
+                     "y":287,
+                     "dy":21,
+                     "dx":18
+                  },
+                  {
+                     "name":"MAR",
+                     "description":"Marriott International, Inc.",
+                     "x":900,
+                     "y":287,
+                     "dx":25,
+                     "dy":21
+                  }
+               ],
+               "x":899,
+               "y":275,
+               "dx":45,
+               "dy":34
+            },
+            {
+               "name":"Residential Construction",
+               "children":[
+                  {
+                     "name":"PHM",
+                     "description":"PulteGroup, Inc.",
+                     "x":991,
+                     "y":259,
+                     "dy":15,
+                     "dx":13
+                  },
+                  {
+                     "name":"NVR",
+                     "description":"NVR, Inc.",
+                     "x":971,
+                     "y":259,
+                     "dx":20,
+                     "dy":15
+                  },
+                  {
+                     "name":"LEN",
+                     "description":"Lennar Corporation",
+                     "x":989,
+                     "y":234,
+                     "dy":25,
+                     "dx":15
+                  },
+                  {
+                     "name":"DHI",
+                     "description":"D.R. Horton, Inc.",
+                     "x":971,
+                     "y":234,
+                     "dy":25,
+                     "dx":18
+                  }
+               ],
+               "x":970,
+               "y":230,
+               "dy":45,
+               "dx":35
+            },
+            {
+               "name":"Auto Manufacturers",
+               "children":[
+                  {
+                     "name":"F",
+                     "description":"Ford Motor Company",
+                     "x":936,
+                     "y":258,
+                     "dx":33,
+                     "dy":16
+                  },
+                  {
+                     "name":"GM",
+                     "description":"General Motors Company",
+                     "x":936,
+                     "y":234,
+                     "dy":24,
+                     "dx":33
+                  }
+               ],
+               "x":935,
+               "y":230,
+               "dy":45,
+               "dx":35
+            },
+            {
+               "name":"Resorts & Casinos",
+               "children":[
+                  {
+                     "name":"MGM",
+                     "description":"MGM Resorts International",
+                     "x":918,
+                     "y":261,
+                     "dx":16,
+                     "dy":13
+                  },
+                  {
+                     "name":"WYNN",
+                     "description":"Wynn Resorts, Limited",
+                     "x":900,
+                     "y":261,
+                     "dx":18,
+                     "dy":13
+                  },
+                  {
+                     "name":"LVS",
+                     "description":"Las Vegas Sands Corp.",
+                     "x":900,
+                     "y":234,
+                     "dy":27,
+                     "dx":34
+                  }
+               ],
+               "x":899,
+               "y":230,
+               "dy":45,
+               "dx":36
+            },
+            {
+               "name":"Packaging & Containers",
+               "children":[
+                  {
+                     "name":"SEE",
+                     "description":"Sealed Air Corporation",
+                     "x":894,
+                     "y":315,
+                     "dy":20,
+                     "dx":4
+                  },
+                  {
+                     "name":"WRK",
+                     "description":"WestRock Company",
+                     "x":876,
+                     "y":325,
+                     "dx":18,
+                     "dy":10
+                  },
+                  {
+                     "name":"PKG",
+                     "description":"Packaging Corporation of America",
+                     "x":876,
+                     "y":315,
+                     "dx":18,
+                     "dy":10
+                  },
+                  {
+                     "name":"IP",
+                     "description":"International Paper Company",
+                     "x":876,
+                     "y":303,
+                     "dy":12,
+                     "dx":22
+                  },
+                  {
+                     "name":"AMCR",
+                     "description":"Amcor plc",
+                     "x":853,
+                     "y":322,
+                     "dx":23,
+                     "dy":13
+                  },
+                  {
+                     "name":"BLL",
+                     "description":"Ball Corporation",
+                     "x":853,
+                     "y":303,
+                     "dx":23,
+                     "dy":19
+                  }
+               ],
+               "x":852,
+               "y":291,
+               "dx":47,
+               "dy":45
+            },
+            {
+               "name":"Travel Services",
+               "children":[
+                  {
+                     "name":"NCLH",
+                     "description":"Norwegian Cruise Line Holdings Ltd.",
+                     "x":880,
+                     "y":284,
+                     "dx":18,
+                     "dy":6
+                  },
+                  {
+                     "name":"RCL",
+                     "description":"Royal Caribbean Cruises Ltd.",
+                     "x":880,
+                     "y":272,
+                     "dy":12,
+                     "dx":18
+                  },
+                  {
+                     "name":"EXPE",
+                     "description":"Expedia Group, Inc.",
+                     "x":868,
+                     "y":272,
+                     "dx":12,
+                     "dy":18
+                  },
+                  {
+                     "name":"CCL",
+                     "description":"Carnival Corporation & Plc",
+                     "x":853,
+                     "y":272,
+                     "dx":15,
+                     "dy":18
+                  },
+                  {
+                     "name":"BKNG",
+                     "description":"Booking Holdings Inc.",
+                     "x":853,
+                     "y":242,
+                     "dy":30,
+                     "dx":45
+                  }
+               ],
+               "x":852,
+               "y":230,
+               "dx":47,
+               "dy":61
+            },
+            {
+               "name":"Apparel Retail",
+               "children":[
+                  {
+                     "name":"GPS",
+                     "description":"The Gap, Inc.",
+                     "x":997,
+                     "y":218,
+                     "dy":11,
+                     "dx":7
+                  },
+                  {
+                     "name":"LB",
+                     "description":"L Brands, Inc.",
+                     "x":997,
+                     "y":207,
+                     "dy":11,
+                     "dx":7
+                  },
+                  {
+                     "name":"ROST",
+                     "description":"Ross Stores, Inc.",
+                     "x":964,
+                     "y":207,
+                     "dx":33,
+                     "dy":22
+                  },
+                  {
+                     "name":"TJX",
+                     "description":"The TJX Companies, Inc.",
+                     "x":964,
+                     "y":174,
+                     "dy":33,
+                     "dx":40
+                  }
+               ],
+               "x":963,
+               "y":162,
+               "dy":68,
+               "dx":42
+            },
+            {
+               "name":"Specialty Retail",
+               "children":[
+                  {
+                     "name":"AAP",
+                     "description":"Advance Auto Parts, Inc.",
+                     "x":947,
+                     "y":217,
+                     "dx":15,
+                     "dy":12
+                  },
+                  {
+                     "name":"GPC",
+                     "description":"Genuine Parts Company",
+                     "x":947,
+                     "y":199,
+                     "dy":18,
+                     "dx":15
+                  },
+                  {
+                     "name":"TSCO",
+                     "description":"Tractor Supply Company",
+                     "x":928,
+                     "y":214,
+                     "dx":19,
+                     "dy":15
+                  },
+                  {
+                     "name":"ULTA",
+                     "description":"Ulta Beauty, Inc.",
+                     "x":928,
+                     "y":199,
+                     "dx":19,
+                     "dy":15
+                  },
+                  {
+                     "name":"BBY",
+                     "description":"Best Buy Co., Inc.",
+                     "x":913,
+                     "y":199,
+                     "dx":15,
+                     "dy":30
+                  },
+                  {
+                     "name":"AZO",
+                     "description":"AutoZone, Inc.",
+                     "x":940,
+                     "y":174,
+                     "dy":25,
+                     "dx":22
+                  },
+                  {
+                     "name":"ORLY",
+                     "description":"O'Reilly Automotive, Inc.",
+                     "x":913,
+                     "y":174,
+                     "dy":25,
+                     "dx":27
+                  }
+               ],
+               "x":912,
+               "y":162,
+               "dy":68,
+               "dx":51
+            },
+            {
+               "name":"Footwear & Accessories",
+               "children":[
+                  {
+                     "name":"NKE",
+                     "description":"NIKE, Inc.",
+                     "x":853,
+                     "y":174,
+                     "dx":58,
+                     "dy":55
+                  }
+               ],
+               "x":852,
+               "y":162,
+               "dy":68,
+               "dx":60
+            },
+            {
+               "name":"Restaurants",
+               "children":[
+                  {
+                     "name":"DRI",
+                     "description":"Darden Restaurants, Inc.",
+                     "x":843,
+                     "y":307,
+                     "dy":28,
+                     "dx":8
+                  },
+                  {
+                     "name":"CMG",
+                     "description":"Chipotle Mexican Grill, Inc.",
+                     "x":821,
+                     "y":307,
+                     "dx":22,
+                     "dy":28
+                  },
+                  {
+                     "name":"YUM",
+                     "description":"Yum! Brands, Inc.",
+                     "x":798,
+                     "y":307,
+                     "dx":23,
+                     "dy":28
+                  },
+                  {
+                     "name":"SBUX",
+                     "description":"Starbucks Corporation",
+                     "x":798,
+                     "y":265,
+                     "dy":42,
+                     "dx":53
+                  },
+                  {
+                     "name":"MCD",
+                     "description":"McDonald's Corporation",
+                     "x":749,
+                     "y":265,
+                     "dx":49,
+                     "dy":70
+                  }
+               ],
+               "x":748,
+               "y":253,
+               "dx":104,
+               "dy":83
+            },
+            {
+               "name":"Home Improvement Retail",
+               "children":[
+                  {
+                     "name":"LOW",
+                     "description":"Lowe's Companies, Inc.",
+                     "x":825,
+                     "y":174,
+                     "dy":78,
+                     "dx":26
+                  },
+                  {
+                     "name":"HD",
+                     "description":"The Home Depot, Inc.",
+                     "x":749,
+                     "y":174,
+                     "dx":76,
+                     "dy":78
+                  }
+               ],
+               "x":748,
+               "y":162,
+               "dx":104,
+               "dy":91
+            },
+            {
+               "name":"Internet Retail",
+               "children":[
+                  {
+                     "name":"EBAY",
+                     "description":"eBay Inc.",
+                     "x":998,
+                     "y":27,
+                     "dy":134,
+                     "dx":6
+                  },
+                  {
+                     "name":"AMZN",
+                     "description":"Amazon.com, Inc.",
+                     "x":749,
+                     "y":27,
+                     "dx":249,
+                     "dy":134
+                  }
+               ],
+               "x":748,
+               "y":15,
+               "dy":147,
+               "dx":257
+            }
+         ],
+         "x":747,
+         "y":0,
+         "dy":337,
+         "dx":259
+      },
+      {
+         "name":"Healthcare",
+         "children":[
+            {
+               "name":"Health Information Services",
+               "children":[
+                  {
+                     "name":"CERN",
+                     "description":"Cerner Corporation",
+                     "x":687,
+                     "y":670,
+                     "dx":58,
+                     "dy":0
+                  }
+               ],
+               "x":686,
+               "y":658,
+               "dx":60,
+               "dy":13
+            },
+            {
+               "name":"Pharmaceutical Retailers",
+               "children":[
+                  {
+                     "name":"WBA",
+                     "description":"Walgreens Boots Alliance, Inc.",
+                     "x":723,
+                     "y":615,
+                     "dy":42,
+                     "dx":22
+                  }
+               ],
+               "x":722,
+               "y":611,
+               "dy":47,
+               "dx":24
+            },
+            {
+               "name":"Medical Care Facilities",
+               "children":[
+                  {
+                     "name":"UHS",
+                     "description":"Universal Health Services, Inc.",
+                     "x":705,
+                     "y":643,
+                     "dx":16,
+                     "dy":14
+                  },
+                  {
+                     "name":"DVA",
+                     "description":"DaVita Inc.",
+                     "x":687,
+                     "y":643,
+                     "dx":18,
+                     "dy":14
+                  },
+                  {
+                     "name":"HCA",
+                     "description":"HCA Healthcare, Inc.",
+                     "x":687,
+                     "y":615,
+                     "dy":28,
+                     "dx":34
+                  }
+               ],
+               "x":686,
+               "y":611,
+               "dy":47,
+               "dx":36
+            },
+            {
+               "name":"Medical Distribution",
+               "children":[
+                  {
+                     "name":"HSIC",
+                     "description":"Henry Schein, Inc.",
+                     "x":738,
+                     "y":591,
+                     "dy":19,
+                     "dx":7
+                  },
+                  {
+                     "name":"CAH",
+                     "description":"Cardinal Health, Inc.",
+                     "x":725,
+                     "y":591,
+                     "dx":13,
+                     "dy":19
+                  },
+                  {
+                     "name":"ABC",
+                     "description":"AmerisourceBergen Corporation",
+                     "x":708,
+                     "y":591,
+                     "dx":17,
+                     "dy":19
+                  },
+                  {
+                     "name":"MCK",
+                     "description":"McKesson Corporation",
+                     "x":687,
+                     "y":591,
+                     "dx":21,
+                     "dy":19
+                  }
+               ],
+               "x":686,
+               "y":579,
+               "dy":32,
+               "dx":60
+            },
+            {
+               "name":"Drug Manufacturers - Specialty & Generic",
+               "children":[
+                  {
+                     "name":"PRGO",
+                     "description":"Perrigo Company plc",
+                     "x":733,
+                     "y":566,
+                     "dy":12,
+                     "dx":12
+                  },
+                  {
+                     "name":"MYL",
+                     "description":"Mylan N.V.",
+                     "x":733,
+                     "y":552,
+                     "dy":14,
+                     "dx":12
+                  },
+                  {
+                     "name":"ZTS",
+                     "description":"Zoetis Inc.",
+                     "x":687,
+                     "y":552,
+                     "dx":46,
+                     "dy":26
+                  }
+               ],
+               "x":686,
+               "y":540,
+               "dy":39,
+               "dx":60
+            },
+            {
+               "name":"Biotechnology",
+               "children":[
+                  {
+                     "name":"INCY",
+                     "description":"Incyte Corporation",
+                     "x":658,
+                     "y":652,
+                     "dx":27,
+                     "dy":18
+                  },
+                  {
+                     "name":"ALXN",
+                     "description":"Alexion Pharmaceuticals, Inc.",
+                     "x":658,
+                     "y":633,
+                     "dy":19,
+                     "dx":27
+                  },
+                  {
+                     "name":"REGN",
+                     "description":"Regeneron Pharmaceuticals, Inc.",
+                     "x":624,
+                     "y":633,
+                     "dx":34,
+                     "dy":37
+                  },
+                  {
+                     "name":"VRTX",
+                     "description":"Vertex Pharmaceuticals Incorporated",
+                     "x":586,
+                     "y":633,
+                     "dx":38,
+                     "dy":37
+                  }
+               ],
+               "x":585,
+               "y":621,
+               "dx":101,
+               "dy":50
+            },
+            {
+               "name":"Medical Instruments & Supplies",
+               "children":[
+                  {
+                     "name":"XRAY",
+                     "description":"DENTSPLY SIRONA Inc.",
+                     "x":670,
+                     "y":604,
+                     "dy":16,
+                     "dx":15
+                  },
+                  {
+                     "name":"VAR",
+                     "description":"Varian Medical Systems, Inc.",
+                     "x":654,
+                     "y":604,
+                     "dx":16,
+                     "dy":16
+                  },
+                  {
+                     "name":"STE",
+                     "description":"STERIS plc",
+                     "x":670,
+                     "y":584,
+                     "dy":20,
+                     "dx":15
+                  },
+                  {
+                     "name":"HOLX",
+                     "description":"Hologic, Inc.",
+                     "x":654,
+                     "y":584,
+                     "dy":20,
+                     "dx":16
+                  },
+                  {
+                     "name":"COO",
+                     "description":"The Cooper Companies, Inc.",
+                     "x":633,
+                     "y":602,
+                     "dx":21,
+                     "dy":18
+                  },
+                  {
+                     "name":"TFX",
+                     "description":"Teleflex Incorporated",
+                     "x":633,
+                     "y":584,
+                     "dx":21,
+                     "dy":18
+                  },
+                  {
+                     "name":"RMD",
+                     "description":"ResMed Inc.",
+                     "x":668,
+                     "y":552,
+                     "dy":32,
+                     "dx":17
+                  },
+                  {
+                     "name":"BAX",
+                     "description":"Baxter International Inc.",
+                     "x":633,
+                     "y":552,
+                     "dy":32,
+                     "dx":35
+                  },
+                  {
+                     "name":"ISRG",
+                     "description":"Intuitive Surgical, Inc.",
+                     "x":586,
+                     "y":588,
+                     "dx":47,
+                     "dy":32
+                  },
+                  {
+                     "name":"BDX",
+                     "description":"Becton, Dickinson and Company",
+                     "x":586,
+                     "y":552,
+                     "dx":47,
+                     "dy":36
+                  }
+               ],
+               "x":585,
+               "y":540,
+               "dx":101,
+               "dy":81
+            },
+            {
+               "name":"Diagnostics & Research",
+               "children":[
+                  {
+                     "name":"PKI",
+                     "description":"PerkinElmer, Inc.",
+                     "x":722,
+                     "y":527,
+                     "dx":23,
+                     "dy":12
+                  },
+                  {
+                     "name":"WAT",
+                     "description":"Waters Corporation",
+                     "x":722,
+                     "y":514,
+                     "dy":13,
+                     "dx":23
+                  },
+                  {
+                     "name":"DGX",
+                     "description":"Quest Diagnostics Incorporated",
+                     "x":722,
+                     "y":498,
+                     "dy":16,
+                     "dx":23
+                  },
+                  {
+                     "name":"LH",
+                     "description":"Laboratory Corporation of America Holdings",
+                     "x":702,
+                     "y":520,
+                     "dx":20,
+                     "dy":19
+                  },
+                  {
+                     "name":"MTD",
+                     "description":"Mettler-Toledo International Inc.",
+                     "x":702,
+                     "y":498,
+                     "dx":20,
+                     "dy":22
+                  },
+                  {
+                     "name":"IDXX",
+                     "description":"IDEXX Laboratories, Inc.",
+                     "x":723,
+                     "y":470,
+                     "dy":28,
+                     "dx":22
+                  },
+                  {
+                     "name":"A",
+                     "description":"Agilent Technologies, Inc.",
+                     "x":702,
+                     "y":470,
+                     "dy":28,
+                     "dx":21
+                  },
+                  {
+                     "name":"IQV",
+                     "description":"IQVIA Holdings Inc.",
+                     "x":675,
+                     "y":514,
+                     "dx":27,
+                     "dy":25
+                  },
+                  {
+                     "name":"ILMN",
+                     "description":"Illumina, Inc.",
+                     "x":675,
+                     "y":470,
+                     "dx":27,
+                     "dy":44
+                  },
+                  {
+                     "name":"DHR",
+                     "description":"Danaher Corporation",
+                     "x":634,
+                     "y":470,
+                     "dx":41,
+                     "dy":69
+                  },
+                  {
+                     "name":"TMO",
+                     "description":"Thermo Fisher Scientific Inc.",
+                     "x":586,
+                     "y":470,
+                     "dx":48,
+                     "dy":69
+                  }
+               ],
+               "x":585,
+               "y":458,
+               "dy":82,
+               "dx":161
+            },
+            {
+               "name":"Medical Devices",
+               "children":[
+                  {
+                     "name":"ABMD",
+                     "description":"Abiomed, Inc.",
+                     "x":560,
+                     "y":658,
+                     "dx":24,
+                     "dy":12
+                  },
+                  {
+                     "name":"ALGN",
+                     "description":"Align Technology, Inc.",
+                     "x":560,
+                     "y":640,
+                     "dy":18,
+                     "dx":24
+                  },
+                  {
+                     "name":"ZBH",
+                     "description":"Zimmer Biomet Holdings, Inc.",
+                     "x":539,
+                     "y":640,
+                     "dx":21,
+                     "dy":30
+                  },
+                  {
+                     "name":"EW",
+                     "description":"Edwards Lifesciences Corporation",
+                     "x":539,
+                     "y":614,
+                     "dy":26,
+                     "dx":45
+                  },
+                  {
+                     "name":"BSX",
+                     "description":"Boston Scientific Corporation",
+                     "x":539,
+                     "y":584,
+                     "dy":30,
+                     "dx":45
+                  },
+                  {
+                     "name":"SYK",
+                     "description":"Stryker Corporation",
+                     "x":479,
+                     "y":640,
+                     "dx":60,
+                     "dy":30
+                  },
+                  {
+                     "name":"MDT",
+                     "description":"Medtronic plc",
+                     "x":479,
+                     "y":584,
+                     "dx":60,
+                     "dy":56
+                  },
+                  {
+                     "name":"ABT",
+                     "description":"Abbott Laboratories",
+                     "x":430,
+                     "y":584,
+                     "dx":49,
+                     "dy":86
+                  }
+               ],
+               "x":429,
+               "y":572,
+               "dx":156,
+               "dy":99
+            },
+            {
+               "name":"Healthcare Plans",
+               "children":[
+                  {
+                     "name":"CNC",
+                     "description":"Centene Corporation",
+                     "x":538,
+                     "y":548,
+                     "dx":46,
+                     "dy":23
+                  },
+                  {
+                     "name":"HUM",
+                     "description":"Humana Inc.",
+                     "x":538,
+                     "y":519,
+                     "dy":29,
+                     "dx":46
+                  },
+                  {
+                     "name":"ANTM",
+                     "description":"Anthem, Inc.",
+                     "x":502,
+                     "y":519,
+                     "dx":36,
+                     "dy":52
+                  },
+                  {
+                     "name":"CI",
+                     "description":"Cigna Corporation",
+                     "x":545,
+                     "y":470,
+                     "dy":49,
+                     "dx":39
+                  },
+                  {
+                     "name":"CVS",
+                     "description":"CVS Health Corporation",
+                     "x":502,
+                     "y":470,
+                     "dy":49,
+                     "dx":43
+                  },
+                  {
+                     "name":"UNH",
+                     "description":"UnitedHealth Group Incorporated",
+                     "x":430,
+                     "y":470,
+                     "dx":72,
+                     "dy":101
+                  }
+               ],
+               "x":429,
+               "y":458,
+               "dx":156,
+               "dy":114
+            },
+            {
+               "name":"Drug Manufacturers - General",
+               "children":[
+                  {
+                     "name":"BIIB",
+                     "description":"Biogen Inc.",
+                     "x":697,
+                     "y":430,
+                     "dx":48,
+                     "dy":27
+                  },
+                  {
+                     "name":"AGN",
+                     "description":"Allergan plc",
+                     "x":697,
+                     "y":395,
+                     "dy":35,
+                     "dx":48
+                  },
+                  {
+                     "name":"GILD",
+                     "description":"Gilead Sciences, Inc.",
+                     "x":650,
+                     "y":395,
+                     "dx":47,
+                     "dy":62
+                  },
+                  {
+                     "name":"ABBV",
+                     "description":"AbbVie Inc.",
+                     "x":700,
+                     "y":320,
+                     "dy":75,
+                     "dx":45
+                  },
+                  {
+                     "name":"BMY",
+                     "description":"Bristol-Myers Squibb Company",
+                     "x":650,
+                     "y":320,
+                     "dy":75,
+                     "dx":50
+                  },
+                  {
+                     "name":"AMGN",
+                     "description":"Amgen Inc.",
+                     "x":592,
+                     "y":390,
+                     "dx":58,
+                     "dy":67
+                  },
+                  {
+                     "name":"LLY",
+                     "description":"Eli Lilly and Company",
+                     "x":592,
+                     "y":320,
+                     "dx":58,
+                     "dy":70
+                  },
+                  {
+                     "name":"MRK",
+                     "description":"Merck & Co., Inc.",
+                     "x":509,
+                     "y":390,
+                     "dx":83,
+                     "dy":67
+                  },
+                  {
+                     "name":"PFE",
+                     "description":"Pfizer Inc.",
+                     "x":509,
+                     "y":320,
+                     "dx":83,
+                     "dy":70
+                  },
+                  {
+                     "name":"JNJ",
+                     "description":"Johnson & Johnson",
+                     "x":430,
+                     "y":320,
+                     "dx":79,
+                     "dy":137
+                  }
+               ],
+               "x":429,
+               "y":308,
+               "dy":150,
+               "dx":317
+            }
+         ],
+         "x":428,
+         "y":293,
+         "dx":319,
+         "dy":379
+      },
+      {
+         "name":"Communication Services",
+         "children":[
+            {
+               "name":"Advertising Agencies",
+               "children":[
+                  {
+                     "name":"IPG",
+                     "description":"The Interpublic Group of Companies, Inc.",
+                     "x":735,
+                     "y":274,
+                     "dy":17,
+                     "dx":10
+                  },
+                  {
+                     "name":"OMC",
+                     "description":"Omnicom Group Inc.",
+                     "x":717,
+                     "y":274,
+                     "dx":18,
+                     "dy":17
+                  }
+               ],
+               "x":716,
+               "y":270,
+               "dx":30,
+               "dy":22
+            },
+            {
+               "name":"Broadcasting",
+               "children":[
+                  {
+                     "name":"NWSA",
+                     "description":"News Corporation",
+                     "x":737,
+                     "y":253,
+                     "dy":16,
+                     "dx":8
+                  },
+                  {
+                     "name":"FOXA",
+                     "description":"Fox Corporation",
+                     "x":717,
+                     "y":253,
+                     "dx":20,
+                     "dy":16
+                  }
+               ],
+               "x":716,
+               "y":249,
+               "dy":21,
+               "dx":30
+            },
+            {
+               "name":"Electronic Gaming & Multimedia",
+               "children":[
+                  {
+                     "name":"TTWO",
+                     "description":"Take-Two Interactive Software, Inc.",
+                     "x":717,
+                     "y":235,
+                     "dx":28,
+                     "dy":13
+                  },
+                  {
+                     "name":"EA",
+                     "description":"Electronic Arts Inc.",
+                     "x":717,
+                     "y":204,
+                     "dy":31,
+                     "dx":28
+                  },
+                  {
+                     "name":"ATVI",
+                     "description":"Activision Blizzard, Inc.",
+                     "x":717,
+                     "y":157,
+                     "dy":47,
+                     "dx":28
+                  }
+               ],
+               "x":716,
+               "y":153,
+               "dy":96,
+               "dx":30
+            },
+            {
+               "name":"Telecom Services",
+               "children":[
+                  {
+                     "name":"CTL",
+                     "description":"CenturyLink, Inc.",
+                     "x":704,
+                     "y":265,
+                     "dy":26,
+                     "dx":11
+                  },
+                  {
+                     "name":"TMUS",
+                     "description":"T-Mobile US, Inc.",
+                     "x":594,
+                     "y":265,
+                     "dx":110,
+                     "dy":26
+                  },
+                  {
+                     "name":"T",
+                     "description":"AT&T Inc.",
+                     "x":657,
+                     "y":165,
+                     "dy":100,
+                     "dx":58
+                  },
+                  {
+                     "name":"VZ",
+                     "description":"Verizon Communications Inc.",
+                     "x":594,
+                     "y":165,
+                     "dy":100,
+                     "dx":63
+                  }
+               ],
+               "x":593,
+               "y":153,
+               "dx":123,
+               "dy":139
+            },
+            {
+               "name":"Entertainment",
+               "children":[
+                  {
+                     "name":"LYV",
+                     "description":"Live Nation Entertainment, Inc.",
+                     "x":726,
+                     "y":140,
+                     "dx":19,
+                     "dy":12
+                  },
+                  {
+                     "name":"VIAC",
+                     "description":"ViacomCBS Inc.",
+                     "x":726,
+                     "y":125,
+                     "dy":15,
+                     "dx":19
+                  },
+                  {
+                     "name":"DISCA",
+                     "description":"Discovery, Inc.",
+                     "x":726,
+                     "y":110,
+                     "dy":15,
+                     "dx":19
+                  },
+                  {
+                     "name":"DISH",
+                     "description":"DISH Network Corporation",
+                     "x":726,
+                     "y":92,
+                     "dy":18,
+                     "dx":19
+                  },
+                  {
+                     "name":"CHTR",
+                     "description":"Charter Communications, Inc.",
+                     "x":675,
+                     "y":92,
+                     "dx":51,
+                     "dy":60
+                  },
+                  {
+                     "name":"CMCSA",
+                     "description":"Comcast Corporation",
+                     "x":675,
+                     "y":27,
+                     "dy":65,
+                     "dx":70
+                  },
+                  {
+                     "name":"NFLX",
+                     "description":"Netflix, Inc.",
+                     "x":594,
+                     "y":91,
+                     "dx":81,
+                     "dy":61
+                  },
+                  {
+                     "name":"DIS",
+                     "description":"The Walt Disney Company",
+                     "x":594,
+                     "y":27,
+                     "dx":81,
+                     "dy":64
+                  }
+               ],
+               "x":593,
+               "y":15,
+               "dy":138,
+               "dx":153
+            },
+            {
+               "name":"Internet Content & Information",
+               "children":[
+                  {
+                     "name":"TWTR",
+                     "description":"Twitter, Inc.",
+                     "x":586,
+                     "y":186,
+                     "dy":105,
+                     "dx":6
+                  },
+                  {
+                     "name":"FB",
+                     "description":"Facebook, Inc.",
+                     "x":430,
+                     "y":186,
+                     "dx":156,
+                     "dy":105
+                  },
+                  {
+                     "name":"GOOGL",
+                     "description":"Alphabet Inc.",
+                     "x":430,
+                     "y":27,
+                     "dy":159,
+                     "dx":162
+                  }
+               ],
+               "x":429,
+               "y":15,
+               "dx":164,
+               "dy":277
+            }
+         ],
+         "x":428,
+         "y":0,
+         "dx":319,
+         "dy":293
+      },
+      {
+         "name":"Financial",
+         "children":[
+            {
+               "name":"Insurance - Specialty",
+               "children":[
+                  {
+                     "name":"AIZ",
+                     "description":"Assurant, Inc.",
+                     "x":421,
+                     "y":656,
+                     "dy":14,
+                     "dx":5
+                  }
+               ],
+               "x":420,
+               "y":652,
+               "dy":19,
+               "dx":7
+            },
+            {
+               "name":"Insurance - Reinsurance",
+               "children":[
+                  {
+                     "name":"RE",
+                     "description":"Everest Re Group, Ltd.",
+                     "x":421,
+                     "y":619,
+                     "dy":32,
+                     "dx":5
+                  }
+               ],
+               "x":420,
+               "y":615,
+               "dy":37,
+               "dx":7
+            },
+            {
+               "name":"Insurance - Life",
+               "children":[
+                  {
+                     "name":"UNM",
+                     "description":"Unum Group",
+                     "x":408,
+                     "y":666,
+                     "dx":11,
+                     "dy":4
+                  },
+                  {
+                     "name":"LNC",
+                     "description":"Lincoln National Corporation",
+                     "x":408,
+                     "y":652,
+                     "dy":14,
+                     "dx":11
+                  },
+                  {
+                     "name":"GL",
+                     "description":"Globe Life Inc.",
+                     "x":397,
+                     "y":652,
+                     "dx":11,
+                     "dy":18
+                  },
+                  {
+                     "name":"PRU",
+                     "description":"Prudential Financial, Inc.",
+                     "x":397,
+                     "y":627,
+                     "dy":25,
+                     "dx":22
+                  },
+                  {
+                     "name":"AFL",
+                     "description":"Aflac Incorporated",
+                     "x":366,
+                     "y":650,
+                     "dx":31,
+                     "dy":20
+                  },
+                  {
+                     "name":"MET",
+                     "description":"MetLife, Inc.",
+                     "x":366,
+                     "y":627,
+                     "dx":31,
+                     "dy":23
+                  }
+               ],
+               "x":365,
+               "y":615,
+               "dx":55,
+               "dy":56
+            },
+            {
+               "name":"Insurance Brokers",
+               "children":[
+                  {
+                     "name":"AJG",
+                     "description":"Arthur J. Gallagher & Co.",
+                     "x":348,
+                     "y":649,
+                     "dy":21,
+                     "dx":16
+                  },
+                  {
+                     "name":"WLTW",
+                     "description":"Willis Towers Watson Public Limited Company",
+                     "x":323,
+                     "y":649,
+                     "dx":25,
+                     "dy":21
+                  },
+                  {
+                     "name":"AON",
+                     "description":"Aon Plc",
+                     "x":323,
+                     "y":627,
+                     "dy":22,
+                     "dx":41
+                  },
+                  {
+                     "name":"MMC",
+                     "description":"Marsh & McLennan Companies, Inc.",
+                     "x":298,
+                     "y":627,
+                     "dx":25,
+                     "dy":43
+                  }
+               ],
+               "x":297,
+               "y":615,
+               "dx":68,
+               "dy":56
+            },
+            {
+               "name":"Insurance - Property & Casualty",
+               "children":[
+                  {
+                     "name":"WRB",
+                     "description":"W. R. Berkley Corporation",
+                     "x":406,
+                     "y":603,
+                     "dx":20,
+                     "dy":11
+                  },
+                  {
+                     "name":"L",
+                     "description":"Loews Corporation",
+                     "x":406,
+                     "y":591,
+                     "dy":12,
+                     "dx":20
+                  },
+                  {
+                     "name":"CINF",
+                     "description":"Cincinnati Financial Corporation",
+                     "x":406,
+                     "y":578,
+                     "dy":13,
+                     "dx":20
+                  },
+                  {
+                     "name":"TRV",
+                     "description":"The Travelers Companies, Inc.",
+                     "x":388,
+                     "y":578,
+                     "dx":18,
+                     "dy":36
+                  },
+                  {
+                     "name":"ALL",
+                     "description":"The Allstate Corporation",
+                     "x":366,
+                     "y":578,
+                     "dx":22,
+                     "dy":36
+                  },
+                  {
+                     "name":"PGR",
+                     "description":"The Progressive Corporation",
+                     "x":397,
+                     "y":539,
+                     "dy":39,
+                     "dx":29
+                  },
+                  {
+                     "name":"CB",
+                     "description":"Chubb Limited",
+                     "x":366,
+                     "y":539,
+                     "dy":39,
+                     "dx":31
+                  }
+               ],
+               "x":365,
+               "y":527,
+               "dy":88,
+               "dx":62
+            },
+            {
+               "name":"Asset Management",
+               "children":[
+                  {
+                     "name":"IVZ",
+                     "description":"Invesco Ltd.",
+                     "x":359,
+                     "y":598,
+                     "dy":16,
+                     "dx":5
+                  },
+                  {
+                     "name":"BEN",
+                     "description":"Franklin Resources, Inc.",
+                     "x":345,
+                     "y":598,
+                     "dx":14,
+                     "dy":16
+                  },
+                  {
+                     "name":"AMP",
+                     "description":"Ameriprise Financial, Inc.",
+                     "x":345,
+                     "y":580,
+                     "dy":18,
+                     "dx":19
+                  },
+                  {
+                     "name":"NTRS",
+                     "description":"Northern Trust Corporation",
+                     "x":317,
+                     "y":599,
+                     "dx":28,
+                     "dy":15
+                  },
+                  {
+                     "name":"STT",
+                     "description":"State Street Corporation",
+                     "x":317,
+                     "y":580,
+                     "dx":28,
+                     "dy":19
+                  },
+                  {
+                     "name":"TROW",
+                     "description":"T. Rowe Price Group, Inc.",
+                     "x":298,
+                     "y":580,
+                     "dx":19,
+                     "dy":34
+                  },
+                  {
+                     "name":"BK",
+                     "description":"The Bank of New York Mellon Corporation",
+                     "x":344,
+                     "y":539,
+                     "dy":41,
+                     "dx":20
+                  },
+                  {
+                     "name":"BLK",
+                     "description":"BlackRock, Inc.",
+                     "x":298,
+                     "y":539,
+                     "dy":41,
+                     "dx":46
+                  }
+               ],
+               "x":297,
+               "y":527,
+               "dy":88,
+               "dx":68
+            },
+            {
+               "name":"Capital Markets",
+               "children":[
+                  {
+                     "name":"ETFC",
+                     "description":"E*TRADE Financial Corporation",
+                     "x":277,
+                     "y":660,
+                     "dx":19,
+                     "dy":10
+                  },
+                  {
+                     "name":"RJF",
+                     "description":"Raymond James Financial, Inc.",
+                     "x":277,
+                     "y":649,
+                     "dy":11,
+                     "dx":19
+                  },
+                  {
+                     "name":"MKTX",
+                     "description":"MarketAxess Holdings Inc.",
+                     "x":258,
+                     "y":649,
+                     "dx":19,
+                     "dy":21
+                  },
+                  {
+                     "name":"SCHW",
+                     "description":"The Charles Schwab Corporation",
+                     "x":258,
+                     "y":619,
+                     "dy":30,
+                     "dx":38
+                  },
+                  {
+                     "name":"MS",
+                     "description":"Morgan Stanley",
+                     "x":230,
+                     "y":619,
+                     "dx":28,
+                     "dy":51
+                  },
+                  {
+                     "name":"GS",
+                     "description":"The Goldman Sachs Group, Inc.",
+                     "x":201,
+                     "y":619,
+                     "dx":29,
+                     "dy":51
+                  }
+               ],
+               "x":200,
+               "y":607,
+               "dx":97,
+               "dy":64
+            },
+            {
+               "name":"Banks - Regional",
+               "children":[
+                  {
+                     "name":"CMA",
+                     "description":"Comerica Incorporated",
+                     "x":278,
+                     "y":599,
+                     "dx":18,
+                     "dy":7
+                  },
+                  {
+                     "name":"ZION",
+                     "description":"Zions Bancorporation, National Association",
+                     "x":287,
+                     "y":585,
+                     "dy":14,
+                     "dx":9
+                  },
+                  {
+                     "name":"PBCT",
+                     "description":"People's United Financial, Inc.",
+                     "x":278,
+                     "y":585,
+                     "dy":14,
+                     "dx":9
+                  },
+                  {
+                     "name":"HBAN",
+                     "description":"Huntington Bancshares Incorporated",
+                     "x":267,
+                     "y":585,
+                     "dx":11,
+                     "dy":21
+                  },
+                  {
+                     "name":"CFG",
+                     "description":"Citizens Financial Group, Inc.",
+                     "x":256,
+                     "y":585,
+                     "dx":11,
+                     "dy":21
+                  },
+                  {
+                     "name":"SIVB",
+                     "description":"SVB Financial Group",
+                     "x":283,
+                     "y":566,
+                     "dy":19,
+                     "dx":13
+                  },
+                  {
+                     "name":"RF",
+                     "description":"Regions Financial Corporation",
+                     "x":270,
+                     "y":566,
+                     "dy":19,
+                     "dx":13
+                  },
+                  {
+                     "name":"KEY",
+                     "description":"KeyCorp",
+                     "x":256,
+                     "y":566,
+                     "dy":19,
+                     "dx":14
+                  },
+                  {
+                     "name":"FITB",
+                     "description":"Fifth Third Bancorp",
+                     "x":239,
+                     "y":587,
+                     "dx":17,
+                     "dy":19
+                  },
+                  {
+                     "name":"MTB",
+                     "description":"M&T Bank Corporation",
+                     "x":239,
+                     "y":566,
+                     "dx":17,
+                     "dy":21
+                  },
+                  {
+                     "name":"FRC",
+                     "description":"First Republic Bank",
+                     "x":280,
+                     "y":539,
+                     "dy":27,
+                     "dx":16
+                  },
+                  {
+                     "name":"PNC",
+                     "description":"The PNC Financial Services Group, Inc.",
+                     "x":239,
+                     "y":539,
+                     "dy":27,
+                     "dx":41
+                  },
+                  {
+                     "name":"TFC",
+                     "description":"Truist Financial Corporation",
+                     "x":201,
+                     "y":574,
+                     "dx":38,
+                     "dy":32
+                  },
+                  {
+                     "name":"USB",
+                     "description":"U.S. Bancorp",
+                     "x":201,
+                     "y":539,
+                     "dx":38,
+                     "dy":35
+                  }
+               ],
+               "x":200,
+               "y":527,
+               "dx":97,
+               "dy":80
+            },
+            {
+               "name":"Financial Data & Stock Exchanges",
+               "children":[
+                  {
+                     "name":"CBOE",
+                     "description":"Cboe Global Markets, Inc.",
+                     "x":415,
+                     "y":502,
+                     "dy":24,
+                     "dx":11
+                  },
+                  {
+                     "name":"NDAQ",
+                     "description":"Nasdaq, Inc.",
+                     "x":396,
+                     "y":502,
+                     "dx":19,
+                     "dy":24
+                  },
+                  {
+                     "name":"MSCI",
+                     "description":"MSCI Inc.",
+                     "x":396,
+                     "y":479,
+                     "dy":23,
+                     "dx":30
+                  },
+                  {
+                     "name":"MCO",
+                     "description":"Moody's Corporation",
+                     "x":371,
+                     "y":479,
+                     "dx":25,
+                     "dy":47
+                  },
+                  {
+                     "name":"ICE",
+                     "description":"Intercontinental Exchange, Inc.",
+                     "x":345,
+                     "y":479,
+                     "dx":26,
+                     "dy":47
+                  },
+                  {
+                     "name":"CME",
+                     "description":"CME Group Inc.",
+                     "x":387,
+                     "y":437,
+                     "dy":42,
+                     "dx":39
+                  },
+                  {
+                     "name":"SPGI",
+                     "description":"S&P Global Inc.",
+                     "x":345,
+                     "y":437,
+                     "dy":42,
+                     "dx":42
+                  }
+               ],
+               "x":344,
+               "y":425,
+               "dy":102,
+               "dx":83
+            },
+            {
+               "name":"Insurance - Diversified",
+               "children":[
+                  {
+                     "name":"PFG",
+                     "description":"Principal Financial Group, Inc.",
+                     "x":330,
+                     "y":507,
+                     "dy":19,
+                     "dx":13
+                  },
+                  {
+                     "name":"HIG",
+                     "description":"The Hartford Financial Services Group, Inc.",
+                     "x":330,
+                     "y":480,
+                     "dy":27,
+                     "dx":13
+                  },
+                  {
+                     "name":"AIG",
+                     "description":"American International Group, Inc.",
+                     "x":330,
+                     "y":437,
+                     "dy":43,
+                     "dx":13
+                  },
+                  {
+                     "name":"BRK-B",
+                     "description":"Berkshire Hathaway Inc.",
+                     "x":201,
+                     "y":437,
+                     "dx":129,
+                     "dy":89
+                  }
+               ],
+               "x":200,
+               "y":425,
+               "dy":102,
+               "dx":144
+            },
+            {
+               "name":"Banks - Diversified",
+               "children":[
+                  {
+                     "name":"C",
+                     "description":"Citigroup Inc.",
+                     "x":139,
+                     "y":627,
+                     "dx":60,
+                     "dy":43
+                  },
+                  {
+                     "name":"WFC",
+                     "description":"Wells Fargo & Company",
+                     "x":139,
+                     "y":576,
+                     "dy":51,
+                     "dx":60
+                  },
+                  {
+                     "name":"BAC",
+                     "description":"Bank of America Corporation",
+                     "x":82,
+                     "y":576,
+                     "dx":57,
+                     "dy":94
+                  },
+                  {
+                     "name":"JPM",
+                     "description":"JPMorgan Chase & Co.",
+                     "x":2,
+                     "y":576,
+                     "dx":80,
+                     "dy":94
+                  }
+               ],
+               "x":1,
+               "y":564,
+               "dx":199,
+               "dy":107
+            },
+            {
+               "name":"Credit Services",
+               "children":[
+                  {
+                     "name":"ADS",
+                     "description":"Alliance Data Systems Corporation",
+                     "x":199,
+                     "y":557,
+                     "dy":6,
+                     "dx":0
+                  },
+                  {
+                     "name":"WU",
+                     "description":"The Western Union Company",
+                     "x":170,
+                     "y":557,
+                     "dx":29,
+                     "dy":6
+                  },
+                  {
+                     "name":"SYF",
+                     "description":"Synchrony Financial",
+                     "x":185,
+                     "y":534,
+                     "dy":23,
+                     "dx":14
+                  },
+                  {
+                     "name":"DFS",
+                     "description":"Discover Financial Services",
+                     "x":170,
+                     "y":534,
+                     "dy":23,
+                     "dx":15
+                  },
+                  {
+                     "name":"COF",
+                     "description":"Capital One Financial Corporation",
+                     "x":143,
+                     "y":534,
+                     "dx":27,
+                     "dy":29
+                  },
+                  {
+                     "name":"AXP",
+                     "description":"American Express Company",
+                     "x":143,
+                     "y":499,
+                     "dy":35,
+                     "dx":56
+                  },
+                  {
+                     "name":"PYPL",
+                     "description":"PayPal Holdings, Inc.",
+                     "x":83,
+                     "y":499,
+                     "dx":60,
+                     "dy":64
+                  },
+                  {
+                     "name":"MA",
+                     "description":"Mastercard Incorporated",
+                     "x":83,
+                     "y":437,
+                     "dy":62,
+                     "dx":116
+                  },
+                  {
+                     "name":"V",
+                     "description":"Visa Inc.",
+                     "x":2,
+                     "y":437,
+                     "dx":81,
+                     "dy":126
+                  }
+               ],
+               "x":1,
+               "y":425,
+               "dx":199,
+               "dy":139
+            }
+         ],
+         "x":0,
+         "y":410,
+         "dx":428,
+         "dy":262
+      },
+      {
+         "name":"Technology",
+         "children":[
+            {
+               "name":"Scientific & Technical Instruments",
+               "children":[
+                  {
+                     "name":"FLIR",
+                     "description":"FLIR Systems, Inc.",
+                     "x":400,
+                     "y":404,
+                     "dx":26,
+                     "dy":4
+                  },
+                  {
+                     "name":"GRMN",
+                     "description":"Garmin Ltd.",
+                     "x":414,
+                     "y":381,
+                     "dy":23,
+                     "dx":12
+                  },
+                  {
+                     "name":"KEYS",
+                     "description":"Keysight Technologies, Inc.",
+                     "x":400,
+                     "y":381,
+                     "dy":23,
+                     "dx":14
+                  },
+                  {
+                     "name":"FTV",
+                     "description":"Fortive Corporation",
+                     "x":386,
+                     "y":381,
+                     "dx":14,
+                     "dy":27
+                  }
+               ],
+               "x":385,
+               "y":369,
+               "dx":42,
+               "dy":40
+            },
+            {
+               "name":"Electronic Components",
+               "children":[
+                  {
+                     "name":"GLW",
+                     "description":"Corning Incorporated",
+                     "x":416,
+                     "y":332,
+                     "dy":36,
+                     "dx":10
+                  },
+                  {
+                     "name":"TEL",
+                     "description":"TE Connectivity Ltd.",
+                     "x":386,
+                     "y":351,
+                     "dx":30,
+                     "dy":17
+                  },
+                  {
+                     "name":"APH",
+                     "description":"Amphenol Corporation",
+                     "x":386,
+                     "y":332,
+                     "dx":30,
+                     "dy":19
+                  }
+               ],
+               "x":385,
+               "y":320,
+               "dy":49,
+               "dx":42
+            },
+            {
+               "name":"Computer Hardware",
+               "children":[
+                  {
+                     "name":"NTAP",
+                     "description":"NetApp, Inc.",
+                     "x":366,
+                     "y":399,
+                     "dx":18,
+                     "dy":9
+                  },
+                  {
+                     "name":"STX",
+                     "description":"Seagate Technology plc",
+                     "x":366,
+                     "y":386,
+                     "dy":13,
+                     "dx":18
+                  },
+                  {
+                     "name":"WDC",
+                     "description":"Western Digital Corporation",
+                     "x":354,
+                     "y":386,
+                     "dx":12,
+                     "dy":22
+                  },
+                  {
+                     "name":"ANET",
+                     "description":"Arista Networks, Inc.",
+                     "x":340,
+                     "y":386,
+                     "dx":14,
+                     "dy":22
+                  },
+                  {
+                     "name":"HPQ",
+                     "description":"HP Inc.",
+                     "x":321,
+                     "y":386,
+                     "dx":19,
+                     "dy":22
+                  }
+               ],
+               "x":320,
+               "y":374,
+               "dx":65,
+               "dy":35
+            },
+            {
+               "name":"Semiconductor Equipment & Materials",
+               "children":[
+                  {
+                     "name":"IPGP",
+                     "description":"IPG Photonics Corporation",
+                     "x":376,
+                     "y":354,
+                     "dy":19,
+                     "dx":8
+                  },
+                  {
+                     "name":"KLAC",
+                     "description":"KLA Corporation",
+                     "x":346,
+                     "y":354,
+                     "dx":30,
+                     "dy":19
+                  },
+                  {
+                     "name":"LRCX",
+                     "description":"Lam Research Corporation",
+                     "x":346,
+                     "y":332,
+                     "dy":22,
+                     "dx":38
+                  },
+                  {
+                     "name":"AMAT",
+                     "description":"Applied Materials, Inc.",
+                     "x":321,
+                     "y":332,
+                     "dx":25,
+                     "dy":41
+                  }
+               ],
+               "x":320,
+               "y":320,
+               "dx":65,
+               "dy":54
+            },
+            {
+               "name":"Communication Equipment",
+               "children":[
+                  {
+                     "name":"JNPR",
+                     "description":"Juniper Networks, Inc.",
+                     "x":300,
+                     "y":398,
+                     "dx":19,
+                     "dy":10
+                  },
+                  {
+                     "name":"ZBRA",
+                     "description":"Zebra Technologies Corporation",
+                     "x":300,
+                     "y":382,
+                     "dy":16,
+                     "dx":19
+                  },
+                  {
+                     "name":"HPE",
+                     "description":"Hewlett Packard Enterprise Company",
+                     "x":300,
+                     "y":365,
+                     "dy":17,
+                     "dx":19
+                  },
+                  {
+                     "name":"MSI",
+                     "description":"Motorola Solutions, Inc.",
+                     "x":300,
+                     "y":332,
+                     "dy":33,
+                     "dx":19
+                  },
+                  {
+                     "name":"CSCO",
+                     "description":"Cisco Systems, Inc.",
+                     "x":240,
+                     "y":332,
+                     "dx":60,
+                     "dy":76
+                  }
+               ],
+               "x":239,
+               "y":320,
+               "dx":81,
+               "dy":89
+            },
+            {
+               "name":"Software - Application",
+               "children":[
+                  {
+                     "name":"PAYC",
+                     "description":"Paycom Software, Inc.",
+                     "x":403,
+                     "y":300,
+                     "dx":23,
+                     "dy":19
+                  },
+                  {
+                     "name":"CTXS",
+                     "description":"Citrix Systems, Inc.",
+                     "x":403,
+                     "y":279,
+                     "dy":21,
+                     "dx":23
+                  },
+                  {
+                     "name":"ANSS",
+                     "description":"ANSYS, Inc.",
+                     "x":373,
+                     "y":299,
+                     "dx":30,
+                     "dy":20
+                  },
+                  {
+                     "name":"CDNS",
+                     "description":"Cadence Design Systems, Inc.",
+                     "x":373,
+                     "y":279,
+                     "dx":30,
+                     "dy":20
+                  },
+                  {
+                     "name":"ADSK",
+                     "description":"Autodesk, Inc.",
+                     "x":346,
+                     "y":279,
+                     "dx":27,
+                     "dy":40
+                  },
+                  {
+                     "name":"NOW",
+                     "description":"ServiceNow, Inc.",
+                     "x":387,
+                     "y":233,
+                     "dy":46,
+                     "dx":39
+                  },
+                  {
+                     "name":"INTU",
+                     "description":"Intuit Inc.",
+                     "x":346,
+                     "y":233,
+                     "dy":46,
+                     "dx":41
+                  },
+                  {
+                     "name":"CRM",
+                     "description":"salesforce.com, inc.",
+                     "x":346,
+                     "y":185,
+                     "dy":48,
+                     "dx":80
+                  }
+               ],
+               "x":345,
+               "y":173,
+               "dy":147,
+               "dx":82
+            },
+            {
+               "name":"Information Technology Services",
+               "children":[
+                  {
+                     "name":"XRX",
+                     "description":"Xerox Holdings Corporation",
+                     "x":334,
+                     "y":298,
+                     "dy":21,
+                     "dx":10
+                  },
+                  {
+                     "name":"DXC",
+                     "description":"DXC Technology Company",
+                     "x":328,
+                     "y":298,
+                     "dy":21,
+                     "dx":6
+                  },
+                  {
+                     "name":"IT",
+                     "description":"Gartner, Inc.",
+                     "x":314,
+                     "y":298,
+                     "dx":14,
+                     "dy":21
+                  },
+                  {
+                     "name":"JKHY",
+                     "description":"Jack Henry & Associates, Inc.",
+                     "x":330,
+                     "y":275,
+                     "dy":23,
+                     "dx":14
+                  },
+                  {
+                     "name":"BR",
+                     "description":"Broadridge Financial Solutions, Inc.",
+                     "x":314,
+                     "y":275,
+                     "dy":23,
+                     "dx":16
+                  },
+                  {
+                     "name":"LDOS",
+                     "description":"Leidos Holdings, Inc.",
+                     "x":296,
+                     "y":299,
+                     "dx":18,
+                     "dy":20
+                  },
+                  {
+                     "name":"CDW",
+                     "description":"CDW Corporation",
+                     "x":296,
+                     "y":275,
+                     "dx":18,
+                     "dy":24
+                  },
+                  {
+                     "name":"FLT",
+                     "description":"FLEETCOR Technologies, Inc.",
+                     "x":325,
+                     "y":246,
+                     "dy":29,
+                     "dx":19
+                  },
+                  {
+                     "name":"CTSH",
+                     "description":"Cognizant Technology Solutions Corporation",
+                     "x":296,
+                     "y":246,
+                     "dy":29,
+                     "dx":29
+                  },
+                  {
+                     "name":"FISV",
+                     "description":"Fiserv, Inc.",
+                     "x":240,
+                     "y":286,
+                     "dx":56,
+                     "dy":33
+                  },
+                  {
+                     "name":"FIS",
+                     "description":"Fidelity National Information Services, Inc.",
+                     "x":240,
+                     "y":246,
+                     "dx":56,
+                     "dy":40
+                  },
+                  {
+                     "name":"IBM",
+                     "description":"International Business Machines Corporation",
+                     "x":295,
+                     "y":185,
+                     "dy":61,
+                     "dx":49
+                  },
+                  {
+                     "name":"ACN",
+                     "description":"Accenture plc",
+                     "x":240,
+                     "y":185,
+                     "dy":61,
+                     "dx":55
+                  }
+               ],
+               "x":239,
+               "y":173,
+               "dy":147,
+               "dx":106
+            },
+            {
+               "name":"Semiconductors",
+               "children":[
+                  {
+                     "name":"QRVO",
+                     "description":"Qorvo, Inc.",
+                     "x":411,
+                     "y":145,
+                     "dy":27,
+                     "dx":15
+                  },
+                  {
+                     "name":"MXIM",
+                     "description":"Maxim Integrated Products, Inc.",
+                     "x":396,
+                     "y":145,
+                     "dx":15,
+                     "dy":27
+                  },
+                  {
+                     "name":"SWKS",
+                     "description":"Skyworks Solutions, Inc.",
+                     "x":396,
+                     "y":129,
+                     "dy":16,
+                     "dx":30
+                  },
+                  {
+                     "name":"MCHP",
+                     "description":"Microchip Technology Incorporated",
+                     "x":369,
+                     "y":151,
+                     "dx":27,
+                     "dy":21
+                  },
+                  {
+                     "name":"XLNX",
+                     "description":"Xilinx, Inc.",
+                     "x":369,
+                     "y":129,
+                     "dx":27,
+                     "dy":22
+                  },
+                  {
+                     "name":"ADI",
+                     "description":"Analog Devices, Inc.",
+                     "x":402,
+                     "y":84,
+                     "dy":45,
+                     "dx":24
+                  },
+                  {
+                     "name":"MU",
+                     "description":"Micron Technology, Inc.",
+                     "x":369,
+                     "y":84,
+                     "dy":45,
+                     "dx":33
+                  },
+                  {
+                     "name":"AMD",
+                     "description":"Advanced Micro Devices, Inc.",
+                     "x":322,
+                     "y":136,
+                     "dx":47,
+                     "dy":36
+                  },
+                  {
+                     "name":"QCOM",
+                     "description":"QUALCOMM Incorporated",
+                     "x":322,
+                     "y":84,
+                     "dx":47,
+                     "dy":52
+                  },
+                  {
+                     "name":"TXN",
+                     "description":"Texas Instruments Incorporated",
+                     "x":374,
+                     "y":27,
+                     "dy":57,
+                     "dx":52
+                  },
+                  {
+                     "name":"AVGO",
+                     "description":"Broadcom Inc.",
+                     "x":322,
+                     "y":27,
+                     "dy":57,
+                     "dx":52
+                  },
+                  {
+                     "name":"NVDA",
+                     "description":"NVIDIA Corporation",
+                     "x":240,
+                     "y":112,
+                     "dx":82,
+                     "dy":60
+                  },
+                  {
+                     "name":"INTC",
+                     "description":"Intel Corporation",
+                     "x":240,
+                     "y":27,
+                     "dx":82,
+                     "dy":85
+                  }
+               ],
+               "x":239,
+               "y":15,
+               "dy":158,
+               "dx":188
+            },
+            {
+               "name":"Consumer Electronics",
+               "children":[
+                  {
+                     "name":"AAPL",
+                     "description":"Apple Inc.",
+                     "x":2,
+                     "y":256,
+                     "dx":236,
+                     "dy":152
+                  }
+               ],
+               "x":1,
+               "y":244,
+               "dx":238,
+               "dy":165
+            },
+            {
+               "name":"Software - Infrastructure",
+               "children":[
+                  {
+                     "name":"FFIV",
+                     "description":"F5 Networks, Inc.",
+                     "x":207,
+                     "y":234,
+                     "dx":31,
+                     "dy":9
+                  },
+                  {
+                     "name":"NLOK",
+                     "description":"NortonLifeLock Inc.",
+                     "x":224,
+                     "y":208,
+                     "dy":26,
+                     "dx":14
+                  },
+                  {
+                     "name":"AKAM",
+                     "description":"Akamai Technologies, Inc.",
+                     "x":207,
+                     "y":208,
+                     "dy":26,
+                     "dx":17
+                  },
+                  {
+                     "name":"FTNT",
+                     "description":"Fortinet, Inc.",
+                     "x":207,
+                     "y":192,
+                     "dy":16,
+                     "dx":31
+                  },
+                  {
+                     "name":"SNPS",
+                     "description":"Synopsys, Inc.",
+                     "x":180,
+                     "y":217,
+                     "dx":27,
+                     "dy":26
+                  },
+                  {
+                     "name":"VRSN",
+                     "description":"VeriSign, Inc.",
+                     "x":180,
+                     "y":192,
+                     "dx":27,
+                     "dy":25
+                  },
+                  {
+                     "name":"ORCL",
+                     "description":"Oracle Corporation",
+                     "x":180,
+                     "y":110,
+                     "dy":82,
+                     "dx":58
+                  },
+                  {
+                     "name":"ADBE",
+                     "description":"Adobe Inc.",
+                     "x":180,
+                     "y":27,
+                     "dy":83,
+                     "dx":58
+                  },
+                  {
+                     "name":"MSFT",
+                     "description":"Microsoft Corporation",
+                     "x":2,
+                     "y":27,
+                     "dx":178,
+                     "dy":216
+                  }
+               ],
+               "x":1,
+               "y":15,
+               "dx":238,
+               "dy":229
+            }
+         ],
+         "x":0,
+         "y":0,
+         "dx":428,
+         "dy":410
+      }
+   ],
+   "x":0,
+   "y":0,
+   "dx":1211,
+   "dy":672
+}
