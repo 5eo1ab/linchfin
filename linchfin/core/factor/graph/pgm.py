@@ -1,14 +1,14 @@
 from dataclasses import dataclass, field
 from collections import OrderedDict
-from typing import OrderedDict as OrderedDictType
+from typing import OrderedDict as Dict
 from linchfin.base.dataclasses.entities import Cluster, Asset
 
 
 @dataclass
 class Factor:
     name: str
-    neighbors: OrderedDictType = field(default_factory=OrderedDict)
-    conditional_prob: OrderedDictType = field(default_factory=OrderedDict)
+    neighbors: Dict = field(default_factory=OrderedDict)
+    conditional_prob: Dict = field(default_factory=OrderedDict)
 
     def register_node(self, factor):
         self.neighbors[factor.name] = factor

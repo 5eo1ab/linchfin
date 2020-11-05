@@ -1,6 +1,6 @@
 from collections import OrderedDict, defaultdict
 from dataclasses import dataclass, field
-from typing import List, Dict, OrderedDict as OrderedDictType
+from typing import List, Dict
 from uuid import uuid4, UUID
 
 import pandas as pd
@@ -47,8 +47,8 @@ class Asset(Entity):
 @dataclass
 class AssetUniverse(Entity):
     universe_id: str = field(default_factory=uuid4)
-    assets: OrderedDictType[AssetId, Asset] = field(default_factory=OrderedDict)
-    asset_code_map: OrderedDictType = field(init=False)
+    assets: Dict[AssetId, Asset] = field(default_factory=OrderedDict)
+    asset_code_map: Dict[AssetCode, AssetId] = field(init=False)
 
     def __post_init__(self):
         super().__post_init__()
