@@ -38,6 +38,14 @@ class Asset(Entity):
     def id(self):
         return self.asset_id
 
+    @property
+    def name(self):
+        return self.code
+
+    @name.setter
+    def name(self, value):
+        self.code = value
+
     def __post_init__(self):
         super().__post_init__()
         if not isinstance(self.code, AssetCode):
