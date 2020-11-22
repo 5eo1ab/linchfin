@@ -1,5 +1,4 @@
 from neo4j import GraphDatabase
-from linchfin.metadata import STOCK_SECTORS
 from linchfin.base.dataclasses.entities import Asset, AssetClass, Cluster
 from linchfin.core.clustering.sectors import SectorTree
 import re
@@ -19,13 +18,19 @@ class GraphManager:
             if parent is None:
                 self.create_node(graph=graph, node_name=node_name)
 
+            total_cap_size = sum([e.extra.get('cap_size', 0) for e in graph.elements if isinstance(e, Asset)])
             for e in graph.elements:
-                node_name = re.sub(pattern='[\s\-&,]', repl='_', string=e.name)
+                node_name = re.sub(pattern='[\s\-&,\/\.]', repl='_', string=e.name)
                 if isinstance(e, Cluster):
                     self.create_node(graph=e, node_name=node_name)
                     self.create(graph=e, parent=graph)
                     self.create_link(from_node=graph, to_node=e)
                 elif isinstance(e, Asset):
+                    if total_cap_size > 0:
+                        e.extra['cap_size'] = e.extra['cap_size'] / total_cap_size
+                    else:
+                        e.extra['cap_size'] = 0
+
                     self.create_node(graph=e, node_name=node_name)
                     self.create_link(from_node=graph, to_node=e)
                 else:
@@ -63,10 +68,3 @@ class GraphManager:
                         "SET a.message = $message "
                         "RETURN a.message + ', from node ' + id(a)", message=message)
         return result.single()[0]
-
-
-if __name__ == "__main__":
-    greeter = GraphManager("bolt://localhost:7687", "neo4j", "pass")
-    sector_graph = SectorTree(STOCK_SECTORS)
-    greeter.create(graph=sector_graph.root)
-    del greeter
