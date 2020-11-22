@@ -8,7 +8,15 @@ import pandas as pd
 
 
 @dataclass
-class Feature:
+class IterValueMixin:
+    value: pd.DataFrame
+
+    def iterrows(self):
+        return self.value.iterrows()
+
+
+@dataclass
+class Feature(IterValueMixin, object):
     name: str
     value: pd.DataFrame
 
@@ -22,7 +30,7 @@ class Feature:
 
 
 @dataclass
-class Metric:
+class Metric(IterValueMixin, object):
     name: str
     value: np.ndarray
 
