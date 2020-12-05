@@ -11,6 +11,16 @@ MONTHLY = 21
 ANNUAL = 252
 
 
+def calc_beta(daily_returns: TimeSeries, bm_asset_code: str):
+    def bm_cov(ts, bm_returns):
+        bm_covariance = pd.concat([ts, bm_returns], axis=1).cov()
+        return bm_covariance.__array__()[0, 1]
+
+    bm_returns = daily_returns[bm_asset_code]
+    bm_variance = bm_returns.var()
+    return daily_returns.apply(lambda ts: bm_cov(ts, bm_returns) / bm_variance)
+
+
 def calc_cumulative_returns(daily_returns: TimeSeries):
     return daily_returns.add(1).cumprod()
 

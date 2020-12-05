@@ -38,6 +38,14 @@ class Asset(Entity):
     def id(self):
         return self.asset_id
 
+    @property
+    def name(self):
+        return self.code
+
+    @name.setter
+    def name(self, value):
+        self.code = value
+
     def __post_init__(self):
         super().__post_init__()
         if not isinstance(self.code, AssetCode):
@@ -106,10 +114,17 @@ class AssetUniverse(Entity):
 
 @dataclass
 class Cluster(Entity):
+    cluster_id: UUID = field(default_factory=uuid4)
     name: str = field(default='')
     elements: List = field(default_factory=list)
     d: float = field(default=0)
     size: int = field(default=0)
+
+    @property
+    def id(self):
+        if isinstance(self.cluster_id, UUID):
+            return self.cluster_id.hex
+        return self.cluster_id
 
 
 @dataclass
@@ -120,6 +135,8 @@ class Portfolio(Entity):
 
     @property
     def id(self):
+        if isinstance(self.portfolio_id, UUID):
+            return self.portfolio_id.hex
         return self.portfolio_id
 
     @property
