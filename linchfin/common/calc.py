@@ -93,3 +93,8 @@ def calc_sharp_ratio(daily_returns: TimeSeries, risk_free_return: float = 0.0) -
     portfolio_yield_without_risk_free = daily_returns.sub(risk_free_return)
     sharp_ratio = (portfolio_yield_without_risk_free.mean()) / np.sqrt(portfolio_volatility)
     return sharp_ratio
+
+
+def calc_expected_return(portfolio: Portfolio, asset_returns: pd.Series):
+    portfolio_sr = portfolio.to_series()
+    return (asset_returns.loc[portfolio_sr.index] * portfolio_sr).sum()
