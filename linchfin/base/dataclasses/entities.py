@@ -31,7 +31,7 @@ class AssetClass(Entity):
 @dataclass
 class Asset(Entity):
     asset_id: AssetId = field(default_factory=uuid4)
-    code: AssetCode = field(default_factory=AssetCode)
+    code: AssetCode or str = field(default_factory=AssetCode)
     asset_class: AssetClass = field(default_factory=AssetClass)
 
     @property
@@ -55,7 +55,7 @@ class Asset(Entity):
 @dataclass
 class AssetUniverse(Entity):
     universe_id: str = field(default_factory=uuid4)
-    assets: Dict[AssetId, Asset] = field(default_factory=OrderedDict)
+    assets: Dict[AssetId, Asset] or List = field(default_factory=OrderedDict)
     asset_code_map: Dict[AssetCode, AssetId] = field(init=False)
 
     def __post_init__(self):
