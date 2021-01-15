@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>linchfin.core.clustering package &mdash; LinchFin 0.1.0 documentation</title>
+  <title>linchfin.core.factor package &mdash; LinchFin 0.1.0 documentation</title>
   
 
   
@@ -26,7 +26,7 @@
   
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+    <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -39,8 +39,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="linchfin.core.encoder package" href="linchfin.core.encoder.html" />
-    <link rel="prev" title="linchfin.core.backtest package" href="linchfin.core.backtest.html" /> 
+    <link rel="next" title="linchfin.core.factor.graph package" href="linchfin.core.factor.graph.html" />
+    <link rel="prev" title="linchfin.core.encoder package" href="linchfin.core.encoder.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -160,13 +160,13 @@
         
           <li><a href="linchfin.core.html">linchfin.core package</a> &raquo;</li>
         
-      <li>linchfin.core.clustering package</li>
+      <li>linchfin.core.factor package</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/linchfin.core.clustering.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/linchfin.core.factor.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -179,42 +179,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="linchfin-core-clustering-package">
-<h1>linchfin.core.clustering package<a class="headerlink" href="#linchfin-core-clustering-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="linchfin-core-factor-package">
+<h1>linchfin.core.factor package<a class="headerlink" href="#linchfin-core-factor-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="linchfin.core.factor.graph.html">linchfin.core.factor.graph package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="linchfin.core.factor.graph.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linchfin.core.factor.graph.html#module-linchfin.core.factor.graph.pgm">linchfin.core.factor.graph.pgm module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linchfin.core.factor.graph.html#module-linchfin.core.factor.graph">Module contents</a></li>
+</ul>
+</li>
+</ul>
 </div>
-<div class="section" id="module-linchfin.core.clustering.sectors">
-<span id="linchfin-core-clustering-sectors-module"></span><h2>linchfin.core.clustering.sectors module<a class="headerlink" href="#module-linchfin.core.clustering.sectors" title="Permalink to this headline">¶</a></h2>
-<dl class="py class">
-<dt id="linchfin.core.clustering.sectors.SectorTree">
-<em class="property">class </em><code class="sig-name descname">SectorTree</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tree_data</span><span class="p">:</span> <span class="n">dict</span></em><span class="sig-paren">)</span><a class="headerlink" href="#linchfin.core.clustering.sectors.SectorTree" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py method">
-<dt id="linchfin.core.clustering.sectors.SectorTree.filter">
-<code class="sig-name descname">filter</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">filter_func=&lt;function SectorTree.&lt;lambda&gt;&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#linchfin.core.clustering.sectors.SectorTree.filter" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="linchfin.core.clustering.sectors.SectorTree.get_node">
-<code class="sig-name descname">get_node</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span></em><span class="sig-paren">)</span><a class="headerlink" href="#linchfin.core.clustering.sectors.SectorTree.get_node" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="linchfin.core.clustering.sectors.SectorTree.parse_tree">
-<code class="sig-name descname">parse_tree</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tree_data</span></em>, <em class="sig-param"><span class="n">keys</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#linchfin.core.clustering.sectors.SectorTree.parse_tree" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="linchfin.core.clustering.sectors.SectorTree.search">
-<code class="sig-name descname">search</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">node</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span><a class="reference internal" href="linchfin.base.dataclasses.html#linchfin.base.dataclasses.entities.Asset" title="linchfin.base.dataclasses.entities.Asset">linchfin.base.dataclasses.entities.Asset</a><span class="p">]</span><a class="headerlink" href="#linchfin.core.clustering.sectors.SectorTree.search" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
 </div>
-<div class="section" id="module-linchfin.core.clustering">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-linchfin.core.clustering" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-linchfin.core.factor">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-linchfin.core.factor" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -224,8 +205,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="linchfin.core.encoder.html" class="btn btn-neutral float-right" title="linchfin.core.encoder package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="linchfin.core.backtest.html" class="btn btn-neutral float-left" title="linchfin.core.backtest package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="linchfin.core.factor.graph.html" class="btn btn-neutral float-right" title="linchfin.core.factor.graph package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="linchfin.core.encoder.html" class="btn btn-neutral float-left" title="linchfin.core.encoder package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
