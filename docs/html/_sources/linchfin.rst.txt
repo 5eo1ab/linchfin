@@ -1,0 +1,27 @@
+linchfin package
+================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   linchfin.base
+   linchfin.common
+   linchfin.core
+   linchfin.data_handler
+   linchfin.metadata
+   linchfin.models
+   linchfin.plugins
+   linchfin.portfolio
+   linchfin.series
+   linchfin.simulation
+
+Module contents
+---------------
+
+.. automodule:: linchfin
+   :members:
+   :undoc-members:
+   :show-inheritance:

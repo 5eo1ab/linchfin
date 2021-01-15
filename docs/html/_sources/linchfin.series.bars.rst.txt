@@ -1,0 +1,21 @@
+linchfin.series.bars package
+============================
+
+Submodules
+----------
+
+linchfin.series.bars.dollar\_bar module
+---------------------------------------
+
+.. automodule:: linchfin.series.bars.dollar_bar
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: linchfin.series.bars
+   :members:
+   :undoc-members:
+   :show-inheritance:

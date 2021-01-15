@@ -1,0 +1,29 @@
+plugins.neo4j package
+=====================
+
+Submodules
+----------
+
+plugins.neo4j.driver module
+---------------------------
+
+.. automodule:: plugins.neo4j.driver
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+plugins.neo4j.link\_cov module
+------------------------------
+
+.. automodule:: plugins.neo4j.link_cov
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: plugins.neo4j
+   :members:
+   :undoc-members:
+   :show-inheritance:

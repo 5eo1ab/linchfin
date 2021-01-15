@@ -1,0 +1,10 @@
+core.encoder package
+====================
+
+Module contents
+---------------
+
+.. automodule:: core.encoder
+   :members:
+   :undoc-members:
+   :show-inheritance:

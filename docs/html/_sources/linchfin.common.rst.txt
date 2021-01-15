@@ -1,0 +1,21 @@
+linchfin.common package
+=======================
+
+Submodules
+----------
+
+linchfin.common.calc module
+---------------------------
+
+.. automodule:: linchfin.common.calc
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: linchfin.common
+   :members:
+   :undoc-members:
+   :show-inheritance:

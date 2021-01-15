@@ -1,0 +1,7 @@
+linchfin
+========
+
+.. toctree::
+   :maxdepth: 4
+
+   linchfin

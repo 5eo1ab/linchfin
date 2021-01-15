@@ -1,0 +1,18 @@
+plugins package
+===============
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   plugins.neo4j
+
+Module contents
+---------------
+
+.. automodule:: plugins
+   :members:
+   :undoc-members:
+   :show-inheritance:

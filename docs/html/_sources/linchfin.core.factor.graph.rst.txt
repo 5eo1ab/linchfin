@@ -1,0 +1,21 @@
+linchfin.core.factor.graph package
+==================================
+
+Submodules
+----------
+
+linchfin.core.factor.graph.pgm module
+-------------------------------------
+
+.. automodule:: linchfin.core.factor.graph.pgm
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: linchfin.core.factor.graph
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,18 @@
+linchfin.core.factor package
+============================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   linchfin.core.factor.graph
+
+Module contents
+---------------
+
+.. automodule:: linchfin.core.factor
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,10 @@
+metadata package
+================
+
+Module contents
+---------------
+
+.. automodule:: metadata
+   :members:
+   :undoc-members:
+   :show-inheritance:

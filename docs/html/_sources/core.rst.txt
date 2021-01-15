@@ -1,0 +1,24 @@
+core package
+============
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   core.analysis
+   core.backtest
+   core.clustering
+   core.encoder
+   core.factor
+   core.model
+   core.portfolio
+
+Module contents
+---------------
+
+.. automodule:: core
+   :members:
+   :undoc-members:
+   :show-inheritance:

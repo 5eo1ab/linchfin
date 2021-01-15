@@ -1,0 +1,37 @@
+linchfin.base.dataclasses package
+=================================
+
+Submodules
+----------
+
+linchfin.base.dataclasses.aggregators module
+--------------------------------------------
+
+.. automodule:: linchfin.base.dataclasses.aggregators
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+linchfin.base.dataclasses.entities module
+-----------------------------------------
+
+.. automodule:: linchfin.base.dataclasses.entities
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+linchfin.base.dataclasses.value\_types module
+---------------------------------------------
+
+.. automodule:: linchfin.base.dataclasses.value_types
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: linchfin.base.dataclasses
+   :members:
+   :undoc-members:
+   :show-inheritance:

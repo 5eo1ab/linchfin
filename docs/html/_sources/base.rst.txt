@@ -1,0 +1,29 @@
+base package
+============
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   base.dataclasses
+
+Submodules
+----------
+
+base.encoder module
+-------------------
+
+.. automodule:: base.encoder
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: base
+   :members:
+   :undoc-members:
+   :show-inheritance:

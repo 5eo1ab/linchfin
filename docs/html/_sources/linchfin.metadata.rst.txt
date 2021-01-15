@@ -1,0 +1,10 @@
+linchfin.metadata package
+=========================
+
+Module contents
+---------------
+
+.. automodule:: linchfin.metadata
+   :members:
+   :undoc-members:
+   :show-inheritance:

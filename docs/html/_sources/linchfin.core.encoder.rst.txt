@@ -1,0 +1,10 @@
+linchfin.core.encoder package
+=============================
+
+Module contents
+---------------
+
+.. automodule:: linchfin.core.encoder
+   :members:
+   :undoc-members:
+   :show-inheritance:

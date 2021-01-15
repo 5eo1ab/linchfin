@@ -1,0 +1,21 @@
+portfolio package
+=================
+
+Submodules
+----------
+
+portfolio.manager module
+------------------------
+
+.. automodule:: portfolio.manager
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: portfolio
+   :members:
+   :undoc-members:
+   :show-inheritance:

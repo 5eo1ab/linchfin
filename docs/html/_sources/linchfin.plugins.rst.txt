@@ -1,0 +1,18 @@
+linchfin.plugins package
+========================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   linchfin.plugins.neo4j
+
+Module contents
+---------------
+
+.. automodule:: linchfin.plugins
+   :members:
+   :undoc-members:
+   :show-inheritance:

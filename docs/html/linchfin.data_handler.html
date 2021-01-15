@@ -1,0 +1,301 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>linchfin.data_handler package &mdash; LinchFin 0.1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="linchfin.metadata package" href="linchfin.metadata.html" />
+    <link rel="prev" title="linchfin.core.portfolio package" href="linchfin.core.portfolio.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> LinchFin
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">linchfin</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="linchfin.html">linchfin package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="linchfin.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="linchfin.base.html">linchfin.base package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="linchfin.common.html">linchfin.common package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="linchfin.core.html">linchfin.core package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">linchfin.data_handler package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="linchfin.metadata.html">linchfin.metadata package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="linchfin.models.html">linchfin.models package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="linchfin.plugins.html">linchfin.plugins package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="linchfin.portfolio.html">linchfin.portfolio package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="linchfin.series.html">linchfin.series package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="linchfin.simulation.html">linchfin.simulation package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="linchfin.html#module-linchfin">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">LinchFin</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">linchfin</a> &raquo;</li>
+        
+          <li><a href="linchfin.html">linchfin package</a> &raquo;</li>
+        
+      <li>linchfin.data_handler package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/linchfin.data_handler.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="linchfin-data-handler-package">
+<h1>linchfin.data_handler package<a class="headerlink" href="#linchfin-data-handler-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-linchfin.data_handler.pipline">
+<span id="linchfin-data-handler-pipline-module"></span><h2>linchfin.data_handler.pipline module<a class="headerlink" href="#module-linchfin.data_handler.pipline" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="linchfin.data_handler.pipline.PipeLine">
+<em class="property">class </em><code class="sig-name descname">PipeLine</code><a class="headerlink" href="#linchfin.data_handler.pipline.PipeLine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="linchfin.data_handler.pipline.PipeLine.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="headerlink" href="#linchfin.data_handler.pipline.PipeLine.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="linchfin.data_handler.pipline.PipeLine.run_step">
+<code class="sig-name descname">run_step</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">buffers</span><span class="o">=</span><span class="default_value">[]</span></em><span class="sig-paren">)</span><a class="headerlink" href="#linchfin.data_handler.pipline.PipeLine.run_step" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-linchfin.data_handler.reader">
+<span id="linchfin-data-handler-reader-module"></span><h2>linchfin.data_handler.reader module<a class="headerlink" href="#module-linchfin.data_handler.reader" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="linchfin.data_handler.reader.DataReader">
+<em class="property">class </em><code class="sig-name descname">DataReader</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data_source</span><span class="o">=</span><span class="default_value">'yahoo'</span></em>, <em class="sig-param"><span class="n">start</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">end</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#linchfin.data_handler.reader.DataReader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="linchfin.data_handler.reader.DataReader.get_adj_close_price">
+<code class="sig-name descname">get_adj_close_price</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">symbols</span><span class="p">:</span> <span class="n">List<span class="p">[</span>str<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="linchfin.base.dataclasses.html#linchfin.base.dataclasses.value_types.TimeSeries" title="linchfin.base.dataclasses.value_types.TimeSeries">linchfin.base.dataclasses.value_types.TimeSeries</a><a class="headerlink" href="#linchfin.data_handler.reader.DataReader.get_adj_close_price" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="linchfin.data_handler.reader.DataReader.get_close_price">
+<code class="sig-name descname">get_close_price</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">symbols</span><span class="p">:</span> <span class="n">List<span class="p">[</span>str<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="linchfin.base.dataclasses.html#linchfin.base.dataclasses.value_types.TimeSeries" title="linchfin.base.dataclasses.value_types.TimeSeries">linchfin.base.dataclasses.value_types.TimeSeries</a><a class="headerlink" href="#linchfin.data_handler.reader.DataReader.get_close_price" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="linchfin.data_handler.reader.DataReader.get_open_price">
+<code class="sig-name descname">get_open_price</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">symbols</span><span class="p">:</span> <span class="n">List<span class="p">[</span>str<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="linchfin.base.dataclasses.html#linchfin.base.dataclasses.value_types.TimeSeries" title="linchfin.base.dataclasses.value_types.TimeSeries">linchfin.base.dataclasses.value_types.TimeSeries</a><a class="headerlink" href="#linchfin.data_handler.reader.DataReader.get_open_price" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="linchfin.data_handler.reader.DataReader.get_price">
+<code class="sig-name descname">get_price</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">symbols</span><span class="p">:</span> <span class="n">List<span class="p">[</span>str<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">apply_func</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="linchfin.base.dataclasses.html#linchfin.base.dataclasses.value_types.TimeSeries" title="linchfin.base.dataclasses.value_types.TimeSeries">linchfin.base.dataclasses.value_types.TimeSeries</a><a class="headerlink" href="#linchfin.data_handler.reader.DataReader.get_price" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="linchfin.data_handler.reader.DataReader.get_timeseries">
+<code class="sig-name descname">get_timeseries</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">symbols</span><span class="p">:</span> <span class="n">List<span class="p">[</span>str<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="linchfin.base.dataclasses.html#linchfin.base.dataclasses.value_types.TimeSeries" title="linchfin.base.dataclasses.value_types.TimeSeries">linchfin.base.dataclasses.value_types.TimeSeries</a><a class="headerlink" href="#linchfin.data_handler.reader.DataReader.get_timeseries" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="linchfin.data_handler.reader.DataReader.get_trading_value">
+<code class="sig-name descname">get_trading_value</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">symbols</span><span class="p">:</span> <span class="n">List<span class="p">[</span>str<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="linchfin.base.dataclasses.html#linchfin.base.dataclasses.value_types.TimeSeries" title="linchfin.base.dataclasses.value_types.TimeSeries">linchfin.base.dataclasses.value_types.TimeSeries</a><a class="headerlink" href="#linchfin.data_handler.reader.DataReader.get_trading_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="linchfin.data_handler.reader.DataReader.get_traidng_volume">
+<code class="sig-name descname">get_traidng_volume</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">symbols</span><span class="p">:</span> <span class="n">List<span class="p">[</span>str<span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="linchfin.base.dataclasses.html#linchfin.base.dataclasses.value_types.TimeSeries" title="linchfin.base.dataclasses.value_types.TimeSeries">linchfin.base.dataclasses.value_types.TimeSeries</a><a class="headerlink" href="#linchfin.data_handler.reader.DataReader.get_traidng_volume" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-linchfin.data_handler">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-linchfin.data_handler" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="linchfin.metadata.html" class="btn btn-neutral float-right" title="linchfin.metadata package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="linchfin.core.portfolio.html" class="btn btn-neutral float-left" title="linchfin.core.portfolio package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, shephexd.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+linchfin.core.portfolio package
+===============================
+
+Submodules
+----------
+
+linchfin.core.portfolio.hierarchical module
+-------------------------------------------
+
+.. automodule:: linchfin.core.portfolio.hierarchical
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+linchfin.core.portfolio.mvo module
+----------------------------------
+
+.. automodule:: linchfin.core.portfolio.mvo
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+linchfin.core.portfolio.rules module
+------------------------------------
+
+.. automodule:: linchfin.core.portfolio.rules
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: linchfin.core.portfolio
+   :members:
+   :undoc-members:
+   :show-inheritance:

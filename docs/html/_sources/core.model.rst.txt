@@ -1,0 +1,21 @@
+core.model package
+==================
+
+Submodules
+----------
+
+core.model.pca module
+---------------------
+
+.. automodule:: core.model.pca
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: core.model
+   :members:
+   :undoc-members:
+   :show-inheritance:

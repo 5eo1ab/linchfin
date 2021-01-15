@@ -1,0 +1,29 @@
+linchfin.plugins.neo4j package
+==============================
+
+Submodules
+----------
+
+linchfin.plugins.neo4j.driver module
+------------------------------------
+
+.. automodule:: linchfin.plugins.neo4j.driver
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+linchfin.plugins.neo4j.link\_cov module
+---------------------------------------
+
+.. automodule:: linchfin.plugins.neo4j.link_cov
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: linchfin.plugins.neo4j
+   :members:
+   :undoc-members:
+   :show-inheritance:

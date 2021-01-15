@@ -1,0 +1,24 @@
+linchfin.core package
+=====================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   linchfin.core.analysis
+   linchfin.core.backtest
+   linchfin.core.clustering
+   linchfin.core.encoder
+   linchfin.core.factor
+   linchfin.core.model
+   linchfin.core.portfolio
+
+Module contents
+---------------
+
+.. automodule:: linchfin.core
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,10 @@
+core.backtest package
+=====================
+
+Module contents
+---------------
+
+.. automodule:: core.backtest
+   :members:
+   :undoc-members:
+   :show-inheritance:

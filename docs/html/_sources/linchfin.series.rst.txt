@@ -1,0 +1,18 @@
+linchfin.series package
+=======================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   linchfin.series.bars
+
+Module contents
+---------------
+
+.. automodule:: linchfin.series
+   :members:
+   :undoc-members:
+   :show-inheritance:

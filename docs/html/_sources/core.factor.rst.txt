@@ -1,0 +1,18 @@
+core.factor package
+===================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   core.factor.graph
+
+Module contents
+---------------
+
+.. automodule:: core.factor
+   :members:
+   :undoc-members:
+   :show-inheritance:
