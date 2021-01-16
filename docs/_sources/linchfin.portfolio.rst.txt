@@ -1,21 +1,15 @@
 linchfin.portfolio package
 ==========================
 
-Submodules
-----------
-
-linchfin.portfolio.manager module
----------------------------------
-
-.. automodule:: linchfin.portfolio.manager
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Module contents
----------------
-
 .. automodule:: linchfin.portfolio
    :members:
    :undoc-members:
    :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   linchfin.portfolio.manager

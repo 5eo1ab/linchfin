@@ -1,0 +1,7 @@
+linchfin.plugins.neo4j.link\_cov module
+=======================================
+
+.. automodule:: linchfin.plugins.neo4j.link_cov
+   :members:
+   :undoc-members:
+   :show-inheritance:

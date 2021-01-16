@@ -1,0 +1,7 @@
+linchfin.base.dataclasses.aggregators module
+============================================
+
+.. automodule:: linchfin.base.dataclasses.aggregators
+   :members:
+   :undoc-members:
+   :show-inheritance:

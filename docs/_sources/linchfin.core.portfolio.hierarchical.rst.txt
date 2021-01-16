@@ -1,0 +1,7 @@
+linchfin.core.portfolio.hierarchical module
+===========================================
+
+.. automodule:: linchfin.core.portfolio.hierarchical
+   :members:
+   :undoc-members:
+   :show-inheritance:

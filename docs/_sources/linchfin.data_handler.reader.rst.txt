@@ -1,0 +1,7 @@
+linchfin.data\_handler.reader module
+====================================
+
+.. automodule:: linchfin.data_handler.reader
+   :members:
+   :undoc-members:
+   :show-inheritance:

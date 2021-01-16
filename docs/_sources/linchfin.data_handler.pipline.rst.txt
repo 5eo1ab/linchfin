@@ -1,0 +1,7 @@
+linchfin.data\_handler.pipline module
+=====================================
+
+.. automodule:: linchfin.data_handler.pipline
+   :members:
+   :undoc-members:
+   :show-inheritance:

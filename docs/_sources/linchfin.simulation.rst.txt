@@ -1,21 +1,15 @@
 linchfin.simulation package
 ===========================
 
-Submodules
-----------
-
-linchfin.simulation.backtest module
------------------------------------
-
-.. automodule:: linchfin.simulation.backtest
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Module contents
----------------
-
 .. automodule:: linchfin.simulation
    :members:
    :undoc-members:
    :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   linchfin.simulation.backtest

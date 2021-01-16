@@ -1,0 +1,7 @@
+linchfin.core.portfolio.mvo module
+==================================
+
+.. automodule:: linchfin.core.portfolio.mvo
+   :members:
+   :undoc-members:
+   :show-inheritance:

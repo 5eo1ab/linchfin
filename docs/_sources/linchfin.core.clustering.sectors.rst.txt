@@ -1,0 +1,7 @@
+linchfin.core.clustering.sectors module
+=======================================
+
+.. automodule:: linchfin.core.clustering.sectors
+   :members:
+   :undoc-members:
+   :show-inheritance:

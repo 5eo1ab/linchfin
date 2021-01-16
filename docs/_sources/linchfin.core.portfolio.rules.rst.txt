@@ -1,0 +1,7 @@
+linchfin.core.portfolio.rules module
+====================================
+
+.. automodule:: linchfin.core.portfolio.rules
+   :members:
+   :undoc-members:
+   :show-inheritance:

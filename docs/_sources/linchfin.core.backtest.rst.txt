@@ -1,9 +1,6 @@
 linchfin.core.backtest package
 ==============================
 
-Module contents
----------------
-
 .. automodule:: linchfin.core.backtest
    :members:
    :undoc-members:

@@ -1,21 +1,15 @@
 linchfin.core.analysis.labelling package
 ========================================
 
-Submodules
-----------
-
-linchfin.core.analysis.labelling.time\_based module
----------------------------------------------------
-
-.. automodule:: linchfin.core.analysis.labelling.time_based
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Module contents
----------------
-
 .. automodule:: linchfin.core.analysis.labelling
    :members:
    :undoc-members:
    :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   linchfin.core.analysis.labelling.time_based

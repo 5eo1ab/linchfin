@@ -1,6 +1,11 @@
 linchfin.plugins package
 ========================
 
+.. automodule:: linchfin.plugins
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Subpackages
 -----------
 
@@ -8,11 +13,3 @@ Subpackages
    :maxdepth: 4
 
    linchfin.plugins.neo4j
-
-Module contents
----------------
-
-.. automodule:: linchfin.plugins
-   :members:
-   :undoc-members:
-   :show-inheritance:

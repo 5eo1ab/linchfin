@@ -1,0 +1,455 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>linchfin.base.dataclasses.entities module &mdash; LinchFin 0.1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="linchfin.base.dataclasses.value_types module" href="linchfin.base.dataclasses.value_types.html" />
+    <link rel="prev" title="linchfin.base.dataclasses.aggregators module" href="linchfin.base.dataclasses.aggregators.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> LinchFin
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="linchfin.html">linchfin package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="linchfin.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="linchfin.base.html">linchfin.base package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="linchfin.base.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="linchfin.base.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="linchfin.common.html">linchfin.common package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linchfin.core.html">linchfin.core package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linchfin.data_handler.html">linchfin.data_handler package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linchfin.metadata.html">linchfin.metadata package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linchfin.models.html">linchfin.models package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linchfin.plugins.html">linchfin.plugins package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linchfin.portfolio.html">linchfin.portfolio package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linchfin.series.html">linchfin.series package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linchfin.simulation.html">linchfin.simulation package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">LinchFin</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="linchfin.html">linchfin package</a> &raquo;</li>
+        
+          <li><a href="linchfin.base.html">linchfin.base package</a> &raquo;</li>
+        
+          <li><a href="linchfin.base.dataclasses.html">linchfin.base.dataclasses package</a> &raquo;</li>
+        
+      <li>linchfin.base.dataclasses.entities module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/linchfin.base.dataclasses.entities.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-linchfin.base.dataclasses.entities">
+<span id="linchfin-base-dataclasses-entities-module"></span><h1>linchfin.base.dataclasses.entities module<a class="headerlink" href="#module-linchfin.base.dataclasses.entities" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="linchfin.base.dataclasses.entities.Asset">
+<em class="property">class </em><code class="sig-name descname">Asset</code><span class="sig-paren">(</span><em class="sig-param">asset_id: linchfin.base.dataclasses.value_types.AssetId = &lt;factory&gt;</em>, <em class="sig-param">code: linchfin.base.dataclasses.value_types.AssetCode = &lt;factory&gt;</em>, <em class="sig-param">asset_class: linchfin.base.dataclasses.entities.AssetClass = &lt;factory&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#linchfin.base.dataclasses.entities.Asset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#linchfin.base.dataclasses.entities.Entity" title="linchfin.base.dataclasses.entities.Entity"><code class="xref py py-class docutils literal notranslate"><span class="pre">linchfin.base.dataclasses.entities.Entity</span></code></a></p>
+<dl class="py attribute">
+<dt id="linchfin.base.dataclasses.entities.Asset.asset_class">
+<code class="sig-name descname">asset_class</code><em class="property">: <a class="reference internal" href="#linchfin.base.dataclasses.entities.AssetClass" title="linchfin.base.dataclasses.entities.AssetClass">linchfin.base.dataclasses.entities.AssetClass</a></em><a class="headerlink" href="#linchfin.base.dataclasses.entities.Asset.asset_class" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="linchfin.base.dataclasses.entities.Asset.asset_id">
+<code class="sig-name descname">asset_id</code><em class="property">: <a class="reference internal" href="linchfin.base.dataclasses.value_types.html#linchfin.base.dataclasses.value_types.AssetId" title="linchfin.base.dataclasses.value_types.AssetId">linchfin.base.dataclasses.value_types.AssetId</a></em><a class="headerlink" href="#linchfin.base.dataclasses.entities.Asset.asset_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="linchfin.base.dataclasses.entities.Asset.code">
+<code class="sig-name descname">code</code><em class="property">: <a class="reference internal" href="linchfin.base.dataclasses.value_types.html#linchfin.base.dataclasses.value_types.AssetCode" title="linchfin.base.dataclasses.value_types.AssetCode">linchfin.base.dataclasses.value_types.AssetCode</a></em><a class="headerlink" href="#linchfin.base.dataclasses.entities.Asset.code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="linchfin.base.dataclasses.entities.Asset.id">
+<em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#linchfin.base.dataclasses.entities.Asset.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="linchfin.base.dataclasses.entities.Asset.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#linchfin.base.dataclasses.entities.Asset.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="linchfin.base.dataclasses.entities.AssetClass">
+<em class="property">class </em><code class="sig-name descname">AssetClass</code><span class="sig-paren">(</span><em class="sig-param">asset_class_id: str = &lt;factory&gt;</em>, <em class="sig-param">asset_class_name: str = ''</em><span class="sig-paren">)</span><a class="headerlink" href="#linchfin.base.dataclasses.entities.AssetClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#linchfin.base.dataclasses.entities.Entity" title="linchfin.base.dataclasses.entities.Entity"><code class="xref py py-class docutils literal notranslate"><span class="pre">linchfin.base.dataclasses.entities.Entity</span></code></a></p>
+<dl class="py attribute">
+<dt id="linchfin.base.dataclasses.entities.AssetClass.asset_class_id">
+<code class="sig-name descname">asset_class_id</code><em class="property">: str</em><a class="headerlink" href="#linchfin.base.dataclasses.entities.AssetClass.asset_class_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="linchfin.base.dataclasses.entities.AssetClass.asset_class_name">
+<code class="sig-name descname">asset_class_name</code><em class="property">: str</em><em class="property"> = ''</em><a class="headerlink" href="#linchfin.base.dataclasses.entities.AssetClass.asset_class_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="linchfin.base.dataclasses.entities.AssetClass.id">
+<em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#linchfin.base.dataclasses.entities.AssetClass.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="linchfin.base.dataclasses.entities.AssetClass.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#linchfin.base.dataclasses.entities.AssetClass.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="linchfin.base.dataclasses.entities.AssetUniverse">
+<em class="property">class </em><code class="sig-name descname">AssetUniverse</code><span class="sig-paren">(</span><em class="sig-param">universe_id: str = &lt;factory&gt;</em>, <em class="sig-param">assets: Dict[linchfin.base.dataclasses.value_types.AssetId</em>, <em class="sig-param">linchfin.base.dataclasses.entities.Asset] = &lt;factory&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#linchfin.base.dataclasses.entities.AssetUniverse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#linchfin.base.dataclasses.entities.Entity" title="linchfin.base.dataclasses.entities.Entity"><code class="xref py py-class docutils literal notranslate"><span class="pre">linchfin.base.dataclasses.entities.Entity</span></code></a></p>
+<dl class="py method">
+<dt id="linchfin.base.dataclasses.entities.AssetUniverse.append">
+<code class="sig-name descname">append</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">asset</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#linchfin.base.dataclasses.entities.Asset" title="linchfin.base.dataclasses.entities.Asset">linchfin.base.dataclasses.entities.Asset</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#linchfin.base.dataclasses.entities.AssetUniverse.append" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="linchfin.base.dataclasses.entities.AssetUniverse.asset_code_map">
+<code class="sig-name descname">asset_code_map</code><em class="property">: Dict<span class="p">[</span><a class="reference internal" href="linchfin.base.dataclasses.value_types.html#linchfin.base.dataclasses.value_types.AssetCode" title="linchfin.base.dataclasses.value_types.AssetCode">linchfin.base.dataclasses.value_types.AssetCode</a><span class="p">, </span><a class="reference internal" href="linchfin.base.dataclasses.value_types.html#linchfin.base.dataclasses.value_types.AssetId" title="linchfin.base.dataclasses.value_types.AssetId">linchfin.base.dataclasses.value_types.AssetId</a><span class="p">]</span></em><a class="headerlink" href="#linchfin.base.dataclasses.entities.AssetUniverse.asset_code_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="linchfin.base.dataclasses.entities.AssetUniverse.assets">
+<code class="sig-name descname">assets</code><em class="property">: Dict<span class="p">[</span><a class="reference internal" href="linchfin.base.dataclasses.value_types.html#linchfin.base.dataclasses.value_types.AssetId" title="linchfin.base.dataclasses.value_types.AssetId">linchfin.base.dataclasses.value_types.AssetId</a><span class="p">, </span><a class="reference internal" href="#linchfin.base.dataclasses.entities.Asset" title="linchfin.base.dataclasses.entities.Asset">linchfin.base.dataclasses.entities.Asset</a><span class="p">]</span></em><a class="headerlink" href="#linchfin.base.dataclasses.entities.AssetUniverse.assets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="linchfin.base.dataclasses.entities.AssetUniverse.filter_assets">
+<code class="sig-name descname">filter_assets</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filter_func</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#linchfin.base.dataclasses.entities.AssetUniverse.filter_assets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="linchfin.base.dataclasses.entities.AssetUniverse.get_asset">
+<code class="sig-name descname">get_asset</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">code</span><span class="p">:</span> <span class="n"><a class="reference internal" href="linchfin.base.dataclasses.value_types.html#linchfin.base.dataclasses.value_types.AssetCode" title="linchfin.base.dataclasses.value_types.AssetCode">linchfin.base.dataclasses.value_types.AssetCode</a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="#linchfin.base.dataclasses.entities.Asset" title="linchfin.base.dataclasses.entities.Asset">linchfin.base.dataclasses.entities.Asset</a><a class="headerlink" href="#linchfin.base.dataclasses.entities.AssetUniverse.get_asset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="linchfin.base.dataclasses.entities.AssetUniverse.get_asset_id">
+<code class="sig-name descname">get_asset_id</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">code</span><span class="p">:</span> <span class="n"><a class="reference internal" href="linchfin.base.dataclasses.value_types.html#linchfin.base.dataclasses.value_types.AssetCode" title="linchfin.base.dataclasses.value_types.AssetCode">linchfin.base.dataclasses.value_types.AssetCode</a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="linchfin.base.dataclasses.value_types.html#linchfin.base.dataclasses.value_types.AssetId" title="linchfin.base.dataclasses.value_types.AssetId">linchfin.base.dataclasses.value_types.AssetId</a><a class="headerlink" href="#linchfin.base.dataclasses.entities.AssetUniverse.get_asset_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="linchfin.base.dataclasses.entities.AssetUniverse.id">
+<em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#linchfin.base.dataclasses.entities.AssetUniverse.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="linchfin.base.dataclasses.entities.AssetUniverse.pop">
+<code class="sig-name descname">pop</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">asset</span><span class="p">:</span> <span class="n"><a class="reference internal" href="linchfin.base.dataclasses.value_types.html#linchfin.base.dataclasses.value_types.AssetId" title="linchfin.base.dataclasses.value_types.AssetId">linchfin.base.dataclasses.value_types.AssetId</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#linchfin.base.dataclasses.entities.AssetUniverse.pop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="linchfin.base.dataclasses.entities.AssetUniverse.symbols">
+<em class="property">property </em><code class="sig-name descname">symbols</code><a class="headerlink" href="#linchfin.base.dataclasses.entities.AssetUniverse.symbols" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="linchfin.base.dataclasses.entities.AssetUniverse.universe_id">
+<code class="sig-name descname">universe_id</code><em class="property">: str</em><a class="headerlink" href="#linchfin.base.dataclasses.entities.AssetUniverse.universe_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="linchfin.base.dataclasses.entities.Cluster">
+<em class="property">class </em><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param">cluster_id: uuid.UUID = &lt;factory&gt;</em>, <em class="sig-param">name: str = ''</em>, <em class="sig-param">elements: List = &lt;factory&gt;</em>, <em class="sig-param">d: float = 0</em>, <em class="sig-param">size: int = 0</em><span class="sig-paren">)</span><a class="headerlink" href="#linchfin.base.dataclasses.entities.Cluster" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#linchfin.base.dataclasses.entities.Entity" title="linchfin.base.dataclasses.entities.Entity"><code class="xref py py-class docutils literal notranslate"><span class="pre">linchfin.base.dataclasses.entities.Entity</span></code></a></p>
+<dl class="py attribute">
+<dt id="linchfin.base.dataclasses.entities.Cluster.cluster_id">
+<code class="sig-name descname">cluster_id</code><em class="property">: uuid.UUID</em><a class="headerlink" href="#linchfin.base.dataclasses.entities.Cluster.cluster_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="linchfin.base.dataclasses.entities.Cluster.d">
+<code class="sig-name descname">d</code><em class="property">: float</em><em class="property"> = 0</em><a class="headerlink" href="#linchfin.base.dataclasses.entities.Cluster.d" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="linchfin.base.dataclasses.entities.Cluster.elements">
+<code class="sig-name descname">elements</code><em class="property">: List</em><a class="headerlink" href="#linchfin.base.dataclasses.entities.Cluster.elements" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="linchfin.base.dataclasses.entities.Cluster.id">
+<em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#linchfin.base.dataclasses.entities.Cluster.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="linchfin.base.dataclasses.entities.Cluster.name">
+<code class="sig-name descname">name</code><em class="property">: str</em><em class="property"> = ''</em><a class="headerlink" href="#linchfin.base.dataclasses.entities.Cluster.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="linchfin.base.dataclasses.entities.Cluster.size">
+<code class="sig-name descname">size</code><em class="property">: int</em><em class="property"> = 0</em><a class="headerlink" href="#linchfin.base.dataclasses.entities.Cluster.size" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="linchfin.base.dataclasses.entities.Entity">
+<em class="property">class </em><code class="sig-name descname">Entity</code><a class="headerlink" href="#linchfin.base.dataclasses.entities.Entity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="linchfin.base.dataclasses.entities.Portfolio">
+<em class="property">class </em><code class="sig-name descname">Portfolio</code><span class="sig-paren">(</span><em class="sig-param">portfolio_id: str = &lt;factory&gt;</em>, <em class="sig-param">weights: Dict[linchfin.base.dataclasses.value_types.AssetCode</em>, <em class="sig-param">linchfin.base.dataclasses.value_types.Weight] = &lt;factory&gt;</em>, <em class="sig-param">asset_universe: linchfin.base.dataclasses.entities.AssetUniverse = &lt;factory&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#linchfin.base.dataclasses.entities.Portfolio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#linchfin.base.dataclasses.entities.Entity" title="linchfin.base.dataclasses.entities.Entity"><code class="xref py py-class docutils literal notranslate"><span class="pre">linchfin.base.dataclasses.entities.Entity</span></code></a></p>
+<dl class="py attribute">
+<dt id="linchfin.base.dataclasses.entities.Portfolio.asset_universe">
+<code class="sig-name descname">asset_universe</code><em class="property">: <a class="reference internal" href="#linchfin.base.dataclasses.entities.AssetUniverse" title="linchfin.base.dataclasses.entities.AssetUniverse">linchfin.base.dataclasses.entities.AssetUniverse</a></em><a class="headerlink" href="#linchfin.base.dataclasses.entities.Portfolio.asset_universe" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="linchfin.base.dataclasses.entities.Portfolio.id">
+<em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#linchfin.base.dataclasses.entities.Portfolio.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="linchfin.base.dataclasses.entities.Portfolio.is_valid">
+<code class="sig-name descname">is_valid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#linchfin.base.dataclasses.entities.Portfolio.is_valid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="linchfin.base.dataclasses.entities.Portfolio.portfolio_id">
+<code class="sig-name descname">portfolio_id</code><em class="property">: str</em><a class="headerlink" href="#linchfin.base.dataclasses.entities.Portfolio.portfolio_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="linchfin.base.dataclasses.entities.Portfolio.round">
+<code class="sig-name descname">round</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">weights</span></em>, <em class="sig-param"><span class="n">points</span><span class="o">=</span><span class="default_value">2</span></em><span class="sig-paren">)</span><a class="headerlink" href="#linchfin.base.dataclasses.entities.Portfolio.round" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="linchfin.base.dataclasses.entities.Portfolio.sector_weights">
+<em class="property">property </em><code class="sig-name descname">sector_weights</code><a class="headerlink" href="#linchfin.base.dataclasses.entities.Portfolio.sector_weights" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="linchfin.base.dataclasses.entities.Portfolio.set_weights">
+<code class="sig-name descname">set_weights</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">weights</span><span class="p">:</span> <span class="n">Dict<span class="p">[</span><a class="reference internal" href="linchfin.base.dataclasses.value_types.html#linchfin.base.dataclasses.value_types.AssetCode" title="linchfin.base.dataclasses.value_types.AssetCode">linchfin.base.dataclasses.value_types.AssetCode</a><span class="p">, </span><a class="reference internal" href="linchfin.base.dataclasses.value_types.html#linchfin.base.dataclasses.value_types.Weight" title="linchfin.base.dataclasses.value_types.Weight">linchfin.base.dataclasses.value_types.Weight</a><span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#linchfin.base.dataclasses.entities.Portfolio.set_weights" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="linchfin.base.dataclasses.entities.Portfolio.show_summary">
+<code class="sig-name descname">show_summary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#linchfin.base.dataclasses.entities.Portfolio.show_summary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="linchfin.base.dataclasses.entities.Portfolio.symbols">
+<em class="property">property </em><code class="sig-name descname">symbols</code><a class="headerlink" href="#linchfin.base.dataclasses.entities.Portfolio.symbols" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="linchfin.base.dataclasses.entities.Portfolio.to_series">
+<code class="sig-name descname">to_series</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#linchfin.base.dataclasses.entities.Portfolio.to_series" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="linchfin.base.dataclasses.entities.Portfolio.validate">
+<code class="sig-name descname">validate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">weights</span></em>, <em class="sig-param"><span class="n">raise_exception</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#linchfin.base.dataclasses.entities.Portfolio.validate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="linchfin.base.dataclasses.entities.Portfolio.weights">
+<code class="sig-name descname">weights</code><em class="property">: Dict<span class="p">[</span><a class="reference internal" href="linchfin.base.dataclasses.value_types.html#linchfin.base.dataclasses.value_types.AssetCode" title="linchfin.base.dataclasses.value_types.AssetCode">linchfin.base.dataclasses.value_types.AssetCode</a><span class="p">, </span><a class="reference internal" href="linchfin.base.dataclasses.value_types.html#linchfin.base.dataclasses.value_types.Weight" title="linchfin.base.dataclasses.value_types.Weight">linchfin.base.dataclasses.value_types.Weight</a><span class="p">]</span></em><a class="headerlink" href="#linchfin.base.dataclasses.entities.Portfolio.weights" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="linchfin.base.dataclasses.value_types.html" class="btn btn-neutral float-right" title="linchfin.base.dataclasses.value_types module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="linchfin.base.dataclasses.aggregators.html" class="btn btn-neutral float-left" title="linchfin.base.dataclasses.aggregators module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, shephexd.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+linchfin.models.hrp module
+==========================
+
+.. automodule:: linchfin.models.hrp
+   :members:
+   :undoc-members:
+   :show-inheritance:

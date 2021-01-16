@@ -1,0 +1,7 @@
+linchfin.core.analysis.labelling.time\_based module
+===================================================
+
+.. automodule:: linchfin.core.analysis.labelling.time_based
+   :members:
+   :undoc-members:
+   :show-inheritance:

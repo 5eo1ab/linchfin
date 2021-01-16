@@ -1,0 +1,7 @@
+linchfin.common.calc module
+===========================
+
+.. automodule:: linchfin.common.calc
+   :members:
+   :undoc-members:
+   :show-inheritance:

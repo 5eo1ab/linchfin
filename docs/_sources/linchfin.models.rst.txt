@@ -1,29 +1,16 @@
 linchfin.models package
 =======================
 
-Submodules
-----------
-
-linchfin.models.hrp module
---------------------------
-
-.. automodule:: linchfin.models.hrp
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-linchfin.models.template module
--------------------------------
-
-.. automodule:: linchfin.models.template
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Module contents
----------------
-
 .. automodule:: linchfin.models
    :members:
    :undoc-members:
    :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   linchfin.models.hrp
+   linchfin.models.template

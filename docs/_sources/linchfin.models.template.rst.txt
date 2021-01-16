@@ -1,0 +1,7 @@
+linchfin.models.template module
+===============================
+
+.. automodule:: linchfin.models.template
+   :members:
+   :undoc-members:
+   :show-inheritance:

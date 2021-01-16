@@ -1,6 +1,11 @@
 linchfin.base package
 =====================
 
+.. automodule:: linchfin.base
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Subpackages
 -----------
 
@@ -12,18 +17,7 @@ Subpackages
 Submodules
 ----------
 
-linchfin.base.encoder module
-----------------------------
+.. toctree::
+   :maxdepth: 4
 
-.. automodule:: linchfin.base.encoder
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Module contents
----------------
-
-.. automodule:: linchfin.base
-   :members:
-   :undoc-members:
-   :show-inheritance:
+   linchfin.base.encoder

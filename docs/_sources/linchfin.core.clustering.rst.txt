@@ -1,21 +1,15 @@
 linchfin.core.clustering package
 ================================
 
-Submodules
-----------
-
-linchfin.core.clustering.sectors module
----------------------------------------
-
-.. automodule:: linchfin.core.clustering.sectors
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Module contents
----------------
-
 .. automodule:: linchfin.core.clustering
    :members:
    :undoc-members:
    :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   linchfin.core.clustering.sectors

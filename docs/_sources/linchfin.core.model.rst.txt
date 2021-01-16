@@ -1,21 +1,15 @@
 linchfin.core.model package
 ===========================
 
-Submodules
-----------
-
-linchfin.core.model.pca module
-------------------------------
-
-.. automodule:: linchfin.core.model.pca
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Module contents
----------------
-
 .. automodule:: linchfin.core.model
    :members:
    :undoc-members:
    :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   linchfin.core.model.pca

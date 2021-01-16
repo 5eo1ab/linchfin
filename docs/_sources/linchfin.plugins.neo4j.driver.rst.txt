@@ -1,0 +1,7 @@
+linchfin.plugins.neo4j.driver module
+====================================
+
+.. automodule:: linchfin.plugins.neo4j.driver
+   :members:
+   :undoc-members:
+   :show-inheritance:

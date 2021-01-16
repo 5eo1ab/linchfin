@@ -1,6 +1,11 @@
 linchfin.core.analysis package
 ==============================
 
+.. automodule:: linchfin.core.analysis
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Subpackages
 -----------
 
@@ -8,11 +13,3 @@ Subpackages
    :maxdepth: 4
 
    linchfin.core.analysis.labelling
-
-Module contents
----------------
-
-.. automodule:: linchfin.core.analysis
-   :members:
-   :undoc-members:
-   :show-inheritance:

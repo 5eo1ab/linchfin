@@ -1,0 +1,7 @@
+linchfin.base.dataclasses.entities module
+=========================================
+
+.. automodule:: linchfin.base.dataclasses.entities
+   :members:
+   :undoc-members:
+   :show-inheritance:

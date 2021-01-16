@@ -1,0 +1,7 @@
+linchfin.portfolio.manager module
+=================================
+
+.. automodule:: linchfin.portfolio.manager
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,6 +1,11 @@
 linchfin.core package
 =====================
 
+.. automodule:: linchfin.core
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Subpackages
 -----------
 
@@ -14,11 +19,3 @@ Subpackages
    linchfin.core.factor
    linchfin.core.model
    linchfin.core.portfolio
-
-Module contents
----------------
-
-.. automodule:: linchfin.core
-   :members:
-   :undoc-members:
-   :show-inheritance:

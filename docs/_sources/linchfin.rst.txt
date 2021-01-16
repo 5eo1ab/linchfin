@@ -1,6 +1,11 @@
 linchfin package
 ================
 
+.. automodule:: linchfin
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Subpackages
 -----------
 
@@ -17,11 +22,3 @@ Subpackages
    linchfin.portfolio
    linchfin.series
    linchfin.simulation
-
-Module contents
----------------
-
-.. automodule:: linchfin
-   :members:
-   :undoc-members:
-   :show-inheritance:

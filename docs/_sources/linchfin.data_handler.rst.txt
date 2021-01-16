@@ -1,29 +1,16 @@
 linchfin.data\_handler package
 ==============================
 
-Submodules
-----------
-
-linchfin.data\_handler.pipline module
--------------------------------------
-
-.. automodule:: linchfin.data_handler.pipline
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-linchfin.data\_handler.reader module
-------------------------------------
-
-.. automodule:: linchfin.data_handler.reader
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Module contents
----------------
-
 .. automodule:: linchfin.data_handler
    :members:
    :undoc-members:
    :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   linchfin.data_handler.pipline
+   linchfin.data_handler.reader

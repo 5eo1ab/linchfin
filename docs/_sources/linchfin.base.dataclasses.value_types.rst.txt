@@ -1,0 +1,7 @@
+linchfin.base.dataclasses.value\_types module
+=============================================
+
+.. automodule:: linchfin.base.dataclasses.value_types
+   :members:
+   :undoc-members:
+   :show-inheritance:

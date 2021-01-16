@@ -1,6 +1,11 @@
 linchfin.core.factor package
 ============================
 
+.. automodule:: linchfin.core.factor
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Subpackages
 -----------
 
@@ -8,11 +13,3 @@ Subpackages
    :maxdepth: 4
 
    linchfin.core.factor.graph
-
-Module contents
----------------
-
-.. automodule:: linchfin.core.factor
-   :members:
-   :undoc-members:
-   :show-inheritance:

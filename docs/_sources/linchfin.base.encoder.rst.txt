@@ -1,0 +1,7 @@
+linchfin.base.encoder module
+============================
+
+.. automodule:: linchfin.base.encoder
+   :members:
+   :undoc-members:
+   :show-inheritance:

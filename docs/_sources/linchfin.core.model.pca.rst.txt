@@ -1,0 +1,7 @@
+linchfin.core.model.pca module
+==============================
+
+.. automodule:: linchfin.core.model.pca
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+linchfin.simulation.backtest module
+===================================
+
+.. automodule:: linchfin.simulation.backtest
+   :members:
+   :undoc-members:
+   :show-inheritance:
