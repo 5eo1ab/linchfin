@@ -33,9 +33,11 @@ release = '0.1.0'
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.todo',
-    'sphinx.ext.mathjax',
     'sphinx.ext.graphviz',
-    'sphinx.ext.autosummary'
+    'sphinx.ext.autosummary',
+    'IPython.sphinxext.ipython_directive',
+    'IPython.sphinxext.ipython_console_highlighting',
+    'sphinx.ext.mathjax',
 ]
 
 numfig = True
@@ -44,7 +46,19 @@ autosummary_generate = True
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
-modindex_common_prefix = ['linchfin.']
+modindex_common_prefix = [
+    'linchfin.',
+    'linchfin.base.',
+    'linchfin.common.',
+    'linchfin.core.',
+    'linchfin.data_handler.',
+    'linchfin.metadata.',
+    'linchfin.models.',
+    'linchfin.plugins.',
+    'linchfin.portfolio.',
+    'linchfin.series.',
+]
+
 add_module_names = False
 
 # List of patterns, relative to source directory, that match files and
@@ -61,7 +75,15 @@ exclude_patterns = []
 html_theme = 'sphinx_rtd_theme'
 
 add_module_names = False
-
+html_sidebars = {
+    '**': [
+        'about.html',
+        'navigation.html',
+        'relations.html',
+        'searchbox.html',
+        'donate.html',
+    ]
+}
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".

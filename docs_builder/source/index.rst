@@ -5,15 +5,37 @@
 
 Welcome to LinchFin's documentation!
 ====================================
+LinchFin is a financial engine library to build your own portfolio.
+This library is on development.
 
-.. toctree::
-   :maxdepth: 4
+Installation
+============
+.. sourcecode:: bash
 
-   modules
+   git clone https://github.com/shephexd/linchfin
+   python setup py install
+
+How to use
+==========
+
+.. sourcecode:: ipython
+
+    In [1]: import linchfin as lf
+    In [2]: lf
+      alpha: float
+      animated: [True | False]
+      antialiased or aa: [True | False]
+      ...snipw
+
 
 Indices and tables
 ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. :ref:`genindex`
+.. :ref:`modindex`
+.. :ref:`search`
+
+.. toctree::
+   :maxdepth: 4
+
+   linchfin
