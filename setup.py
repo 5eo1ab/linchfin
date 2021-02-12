@@ -1,4 +1,5 @@
 import setuptools
+import glob
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
@@ -24,5 +25,6 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     python_requires='>=3.6',
+    include_package_data=True,
     install_requires=requirements,
 )
