@@ -1,13 +1,16 @@
 import math
+from datetime import timedelta
 from dataclasses import dataclass, field
 from linchfin.base.dataclasses.entities import Portfolio
 from linchfin.base.dataclasses.value_types import TimeSeries, Weight
-from linchfin.common.calc import calc_portfolio_return, calc_daily_returns
+from linchfin.common.calc import calc_portfolio_return
+from linchfin.models.template import ABCModelTemplate
+from linchfin.models.hrp import HierarchyRiskParityModel
 
 
 @dataclass
 class BackTestConfig:
-    acc_trading_values_threshold: float = field(default=1000000000)
+    acc_trading_values_threshold: float = field(default=50000000000)
 
 
 class BackTestIterator:
@@ -60,18 +63,23 @@ class BackTestIterator:
 
 
 class BackTestRunner:
-    def __init__(self, portfolio: Portfolio, config: BackTestConfig = None):
+    def __init__(self, model: ABCModelTemplate, config: BackTestConfig = None):
         if config is None:
             config = BackTestConfig()
 
         self.prev_value = None
         self._value = None
+        self._iterator = None
+        self.model = model
+        portfolio = model.run()
+        print("INIT PORT", portfolio.to_series())
         self.model_portfolio = Portfolio(weights=portfolio.weights)
         self.current_portfolio = Portfolio(weights=portfolio.weights)
         self.config = config
 
     def __iter__(self):
-        return BackTestIterator(runner=self, time_series_iter=self.time_series.iterrows())
+        self._iterator = BackTestIterator(runner=self, time_series_iter=self.time_series.iterrows())
+        return self._iterator
 
     def __call__(self, time_series: TimeSeries):
         self.time_series = time_series
@@ -79,11 +87,17 @@ class BackTestRunner:
 
     def do_rebalancing(self, **kwargs):
         # TODO calc portfolio based on time_series
-        weights = {
-            'SKYY': Weight('0.7'),
-            'OIH': Weight('0.2'),
-            'GUNR': Weight('0.1')}
-        _port = Portfolio(weights=weights)
+        _start = self._iterator.idx - timedelta(days=90)
+        _end = self._iterator.idx
+        self.model.start = _start.strftime("%Y-%m-%d")
+        self.model.end = _end.strftime("%Y-%m-%d")
+        _port = self.model.run()
+        print("NEW_PORT", _port.to_series())
+        lr = 0.5
+        cur_weights = self.model_portfolio.to_series()
+        new_weights = _port.to_series()
+        adaptive_weights = (cur_weights + lr * (new_weights - cur_weights)).loc[cur_weights.index]
+        _port.set_weights(weights=adaptive_weights)
         self.update_portfolio(portfolio=_port)
 
     def update_portfolio(self, portfolio: Portfolio):
@@ -104,7 +118,7 @@ class BackTestSimulator:
                 print('-' * 30)
                 runner_iter.acc_trading_values = 0
 
-                if runner_iter.idx.year >= 2020 and runner_iter.idx.month > 2:
+                if runner_iter.idx.year >= 2020 and runner_iter.idx.month == 2:
                     runner.do_rebalancing()
 
 
@@ -118,8 +132,12 @@ if __name__ == '__main__':
     _port = Portfolio(weights=weights)
     backtester = BackTestSimulator()
 
-    data_reader = DataReader(start='2019/01/01', end='2021/01/01')
-    ts = data_reader.get_price(symbols=list(_port.weights.keys()))
+    start, end = '2019/01/01', '2020/01/01'
+    data_reader = DataReader(start='2020/01/01', end='2021/01/01')
 
-    backtest_runner = BackTestRunner(portfolio=_port, config=BackTestConfig())
+    symbols = ['MSFT', 'KO', 'PG', 'LULU', 'NKE', 'NVDA']
+    ts = data_reader.get_price(symbols=symbols)
+    hrp_model = HierarchyRiskParityModel(asset_universe=symbols, start=start, end=end)
+    backtest_config = BackTestConfig()
+    backtest_runner = BackTestRunner(model=hrp_model, config=backtest_config)
     backtester.iter_runner(runner=backtest_runner, time_series=ts)

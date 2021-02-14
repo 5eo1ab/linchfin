@@ -1,3 +1,4 @@
+from typing import List
 from linchfin.models.template import ABCModelTemplate
 from linchfin.core.portfolio.hierarchical import HierarchyRiskParityEngine
 from linchfin.base.dataclasses.entities import AssetUniverse
@@ -8,7 +9,9 @@ from linchfin.common.calc import calc_corr
 class HierarchyRiskParityModel(ABCModelTemplate):
     engine_class = HierarchyRiskParityEngine
 
-    def __init__(self, asset_universe: AssetUniverse, start, end, period='D'):
+    def __init__(self, asset_universe: AssetUniverse or List[str], start, end, period='D'):
+        if isinstance(asset_universe, list):
+            asset_universe = self.to_asset_universes(symbols=asset_universe)
         self._engine = None
         self.asset_universe = asset_universe
         self.init_engine()
