@@ -1,29 +1,36 @@
+import math
+from dataclasses import dataclass, field
 from linchfin.base.dataclasses.entities import Portfolio
 from linchfin.base.dataclasses.value_types import TimeSeries, Weight
 from linchfin.common.calc import calc_portfolio_return, calc_daily_returns
 
 
+@dataclass
 class BackTestConfig:
-    pass
+    acc_trading_values_threshold: float = field(default=1000000000)
 
 
-class BackTestRunner:
-    def __init__(self, portfolio: Portfolio, config: BackTestConfig):
+class BackTestIterator:
+    def __init__(self, runner: 'BackTestRunner', time_series_iter):
         self.step = 0
-        self.prev_value = None
-        self._value = None
-        self.model_portfolio = Portfolio(weights=portfolio.weights)
-        self.current_portfolio = Portfolio(weights=portfolio.weights)
+        self.runner = runner
         self.acc_trading_values = 0
-        self.config = config
-
-    def __iter__(self):
-        return self
+        self.log_acc_return = 0
+        self.time_series_iter = time_series_iter
+        self.idx = None
+        self._value = None
+        self.prev_value = None
 
     def __next__(self):
+        self.step += 1
+        self.idx, self.value = next(self.time_series_iter)
         self.calc_current_portfolio()
         self.acc_trading_values += self.calc_trading_values()
-        return self.step, self.value
+        return self.idx, self
+
+    @property
+    def acc_return(self):
+        return math.exp(self.log_acc_return)
 
     @property
     def value(self):
@@ -34,21 +41,54 @@ class BackTestRunner:
         self.prev_value = self._value
         self._value = value
 
+    @property
+    def is_rebalancing_condition_met(self):
+        return self.acc_trading_values > self.runner.config.acc_trading_values_threshold
+
     def calc_trading_values(self):
-        return (self.current_portfolio.to_series() * self.value.loc['Adj Close'] * self.value.loc['Volume']).sum()
+        return (self.runner.current_portfolio.to_series() * self.value.loc['Adj Close'] * self.value.loc['Volume']).sum()
 
     def calc_current_portfolio(self):
         if self.prev_value is not None:
             changes = (1 + (self.value.loc['Adj Close'] - self.prev_value.loc['Adj Close']) / self.value.loc['Adj Close'])
-            new_weights = self.current_portfolio.to_series() * changes
+            new_weights = self.runner.current_portfolio.to_series() * changes
+            self.log_acc_return += math.log(new_weights.sum())
             new_weights = new_weights / new_weights.sum()
-            self.current_portfolio.set_weights(new_weights)
-            print(self.current_portfolio.to_series())
+            self.runner.current_portfolio.set_weights(new_weights)
             return
         return
 
-    def check_rebalancing_condition(self):
-        pass
+
+class BackTestRunner:
+    def __init__(self, portfolio: Portfolio, config: BackTestConfig = None):
+        if config is None:
+            config = BackTestConfig()
+
+        self.prev_value = None
+        self._value = None
+        self.model_portfolio = Portfolio(weights=portfolio.weights)
+        self.current_portfolio = Portfolio(weights=portfolio.weights)
+        self.config = config
+
+    def __iter__(self):
+        return BackTestIterator(runner=self, time_series_iter=self.time_series.iterrows())
+
+    def __call__(self, time_series: TimeSeries):
+        self.time_series = time_series
+        return self
+
+    def do_rebalancing(self, **kwargs):
+        # TODO calc portfolio based on time_series
+        weights = {
+            'SKYY': Weight('0.7'),
+            'OIH': Weight('0.2'),
+            'GUNR': Weight('0.1')}
+        _port = Portfolio(weights=weights)
+        self.update_portfolio(portfolio=_port)
+
+    def update_portfolio(self, portfolio: Portfolio):
+        self.model_portfolio = Portfolio(weights=portfolio.weights)
+        self.current_portfolio = Portfolio(weights=portfolio.weights)
 
 
 class BackTestSimulator:
@@ -57,11 +97,15 @@ class BackTestSimulator:
         return portfolio_yield
 
     def iter_runner(self, runner: BackTestRunner, time_series: TimeSeries):
-        for i, row in time_series.iterrows():
-            runner.step = i
-            runner.value = row
-            k = next(runner)
-            print(k)
+        for idx, runner_iter in runner(time_series):
+            if runner_iter.is_rebalancing_condition_met:
+                print("REB", idx, runner_iter.acc_trading_values)
+                print("SUMMARY", idx, runner_iter.acc_return)
+                print('-' * 30)
+                runner_iter.acc_trading_values = 0
+
+                if runner_iter.idx.year >= 2020 and runner_iter.idx.month > 2:
+                    runner.do_rebalancing()
 
 
 if __name__ == '__main__':
@@ -74,11 +118,8 @@ if __name__ == '__main__':
     _port = Portfolio(weights=weights)
     backtester = BackTestSimulator()
 
-    data_reader = DataReader(start='2019/01/01', end='2020/09/01')
+    data_reader = DataReader(start='2019/01/01', end='2021/01/01')
     ts = data_reader.get_price(symbols=list(_port.weights.keys()))
-    # ts = data_reader.get_adj_close_price(symbols=list(_port.weights.keys()))
-    # daily_returns = calc_daily_returns(time_series=ts)
-    # backtester.run(portfolio=_port, daily_returns=daily_returns)
 
-    backtest_runner = BackTestRunner(portfolio=_port)
+    backtest_runner = BackTestRunner(portfolio=_port, config=BackTestConfig())
     backtester.iter_runner(runner=backtest_runner, time_series=ts)
