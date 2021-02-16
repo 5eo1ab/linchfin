@@ -1,4 +1,5 @@
 import math
+import logging
 from datetime import timedelta
 from dataclasses import dataclass, field
 from linchfin.base.dataclasses.entities import Portfolio
@@ -8,9 +9,15 @@ from linchfin.models.template import ABCModelTemplate
 from linchfin.models.hrp import HierarchyRiskParityModel
 
 
+logger = logging.getLogger('linchfin')
+
+
 @dataclass
 class BackTestConfig:
     acc_trading_values_threshold: float = field(default=50000000000)
+    use_dynamic_rebalancing: bool = field(default=True)
+    rebalancing_learing_rate: float = field(default=0.5)
+    mode: str = field(default='debug')
 
 
 class BackTestIterator:
@@ -21,6 +28,7 @@ class BackTestIterator:
         self.log_acc_return = 0
         self.time_series_iter = time_series_iter
         self.idx = None
+        self.changes = None
         self._value = None
         self.prev_value = None
 
@@ -53,8 +61,8 @@ class BackTestIterator:
 
     def calc_current_portfolio(self):
         if self.prev_value is not None:
-            changes = (1 + (self.value.loc['Adj Close'] - self.prev_value.loc['Adj Close']) / self.value.loc['Adj Close'])
-            new_weights = self.runner.current_portfolio.to_series() * changes
+            self.changes = (1 + (self.value.loc['Adj Close'] - self.prev_value.loc['Adj Close']) / self.value.loc['Adj Close'])
+            new_weights = self.runner.current_portfolio.to_series() * self.changes
             self.log_acc_return += math.log(new_weights.sum())
             new_weights = new_weights / new_weights.sum()
             self.runner.current_portfolio.set_weights(new_weights)
@@ -72,7 +80,6 @@ class BackTestRunner:
         self._iterator = None
         self.model = model
         portfolio = model.run()
-        print("INIT PORT", portfolio.to_series())
         self.model_portfolio = Portfolio(weights=portfolio.weights)
         self.current_portfolio = Portfolio(weights=portfolio.weights)
         self.config = config
@@ -93,7 +100,7 @@ class BackTestRunner:
         self.model.end = _end.strftime("%Y-%m-%d")
         _port = self.model.run()
         print("NEW_PORT", _port.to_series())
-        lr = 0.5
+        lr = self.config.rebalancing_learing_rate
         cur_weights = self.model_portfolio.to_series()
         new_weights = _port.to_series()
         adaptive_weights = (cur_weights + lr * (new_weights - cur_weights)).loc[cur_weights.index]
@@ -111,14 +118,18 @@ class BackTestSimulator:
         return portfolio_yield
 
     def iter_runner(self, runner: BackTestRunner, time_series: TimeSeries):
+        acc_returns = TimeSeries()
+        weight_changes = TimeSeries()
         for idx, runner_iter in runner(time_series):
+            acc_returns = acc_returns.append(TimeSeries({"acc_return": runner_iter.acc_return}, index=[idx]))
+            weight_changes = weight_changes.append(TimeSeries(runner.current_portfolio.weights, index=[idx]))
+
             if runner_iter.is_rebalancing_condition_met:
-                print("REB", idx, runner_iter.acc_trading_values)
-                print("SUMMARY", idx, runner_iter.acc_return)
-                print('-' * 30)
+                logger.debug("REB", idx, runner_iter.acc_trading_values)
+                logger.debug("SUMMARY", idx, runner_iter.acc_return)
                 runner_iter.acc_trading_values = 0
 
-                if runner_iter.idx.year >= 2020 and runner_iter.idx.month == 2:
+                if runner.config.use_dynamic_rebalancing:
                     runner.do_rebalancing()
 
 
