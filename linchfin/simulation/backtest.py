@@ -1,5 +1,6 @@
 import math
 import logging
+from matplotlib import pyplot as plt
 from datetime import timedelta
 from dataclasses import dataclass, field
 from linchfin.base.dataclasses.entities import Portfolio
@@ -18,6 +19,7 @@ class BackTestConfig:
     use_dynamic_rebalancing: bool = field(default=True)
     rebalancing_learing_rate: float = field(default=0.5)
     mode: str = field(default='debug')
+    show_plot: bool = field(default=True)
 
 
 class BackTestIterator:
@@ -120,17 +122,28 @@ class BackTestSimulator:
     def iter_runner(self, runner: BackTestRunner, time_series: TimeSeries):
         acc_returns = TimeSeries()
         weight_changes = TimeSeries()
-        for idx, runner_iter in runner(time_series):
-            acc_returns = acc_returns.append(TimeSeries({"acc_return": runner_iter.acc_return}, index=[idx]))
-            weight_changes = weight_changes.append(TimeSeries(runner.current_portfolio.weights, index=[idx]))
+        rebalancing_indices = []
+
+        for idx, (_ts, runner_iter) in enumerate(runner(time_series)):
+            acc_returns = acc_returns.append(TimeSeries({"acc_return": runner_iter.acc_return}, index=[_ts]))
+            weight_changes = weight_changes.append(TimeSeries(runner.current_portfolio.weights, index=[_ts]))
 
             if runner_iter.is_rebalancing_condition_met:
-                logger.debug("REB", idx, runner_iter.acc_trading_values)
-                logger.debug("SUMMARY", idx, runner_iter.acc_return)
+                logger.debug("REB", _ts, runner_iter.acc_trading_values)
+                logger.debug("SUMMARY", _ts, runner_iter.acc_return)
                 runner_iter.acc_trading_values = 0
 
                 if runner.config.use_dynamic_rebalancing:
+                    rebalancing_indices.append(idx)
                     runner.do_rebalancing()
+
+        if runner.config.show_plot:
+            plt.figure()
+            fig, axes = plt.subplots(nrows=3, ncols=1)
+            acc_returns.plot(ax=axes[0], linestyle='-', markevery=rebalancing_indices,
+                             marker='x', markerfacecolor='black')
+            weight_changes.astype(float).plot(ax=axes[1])
+            plt.show()
 
 
 if __name__ == '__main__':
