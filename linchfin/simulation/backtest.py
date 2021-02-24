@@ -14,16 +14,18 @@ logger = logging.getLogger('linchfin')
 
 
 @dataclass
-class BackTestConfig:
-    acc_trading_values_threshold: float = field(default=50000000000)
+class BacktestConfig:
+    base: float = field(default=0)
+    acc_trading_values_threshold: float = field(default=30000000000)
     use_dynamic_rebalancing: bool = field(default=True)
     rebalancing_learing_rate: float = field(default=0.5)
     mode: str = field(default='debug')
     show_plot: bool = field(default=True)
+    lookback_period: int = field(default=90)
 
 
-class BackTestIterator:
-    def __init__(self, runner: 'BackTestRunner', time_series_iter):
+class BacktestIterator:
+    def __init__(self, runner: 'BacktestRunner', time_series_iter):
         self.step = 0
         self.runner = runner
         self.acc_trading_values = 0
@@ -72,10 +74,10 @@ class BackTestIterator:
         return
 
 
-class BackTestRunner:
-    def __init__(self, model: ABCModelTemplate, config: BackTestConfig = None):
+class BacktestRunner:
+    def __init__(self, model: ABCModelTemplate, config: BacktestConfig = None):
         if config is None:
-            config = BackTestConfig()
+            config = BacktestConfig()
 
         self.prev_value = None
         self._value = None
@@ -87,7 +89,7 @@ class BackTestRunner:
         self.config = config
 
     def __iter__(self):
-        self._iterator = BackTestIterator(runner=self, time_series_iter=self.time_series.iterrows())
+        self._iterator = BacktestIterator(runner=self, time_series_iter=self.time_series.iterrows())
         return self._iterator
 
     def __call__(self, time_series: TimeSeries):
@@ -96,12 +98,12 @@ class BackTestRunner:
 
     def do_rebalancing(self, **kwargs):
         # TODO calc portfolio based on time_series
-        _start = self._iterator.idx - timedelta(days=90)
+        _start = self._iterator.idx - timedelta(days=self.config.lookback_period)
         _end = self._iterator.idx
         self.model.start = _start.strftime("%Y-%m-%d")
         self.model.end = _end.strftime("%Y-%m-%d")
         _port = self.model.run()
-        print("NEW_PORT", _port.to_series())
+        logger.info(f"port based {self._iterator.idx}\n:{_port.to_series()}")
         lr = self.config.rebalancing_learing_rate
         cur_weights = self.model_portfolio.to_series()
         new_weights = _port.to_series()
@@ -114,12 +116,12 @@ class BackTestRunner:
         self.current_portfolio = Portfolio(weights=portfolio.weights)
 
 
-class BackTestSimulator:
+class BacktestSimulator:
     def run(self, portfolio: Portfolio, daily_returns: TimeSeries):
         portfolio_yield = calc_portfolio_return(portfolio=portfolio, daily_returns=daily_returns)
         return portfolio_yield
 
-    def iter_runner(self, runner: BackTestRunner, time_series: TimeSeries):
+    def iter_runner(self, runner: BacktestRunner, time_series: TimeSeries):
         acc_returns = TimeSeries()
         weight_changes = TimeSeries()
         rebalancing_indices = []
@@ -139,7 +141,7 @@ class BackTestSimulator:
 
         if runner.config.show_plot:
             plt.figure()
-            fig, axes = plt.subplots(nrows=3, ncols=1)
+            fig, axes = plt.subplots(nrows=2, ncols=1)
             acc_returns.plot(ax=axes[0], linestyle='-', markevery=rebalancing_indices,
                              marker='x', markerfacecolor='black')
             weight_changes.astype(float).plot(ax=axes[1])
@@ -148,20 +150,20 @@ class BackTestSimulator:
 
 if __name__ == '__main__':
     from linchfin.data_handler.reader import DataReader
-    weights = {
-        'SKYY': Weight('0.4'),
-        'OIH': Weight('0.3'),
-        'GUNR': Weight('0.3')}
+    Backtester = BacktestSimulator()
 
-    _port = Portfolio(weights=weights)
-    backtester = BackTestSimulator()
+    start, end = '2018/01/01', '2020/01/01'
+    data_reader = DataReader(start='2019/01/01', end='2021/01/01')
 
-    start, end = '2019/01/01', '2020/01/01'
-    data_reader = DataReader(start='2020/01/01', end='2021/01/01')
-
-    symbols = ['MSFT', 'KO', 'PG', 'LULU', 'NKE', 'NVDA']
+    # symbols = ['MSFT', 'KO', 'PG', 'LULU', 'NKE', 'NVDA']
+    symbols = [
+        'VTI',
+        'XLK', 'XLF', 'XLE', 'XLI', 'XLB', 'XLU',
+        'LQD', 'IEF', 'TLT', 'SLV',
+        ]
     ts = data_reader.get_price(symbols=symbols)
     hrp_model = HierarchyRiskParityModel(asset_universe=symbols, start=start, end=end)
-    backtest_config = BackTestConfig()
-    backtest_runner = BackTestRunner(model=hrp_model, config=backtest_config)
-    backtester.iter_runner(runner=backtest_runner, time_series=ts)
+    Backtest_config = BacktestConfig(base=100000, rebalancing_learing_rate=0.8, lookback_period=250,
+                                     acc_trading_values_threshold=30000000000)
+    Backtest_runner = BacktestRunner(model=hrp_model, config=Backtest_config)
+    Backtester.iter_runner(runner=Backtest_runner, time_series=ts)
