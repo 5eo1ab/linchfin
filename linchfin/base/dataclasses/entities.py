@@ -16,7 +16,7 @@ class Entity:
 
 @dataclass
 class AssetClass(Entity):
-    asset_class_id: str = field(default_factory=uuid4)
+    asset_class_id: str = field(default_factory=uuid4, repr=False)
     asset_class_name: str = field(default='')
 
     @property
@@ -30,7 +30,7 @@ class AssetClass(Entity):
 
 @dataclass
 class Asset(Entity):
-    asset_id: AssetId = field(default_factory=uuid4)
+    asset_id: AssetId = field(default_factory=uuid4, repr=False)
     code: AssetCode or str = field(default_factory=AssetCode)
     asset_class: AssetClass = field(default_factory=AssetClass)
 
@@ -54,7 +54,7 @@ class Asset(Entity):
 
 @dataclass
 class AssetUniverse(Entity):
-    universe_id: str = field(default_factory=uuid4)
+    universe_id: str = field(default_factory=uuid4, repr=False)
     assets: Dict[AssetId, Asset] or List = field(default_factory=OrderedDict)
     asset_code_map: Dict[AssetCode, AssetId] = field(init=False)
 
@@ -114,7 +114,7 @@ class AssetUniverse(Entity):
 
 @dataclass
 class Cluster(Entity):
-    cluster_id: UUID = field(default_factory=uuid4)
+    cluster_id: UUID = field(default_factory=uuid4, repr=False)
     name: str = field(default='')
     elements: List = field(default_factory=list)
     d: float = field(default=0)
@@ -129,7 +129,7 @@ class Cluster(Entity):
 
 @dataclass
 class Portfolio(Entity):
-    portfolio_id: str = field(default_factory=uuid4)
+    portfolio_id: str = field(default_factory=uuid4, repr=False)
     weights: Dict[AssetCode, Weight] = field(default_factory=dict)
     asset_universe: AssetUniverse = field(default_factory=AssetUniverse)
 
