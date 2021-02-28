@@ -40,12 +40,18 @@ class SectorTree:
                 TypeError(f"Check tree data type {k}:{v}")
         return _cluster
 
-    def categorize(self, assets: List[Asset], depth=0):
-        categorized = defaultdict(list)
+    def categorize(self, assets: List[Asset], depth=1):
+        categories = defaultdict(list)
+        assert depth >= 0, "Depth must be larger than 0"
+
         for a in assets:
             category_keys = a.asset_class.name.split('-')
-            category_name = f"{DELIMITER}".join(category_keys[:depth+1])
-            categorized[category_name].append(a)
+            category_name = f"{DELIMITER}".join(category_keys[:depth])
+            categories[category_name].append(a)
+
+        categorized = OrderedDict()
+        for k, elements in categories.items():
+            categorized[k] = Cluster(name=k, elements=elements)
         return categorized
 
     def filter(self, key, filter_func=lambda x: x):

@@ -126,6 +126,10 @@ class Cluster(Entity):
             return self.cluster_id.hex
         return self.cluster_id
 
+    @property
+    def symbols(self):
+        return [e.code for e in self.elements]
+
 
 @dataclass
 class Portfolio(Entity):
