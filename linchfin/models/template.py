@@ -1,6 +1,8 @@
 from abc import ABCMeta, abstractmethod
+from typing import List
 from linchfin.data_handler.reader import DataReader
 from linchfin.common.calc import calc_corr, calc_daily_returns, calc_monthly_returns, calc_annal_returns
+from linchfin.base.dataclasses.entities import Asset, AssetUniverse, Portfolio
 
 
 class ABCModelTemplate(metaclass=ABCMeta):
@@ -13,7 +15,7 @@ class ABCModelTemplate(metaclass=ABCMeta):
     }
 
     @abstractmethod
-    def run(self, *args, **kwargs):
+    def run(self, *args, **kwargs) -> Portfolio:
         pass
 
     @abstractmethod
@@ -28,3 +30,7 @@ class ABCModelTemplate(metaclass=ABCMeta):
         clos = reader.get_adj_close_price(symbols=symbols)
         calc_func = self.return_period_calc[period]
         return calc_func(clos)
+
+    @staticmethod
+    def to_asset_universes(symbols: List[str]):
+        return AssetUniverse(assets=[Asset(code=s) for s in symbols])
