@@ -24,6 +24,13 @@ class BacktestConfig:
     lookback_period: int = field(default=90)
 
 
+@dataclass
+class BacktestSummary:
+    acc_returns: TimeSeries
+    weight_changes: TimeSeries
+    rebalancing_indices: TimeSeries
+
+
 class BacktestIterator:
     def __init__(self, runner: 'BacktestRunner', time_series_iter):
         self.step = 0
@@ -139,31 +146,39 @@ class BacktestSimulator:
                     rebalancing_indices.append(idx)
                     runner.do_rebalancing()
 
-        if runner.config.show_plot:
-            plt.figure()
-            fig, axes = plt.subplots(nrows=2, ncols=1)
-            acc_returns.plot(ax=axes[0], linestyle='-', markevery=rebalancing_indices,
-                             marker='x', markerfacecolor='black')
-            weight_changes.astype(float).plot(ax=axes[1])
-            plt.show()
+        return BacktestSummary(**{"acc_returns": acc_returns, "weight_changes": weight_changes, 'rebalancing_indices': rebalancing_indices})
 
 
 if __name__ == '__main__':
+    from linchfin.common.calc import *
     from linchfin.data_handler.reader import DataReader
     Backtester = BacktestSimulator()
 
-    start, end = '2018/01/01', '2020/01/01'
-    data_reader = DataReader(start='2019/01/01', end='2021/01/01')
+    start, end = '2019/01/01', '2021/01/01'
+    data_reader = DataReader(start=start, end=end)
 
-    # symbols = ['MSFT', 'KO', 'PG', 'LULU', 'NKE', 'NVDA']
     symbols = [
-        'VTI',
-        'XLK', 'XLF', 'XLE', 'XLI', 'XLB', 'XLU',
-        'LQD', 'IEF', 'TLT', 'SLV',
+        'QQQ',
+        'ARKK', 'ARKW',# 'ARKF', #'ARKW', 'ARKG', 'ARKF',
+        'IEF', 'TLT'
         ]
     ts = data_reader.get_price(symbols=symbols)
     hrp_model = HierarchyRiskParityModel(asset_universe=symbols, start=start, end=end)
-    Backtest_config = BacktestConfig(base=100000, rebalancing_learing_rate=0.8, lookback_period=250,
-                                     acc_trading_values_threshold=30000000000)
-    Backtest_runner = BacktestRunner(model=hrp_model, config=Backtest_config)
-    Backtester.iter_runner(runner=Backtest_runner, time_series=ts)
+    backtest_config = BacktestConfig(base=100000, rebalancing_learing_rate=0.8, lookback_period=250,
+                                     acc_trading_values_threshold=100000000000)
+    runner = BacktestRunner(model=hrp_model, config=backtest_config)
+    summary = Backtester.iter_runner(runner=runner, time_series=ts)
+
+    bm_returns = \
+        calc_cumulative_returns(calc_daily_returns(data_reader.get_adj_close_price(symbols=['SPY'])))
+
+    if runner.config.show_plot:
+        _acc_returns, _weight_changes = summary.acc_returns, summary.weight_changes
+
+        plt.figure()
+        fig, axes = plt.subplots(nrows=2, ncols=1)
+        _acc_returns.plot(ax=axes[0], linestyle='-', markevery=summary.rebalancing_indices,
+                          marker='x', markerfacecolor='black')
+        bm_returns.plot(ax=axes[0])
+        _weight_changes.astype(float).plot(ax=axes[1])
+        plt.show()
