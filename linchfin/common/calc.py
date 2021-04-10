@@ -37,7 +37,7 @@ def calc_monthly_returns(time_series: TimeSeries) -> TimeSeries:
     return time_series.resample('M').ffill().pct_change()
 
 
-def calc_annal_returns(time_series: TimeSeries) -> TimeSeries:
+def calc_annual_returns(time_series: TimeSeries) -> TimeSeries:
     return time_series.resample('Y').ffill().pct_change()
 
 
@@ -70,14 +70,14 @@ def calc_portfolio_return(portfolio: Portfolio, daily_returns: TimeSeries) -> Ti
     return portfolio_asset_yields.sum(axis=1).sub(1)
 
 
-def calc_volatility(time_series: TimeSeries) -> float:
+def calc_volatility(period_returns: TimeSeries) -> float:
     """
     calculate portfolio volatility
 
-    :param time_series: TimeSeries
+    :param period_returns: TimeSeries
     :return:
     """
-    return time_series.var()
+    return np.log(period_returns + 1).std()
 
 
 def calc_sharp_ratio(daily_returns: TimeSeries, risk_free_return: float = 0.0) -> float:
@@ -89,7 +89,7 @@ def calc_sharp_ratio(daily_returns: TimeSeries, risk_free_return: float = 0.0) -
     :return:
     """
 
-    portfolio_volatility = calc_volatility(time_series=daily_returns)
+    portfolio_volatility = calc_volatility(period_returns=daily_returns)
     portfolio_yield_without_risk_free = daily_returns.sub(risk_free_return)
     sharp_ratio = (portfolio_yield_without_risk_free.mean()) / np.sqrt(portfolio_volatility)
     return sharp_ratio
