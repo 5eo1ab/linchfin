@@ -1,7 +1,7 @@
 from abc import ABCMeta, abstractmethod
 from typing import List
 from linchfin.data_handler.reader import DataReader
-from linchfin.common.calc import calc_corr, calc_daily_returns, calc_monthly_returns, calc_annal_returns
+from linchfin.common.calc import calc_daily_returns, calc_monthly_returns, calc_annual_returns
 from linchfin.base.dataclasses.entities import Asset, AssetUniverse, Portfolio
 
 
@@ -11,7 +11,7 @@ class ABCModelTemplate(metaclass=ABCMeta):
     return_period_calc = {
         'D': calc_daily_returns,
         'M': calc_monthly_returns,
-        'Y': calc_annal_returns,
+        'Y': calc_annual_returns,
     }
 
     @abstractmethod

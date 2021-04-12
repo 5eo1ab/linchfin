@@ -1,5 +1,4 @@
 from typing import List
-from linchfin.base.dataclasses.value_types import TimeSeries
 from linchfin.common.calc import *
 
 
@@ -17,6 +16,23 @@ class AssetProfiler:
         self.bm_ticker = bm_ticker
 
     @property
+    def metrics(self):
+        def get_metric(metric_map):
+            _metrics = []
+            for _k, _v in metric_map.items():
+                if isinstance(_v, dict):
+                    _metrics += get_metric(_v)
+                elif isinstance(_v, list):
+                    _metrics += _v
+                elif callable(_v):
+                    _metrics.append(_k)
+            return _metrics
+
+        __metrics = get_metric(self.price_profile_func_map)
+        __metrics += get_metric(self.period_return_profile_func_map)
+        return __metrics
+
+    @property
     def period_return_profile_func_map(self):
         _period_return_profile_func_map = {
             'daily': self.daily_return_profile_func_map,
@@ -29,7 +45,7 @@ class AssetProfiler:
         _func_map = {
             'daily_volatility': calc_volatility,
             'sharp_ratio': calc_sharp_ratio,
-            'cumulative_returns': calc_cumulative_returns,
+            'cumulative_returns': lambda daily_returns: calc_cumulative_returns(daily_returns).iloc[-1],
             'beta': lambda daily_returns: calc_beta(daily_returns, self.bm_ticker)
         }
         return _func_map
@@ -42,6 +58,9 @@ class AssetProfiler:
         return _func_map
 
     def profile(self, prices, factors: List[str] = None):
+        if factors is None:
+            factors = self.metrics
+
         factors_based_prices = list(set(self.price_profile_func_map.keys()).intersection(factors))
         factors_based_period_returns = dict()
         for _period, _period_func_map in self.period_return_profile_func_map.items():
@@ -60,21 +79,21 @@ class AssetProfiler:
                                                    period=_period, factors=target_factors)
                 )
 
-        profile_result = pd.concat(results)
+        profile_result = pd.concat(results, axis=1)
         return profile_result
 
     def profile_by_price(self, prices: TimeSeries, factors: List[str] = None):
-        _profile = pd.DataFrame(columns=prices.columns)
+        _profile = pd.DataFrame(index=prices.columns, columns=factors)
         for _factor in factors:
             _func = self.price_profile_func_map[_factor]
-            _profile.loc[_factor] = _func(prices)
+            _profile[_factor] = _func(prices)
         return _profile
 
     def profile_by_period_returns(self, period_returns, factors, period='daily'):
-        _profile = pd.DataFrame(columns=period_returns.columns)
+        _profile = pd.DataFrame(index=period_returns.columns, columns=factors)
         for _factor in factors:
             _func = self.period_return_profile_func_map[period][_factor]
-            _profile.loc[_factor] = _func(period_returns)
+            _profile[_factor] = _func(period_returns)
         return _profile
 
 
