@@ -45,7 +45,7 @@ class MeanVarOptimizationEngine:
             portfolio_candidate = self.get_portfolio_candidate(min_cutoff=0.01)
             portfolio_candidate_returns = calc_portfolio_return(portfolio=portfolio_candidate, daily_returns=daily_returns)
             sharp_ratio = calc_sharp_ratio(daily_returns=portfolio_candidate_returns)
-            volatility = calc_volatility(time_series=portfolio_candidate_returns)
+            volatility = calc_volatility(period_returns=portfolio_candidate_returns)
 
             data['sharp_ratio'].append(sharp_ratio)
             data['volatility'].append(volatility)

@@ -7,15 +7,15 @@ from linchfin.core.clustering.sectors import SectorTree
 from linchfin.core.portfolio.rules import RuleEngine
 from linchfin.core.portfolio.hierarchical import HierarchyRiskParityEngine
 from linchfin.data_handler.reader import DataReader
-from linchfin.data_handler.wrangler import DataWrangler
 from linchfin.metadata import ETF_SECTORS
-from linchfin.simulation.backtest import BackTestSimulator
 from linchfin.common.calc import calc_monthly_returns, calc_corr, calc_daily_returns
+from linchfin.common.cov import CovarianceEstimator
+from linchfin.simulation.backtest import BacktestSimulator
+
 
 if __name__ == '__main__':
     # 1. read data
     data_reader = DataReader(start='2019/01/01', end='2020/09/01')
-    wrangler = DataWrangler()
 
     # 2. load sector tree
     sector_tree = SectorTree(tree_data=ETF_SECTORS)
@@ -63,7 +63,7 @@ if __name__ == '__main__':
     portfolio.show_summary()
 
     # 8. run backtest
-    backtest_simulator = BackTestSimulator()
+    backtest_simulator = BacktestSimulator()
     daily_returns = calc_daily_returns(time_series=time_series)
     backtest_result = backtest_simulator.run(portfolio=portfolio, daily_returns=daily_returns)
 
@@ -71,7 +71,7 @@ if __name__ == '__main__':
     # 9-1. show evaluation metrics
     portfolio_returns = calc_portfolio_return(portfolio=portfolio, daily_returns=daily_returns)
     sharp_ratio = calc_sharp_ratio(daily_returns=portfolio_returns, risk_free_return=0.01)
-    volatility = calc_volatility(time_series=portfolio_returns)
+    volatility = calc_volatility(period_returns=portfolio_returns)
     print(f"Portfolio evaluation metric\n"
           f"sharp_ratio: {sharp_ratio}\n"
           f"volatility: {volatility}\n")
