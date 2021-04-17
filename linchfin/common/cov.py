@@ -1,5 +1,6 @@
 import pandas as pd
 from sklearn import covariance
+import numpy as np
 
 
 class CovarianceEstimator:
@@ -35,8 +36,6 @@ class CovarianceEstimator:
 
 
 if __name__ == '__main__':
-    import numpy as np
-
     real_cov = np.array([[.4, .2], [.2, .8]])
     X = np.random.multivariate_normal(mean=[0, 0], cov=real_cov,size=100)
 
