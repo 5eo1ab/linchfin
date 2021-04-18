@@ -76,7 +76,7 @@ class HierarchicalCorrCluster:
 
     def assign_cluster(self, sorted_corr: Feature):
         diff_metrics = ((sorted_corr.value.diff(1).pow(2)).sum(axis=1) ** 1 / 2)
-        threshold = diff_metrics.median()
+        threshold = diff_metrics.mean()
         return (diff_metrics > threshold).astype(int).cumsum()
 
     def get_clusters(self, distance: Metric) -> List[Cluster]:
