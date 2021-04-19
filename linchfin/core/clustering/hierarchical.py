@@ -74,8 +74,19 @@ class HierarchicalCorrCluster:
         _sorted_corr = self.get_sorted_corr(corr=_corr, indices=diag_indices)
         return _sorted_corr
 
+    def divide(self, sorted_corr: Feature):
+        cluster_indices = self.assign_cluster(sorted_corr=sorted_corr)
+        dividable_sorted_corr = _sorted_corr.value.copy()
+        dividable_sorted_corr['cluster'] = cluster_indices
+        return [subset[subset.index] for cidx, subset in dividable_sorted_corr.groupby('cluster')]
+
     def assign_cluster(self, sorted_corr: Feature):
-        diff_metrics = ((sorted_corr.value.diff(1).pow(2)).sum(axis=1) ** 1 / 2)
+        """
+        \sqrt{\sigma -np.log(cov ** 0.5)}
+        :param sorted_corr:
+        :return:
+        """
+        diff_metrics = sorted_corr.value.diff(1).pow(2).transform(lambda x: -np.log(x)).sum().pow(1 / 2)
         threshold = diff_metrics.mean()
         return (diff_metrics > threshold).astype(int).cumsum()
 
@@ -92,8 +103,11 @@ class HierarchicalCorrCluster:
         sch.dendrogram(links, **kwargs)
         plt.show()
 
-    def show_heatmap(self, corr: Feature):
-        sns.heatmap(corr.value)
+    def show_heatmap(self, corr: Feature or pd.DataFrame):
+        _corr = corr
+        if isinstance(corr, Feature):
+            _corr = corr.value
+        sns.heatmap(_corr)
         plt.show()
 
 
