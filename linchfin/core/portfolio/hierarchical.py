@@ -9,21 +9,13 @@ from linchfin.base.dataclasses.entities import (
     Asset, AssetUniverse, Portfolio, Cluster
 )
 from linchfin.base.dataclasses.value_types import Metric, Feature
-from linchfin.base.encoder import CorrelationEncoder
+from linchfin.core.clustering.hierarchical import HierarchicalCorrCluster
 
 
-class HierarchyRiskParityEngine:
-    def __init__(self, asset_universe):
+class HierarchyRiskParityEngine(HierarchicalCorrCluster):
+    def __init__(self, asset_universe, estimation=True):
+        super().__init__(estimation=estimation)
         self.asset_universe = asset_universe
-        self.distance_encoder = CorrelationEncoder()
-
-    @staticmethod
-    def calc_correlation(x: np.array):
-        return x.corr()
-
-    @staticmethod
-    def calc_covariance(x: np.array):
-        return x.cov()
 
     def run(self, corr: Feature) -> Portfolio:
         portfolio = Portfolio(asset_universe=self.asset_universe)
@@ -37,35 +29,10 @@ class HierarchyRiskParityEngine:
         portfolio.set_weights(weights)
         return portfolio
 
-    @staticmethod
-    def calc_linkage(distance: Metric) -> np.array:
-        links = sch.linkage(distance.value, 'single')
-        return links
-
     def get_clusters(self, distance: Metric) -> List[Cluster]:
         links = self.calc_linkage(distance=distance)
         return [Cluster(elements=[int(p1), int(p2)], d=dist, size=int(size))
                 for p1, p2, dist, size in links]
-
-    @staticmethod
-    def get_quansi_diag(link):
-        link = link.astype(int)
-        last_cluster = link[-1]
-        sort_ix = pd.Series([link[-1, 0], link[-1, 1]])
-        num_items = last_cluster[3]
-
-        while sort_ix.max() >= num_items:
-            sort_ix.index = range(0, sort_ix.shape[0] * 2, 2)  # make space
-            df0 = sort_ix[sort_ix >= num_items]
-            i = df0.index
-            j = df0.values - num_items
-
-            sort_ix[i] = link[j, 0]
-            df0 = pd.Series(link[j, 1], index=i + 1)
-            sort_ix = sort_ix.append(df0)
-            sort_ix = sort_ix.sort_index()  # re-sort
-            sort_ix.index = range(sort_ix.shape[0])  # reindex
-        return sort_ix.tolist()
 
     def get_recursive_bisect(self, corr: Feature, sort_ix: list):
         w = pd.Series(1, index=sort_ix)
@@ -91,7 +58,6 @@ class HierarchyRiskParityEngine:
 
     def get_cluster_var(self, corr: Feature, c_items):
         _corr_value = corr.value.loc[corr.columns[c_items], corr.columns[c_items]]
-        # cov_ = cov.loc[c_items, c_items]
         w_ = self.get_ivp(_corr_value).reshape(-1, 1)
         c_var = np.dot(np.dot(w_.T, _corr_value), w_)[0, 0]
         return c_var
@@ -99,14 +65,6 @@ class HierarchyRiskParityEngine:
     def get_ivp(self, cov: pd.DataFrame, **kwargs):
         ivp = 1. / np.diag(cov)
         return ivp / ivp.sum()
-
-    def show_dendrogram(self, corr: Feature, **kwargs):
-        plt.title("Hierarchical Cluster")
-        plt.xlabel("index")
-        plt.ylabel("Distance")
-        links = sch.linkage(corr.value.to_numpy(), 'single')
-        sch.dendrogram(links, **kwargs)
-        plt.show()
 
 
 if __name__ == '__main__':

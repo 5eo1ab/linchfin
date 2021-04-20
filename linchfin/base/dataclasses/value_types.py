@@ -14,6 +14,9 @@ class IterValueMixin:
     def iterrows(self):
         return self.value.iterrows()
 
+    def __getitem__(self, item):
+        return self.value.__getitem__(key=item)
+
 
 @dataclass
 class Feature(IterValueMixin, object):
