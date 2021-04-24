@@ -1,11 +1,16 @@
 from collections import OrderedDict, defaultdict
 from dataclasses import dataclass, field
-from typing import List, Dict
+from typing import List, Dict, Union
 from uuid import uuid4, UUID
 
 import pandas as pd
+from decimal import Decimal
 
-from .value_types import Weight, AssetId, AssetCode
+
+Weight = Union[Decimal]
+AssetId = Union[UUID]
+AssetCode = Union[str]
+Weights = Dict[AssetCode, Weight]
 
 
 @dataclass
@@ -31,7 +36,7 @@ class AssetClass(Entity):
 @dataclass
 class Asset(Entity):
     asset_id: AssetId = field(default_factory=uuid4, repr=False)
-    code: AssetCode or str = field(default_factory=AssetCode)
+    code: AssetCode = field(default_factory=AssetCode)
     asset_class: AssetClass = field(default_factory=AssetClass)
 
     @property
@@ -45,11 +50,6 @@ class Asset(Entity):
     @name.setter
     def name(self, value):
         self.code = value
-
-    def __post_init__(self):
-        super().__post_init__()
-        if not isinstance(self.code, AssetCode):
-            self.code = AssetCode(self.code)
 
 
 @dataclass
@@ -72,6 +72,9 @@ class AssetUniverse(Entity):
         self.asset_code_map = OrderedDict()
         for asset_id, _asset in self.assets.items():
             self.asset_code_map[_asset.code] = asset_id
+
+    def __iter__(self):
+        return iter(self.assets.values())
 
     @property
     def id(self):
@@ -101,15 +104,23 @@ class AssetUniverse(Entity):
         self.assets[asset.asset_id] = asset
         self.asset_code_map[asset.code] = asset.asset_id
 
-    def pop(self, asset: AssetId or Asset):
-        if isinstance(asset, AssetId) or isinstance(asset, UUID):
+    def pop(self, asset: AssetId or Asset or AssetCode):
+        if isinstance(asset, UUID):
             asset = self.assets[asset]
+        elif isinstance(asset, str):
+            asset = self.get_asset(asset)
 
         if not isinstance(asset, Asset):
             raise TypeError(f"Can't pop assets for {type(asset)}")
 
         self.assets.pop(asset.asset_id)
         self.asset_code_map.pop(asset.code)
+
+    def get_asset_classes(self):
+        _asset_class_dic = defaultdict(list)
+        for _asset in self.assets.values():
+            _asset_class_dic[_asset.asset_class.asset_class_name].append(_asset)
+        return OrderedDict(_asset_class_dic)
 
 
 @dataclass
@@ -134,7 +145,7 @@ class Cluster(Entity):
 @dataclass
 class Portfolio(Entity):
     portfolio_id: str = field(default_factory=uuid4, repr=False)
-    weights: Dict[AssetCode, Weight] = field(default_factory=dict)
+    weights: Weights = field(default_factory=dict)
     asset_universe: AssetUniverse = field(default_factory=AssetUniverse)
 
     @property
@@ -155,8 +166,8 @@ class Portfolio(Entity):
             _sector_weights[_asset.asset_class.asset_class_name] += v
         return _sector_weights
 
-    def set_weights(self, weights: Dict[AssetCode, Weight] or pd.Series):
-        self.weights = {asset_code: Weight(str(w)) for asset_code, w in weights.items()}
+    def set_weights(self, weights: Weights or pd.Series):
+        self.weights = {asset_code: Decimal(str(w)) for asset_code, w in weights.items()}
 
     def round(self, weights, points=2):
         _rounded_weights = OrderedDict()
