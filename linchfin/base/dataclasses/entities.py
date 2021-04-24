@@ -73,6 +73,9 @@ class AssetUniverse(Entity):
         for asset_id, _asset in self.assets.items():
             self.asset_code_map[_asset.code] = asset_id
 
+    def __iter__(self):
+        return iter(self.assets.values())
+
     @property
     def id(self):
         return self.universe_id
@@ -104,12 +107,20 @@ class AssetUniverse(Entity):
     def pop(self, asset: AssetId or Asset or AssetCode):
         if isinstance(asset, UUID):
             asset = self.assets[asset]
+        elif isinstance(asset, str):
+            asset = self.get_asset(asset)
 
         if not isinstance(asset, Asset):
             raise TypeError(f"Can't pop assets for {type(asset)}")
 
         self.assets.pop(asset.asset_id)
         self.asset_code_map.pop(asset.code)
+
+    def get_asset_classes(self):
+        _asset_class_dic = defaultdict(list)
+        for _asset in self.assets.values():
+            _asset_class_dic[_asset.asset_class.asset_class_name].append(_asset)
+        return OrderedDict(_asset_class_dic)
 
 
 @dataclass
