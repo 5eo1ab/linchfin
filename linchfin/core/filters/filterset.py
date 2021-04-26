@@ -9,7 +9,7 @@ class AssetFilter:
         assert not set(self.includes).intersection(self.excludes), "Intersection between includes and excludes"
 
     def filter(self, asset_universe: Iterable) -> AssetUniverse:
-        filtered_assets = [asset for asset in asset_universe if self.is_filtered(asset=asset)]
+        filtered_assets = [asset for asset in asset_universe if self.check(asset=asset)]
         return AssetUniverse(assets=filtered_assets)
 
     def check(self, asset: Asset):
@@ -24,7 +24,7 @@ class AssetFilter:
     def is_excluded(self, asset: Asset):
         _excluded = False
         if self.excludes:
-            _excluded = asset.name not in self.excludes
+            _excluded = asset.name in self.excludes
         return _excluded
 
 
@@ -44,29 +44,25 @@ class AssetClassFilter(AssetFilter):
         return _excluded
 
 
-class AssetFilterBackends:
+class AssetFilterSet:
     def __init__(self, filters: List[AssetFilter]):
         self.filters = filters
 
     def filter(self, asset_universe: Iterable) -> AssetUniverse:
-        filtered_assets = []
-
-        for _asset in asset_universe:
-            filter_results = [True for _filter in self.filters if _filter.check(_asset)]
-
-            if sum(filter_results):
-                filtered_assets.append(_asset)
-        return AssetUniverse(assets=filtered_assets)
+        filtered = asset_universe
+        for _filter in self.filters:
+            filtered = _filter.filter(asset_universe=filtered)
+        return filtered
 
 
 if __name__ == '__main__':
     from linchfin.core.clustering.sectors import SectorTree, ETF_SECTORS
 
     etf_sector_tree = SectorTree(ETF_SECTORS)
-    filters = [
-        AssetFilter(includes=['SPY']),
+    _filters = [
+        AssetFilter(excludes=['SPY', 'CEFL']),
         AssetClassFilter(excludes=['Inverse', 'Forex'])
     ]
-    filter_backends = AssetFilterBackends(filters=filters)
+    filter_backends = AssetFilterSet(filters=_filters)
     a = filter_backends.filter(etf_sector_tree.assets)
-    print([i.asset_class.name for i in a])
+    print([i.code for i in a])
