@@ -76,6 +76,25 @@ class AssetUniverse(Entity):
     def __iter__(self):
         return iter(self.assets.values())
 
+    def __getitem__(self, item):
+        if isinstance(item, int):
+            return self.get_by_idx(idx=item)
+        elif isinstance(item, str):
+            return self.get_by_code(code=item)
+        raise TypeError("Unsupported key type")
+
+    def get_by_idx(self, idx):
+        for i, _asset in enumerate(self.assets.values()):
+            if i == idx:
+                return _asset
+        raise IndexError(f"Can't find {idx}th asset")
+
+    def get_by_code(self, code):
+        for i, _asset in enumerate(self.assets.values()):
+            if code == _asset.code:
+                return _asset
+        raise KeyError(f"Can't find {code} in assets")
+
     @property
     def id(self):
         return self.universe_id

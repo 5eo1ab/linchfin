@@ -13,6 +13,10 @@ class SectorTree:
         self.cluster_dic = OrderedDict()
         self.root = self.parse_tree(tree_data=tree_data)
 
+    @property
+    def assets(self):
+        return self.search(node=self.root)
+
     def parse_tree(self, tree_data, keys=None):
         if not keys:
             key = 'root'
