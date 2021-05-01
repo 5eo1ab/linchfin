@@ -1,5 +1,5 @@
-from linchfin.base.dataclasses.entities import Portfolio
-from linchfin.base.dataclasses.value_types import Weight, Weights, Prices
+from linchfin.base.dataclasses.entities import Portfolio, Weight, Weights
+from linchfin.base.dataclasses.value_types import Prices
 import random
 from collections import OrderedDict
 from math import gcd
