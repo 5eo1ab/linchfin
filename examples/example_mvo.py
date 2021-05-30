@@ -7,6 +7,7 @@ from linchfin.metadata import ETF_SECTORS
 from linchfin.common.calc import calc_daily_returns
 from linchfin.common.calc import calc_total_return
 
+
 if __name__ == '__main__':
     # 1. read data
     data_reader = DataReader(start='2019/01/01', end='2020/09/01')

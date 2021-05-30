@@ -4,8 +4,7 @@ from matplotlib import pyplot as plt
 from datetime import timedelta
 from dataclasses import dataclass, field
 from linchfin.base.dataclasses.entities import Portfolio
-from linchfin.base.dataclasses.value_types import TimeSeries, Weight
-from linchfin.common.calc import calc_portfolio_return
+from linchfin.base.dataclasses.value_types import TimeSeries
 from linchfin.models.template import ABCModelTemplate
 from linchfin.models.hrp import HierarchyRiskParityModel
 

@@ -3,8 +3,8 @@ import pandas as pd
 import random
 
 from collections import defaultdict
-from linchfin.base.dataclasses.entities import Portfolio, AssetUniverse
-from linchfin.base.dataclasses.value_types import TimeSeries, Weights, Weight
+from linchfin.base.dataclasses.entities import Portfolio, AssetUniverse, Weights, Weight
+from linchfin.base.dataclasses.value_types import TimeSeries
 from linchfin.core.portfolio.rules import RuleEngine
 from linchfin.common.calc import calc_volatility, calc_portfolio_return, calc_sharp_ratio
 

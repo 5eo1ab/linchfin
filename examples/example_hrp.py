@@ -15,7 +15,7 @@ from linchfin.simulation.backtest import BacktestSimulator
 
 if __name__ == '__main__':
     # 1. read data
-    data_reader = DataReader(start='2019/01/01', end='2020/09/01')
+    data_reader = DataReader(start='2017/01/01', end='2021/04/20')
 
     # 2. load sector tree
     sector_tree = SectorTree(tree_data=ETF_SECTORS)
