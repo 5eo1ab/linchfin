@@ -7,6 +7,7 @@ from linchfin.base.dataclasses.entities import Portfolio
 from linchfin.base.dataclasses.value_types import TimeSeries
 from linchfin.models.template import ABCModelTemplate
 from linchfin.models.hrp import HierarchyRiskParityModel
+from linchfin.common.calc import calc_portfolio_return
 
 
 logger = logging.getLogger('linchfin')
