@@ -20,7 +20,14 @@ if __name__ == '__main__':
     # 2. load sector tree
     sector_tree = SectorTree(tree_data=ETF_SECTORS)
     # 3-1. filter asset universe
-    filtered = sector_tree.filter(key='root', filter_func=lambda x: x.extra['cap_size'] > 60)
+    filtered = sector_tree.filter(key='root', filter_func=lambda x: x.extra['cap_size'] > 40)
+    # tickers = {'DIA', 'XLK', 'GDXJ', 'IEFA', 'VTI', 'SPY', 'XLF', 'AGG', 'SHV', 'SHY', 'QQQ', 'VEA', 'TQQQ', 'VNQ', 'GDX', 'TLT',
+    #            'JNK', 'BND', 'XLE', 'LQD', 'IEMG', 'SSO', 'IJR', 'BIL', 'MDY', 'HYG', 'VOO', 'IEF', 'IVV', 'EFA', 'SMH', 'SPXL',
+    #            'XLV', 'EEM', 'IWM', 'XBI', 'VWO', 'UPRO'}
+
+    # for _ticker in ['TLT', 'SHV', 'IEF', 'SHY', 'BIL', 'GDX', 'GDXJ']:
+    #     tickers.remove(_ticker)
+    # filtered = sector_tree.filter(key='root', filter_func=lambda x: x.code in tickers)
     asset_universe = AssetUniverse(assets=filtered)
 
     # 3-2. filter asset universe(exclude: Inverse, Leverage)
@@ -77,5 +84,7 @@ if __name__ == '__main__':
           f"volatility: {volatility}\n")
 
     # 9-2. show plot
-    backtest_result.plot()
+    (1 + backtest_result).plot()
+    bm_spy = (1 + time_series['SPY'].pct_change()).cumprod()
+    bm_spy.plot()
     pyplot.show()

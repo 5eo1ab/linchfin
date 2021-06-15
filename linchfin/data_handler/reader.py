@@ -49,6 +49,11 @@ class DataReader:
         return TimeSeries(df)
 
 
+class CachedDataReader(DataReader):
+    def get_close_price(self, symbols: List[str]) -> TimeSeries:
+        pass
+
+
 if __name__ == "__main__":
     dr = DataReader()
     c = dr.get_adj_close_price(['AAPL', 'PIO'])

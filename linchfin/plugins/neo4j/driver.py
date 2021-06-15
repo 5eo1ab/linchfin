@@ -68,3 +68,11 @@ class GraphManager:
                         "SET a.message = $message "
                         "RETURN a.message + ', from node ' + id(a)", message=message)
         return result.single()[0]
+
+
+if __name__ == "__main__":
+    from linchfin.metadata import STOCK_SECTORS
+    greeter = GraphManager("bolt://localhost:7687", "neo4j", "mypass")
+    sector_graph = SectorTree(STOCK_SECTORS)
+    greeter.create(graph=sector_graph.root)
+    del greeter

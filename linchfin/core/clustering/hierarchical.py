@@ -122,7 +122,7 @@ if __name__ == '__main__':
     from linchfin.data_handler.reader import DataReader
     from linchfin.metadata import ETF_SECTORS
     from linchfin.common.calc import (
-        calc_monthly_returns, calc_corr, calc_daily_returns
+        calc_monthly_returns
     )
     from linchfin.common.cov import CovarianceEstimator
     # from linchfin.core.portfolio.hierarchical import HierarchyRiskParityEngine
@@ -131,14 +131,35 @@ if __name__ == '__main__':
     data_reader = DataReader(start='2019/01/01', end='2021/04/01')
     sector_tree = SectorTree(tree_data=ETF_SECTORS)
     # 3-1. filter asset universe
-    filtered = sector_tree.filter(key='root', filter_func=lambda x: x.extra['cap_size'] > 63)
+    filtered = sector_tree.filter(key='root', filter_func=lambda x: x.extra['cap_size'] > 50)
     asset_universe = AssetUniverse(assets=filtered)
 
     # 4. load time_series
-    time_series = data_reader.get_adj_close_price(symbols=asset_universe.symbols)
+    time_series = data_reader.get_adj_close_price(symbols=asset_universe.symbols + ['SPY'])
     time_series = time_series.dropna(axis=1)
     time_series_monthly = calc_monthly_returns(time_series=time_series)
 
     hcorr_cluster = HierarchicalCorrCluster()
     _sorted_corr = hcorr_cluster.run(time_series=time_series_monthly.fillna(0))
     hcorr_cluster.show_heatmap(corr=_sorted_corr)
+
+    divided_corr = hcorr_cluster.divide(sorted_corr=_sorted_corr)
+
+    from linchfin.core.analysis.profiler import AssetProfiler
+    profiler = AssetProfiler()
+    profiled = [
+        profiler.profile(prices=time_series[
+            set(_subset_corr.columns.append(pd.Index(['SPY'])))
+        ])
+        for _subset_corr in divided_corr
+    ]
+
+    print(profiled)
+
+    def reduce_by_assets():
+        pass
+
+    from linchfin.metadata import ETF_SECTORS
+    from linchfin.core.clustering.sectors import SectorTree
+
+    etf_sector_tree = SectorTree(tree_data=ETF_SECTORS)
