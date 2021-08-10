@@ -1,6 +1,8 @@
+from __future__ import annotations
 from dataclasses import dataclass
 import numpy as np
 import pandas as pd
+from typing import Iterable, Dict
 
 
 @dataclass
@@ -39,4 +41,7 @@ class Prices(pd.Series):
 
 
 class TimeSeries(pd.DataFrame):
-    pass
+    def pivot(self, *args, **kwargs) -> TimeSeries:
+        ts = TimeSeries(super().pivot(*args, **kwargs), dtype=float)
+        ts.index = pd.to_datetime(ts.index)
+        return ts
