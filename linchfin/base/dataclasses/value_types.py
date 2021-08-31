@@ -3,6 +3,7 @@ from dataclasses import dataclass
 import numpy as np
 import pandas as pd
 from typing import Type
+from linchfin.common.calc import calc_corr
 
 
 @dataclass
@@ -57,3 +58,7 @@ class TimeSeries(pd.DataFrame):
     @property
     def _constructor(self) -> Type["TimeSeries"]:
         return TimeSeries
+
+    def calc_corr(self, periods=5):
+        corr_value = calc_corr(time_series=self.pct_change(periods), method='spearman')
+        return Feature(name='corr', value=corr_value)

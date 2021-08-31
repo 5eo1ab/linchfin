@@ -1,4 +1,5 @@
 from typing import List
+from linchfin.base.dataclasses.value_types import TimeSeries
 from linchfin.common.calc import *
 
 
