@@ -24,7 +24,7 @@ def calc_beta(daily_returns: 'TimeSeries', bm_asset_code: str):
 
 
 def calc_cumulative_returns(daily_returns: 'TimeSeries'):
-    return daily_returns.add(1).cumprod()
+    return daily_returns.add(1).cumprod().fillna(1)
 
 
 def calc_total_return(prices: 'TimeSeries'):
